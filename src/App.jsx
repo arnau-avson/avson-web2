@@ -128,7 +128,11 @@ function useIsMobile() {
 }
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true)
+  const [showSplash, setShowSplash] = useState(() => {
+    if (sessionStorage.getItem('avson-visited')) return false
+    sessionStorage.setItem('avson-visited', '1')
+    return true
+  })
   const isMobile = useIsMobile()
   const panelSteps = isMobile ? panels.length : panels.length - 1
   const totalSections = 1 + panelSteps + circleQuarters.length + 2

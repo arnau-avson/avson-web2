@@ -306,7 +306,13 @@ export default function GrcPage() {
               <span>&larr;</span> Volver al inicio
             </Link>
             <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">01 — GRC Estratégico</p>
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-3">GRC</h1>
+            <div className="flex items-end gap-4 mb-3">
+              <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">GRC</h1>
+              <a href="https://praesys.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-4 py-1.5 rounded-full bg-green-500/15 text-green-400 hover:bg-green-500/25 transition-all">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                Plataforma activa
+              </a>
+            </div>
             <p className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-6">
               Governance &bull; Risk &bull; Compliance
             </p>

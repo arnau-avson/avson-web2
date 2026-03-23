@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = forwardRef(function Footer(props, ref) {
   return (
@@ -17,18 +18,18 @@ const Footer = forwardRef(function Footer(props, ref) {
           <div>
             <h3 className="text-white font-medium mb-3 text-sm">Soluciones</h3>
             <ul className="flex flex-col gap-2 text-gray-500 text-sm">
-              <li>GRC</li>
-              <li>Artificial Intelligence</li>
-              <li>Cybersecurity</li>
-              <li>Data Intelligence</li>
+              <li><Link to="/grc" className="hover:text-white transition-colors">GRC</Link></li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">Artificial Intelligence</span></li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">Cybersecurity</span></li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">Data Intelligence</span></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white font-medium mb-3 text-sm">Empresa</h3>
             <ul className="flex flex-col gap-2 text-gray-500 text-sm">
-              <li>Sobre nosotros</li>
-              <li>Contacto</li>
-              <li>Política de privacidad</li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">Sobre nosotros</span></li>
+              <li><a href="/#contacto" className="hover:text-white transition-colors">Contacto</a></li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">Política de privacidad</span></li>
             </ul>
           </div>
         </div>
