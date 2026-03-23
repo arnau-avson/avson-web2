@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShieldBackground from '../components/ShieldBackground'
 import GeoShape from '../components/GeoShape'
+import { isMenuOpen } from '../utils/menuOpen'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const services = [
   {
@@ -140,6 +142,7 @@ function useIsMobile() {
 
 export default function CyberPage() {
   const isMobile = useIsMobile()
+  const { t } = useLanguage()
   const svcSteps = isMobile ? services.length : services.length - 1
   const detailSteps = details.length
   const totalSections = 1 + svcSteps + detailSteps + 1
@@ -185,6 +188,7 @@ export default function CyberPage() {
 
   useEffect(() => {
     const handleWheel = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (Math.abs(e.deltaY) < DELTA_THRESHOLD) return
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
@@ -198,6 +202,7 @@ export default function CyberPage() {
     }
 
     const handleTouchMove = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (touchMoved.current) return
       const delta = touchStartY.current - e.touches[0].clientY
@@ -273,23 +278,23 @@ export default function CyberPage() {
         <div className="flex-1 flex flex-col justify-center px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left relative z-10">
           <div>
             <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors mb-6">
-              <span>&larr;</span> Volver al inicio
+              <span>&larr;</span> {t('cyber.back')}
             </Link>
-            <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">03 — Ciberseguridad</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">{t('cyber.tag')}</p>
             <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tight mb-3">
               Ciberseguridad
             </h1>
             <p className="text-sm md:text-base text-gray-500 mb-6">
-              Cada 11 segundos una empresa está bajo ataque
+              {t('cyber.subtitle')}
             </p>
             <p className="text-sm uppercase tracking-[0.3em] text-gray-500">
-              CISO as a Service &bull; Threat Intelligence
+              {t('cyber.services')}
             </p>
           </div>
         </div>
 
         <div className="relative z-10 flex flex-col items-center gap-2 pb-8 text-gray-500 text-xs uppercase tracking-widest opacity-50">
-          <span>Scroll</span>
+          <span>{t('cyber.scroll')}</span>
           <div className="w-px h-8 bg-gray-500 animate-pulse" />
         </div>
       </section>
@@ -314,7 +319,7 @@ export default function CyberPage() {
             >
               <div className="max-w-2xl w-full flex flex-col gap-5">
                 <div>
-                  <p className={`text-sm uppercase tracking-widest mb-2 ${svc.descColor}`}>Servicios de Ciberseguridad</p>
+                  <p className={`text-sm uppercase tracking-widest mb-2 ${svc.descColor}`}>{t('cyber.svcTag')}</p>
                   <h2 className={`text-2xl md:text-3xl font-bold tracking-tight mb-2 ${svc.textColor}`}>
                     {svc.title}
                   </h2>
@@ -334,7 +339,7 @@ export default function CyberPage() {
                 </ul>
 
                 <a href="/#contacto" className={`inline-block self-start border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${svc.bg === '#ffffff' ? 'border-gray-400 text-gray-900' : 'border-white/20 text-white'}`}>
-                  Solicitar Evaluación
+                  {t('cyber.evalBtn')}
                 </a>
               </div>
 
@@ -421,14 +426,14 @@ export default function CyberPage() {
                   ))}
                 </div>
                 <a href="/#contacto" className="inline-block bg-accent text-white px-8 py-3 rounded-lg text-sm font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                  Solicitar Evaluación Estratégica
+                  {t('cyber.evalStrat')}
                 </a>
               </div>
             ))}
           </div>
 
           {/* Right: step indicators */}
-          <div className="md:w-[280px] shrink-0 flex flex-row md:flex-col gap-3">
+          <div className="md:w-[280px] shrink-0 flex flex-col gap-3">
             {details.map((det, i) => (
               <div
                 key={i}

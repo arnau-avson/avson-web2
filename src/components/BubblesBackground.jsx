@@ -134,7 +134,7 @@ function ParticleCloud() {
 
 export default function BubblesBackground() {
   return (
-    <div className="absolute right-0 top-0 w-[60%] h-[40%] md:w-[55%] md:h-full z-0">
+    <div className="absolute inset-0 md:right-0 md:top-0 md:left-auto md:w-[55%] z-0 opacity-40 md:opacity-100">
       <Canvas
         camera={{ position: [0, 0, 6], fov: 45 }}
         dpr={[1, 1.5]}

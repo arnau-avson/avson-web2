@@ -6,6 +6,8 @@ import BubblesBackground from './components/BubblesBackground'
 import SplashScreen from './components/SplashScreen'
 import Footer from './components/Footer'
 import GeoShape from './components/GeoShape'
+import { isMenuOpen } from './utils/menuOpen'
+import { useLanguage } from './i18n/LanguageContext'
 import './App.css'
 
 const panels = [
@@ -77,6 +79,7 @@ const panels = [
     bulletColor: 'text-gray-800',
     iconColor: 'text-black/5',
     icon: '04',
+    link: '/intel',
     shapeColor: 'rgba(0,0,0,0.15)',
     shapes: ['square', 'hexagon-outline', 'circle'],
   },
@@ -139,6 +142,7 @@ function useIsMobile() {
 }
 
 function App() {
+  const { t, ta } = useLanguage()
   const [showSplash, setShowSplash] = useState(() => {
     if (sessionStorage.getItem('avson-visited')) return false
     sessionStorage.setItem('avson-visited', '1')
@@ -187,6 +191,7 @@ function App() {
 
   useEffect(() => {
     const handleWheel = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (Math.abs(e.deltaY) < DELTA_THRESHOLD) return
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
@@ -200,6 +205,7 @@ function App() {
     }
 
     const handleTouchMove = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (touchMoved.current) return
       const delta = touchStartY.current - e.touches[0].clientY
@@ -265,18 +271,18 @@ function App() {
 
         <Navbar />
 
-        <div className="relative z-10 flex-1 flex flex-col justify-center items-center md:items-start px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left">
+        <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-8 md:items-start md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left">
           <h1 className="text-[clamp(56px,10vw,120px)] font-bold leading-none tracking-[-3px] text-white">
             avson
           </h1>
           <Typewriter
-            words={['Governance', 'Artificial Intelligence', 'Cybersecurity']}
+            words={ta('home.typewriter')}
             className="text-xl md:text-3xl font-semibold text-gray-400 h-10 md:h-12"
           />
         </div>
 
         <div className="relative z-10 flex flex-col items-center gap-2 pb-8 text-gray-500 text-xs uppercase tracking-widest opacity-50">
-          <span>Scroll</span>
+          <span>{t('home.scroll')}</span>
           <div className="w-px h-8 bg-gray-500 animate-pulse" />
         </div>
       </section>
@@ -304,35 +310,32 @@ function App() {
                   {panel.icon}
                 </div>
                 <div className="flex-1 text-left">
+                  {(() => {
+                    const tp = t(`home.panels.${i}`)
+                    return (<>
                   <h2 className={`text-2xl md:text-4xl font-bold tracking-tight mb-2 ${panel.textColor}`}>
-                    {panel.title}
+                    {tp?.title ?? panel.title}
                   </h2>
-                  {panel.subtitle && (
-                    <p className={`text-sm md:text-base mb-5 ${panel.subtitleColor}`}>{panel.subtitle}</p>
-                  )}
-                  {panel.bullets ? (
-                    <ul className="space-y-3">
-                      {panel.bullets.map((b, idx) => (
-                        <li key={idx} className={`flex items-start gap-3 text-sm md:text-base leading-relaxed ${panel.bulletColor}`}>
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className={`text-sm md:text-base max-w-lg leading-relaxed ${panel.bulletColor}`}>
-                      {panel.description}
-                    </p>
-                  )}
+                  <p className={`text-sm md:text-base mb-5 ${panel.subtitleColor}`}>{tp?.subtitle ?? panel.subtitle}</p>
+                  <ul className="space-y-3">
+                    {(tp?.bullets ?? panel.bullets ?? []).map((b, idx) => (
+                      <li key={idx} className={`flex items-start gap-3 text-sm md:text-base leading-relaxed ${panel.bulletColor}`}>
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
                   {panel.link ? (
                     <Link to={panel.link} className={`inline-block mt-6 border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${panel.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
-                      Saber más
+                      {t('home.learnMore')}
                     </Link>
                   ) : (
                     <a href="#contacto" className={`inline-block mt-6 border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${panel.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
-                      Saber más
+                      {t('home.learnMore')}
                     </a>
                   )}
+                  </>)
+                  })()}
                 </div>
               </div>
 
@@ -399,20 +402,22 @@ function App() {
                     : 'opacity-0 translate-y-8 pointer-events-none absolute inset-0'
                 }`}
               >
+                {(() => { const tc = t(`home.circle.${i}`); return (<>
                 <p className="text-sm uppercase tracking-widest text-gray-500 mb-3">{q.label}</p>
                 <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">
-                  {q.title}
+                  {tc?.title ?? q.title}
                 </h2>
                 <p className="text-lg md:text-xl text-gray-400 max-w-lg leading-relaxed">
-                  {q.description}
+                  {tc?.description ?? q.description}
                 </p>
                 <span className={`inline-block mt-5 text-sm font-medium px-4 py-1.5 rounded-full ${
                   q.available
                     ? 'bg-green-500/15 text-green-400'
                     : 'bg-yellow-500/15 text-yellow-400'
                 }`}>
-                  {q.status}
+                  {tc?.status ?? q.status}
                 </span>
+                </>)})()}
               </div>
             ))}
           </div>
@@ -469,67 +474,48 @@ function App() {
         <div className="max-w-2xl w-full">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-center">
-              Contacto
+              {t('home.contactTitle')}
             </h2>
             <p className="text-gray-400 mb-10 text-center">
-              Cuéntanos sobre tu proyecto y te respondemos en menos de 24h.
+              {t('home.contactDesc')}
             </p>
           <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
-            <div className="flex flex-col sm:flex-row gap-5">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-5">
               <div className="flex-1">
-                <label className="text-sm text-gray-400 mb-1.5 block">Nombre completo <span className="text-accent">*</span></label>
-                <input
-                  type="text"
-                  placeholder="Tu nombre"
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors"
-                />
+                <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formName')} <span className="text-accent">*</span></label>
+                <input type="text" placeholder={t('home.formNamePh')} required
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors" />
               </div>
               <div className="flex-1">
-                <label className="text-sm text-gray-400 mb-1.5 block">Email corporativo <span className="text-accent">*</span></label>
-                <input
-                  type="email"
-                  placeholder="nombre@empresa.com"
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors"
-                />
+                <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formEmail')} <span className="text-accent">*</span></label>
+                <input type="email" placeholder={t('home.formEmailPh')} required
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors" />
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-5">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-5">
               <div className="flex-1">
-                <label className="text-sm text-gray-400 mb-1.5 block">Organización</label>
-                <input
-                  type="text"
-                  placeholder="Nombre de tu organización"
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors"
-                />
+                <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formOrg')}</label>
+                <input type="text" placeholder={t('home.formOrgPh')}
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors" />
               </div>
               <div className="flex-1">
-                <label className="text-sm text-gray-400 mb-1.5 block">Área de interés estratégico</label>
-                <select
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-gray-500 outline-none focus:border-accent transition-colors appearance-none"
-                >
-                  <option value="">Selecciona área estratégica</option>
-                  <option value="grc">GRC Estratégico</option>
-                  <option value="ai">Inteligencia Artificial Aplicada</option>
-                  <option value="cyber">Ciberseguridad Ejecutiva</option>
-                  <option value="intel">Inteligencia & Defensa</option>
+                <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formArea')}</label>
+                <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-gray-500 outline-none focus:border-accent transition-colors appearance-none">
+                  <option value="">{t('home.formAreaPh')}</option>
+                  {ta('home.formAreaOpts').map((opt, idx) => (
+                    <option key={idx} value={['grc','ai','cyber','intel'][idx]}>{opt}</option>
+                  ))}
                 </select>
               </div>
             </div>
             <div>
-              <label className="text-sm text-gray-400 mb-1.5 block">Desafíos estratégicos</label>
-              <textarea
-                placeholder="Describe brevemente los retos de tu organización"
-                rows={4}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors resize-none"
-              />
+              <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formChallenges')}</label>
+              <textarea placeholder={t('home.formChallengesPh')} rows={4}
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors resize-none" />
             </div>
-            <button
-              type="submit"
-              className="bg-accent text-white py-3.5 rounded-lg text-base font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all mt-2"
-            >
-              Enviar mensaje
+            <button type="submit"
+              className="bg-accent text-white py-3.5 rounded-lg text-base font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all mt-2">
+              {t('home.formSubmit')}
             </button>
           </form>
           </div>

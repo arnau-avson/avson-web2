@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function SplashScreen({ onFinish }) {
-  const [city, setCity] = useState('madrid')
+  const { t } = useLanguage()
+  const [city, setCity] = useState(() => t('splash.madrid'))
   const [fade, setFade] = useState(true)
   const [exiting, setExiting] = useState(false)
 
@@ -10,7 +12,7 @@ export default function SplashScreen({ onFinish }) {
     const switchTimer = setTimeout(() => {
       setFade(false)
       setTimeout(() => {
-        setCity('barcelona')
+        setCity(t('splash.barcelona'))
         setFade(true)
       }, 300)
     }, 2000)

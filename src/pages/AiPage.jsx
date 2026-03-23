@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShieldBackground from '../components/ShieldBackground'
 import GeoShape from '../components/GeoShape'
+import { isMenuOpen } from '../utils/menuOpen'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const solutions = [
   {
@@ -112,6 +114,7 @@ function useIsMobile() {
 }
 
 export default function AiPage() {
+  const { t } = useLanguage()
   const isMobile = useIsMobile()
   const solSteps = isMobile ? solutions.length : solutions.length - 1
   const innovSteps = innovations.length
@@ -159,6 +162,7 @@ export default function AiPage() {
 
   useEffect(() => {
     const handleWheel = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (Math.abs(e.deltaY) < DELTA_THRESHOLD) return
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
@@ -172,6 +176,7 @@ export default function AiPage() {
     }
 
     const handleTouchMove = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (touchMoved.current) return
       const delta = touchStartY.current - e.touches[0].clientY
@@ -247,23 +252,23 @@ export default function AiPage() {
         <div className="flex-1 flex flex-col justify-center px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left relative z-10">
           <div>
             <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors mb-6">
-              <span>&larr;</span> Volver al inicio
+              <span>&larr;</span> {t('ai.back')}
             </Link>
-            <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">02 — Inteligencia Artificial</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">{t('ai.tag')}</p>
             <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tight mb-3">
               Inteligencia Artificial
             </h1>
             <p className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-6">
-              Donde Machine Learning se encuentra con la Excelencia en Ciberseguridad
+              {t('ai.subtitle')}
             </p>
             <p className="text-base md:text-lg text-gray-400 leading-relaxed">
-              Algoritmos revolucionarios que transforman la ciberseguridad y el cumplimiento normativo con IA real, no hype.
+              {t('ai.desc')}
             </p>
           </div>
         </div>
 
         <div className="relative z-10 flex flex-col items-center gap-2 pb-8 text-gray-500 text-xs uppercase tracking-widest opacity-50">
-          <span>Scroll</span>
+          <span>{t('ai.scroll')}</span>
           <div className="w-px h-8 bg-gray-500 animate-pulse" />
         </div>
       </section>
@@ -292,7 +297,7 @@ export default function AiPage() {
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <p className={`text-xs uppercase tracking-widest mb-1 ${sol.descColor} hidden md:block`}>Soluciones de IA</p>
+                    <p className={`text-xs uppercase tracking-widest mb-1 ${sol.descColor} hidden md:block`}>{t('ai.solTag')}</p>
                     <h2 className={`text-xl md:text-3xl font-bold tracking-tight ${sol.textColor}`}>
                       {sol.title}
                     </h2>
@@ -313,11 +318,7 @@ export default function AiPage() {
                       <span className={`text-xs md:text-sm ${sol.itemColor}`}>{it}</span>
                     </div>
                   ))}
-                </div>
-
-                <a href="/#contacto" className={`inline-block border text-xs md:text-sm font-medium px-5 py-2 md:px-6 md:py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${sol.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
-                  Consulta Experta
-                </a>
+                </div>  
               </div>
 
               {/* Geometric shapes */}
@@ -388,7 +389,7 @@ export default function AiPage() {
                         : 'opacity-0 translate-x-full absolute inset-0 pointer-events-none'
                   }`}
                 >
-                  <p className="text-sm uppercase tracking-widest text-accent mb-4">Innovaciones en Desarrollo</p>
+                  <p className="text-sm uppercase tracking-widest text-accent mb-4">{t('ai.innovTag')}</p>
                   <span className={`inline-block text-xs font-medium px-3 py-1 rounded-full mb-5 ${tagColor}`}>
                     {inn.tag}
                   </span>
@@ -399,7 +400,7 @@ export default function AiPage() {
                     {inn.desc}
                   </p>
                   <a href="/#contacto" className="inline-block bg-accent text-white px-8 py-3 rounded-lg text-sm font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                    Consulta Personalizada
+                    {t('ai.consultCta')}
                   </a>
                 </div>
               )
@@ -407,7 +408,7 @@ export default function AiPage() {
           </div>
 
           {/* Right: step indicators */}
-          <div className="md:w-[280px] shrink-0 flex flex-row md:flex-col gap-3">
+          <div className="md:w-[280px] shrink-0 flex flex-col gap-3">
             {innovations.map((inn, i) => {
               const tagColor = inn.tag === 'Disponible'
                 ? 'text-green-400'

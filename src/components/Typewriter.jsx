@@ -6,8 +6,11 @@ const SCRAMBLE_SPEED = 30
 const PAUSE_RESOLVED = 3000
 const SCRAMBLE_CYCLES = 12
 
+const WORD_COLORS = ['#38bdf8', '#22c55e', '#ef4444']
+
 export default function Typewriter({ words, className = '' }) {
   const [display, setDisplay] = useState('')
+  const [colorIndex, setColorIndex] = useState(0)
   const wordIndex = useRef(0)
   const frameRef = useRef(null)
 
@@ -56,6 +59,7 @@ export default function Typewriter({ words, className = '' }) {
                 } else {
                   setDisplay('')
                   wordIndex.current = (wordIndex.current + 1) % words.length
+                  setColorIndex(wordIndex.current % WORD_COLORS.length)
                   frameRef.current = setTimeout(scrambleAndResolve, 300)
                 }
               }
@@ -77,7 +81,7 @@ export default function Typewriter({ words, className = '' }) {
 
   return (
     <div className={`flex items-center justify-start ${className}`}>
-      <span className="font-mono">{display}</span>
+      <span className="font-mono" style={{ color: WORD_COLORS[colorIndex] }}>{display}</span>
       <span className="ml-0.5 w-[2px] h-[1em] bg-white/40 animate-pulse" />
     </div>
   )

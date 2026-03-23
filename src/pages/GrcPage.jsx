@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShieldBackground from '../components/ShieldBackground'
 import GeoShape from '../components/GeoShape'
+import { isMenuOpen } from '../utils/menuOpen'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const normativas = [
   {
@@ -170,6 +172,7 @@ function useIsMobile() {
 }
 
 export default function GrcPage() {
+  const { t, ta } = useLanguage()
   const isMobile = useIsMobile()
   const normSteps = isMobile ? normativas.length : normativas.length - 1
   const solSteps = soluciones.length
@@ -217,6 +220,7 @@ export default function GrcPage() {
 
   useEffect(() => {
     const handleWheel = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (Math.abs(e.deltaY) < DELTA_THRESHOLD) return
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
@@ -230,6 +234,7 @@ export default function GrcPage() {
     }
 
     const handleTouchMove = (e) => {
+      if (isMenuOpen()) return
       e.preventDefault()
       if (touchMoved.current) return
       const delta = touchStartY.current - e.touches[0].clientY
@@ -314,27 +319,27 @@ export default function GrcPage() {
         <div className="flex-1 flex flex-col justify-center px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left relative z-10">
           <div>
             <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors mb-6">
-              <span>&larr;</span> Volver al inicio
+              <span>&larr;</span> {t('grc.back')}
             </Link>
-            <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">01 — GRC Estratégico</p>
-            <div className="flex items-end gap-4 mb-3">
+            <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">{t('grc.tag')}</p>
+            <div className="flex flex-wrap items-end gap-4 mb-3">
               <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">GRC</h1>
               <a href="https://praesys.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-4 py-1.5 rounded-full bg-green-500/15 text-green-400 hover:bg-green-500/25 transition-all">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Plataforma activa
+                {t('grc.platformActive')}
               </a>
             </div>
             <p className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-6">
-              Governance &bull; Risk &bull; Compliance
+              {t('grc.subtitle')}
             </p>
             <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-8">
-              Automatizamos y fortalecemos la gestión de cumplimiento normativo de tu organización. Certificaciones estratégicas, resiliencia operativa y auditorías inteligentes.
+              {t('grc.desc')}
             </p>
           </div>
         </div>
 
         <div className="relative z-10 flex flex-col items-center gap-2 pb-8 text-gray-500 text-xs uppercase tracking-widest opacity-50">
-          <span>Scroll</span>
+          <span>{t('grc.scroll')}</span>
           <div className="w-px h-8 bg-gray-500 animate-pulse" />
         </div>
       </section>
@@ -359,7 +364,7 @@ export default function GrcPage() {
             >
               <div className="max-w-2xl w-full flex flex-col gap-6">
                 <div>
-                  <p className={`text-sm uppercase tracking-widest mb-2 ${item.descColor}`}>Normativas y marcos</p>
+                  <p className={`text-sm uppercase tracking-widest mb-2 ${item.descColor}`}>{t('grc.normTag')}</p>
                   <span className="inline-block text-accent text-sm font-medium px-3 py-1 border border-accent/30 rounded-full mb-4">
                     {item.tag}
                   </span>
@@ -381,7 +386,7 @@ export default function GrcPage() {
                 </ul>
 
                 <a href="/#contacto" className={`inline-block self-start border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${item.bg === '#ffffff' || item.bg === '#d4a017' ? 'border-gray-400 text-gray-900' : 'border-white/20 text-white'}`}>
-                  Más información
+                  {t('grc.moreInfo')}
                 </a>
               </div>
 
@@ -421,16 +426,16 @@ export default function GrcPage() {
           <div className="flex flex-col md:flex-row gap-10 md:gap-20 items-start">
             {/* Left: header + vertical tabs */}
             <div className="md:w-[280px] shrink-0">
-              <p className="text-sm uppercase tracking-widest text-accent mb-3">Soluciones</p>
+              <p className="text-sm uppercase tracking-widest text-accent mb-3">{t('grc.solTag')}</p>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-white">
-                GRC, de principio a fin
+                {t('grc.solTitle')}
               </h2>
               <p className="text-sm mb-8 leading-relaxed text-gray-400">
-                Servicios modulares que combinan gobierno, riesgo y cumplimiento para acelerar la adopción y sostener la mejora continua.
+                {t('grc.solDesc')}
               </p>
 
               {/* Vertical step indicators */}
-              <div className="flex flex-row md:flex-col gap-1 flex-wrap">
+              <div className="flex flex-col gap-1">
                 {soluciones.map((sol, i) => (
                   <div
                     key={i}
@@ -443,7 +448,7 @@ export default function GrcPage() {
                     <span className={`text-xs font-mono ${i === activeSolucion ? 'text-accent' : 'text-gray-600'}`}>
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    {sol.tab}
+                    {t(`grc.solutions.${i}`).tab}
                   </div>
                 ))}
               </div>
@@ -466,12 +471,12 @@ export default function GrcPage() {
                     <div className="flex items-center gap-4 mb-6">
                       <span className={`text-5xl md:text-6xl font-bold ${sol.bg === '#ffffff' ? 'text-gray-200' : 'text-white/10'}`}>{sol.label.split('#')[1]}</span>
                       <div>
-                        <h3 className={`text-2xl md:text-3xl font-bold ${sol.textColor}`}>{sol.tab}</h3>
-                        <p className="text-base text-accent">{sol.subtitle}</p>
+                        <h3 className={`text-2xl md:text-3xl font-bold ${sol.textColor}`}>{t(`grc.solutions.${i}`).tab}</h3>
+                        <p className="text-base text-accent">{t(`grc.solutions.${i}`).subtitle}</p>
                       </div>
                     </div>
                     <ul className="space-y-4 mb-8">
-                      {sol.items.map((it, idx) => (
+                      {(t(`grc.solutions.${i}`).items || sol.items).map((it, idx) => (
                         <li key={idx} className={`flex items-center gap-4 text-sm md:text-base ${sol.itemColor}`}>
                           <span className="w-6 h-6 rounded-full border border-accent/30 flex items-center justify-center shrink-0">
                             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -481,7 +486,7 @@ export default function GrcPage() {
                       ))}
                     </ul>
                     <a href="/#contacto" className="inline-block bg-accent text-white text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                      Solicitar información
+                      {t('grc.solCta')}
                     </a>
                   </div>
                 </div>
@@ -491,10 +496,10 @@ export default function GrcPage() {
 
           <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <p className="text-sm text-gray-500">
-              ¿No encuentras lo que necesitas? Diseñamos paquetes a medida con KPIs de avance.
+              {t('grc.solCustom')}
             </p>
             <a href="/#contacto" className="text-accent text-sm font-medium hover:underline whitespace-nowrap">
-              Hablar con un consultor &rarr;
+              {t('grc.solConsult')} &rarr;
             </a>
           </div>
         </div>

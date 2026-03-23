@@ -1,7 +1,9 @@
 import { forwardRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const Footer = forwardRef(function Footer(props, ref) {
+  const { t } = useLanguage()
   return (
     <footer
       ref={ref}
@@ -11,31 +13,31 @@ const Footer = forwardRef(function Footer(props, ref) {
         <div>
           <span className="text-2xl font-semibold text-white tracking-tight">avson</span>
           <p className="text-gray-500 text-sm mt-2 max-w-xs">
-            IA aplicada a Governance, Risk & Compliance. Automatiza tu cumplimiento normativo.
+            {t('footer.desc')}
           </p>
         </div>
-        <div className="flex gap-16">
+        <div className="flex flex-col sm:flex-row gap-8 sm:gap-16">
           <div>
-            <h3 className="text-white font-medium mb-3 text-sm">Soluciones</h3>
+            <h3 className="text-white font-medium mb-3 text-sm">{t('footer.solutions')}</h3>
             <ul className="flex flex-col gap-2 text-gray-500 text-sm">
               <li><Link to="/grc" className="hover:text-white transition-colors">GRC</Link></li>
               <li><Link to="/ai" className="hover:text-white transition-colors">Artificial Intelligence</Link></li>
               <li><Link to="/cyber" className="hover:text-white transition-colors">Cybersecurity</Link></li>
-              <li><span className="cursor-pointer hover:text-white transition-colors">Data Intelligence</span></li>
+              <li><Link to="/intel" className="hover:text-white transition-colors">{t('nav.intel')} & {t('nav.contact') === 'Contact' ? 'Defense' : 'Defensa'}</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-medium mb-3 text-sm">Empresa</h3>
+            <h3 className="text-white font-medium mb-3 text-sm">{t('footer.company')}</h3>
             <ul className="flex flex-col gap-2 text-gray-500 text-sm">
-              <li><span className="cursor-pointer hover:text-white transition-colors">Sobre nosotros</span></li>
-              <li><a href="/#contacto" className="hover:text-white transition-colors">Contacto</a></li>
-              <li><span className="cursor-pointer hover:text-white transition-colors">Política de privacidad</span></li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">{t('footer.about')}</span></li>
+              <li><a href="/#contacto" className="hover:text-white transition-colors">{t('footer.contact')}</a></li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">{t('footer.privacy')}</span></li>
             </ul>
           </div>
         </div>
       </div>
       <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-white/10 text-center text-gray-600 text-xs">
-        &copy; {new Date().getFullYear()} avson. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} avson. {t('footer.rights')}
       </div>
     </footer>
   )
