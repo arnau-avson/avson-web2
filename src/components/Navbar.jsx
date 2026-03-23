@@ -15,10 +15,7 @@ export default function Navbar() {
           <a href="#soluciones" className="text-xl text-gray-400 hover:text-white transition-colors">
             Soluciones
           </a>
-          <a href="#sobre" className="text-xl text-gray-400 hover:text-white transition-colors">
-            Sobre nosotros
-          </a>
-          <a href="#contacto" className="cursor-pointer border border-white border-4 text-white px-4 py-1">
+          <a href="#contacto" className="cursor-pointer border border-white border-3 text-white px-4 py-1">
             Contacto
           </a>
         </div>
@@ -40,9 +37,6 @@ export default function Navbar() {
         <div className="flex flex-col px-6 py-4 gap-4">
           <a href="#soluciones" onClick={() => setOpen(false)} className="text-lg text-gray-400 hover:text-white transition-colors">
             Soluciones
-          </a>
-          <a href="#sobre" onClick={() => setOpen(false)} className="text-lg text-gray-400 hover:text-white transition-colors">
-            Sobre nosotros
           </a>
           <a href="#contacto" onClick={() => setOpen(false)} className="text-lg text-white border border-white/20 text-center py-2 hover:border-accent transition-colors">
             Contacto

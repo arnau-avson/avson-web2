@@ -2,6 +2,7 @@ import { useEffect, useRef, useCallback, useState } from 'react'
 import Navbar from './components/Navbar'
 import Typewriter from './components/Typewriter'
 import BubblesBackground from './components/BubblesBackground'
+import SplashScreen from './components/SplashScreen'
 import './App.css'
 
 const panels = [
@@ -13,7 +14,11 @@ const panels = [
       'Resiliencia operativa ISO 22301 con enfoque predictivo',
       'Auditorías inteligentes y gestión proactiva de riesgos',
     ],
-    accent: 'from-purple-500/20 to-blue-500/10',
+    bg: '#0f1b3d',
+    textColor: 'text-white',
+    subtitleColor: 'text-blue-300/60',
+    bulletColor: 'text-blue-100/70',
+    iconColor: 'text-white/5',
     icon: '01',
   },
   {
@@ -24,7 +29,11 @@ const panels = [
       'Plataformas adaptativas con aprendizaje continuo',
       'Ciberinteligencia predictiva y preventiva',
     ],
-    accent: 'from-blue-500/20 to-cyan-500/10',
+    bg: '#ffffff',
+    textColor: 'text-gray-900',
+    subtitleColor: 'text-gray-500',
+    bulletColor: 'text-gray-600',
+    iconColor: 'text-gray-200',
     icon: '02',
   },
   {
@@ -35,7 +44,11 @@ const panels = [
       'Threat Intelligence potenciado por IA propia',
       'Respuesta adaptativa a amenazas emergentes',
     ],
-    accent: 'from-cyan-500/20 to-emerald-500/10',
+    bg: '#0a2e1a',
+    textColor: 'text-white',
+    subtitleColor: 'text-emerald-300/60',
+    bulletColor: 'text-emerald-100/70',
+    iconColor: 'text-white/5',
     icon: '03',
   },
   {
@@ -46,7 +59,11 @@ const panels = [
       'Plataformas OSINT e inteligencia de fuentes abiertas con IA',
       'Sistemas de apoyo a la decisión en tiempo real para operaciones críticas',
     ],
-    accent: 'from-emerald-500/20 to-purple-500/10',
+    bg: '#d4a017',
+    textColor: 'text-gray-900',
+    subtitleColor: 'text-gray-700',
+    bulletColor: 'text-gray-800',
+    iconColor: 'text-black/5',
     icon: '04',
   },
 ]
@@ -108,6 +125,7 @@ function useIsMobile() {
 }
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true)
   const isMobile = useIsMobile()
   const panelSteps = isMobile ? panels.length : panels.length - 1
   const totalSections = 1 + panelSteps + circleQuarters.length + 2
@@ -210,6 +228,7 @@ function App() {
 
   return (
     <div>
+      {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
       {/* Section 0: Hero */}
       <section
         ref={heroRef}
@@ -251,34 +270,34 @@ function App() {
             <div
               key={i}
               className="w-screen md:w-[50vw] h-full flex items-center justify-center relative shrink-0"
+              style={{ backgroundColor: panel.bg }}
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${panel.accent}`} />
               <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-20 px-8 md:px-16 max-w-3xl w-full">
-                <div className="text-[80px] md:text-[140px] font-bold leading-none tracking-tighter text-white/5">
+                <div className={`text-[80px] md:text-[140px] font-bold leading-none tracking-tighter ${panel.iconColor}`}>
                   {panel.icon}
                 </div>
                 <div className="flex-1 text-left">
-                  <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight mb-2">
+                  <h2 className={`text-2xl md:text-4xl font-bold tracking-tight mb-2 ${panel.textColor}`}>
                     {panel.title}
                   </h2>
                   {panel.subtitle && (
-                    <p className="text-sm md:text-base text-gray-500 mb-5">{panel.subtitle}</p>
+                    <p className={`text-sm md:text-base mb-5 ${panel.subtitleColor}`}>{panel.subtitle}</p>
                   )}
                   {panel.bullets ? (
                     <ul className="space-y-3">
                       {panel.bullets.map((b, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm md:text-base text-gray-400 leading-relaxed">
+                        <li key={idx} className={`flex items-start gap-3 text-sm md:text-base leading-relaxed ${panel.bulletColor}`}>
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
                           {b}
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-sm md:text-base text-gray-400 max-w-lg leading-relaxed">
+                    <p className={`text-sm md:text-base max-w-lg leading-relaxed ${panel.bulletColor}`}>
                       {panel.description}
                     </p>
                   )}
-                  <a href="#contacto" className="inline-block mt-6 border border-white/20 text-white text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all">
+                  <a href="#contacto" className={`inline-block mt-6 border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${panel.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
                     Saber más
                   </a>
                 </div>
