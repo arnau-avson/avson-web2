@@ -5,6 +5,7 @@ import Typewriter from './components/Typewriter'
 import BubblesBackground from './components/BubblesBackground'
 import SplashScreen from './components/SplashScreen'
 import Footer from './components/Footer'
+import GeoShape from './components/GeoShape'
 import './App.css'
 
 const panels = [
@@ -23,6 +24,8 @@ const panels = [
     iconColor: 'text-white/5',
     icon: '01',
     link: '/grc',
+    shapeColor: 'rgba(255,255,255,0.08)',
+    shapes: ['square-outline', 'circle', 'hexagon-outline'],
   },
   {
     title: 'Inteligencia Artificial Aplicada',
@@ -38,6 +41,9 @@ const panels = [
     bulletColor: 'text-gray-600',
     iconColor: 'text-gray-200',
     icon: '02',
+    link: '/ai',
+    shapeColor: 'rgba(0,0,0,0.15)',
+    shapes: ['circle-outline', 'square', 'hexagon'],
   },
   {
     title: 'Ciberseguridad Ejecutiva',
@@ -53,6 +59,8 @@ const panels = [
     bulletColor: 'text-emerald-100/70',
     iconColor: 'text-white/5',
     icon: '03',
+    shapeColor: 'rgba(255,255,255,0.07)',
+    shapes: ['hexagon', 'circle-outline', 'square-outline'],
   },
   {
     title: 'Inteligencia & Defensa',
@@ -68,6 +76,8 @@ const panels = [
     bulletColor: 'text-gray-800',
     iconColor: 'text-black/5',
     icon: '04',
+    shapeColor: 'rgba(0,0,0,0.15)',
+    shapes: ['square', 'hexagon-outline', 'circle'],
   },
 ]
 
@@ -322,6 +332,23 @@ function App() {
                       Saber más
                     </a>
                   )}
+                </div>
+              </div>
+
+              {/* Geometric shapes - reversed L */}
+              <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 opacity-60">
+                <div className="flex flex-col items-end -space-y-3">
+                  <div className="transition-transform duration-300 ease-out" style={{ transform: `rotate(${activePanelIndex * (i % 2 === 0 ? 90 : -90)}deg)` }}>
+                    <GeoShape type={panel.shapes[0]} color={panel.shapeColor} size={60} />
+                  </div>
+                  <div className="flex items-end -space-x-5">
+                    <div className="transition-transform duration-300 ease-out" style={{ transform: `rotate(${activePanelIndex * (i % 2 === 0 ? -90 : 90)}deg)` }}>
+                      <GeoShape type={panel.shapes[1]} color={panel.shapeColor} size={75} />
+                    </div>
+                    <div className="transition-transform duration-300 ease-out" style={{ transform: `rotate(${activePanelIndex * 90}deg)` }}>
+                      <GeoShape type={panel.shapes[2]} color={panel.shapeColor} size={90} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

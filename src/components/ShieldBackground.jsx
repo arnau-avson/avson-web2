@@ -96,7 +96,7 @@ function ParticleCloud() {
   })
 
   return (
-    <points ref={pointsRef} position={[0, 0, 0]}>
+    <points ref={pointsRef} position={[5, 0, 0]}>
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" array={positions} count={PARTICLE_COUNT} itemSize={3} />
         <bufferAttribute attach="attributes-color" array={colors} count={PARTICLE_COUNT} itemSize={3} />
@@ -116,7 +116,7 @@ function ParticleCloud() {
 
 export default function ShieldBackground() {
   return (
-    <div className="absolute right-0 top-0 w-[60%] h-[40%] md:w-[50%] md:h-full z-0">
+    <div className="absolute inset-0 z-0">
       <Canvas
         camera={{ position: [0, 0, 6], fov: 45 }}
         dpr={[1, 1.5]}

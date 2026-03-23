@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShieldBackground from '../components/ShieldBackground'
+import GeoShape from '../components/GeoShape'
 
 const normativas = [
   {
@@ -21,6 +22,8 @@ const normativas = [
     textColor: 'text-white',
     descColor: 'text-blue-200/60',
     itemColor: 'text-blue-100/80',
+    shapeColor: 'rgba(255,255,255,0.08)',
+    shapes: ['hexagon-outline', 'circle', 'square-outline'],
   },
   {
     tag: 'ENS',
@@ -38,6 +41,8 @@ const normativas = [
     textColor: 'text-gray-900',
     descColor: 'text-gray-500',
     itemColor: 'text-gray-600',
+    shapeColor: 'rgba(0,0,0,0.15)',
+    shapes: ['circle-outline', 'square', 'hexagon'],
   },
   {
     tag: 'ISO 27001',
@@ -55,6 +60,8 @@ const normativas = [
     textColor: 'text-white',
     descColor: 'text-emerald-200/60',
     itemColor: 'text-emerald-100/80',
+    shapeColor: 'rgba(255,255,255,0.07)',
+    shapes: ['square', 'hexagon-outline', 'circle-outline'],
   },
   {
     tag: 'ISO 22301',
@@ -72,6 +79,8 @@ const normativas = [
     textColor: 'text-white',
     descColor: 'text-indigo-200/60',
     itemColor: 'text-indigo-100/80',
+    shapeColor: 'rgba(255,255,255,0.08)',
+    shapes: ['hexagon', 'circle-outline', 'square'],
   },
   {
     tag: 'DORA',
@@ -89,6 +98,8 @@ const normativas = [
     textColor: 'text-gray-900',
     descColor: 'text-gray-700',
     itemColor: 'text-gray-800',
+    shapeColor: 'rgba(0,0,0,0.15)',
+    shapes: ['circle', 'square-outline', 'hexagon-outline'],
   },
 ]
 
@@ -372,6 +383,23 @@ export default function GrcPage() {
                 <a href="/#contacto" className={`inline-block self-start border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${item.bg === '#ffffff' || item.bg === '#d4a017' ? 'border-gray-400 text-gray-900' : 'border-white/20 text-white'}`}>
                   Más información
                 </a>
+              </div>
+
+              {/* Geometric shapes */}
+              <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 opacity-60">
+                <div className="flex flex-col items-end -space-y-3">
+                  <div className="transition-transform duration-300 ease-out" style={{ transform: `rotate(${activeNormIndex * (i % 2 === 0 ? 90 : -90)}deg)` }}>
+                    <GeoShape type={item.shapes[0]} color={item.shapeColor} size={60} />
+                  </div>
+                  <div className="flex items-end -space-x-5">
+                    <div className="transition-transform duration-300 ease-out" style={{ transform: `rotate(${activeNormIndex * (i % 2 === 0 ? -90 : 90)}deg)` }}>
+                      <GeoShape type={item.shapes[1]} color={item.shapeColor} size={75} />
+                    </div>
+                    <div className="transition-transform duration-300 ease-out" style={{ transform: `rotate(${activeNormIndex * 90}deg)` }}>
+                      <GeoShape type={item.shapes[2]} color={item.shapeColor} size={90} />
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Counter */}

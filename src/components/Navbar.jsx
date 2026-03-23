@@ -45,33 +45,79 @@ export default function Navbar() {
         }`}
       >
         <div className="h-full flex items-center justify-center px-8 md:px-20">
-          <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-            <Link
-              to="/grc"
-              onClick={() => setMenuOpen(false)}
-              className="group flex flex-col gap-3 p-6 md:p-8 border border-white/10 rounded-xl hover:border-accent/50 transition-all"
-            >
-              <span className="text-4xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">01</span>
-              <h3 className="text-xl font-bold text-white">GRC Estratégico</h3>
-              <p className="text-sm text-gray-500">Gobierno, Riesgo y Cumplimiento Inteligente</p>
-            </Link>
+          <div className="max-w-6xl w-full flex flex-col md:flex-row gap-12 md:gap-20">
+            {/* Left: Navigation */}
+            <div className="flex-1">
+              <p className="text-xs uppercase tracking-widest text-gray-500 mb-6">Navegación</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <Link
+                  to="/grc"
+                  onClick={() => setMenuOpen(false)}
+                  className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all"
+                >
+                  <span className="text-3xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">01</span>
+                  <h3 className="text-lg font-bold text-white">GRC Estratégico</h3>
+                  <p className="text-sm text-gray-500">Gobierno, Riesgo y Cumplimiento</p>
+                </Link>
 
-            <div className="group flex flex-col gap-3 p-6 md:p-8 border border-white/10 rounded-xl hover:border-accent/50 transition-all cursor-pointer">
-              <span className="text-4xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">02</span>
-              <h3 className="text-xl font-bold text-white">Inteligencia Artificial</h3>
-              <p className="text-sm text-gray-500">IA Real, No Hype</p>
+                <Link
+                  to="/ai"
+                  onClick={() => setMenuOpen(false)}
+                  className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all"
+                >
+                  <span className="text-3xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">02</span>
+                  <h3 className="text-lg font-bold text-white">Inteligencia Artificial</h3>
+                  <p className="text-sm text-gray-500">IA Real, No Hype</p>
+                </Link>
+
+                <div className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all cursor-pointer">
+                  <span className="text-3xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">03</span>
+                  <h3 className="text-lg font-bold text-white">Ciberseguridad</h3>
+                  <p className="text-sm text-gray-500">CISO as a Service + Threat Intelligence</p>
+                </div>
+
+                <div className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all cursor-pointer">
+                  <span className="text-3xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">04</span>
+                  <h3 className="text-lg font-bold text-white">Inteligencia & Defensa</h3>
+                  <p className="text-sm text-gray-500">Capacidades soberanas para seguridad nacional</p>
+                </div>
+              </div>
             </div>
 
-            <div className="group flex flex-col gap-3 p-6 md:p-8 border border-white/10 rounded-xl hover:border-accent/50 transition-all cursor-pointer">
-              <span className="text-4xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">03</span>
-              <h3 className="text-xl font-bold text-white">Ciberseguridad</h3>
-              <p className="text-sm text-gray-500">CISO as a Service + Threat Intelligence</p>
-            </div>
+            {/* Right: Software */}
+            <div className="md:w-[300px] shrink-0">
+              <p className="text-xs uppercase tracking-widest text-gray-500 mb-6">Software</p>
+              <div className="flex flex-col gap-5">
+                <a
+                  href="https://praesys.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                    <span className="text-xs text-green-400">Activo</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white">Software de GRC</h3>
+                  <p className="text-sm text-gray-500">praesys.ai</p>
+                </a>
 
-            <div className="group flex flex-col gap-3 p-6 md:p-8 border border-white/10 rounded-xl hover:border-accent/50 transition-all cursor-pointer">
-              <span className="text-4xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">04</span>
-              <h3 className="text-xl font-bold text-white">Inteligencia & Defensa</h3>
-              <p className="text-sm text-gray-500">Capacidades soberanas para seguridad nacional</p>
+                <a
+                  href="https://nyctos.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                    <span className="text-xs text-green-400">Activo</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white">Software de Inteligencia</h3>
+                  <p className="text-sm text-gray-500">nyctos.ai</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
