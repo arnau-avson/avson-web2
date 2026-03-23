@@ -495,12 +495,12 @@ function App() {
             <div className="flex flex-col md:flex-row gap-3 md:gap-5">
               <div className="flex-1">
                 <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formOrg')}</label>
-                <input type="text" placeholder={t('home.formOrgPh')}
+                <input type="text" placeholder={t('home.formOrgPh')} required
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors" />
               </div>
               <div className="flex-1">
                 <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formArea')}</label>
-                <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-gray-500 outline-none focus:border-accent transition-colors appearance-none">
+                <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-gray-500 outline-none focus:border-accent transition-colors appearance-none" required>
                   <option value="">{t('home.formAreaPh')}</option>
                   {ta('home.formAreaOpts').map((opt, idx) => (
                     <option key={idx} value={['grc','ai','cyber','intel'][idx]}>{opt}</option>
@@ -510,7 +510,7 @@ function App() {
             </div>
             <div>
               <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formChallenges')}</label>
-              <textarea placeholder={t('home.formChallengesPh')} rows={4}
+              <textarea placeholder={t('home.formChallengesPh')} rows={4} required
                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors resize-none" />
             </div>
             <button type="submit"

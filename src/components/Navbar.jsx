@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
+import ContactModal from './ContactModal'
 
 const languages = [
   { code: 'ES', label: 'Español' },
@@ -15,6 +16,7 @@ const languages = [
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [contactOpen, setContactOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
   const langRef = useRef(null)
 
@@ -81,9 +83,9 @@ export default function Navbar() {
             >
               ☰
             </button>
-            <a href="/#contacto" className="cursor-pointer border border-white border-3 text-white px-4 py-1">
+            <button onClick={() => setContactOpen(true)} className="cursor-pointer border border-white border-3 text-white px-4 py-1">
               {t('nav.contact')}
-            </a>
+            </button>
           </div>
 
           {/* Mobile hamburger */}
@@ -199,6 +201,8 @@ export default function Navbar() {
           {t('nav.close')} <span className="text-lg">&times;</span>
         </button>
       </div>
+
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} />
     </>
   )
 }
