@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import GrcPage from './pages/GrcPage.jsx'
 import AiPage from './pages/AiPage.jsx'
+import CyberPage from './pages/CyberPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/grc" element={<GrcPage />} />
         <Route path="/ai" element={<AiPage />} />
+        <Route path="/cyber" element={<CyberPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

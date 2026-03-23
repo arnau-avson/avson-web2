@@ -286,31 +286,36 @@ export default function AiPage() {
               className="w-screen md:w-[50vw] h-full flex items-center justify-center relative shrink-0 px-8 md:px-16"
               style={{ backgroundColor: sol.bg }}
             >
-              <div className="max-w-2xl w-full flex flex-col gap-5">
-                <div>
-                  <p className={`text-sm uppercase tracking-widest mb-2 ${sol.descColor}`}>Soluciones de IA</p>
-                  <h2 className={`text-2xl md:text-3xl font-bold tracking-tight mb-2 ${sol.textColor}`}>
-                    {sol.title}
-                  </h2>
-                  <p className="text-sm text-accent mb-3">{sol.subtitle}</p>
-                  <p className={`text-sm md:text-base leading-relaxed mb-4 ${sol.descColor}`}>
-                    {sol.description}
-                  </p>
+              <div className="max-w-2xl w-full">
+                <div className="flex items-center gap-3 md:gap-5 mb-4 md:mb-6">
+                  <span className={`text-4xl md:text-7xl font-bold ${sol.bg === '#ffffff' ? 'text-gray-200' : 'text-white/5'}`}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <p className={`text-xs uppercase tracking-widest mb-1 ${sol.descColor} hidden md:block`}>Soluciones de IA</p>
+                    <h2 className={`text-xl md:text-3xl font-bold tracking-tight ${sol.textColor}`}>
+                      {sol.title}
+                    </h2>
+                    <p className="text-xs md:text-sm text-accent">{sol.subtitle}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <p className={`text-xs uppercase tracking-widest mb-3 ${sol.descColor}`}>Capacidades Clave:</p>
-                  <ul className="space-y-2">
-                    {sol.items.map((it, idx) => (
-                      <li key={idx} className={`flex items-center gap-3 text-sm ${sol.itemColor}`}>
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                        {it}
-                      </li>
-                    ))}
-                  </ul>
+                <p className={`text-xs md:text-base leading-relaxed mb-4 md:mb-6 border-l-2 border-accent/30 pl-3 md:pl-4 ${sol.descColor}`}>
+                  {sol.description}
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4 md:mb-6">
+                  {sol.items.map((it, idx) => (
+                    <div key={idx} className={`flex items-start gap-2 md:gap-3 p-2 md:p-3 border rounded-lg ${sol.bg === '#ffffff' ? 'border-gray-200' : 'border-white/5'}`}>
+                      <span className="w-4 h-4 md:w-5 md:h-5 rounded-full border border-accent/30 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-accent" />
+                      </span>
+                      <span className={`text-xs md:text-sm ${sol.itemColor}`}>{it}</span>
+                    </div>
+                  ))}
                 </div>
 
-                <a href="/#contacto" className={`inline-block self-start border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${sol.bg === '#ffffff' ? 'border-gray-400 text-gray-900' : 'border-white/20 text-white'}`}>
+                <a href="/#contacto" className={`inline-block border text-xs md:text-sm font-medium px-5 py-2 md:px-6 md:py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${sol.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
                   Consulta Experta
                 </a>
               </div>

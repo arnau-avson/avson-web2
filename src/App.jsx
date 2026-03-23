@@ -59,6 +59,7 @@ const panels = [
     bulletColor: 'text-emerald-100/70',
     iconColor: 'text-white/5',
     icon: '03',
+    link: '/cyber',
     shapeColor: 'rgba(255,255,255,0.07)',
     shapes: ['hexagon', 'circle-outline', 'square-outline'],
   },

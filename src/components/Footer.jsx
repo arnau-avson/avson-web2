@@ -20,7 +20,7 @@ const Footer = forwardRef(function Footer(props, ref) {
             <ul className="flex flex-col gap-2 text-gray-500 text-sm">
               <li><Link to="/grc" className="hover:text-white transition-colors">GRC</Link></li>
               <li><Link to="/ai" className="hover:text-white transition-colors">Artificial Intelligence</Link></li>
-              <li><span className="cursor-pointer hover:text-white transition-colors">Cybersecurity</span></li>
+              <li><Link to="/cyber" className="hover:text-white transition-colors">Cybersecurity</Link></li>
               <li><span className="cursor-pointer hover:text-white transition-colors">Data Intelligence</span></li>
             </ul>
           </div>

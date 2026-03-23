@@ -44,8 +44,8 @@ export default function Navbar() {
           menuOpen ? 'top-[72px] opacity-100' : 'top-[-100%] opacity-0 pointer-events-none'
         }`}
       >
-        <div className="h-full flex items-center justify-center px-8 md:px-20">
-          <div className="max-w-6xl w-full flex flex-col md:flex-row gap-12 md:gap-20">
+        <div className="h-full overflow-y-auto px-8 md:px-20 py-8 md:py-0 md:flex md:items-center md:justify-center">
+          <div className="max-w-6xl w-full flex flex-col md:flex-row gap-8 md:gap-20">
             {/* Left: Navigation */}
             <div className="flex-1">
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-6">Navegación</p>
@@ -70,11 +70,15 @@ export default function Navbar() {
                   <p className="text-sm text-gray-500">IA Real, No Hype</p>
                 </Link>
 
-                <div className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all cursor-pointer">
+                <Link
+                  to="/cyber"
+                  onClick={() => setMenuOpen(false)}
+                  className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all"
+                >
                   <span className="text-3xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">03</span>
                   <h3 className="text-lg font-bold text-white">Ciberseguridad</h3>
                   <p className="text-sm text-gray-500">CISO as a Service + Threat Intelligence</p>
-                </div>
+                </Link>
 
                 <div className="group flex flex-col gap-3 p-6 border border-white/10 rounded-xl hover:border-accent/50 transition-all cursor-pointer">
                   <span className="text-3xl font-bold text-white/10 group-hover:text-accent/20 transition-colors">04</span>
