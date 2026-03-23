@@ -1,4 +1,5 @@
 import { useEffect, useRef, useCallback, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Typewriter from './components/Typewriter'
 import BubblesBackground from './components/BubblesBackground'
@@ -20,6 +21,7 @@ const panels = [
     bulletColor: 'text-blue-100/70',
     iconColor: 'text-white/5',
     icon: '01',
+    link: '/grc',
   },
   {
     title: 'Inteligencia Artificial Aplicada',
@@ -134,6 +136,7 @@ function App() {
   const currentIndex = useRef(0)
   const lastScrollTime = useRef(0)
   const touchStartY = useRef(0)
+  const touchMoved = useRef(false)
   const heroRef = useRef(null)
   const panelsContainerRef = useRef(null)
   const circleRef = useRef(null)
@@ -177,15 +180,21 @@ function App() {
 
     const handleTouchStart = (e) => {
       touchStartY.current = e.touches[0].clientY
+      touchMoved.current = false
     }
 
-    const handleTouchEnd = (e) => {
+    const handleTouchMove = (e) => {
+      e.preventDefault()
+      if (touchMoved.current) return
+      const delta = touchStartY.current - e.touches[0].clientY
+      if (Math.abs(delta) < 40) return
+      touchMoved.current = true
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
-      const delta = touchStartY.current - e.changedTouches[0].clientY
-      if (Math.abs(delta) < 50) return
       const direction = delta > 0 ? 1 : -1
       goToSection(currentIndex.current + direction)
     }
+
+    const handleTouchEnd = () => {}
 
     const handleKeyDown = (e) => {
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
@@ -200,12 +209,14 @@ function App() {
 
     window.addEventListener('wheel', handleWheel, { passive: false })
     window.addEventListener('touchstart', handleTouchStart, { passive: true })
+    window.addEventListener('touchmove', handleTouchMove, { passive: false })
     window.addEventListener('touchend', handleTouchEnd, { passive: true })
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {
       window.removeEventListener('wheel', handleWheel)
       window.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('touchmove', handleTouchMove)
       window.removeEventListener('touchend', handleTouchEnd)
       window.removeEventListener('keydown', handleKeyDown)
     }
@@ -297,9 +308,15 @@ function App() {
                       {panel.description}
                     </p>
                   )}
-                  <a href="#contacto" className={`inline-block mt-6 border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${panel.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
-                    Saber más
-                  </a>
+                  {panel.link ? (
+                    <Link to={panel.link} className={`inline-block mt-6 border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${panel.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
+                      Saber más
+                    </Link>
+                  ) : (
+                    <a href="#contacto" className={`inline-block mt-6 border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${panel.bg === '#ffffff' ? 'border-gray-300 text-gray-900' : 'border-white/20 text-white'}`}>
+                      Saber más
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
