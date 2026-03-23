@@ -317,12 +317,29 @@ export default function CyberPage() {
               className="w-screen md:w-[50vw] h-full flex items-center justify-center relative shrink-0 px-8 md:px-16"
               style={{ backgroundColor: svc.bg }}
             >
+              {/* Decorative light lines */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute h-px w-[40%] animate-[pulse_5s_ease-in-out_infinite]"
+                  style={{ top: '15%', left: '5%', background: `linear-gradient(90deg, transparent, ${svc.shapeColor}, transparent)` }} />
+                <div className="absolute h-px w-[30%] animate-[pulse_6s_ease-in-out_infinite_1s]"
+                  style={{ top: '85%', right: '10%', background: `linear-gradient(90deg, transparent, ${svc.shapeColor}, transparent)` }} />
+              </div>
+
+              {/* Top-left tag */}
+              <div className="absolute top-8 left-8 md:top-12 md:left-16 flex items-center gap-3">
+                <span className={`text-xs font-mono uppercase tracking-widest ${svc.bg === '#ffffff' || svc.bg === '#d4a017' ? 'text-gray-400' : 'text-white/20'}`}>
+                  {String(i + 1).padStart(2, '0')} / {String(services.length).padStart(2, '0')}
+                </span>
+                <div className={`w-12 h-px ${svc.bg === '#ffffff' || svc.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
+              </div>
+
               <div className="max-w-2xl w-full flex flex-col gap-5">
                 <div>
                   <p className={`text-sm uppercase tracking-widest mb-2 ${svc.descColor}`}>{t('cyber.svcTag')}</p>
                   <h2 className={`text-2xl md:text-3xl font-bold tracking-tight mb-2 ${svc.textColor}`}>
                     {svc.title}
                   </h2>
+                  <div className={`h-px w-16 mb-4 ${svc.bg === '#ffffff' || svc.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
                   <p className="text-sm text-accent mb-3">{svc.subtitle}</p>
                   <p className={`text-sm md:text-base leading-relaxed mb-4 ${svc.descColor}`}>
                     {svc.description}
@@ -332,7 +349,9 @@ export default function CyberPage() {
                 <ul className="space-y-2">
                   {svc.items.map((it, idx) => (
                     <li key={idx} className={`flex items-center gap-3 text-sm ${svc.itemColor}`}>
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                      <span className="w-5 h-5 rounded-full border border-accent/30 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      </span>
                       {it}
                     </li>
                   ))}

@@ -305,7 +305,23 @@ function App() {
               className="w-screen md:w-[50vw] h-full flex items-center justify-center relative shrink-0"
               style={{ backgroundColor: panel.bg }}
             >
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 md:gap-20 px-8 md:px-16 max-w-3xl w-full">
+              {/* Decorative light lines */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute h-px w-[40%] animate-[pulse_5s_ease-in-out_infinite]"
+                  style={{ top: '15%', left: '5%', background: `linear-gradient(90deg, transparent, ${panel.shapeColor}, transparent)` }} />
+                <div className="absolute h-px w-[30%] animate-[pulse_6s_ease-in-out_infinite_1s]"
+                  style={{ top: '85%', right: '10%', background: `linear-gradient(90deg, transparent, ${panel.shapeColor}, transparent)` }} />
+              </div>
+
+              {/* Top-left tag */}
+              <div className="absolute top-8 left-8 md:top-12 md:left-16 flex items-center gap-3">
+                <span className={`text-xs font-mono uppercase tracking-widest ${panel.bg === '#ffffff' || panel.bg === '#d4a017' ? 'text-gray-400' : 'text-white/20'}`}>
+                  {panel.icon} / 04
+                </span>
+                <div className={`w-12 h-px ${panel.bg === '#ffffff' || panel.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
+              </div>
+
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-16 px-8 md:px-16 max-w-3xl w-full">
                 <div className={`text-[80px] md:text-[140px] font-bold leading-none tracking-tighter ${panel.iconColor}`}>
                   {panel.icon}
                 </div>
@@ -316,11 +332,14 @@ function App() {
                   <h2 className={`text-2xl md:text-4xl font-bold tracking-tight mb-2 ${panel.textColor}`}>
                     {tp?.title ?? panel.title}
                   </h2>
+                  <div className={`h-px w-16 mb-4 ${panel.bg === '#ffffff' || panel.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
                   <p className={`text-sm md:text-base mb-5 ${panel.subtitleColor}`}>{tp?.subtitle ?? panel.subtitle}</p>
                   <ul className="space-y-3">
                     {(tp?.bullets ?? panel.bullets ?? []).map((b, idx) => (
                       <li key={idx} className={`flex items-start gap-3 text-sm md:text-base leading-relaxed ${panel.bulletColor}`}>
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                        <span className="w-5 h-5 rounded-full border border-accent/30 flex items-center justify-center shrink-0 mt-0.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        </span>
                         {b}
                       </li>
                     ))}

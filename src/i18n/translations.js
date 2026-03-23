@@ -7,7 +7,7 @@ const es = {
   // Footer
   footer: { desc: 'IA aplicada a Governance, Risk & Compliance. Automatiza tu cumplimiento normativo.',
     solutions: 'Soluciones', company: 'Empresa', about: 'Sobre nosotros', contact: 'Contacto',
-    privacy: 'Política de privacidad', rights: 'Todos los derechos reservados.' },
+    privacy: 'Política de Privacidad', terms: 'Términos y Condiciones', cookies: 'Política de Cookies', rights: 'Todos los derechos reservados.' },
   // Splash
   splash: { madrid: 'madrid', barcelona: 'barcelona' },
   // Home

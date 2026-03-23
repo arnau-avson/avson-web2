@@ -30,14 +30,27 @@ const Footer = forwardRef(function Footer(props, ref) {
             <h3 className="text-white font-medium mb-3 text-sm">{t('footer.company')}</h3>
             <ul className="flex flex-col gap-2 text-gray-500 text-sm">
               <li><span className="cursor-pointer hover:text-white transition-colors">{t('footer.about')}</span></li>
-              <li><a href="/#contacto" className="hover:text-white transition-colors">{t('footer.contact')}</a></li>
-              <li><span className="cursor-pointer hover:text-white transition-colors">{t('footer.privacy')}</span></li>
+              <li><span className="cursor-pointer hover:text-white transition-colors">{t('footer.contact')}</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-white font-medium mb-3 text-sm">{t('footer.contact')}</h3>
+            <ul className="flex flex-col gap-2 text-gray-500 text-sm">
+              <li><a href="mailto:hello@avson.eu" className="hover:text-white transition-colors">hello@avson.eu</a></li>
+              <li>Madrid & Barcelona</li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-white/10 text-center text-gray-600 text-xs">
-        &copy; {new Date().getFullYear()} avson. {t('footer.rights')}
+      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-600 text-xs">
+        <span>&copy; {new Date().getFullYear()} avson. {t('footer.rights')}</span>
+        <div className="flex gap-3">
+          <span className="cursor-pointer hover:text-white transition-colors">{t('footer.privacy')}</span>
+          <span>·</span>
+          <span className="cursor-pointer hover:text-white transition-colors">{t('footer.terms')}</span>
+          <span>·</span>
+          <span className="cursor-pointer hover:text-white transition-colors">{t('footer.cookies')}</span>
+        </div>
       </div>
     </footer>
   )

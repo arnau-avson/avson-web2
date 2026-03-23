@@ -309,6 +309,22 @@ export default function IntelPage() {
               className="w-screen md:w-[50vw] h-full flex items-center justify-center relative shrink-0 px-8 md:px-16"
               style={{ backgroundColor: mod.bg }}
             >
+              {/* Decorative light lines */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute h-px w-[40%] animate-[pulse_5s_ease-in-out_infinite]"
+                  style={{ top: '15%', left: '5%', background: `linear-gradient(90deg, transparent, ${mod.shapeColor}, transparent)` }} />
+                <div className="absolute h-px w-[30%] animate-[pulse_6s_ease-in-out_infinite_1s]"
+                  style={{ top: '85%', right: '10%', background: `linear-gradient(90deg, transparent, ${mod.shapeColor}, transparent)` }} />
+              </div>
+
+              {/* Top-left tag */}
+              <div className="absolute top-8 left-8 md:top-12 md:left-16 flex items-center gap-3">
+                <span className={`text-xs font-mono uppercase tracking-widest ${mod.bg === '#ffffff' || mod.bg === '#d4a017' ? 'text-gray-400' : 'text-white/20'}`}>
+                  {String(i + 1).padStart(2, '0')} / {String(modules.length).padStart(2, '0')}
+                </span>
+                <div className={`w-12 h-px ${mod.bg === '#ffffff' || mod.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
+              </div>
+
               <div className="max-w-2xl w-full">
                 <div className="flex items-center gap-3 md:gap-5 mb-4 md:mb-6">
                   <span className={`text-4xl md:text-7xl font-bold ${mod.bg === '#ffffff' || mod.bg === '#d4a017' ? 'text-gray-200' : 'text-white/5'}`}>
@@ -322,6 +338,7 @@ export default function IntelPage() {
                     <h2 className={`text-xl md:text-3xl font-bold tracking-tight ${mod.textColor}`}>
                       {mod.title}
                     </h2>
+                    <div className={`h-px w-16 mb-1 mt-1 ${mod.bg === '#ffffff' || mod.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
                     <p className="text-xs md:text-sm text-accent">{mod.subtitle}</p>
                   </div>
                 </div>
