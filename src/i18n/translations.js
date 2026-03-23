@@ -87,7 +87,7 @@ const en = {
     softwareGrc: 'GRC Software', softwareIntel: 'Intelligence Software' },
   footer: { desc: 'AI applied to Governance, Risk & Compliance. Automate your regulatory compliance.',
     solutions: 'Solutions', company: 'Company', about: 'About us', contact: 'Contact',
-    privacy: 'Privacy policy', rights: 'All rights reserved.' },
+    privacy: 'Privacy Policy', terms: 'Terms & Conditions', cookies: 'Cookie Policy', rights: 'All rights reserved.' },
   splash: { madrid: 'madrid', barcelona: 'barcelona' },
   home: {
     scroll: 'Scroll', learnMore: 'Learn more',
@@ -161,7 +161,7 @@ const ca = {
     softwareGrc: 'Software de GRC', softwareIntel: "Software d'Intel·ligència" },
   footer: { desc: "IA aplicada a Governance, Risk & Compliance. Automatitza el teu compliment normatiu.",
     solutions: 'Solucions', company: 'Empresa', about: 'Sobre nosaltres', contact: 'Contacte',
-    privacy: 'Política de privacitat', rights: 'Tots els drets reservats.' },
+    privacy: 'Política de Privacitat', terms: 'Termes i Condicions', cookies: 'Política de Cookies', rights: 'Tots els drets reservats.' },
   splash: { madrid: 'madrid', barcelona: 'barcelona' },
   home: {
     scroll: 'Scroll', learnMore: 'Saber-ne més',
@@ -222,7 +222,7 @@ const eu = {
     softwareGrc: 'GRC Softwarea', softwareIntel: 'Adimen Softwarea' },
   footer: { desc: 'AA aplikatua Governance, Risk & Compliance-ra. Automatizatu zure arau-betetzea.',
     solutions: 'Irtenbideak', company: 'Enpresa', about: 'Guri buruz', contact: 'Kontaktua',
-    privacy: 'Pribatutasun politika', rights: 'Eskubide guztiak erreserbatuta.' },
+    privacy: 'Pribatutasun Politika', terms: 'Baldintzak', cookies: 'Cookie Politika', rights: 'Eskubide guztiak erreserbatuta.' },
   splash: { madrid: 'madrid', barcelona: 'barcelona' },
   home: {
     scroll: 'Scroll', learnMore: 'Gehiago jakin',
@@ -283,7 +283,7 @@ const he = {
     softwareGrc: 'תוכנת GRC', softwareIntel: 'תוכנת מודיעין' },
   footer: { desc: 'AI מיושם לממשל, סיכונים וציות. אוטומציה של ציות רגולטורי.',
     solutions: 'פתרונות', company: 'חברה', about: 'אודותינו', contact: 'צור קשר',
-    privacy: 'מדיניות פרטיות', rights: 'כל הזכויות שמורות.' },
+    privacy: 'מדיניות פרטיות', terms: 'תנאים והגבלות', cookies: 'מדיניות עוגיות', rights: 'כל הזכויות שמורות.' },
   splash: { madrid: 'מדריד', barcelona: 'ברצלונה' },
   home: {
     scroll: 'גלול', learnMore: 'למידע נוסף',
@@ -344,7 +344,7 @@ const ar = {
     softwareGrc: 'برمجيات GRC', softwareIntel: 'برمجيات الاستخبارات' },
   footer: { desc: 'الذكاء الاصطناعي المطبق على الحوكمة والمخاطر والامتثال.',
     solutions: 'الحلول', company: 'الشركة', about: 'عنا', contact: 'اتصل بنا',
-    privacy: 'سياسة الخصوصية', rights: 'جميع الحقوق محفوظة.' },
+    privacy: 'سياسة الخصوصية', terms: 'الشروط والأحكام', cookies: 'سياسة ملفات تعريف الارتباط', rights: 'جميع الحقوق محفوظة.' },
   splash: { madrid: 'مدريد', barcelona: 'برشلونة' },
   home: {
     scroll: 'تمرير', learnMore: 'اعرف المزيد',
@@ -405,7 +405,7 @@ const pl = {
     softwareGrc: 'Oprogramowanie GRC', softwareIntel: 'Oprogramowanie wywiadowcze' },
   footer: { desc: 'AI zastosowane do zarządzania, ryzyka i zgodności. Automatyzacja zgodności regulacyjnej.',
     solutions: 'Rozwiązania', company: 'Firma', about: 'O nas', contact: 'Kontakt',
-    privacy: 'Polityka prywatności', rights: 'Wszelkie prawa zastrzeżone.' },
+    privacy: 'Polityka Prywatności', terms: 'Regulamin', cookies: 'Polityka Cookies', rights: 'Wszelkie prawa zastrzeżone.' },
   splash: { madrid: 'madryt', barcelona: 'barcelona' },
   home: {
     scroll: 'Przewiń', learnMore: 'Dowiedz się więcej',
