@@ -249,6 +249,8 @@ export default function GrcPage() {
     const handleTouchEnd = () => {}
 
     const handleKeyDown = (e) => {
+      const tag = e.target.tagName
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || e.target.isContentEditable) return
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
       if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
         e.preventDefault()

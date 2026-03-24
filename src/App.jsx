@@ -9,6 +9,7 @@ import GeoShape from './components/GeoShape'
 import CookieBanner from './components/CookieBanner'
 import SEO from './components/SEO'
 import { isMenuOpen } from './utils/menuOpen'
+import { sendContactEmail } from './utils/sendContact'
 import { useLanguage } from './i18n/LanguageContext'
 import './App.css'
 
@@ -155,6 +156,9 @@ function App() {
   const totalSections = 1 + panelSteps + circleQuarters.length + 2
 
   const [sectionIndex, setSectionIndex] = useState(0)
+  const [formSending, setFormSending] = useState(false)
+  const [formSent, setFormSent] = useState(false)
+  const [formError, setFormError] = useState(false)
   const currentIndex = useRef(0)
   const lastScrollTime = useRef(0)
   const touchStartY = useRef(0)
@@ -221,6 +225,8 @@ function App() {
     const handleTouchEnd = () => {}
 
     const handleKeyDown = (e) => {
+      const tag = e.target.tagName
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || e.target.isContentEditable) return
       if (Date.now() - lastScrollTime.current < COOLDOWN_MS) return
       if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
         e.preventDefault()
@@ -502,28 +508,56 @@ function App() {
             <p className="text-gray-400 mb-10 text-center">
               {t('home.contactDesc')}
             </p>
-          <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+          {formSent ? (
+            <div className="text-center py-20">
+              <div className="text-5xl mb-6">&#10003;</div>
+              <h2 className="text-3xl font-bold text-white mb-3">{t('home.formSent')}</h2>
+              <p className="text-gray-400">{t('home.formSentDesc')}</p>
+            </div>
+          ) : (
+          <form className="flex flex-col gap-5" onSubmit={async (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setFormSending(true)
+            setFormError(false)
+            const f = e.target
+            try {
+              await sendContactEmail({
+                name: f.elements.name.value,
+                email: f.elements.email.value,
+                org: f.elements.org.value,
+                area: f.elements.area.value,
+                challenges: f.elements.challenges.value,
+              })
+              setFormSent(true)
+              f.reset()
+            } catch {
+              setFormError(true)
+            } finally {
+              setFormSending(false)
+            }
+          }}>
             <div className="flex flex-col md:flex-row gap-3 md:gap-5">
               <div className="flex-1">
                 <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formName')} <span className="text-accent">*</span></label>
-                <input type="text" placeholder={t('home.formNamePh')} required
+                <input name="name" type="text" placeholder={t('home.formNamePh')} required
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors" />
               </div>
               <div className="flex-1">
                 <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formEmail')} <span className="text-accent">*</span></label>
-                <input type="email" placeholder={t('home.formEmailPh')} required
+                <input name="email" type="email" placeholder={t('home.formEmailPh')} required
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors" />
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-3 md:gap-5">
               <div className="flex-1">
                 <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formOrg')}</label>
-                <input type="text" placeholder={t('home.formOrgPh')} required
+                <input name="org" type="text" placeholder={t('home.formOrgPh')} required
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors" />
               </div>
               <div className="flex-1">
                 <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formArea')}</label>
-                <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-gray-500 outline-none focus:border-accent transition-colors appearance-none" required>
+                <select name="area" className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-gray-500 outline-none focus:border-accent transition-colors appearance-none" required>
                   <option value="">{t('home.formAreaPh')}</option>
                   {ta('home.formAreaOpts').map((opt, idx) => (
                     <option key={idx} value={['grc','ai','cyber','intel'][idx]}>{opt}</option>
@@ -533,14 +567,18 @@ function App() {
             </div>
             <div>
               <label className="text-sm text-gray-400 mb-1.5 block">{t('home.formChallenges')}</label>
-              <textarea placeholder={t('home.formChallengesPh')} rows={4} required
+              <textarea name="challenges" placeholder={t('home.formChallengesPh')} rows={4} required
                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 outline-none focus:border-accent transition-colors resize-none" />
             </div>
-            <button type="submit"
-              className="bg-accent text-white py-3.5 rounded-lg text-base font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all mt-2">
-              {t('home.formSubmit')}
+            {formError && (
+              <p className="text-red-400 text-sm text-center">{t('home.formError')}</p>
+            )}
+            <button type="submit" disabled={formSending}
+              className="bg-accent text-white py-3.5 rounded-lg text-base font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all mt-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer">
+              {formSending ? '...' : t('home.formSubmit')}
             </button>
           </form>
+          )}
           </div>
         </div>
       </section>
