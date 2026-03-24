@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.DEV ? 'http://localhost:3001' : ''
+const API_BASE = import.meta.env.DEV ? 'http://localhost:3001' : 'https://mail.avson.eu'
 
 export async function sendContactEmail({ name, email, org, area, challenges }) {
   const res = await fetch(`${API_BASE}/api/contact`, {

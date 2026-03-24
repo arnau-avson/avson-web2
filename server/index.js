@@ -149,7 +149,7 @@ app.post('/api/contact', async (req, res) => {
   }
 })
 
-const PORT = 3001
+const PORT = process.env.PORT || 3011
 app.listen(PORT, '0.0.0.0', () => {
   process.stdout.write(`Contact API running on port ${PORT}\n`)
 })

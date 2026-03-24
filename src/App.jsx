@@ -502,12 +502,6 @@ function App() {
       >
         <div className="max-w-2xl w-full">
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-center">
-              {t('home.contactTitle')}
-            </h2>
-            <p className="text-gray-400 mb-10 text-center">
-              {t('home.contactDesc')}
-            </p>
           {formSent ? (
             <div className="text-center py-20">
               <div className="text-5xl mb-6">&#10003;</div>
@@ -515,6 +509,13 @@ function App() {
               <p className="text-gray-400">{t('home.formSentDesc')}</p>
             </div>
           ) : (
+          <>
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-center">
+              {t('home.contactTitle')}
+            </h2>
+            <p className="text-gray-400 mb-10 text-center">
+              {t('home.contactDesc')}
+            </p>
           <form className="flex flex-col gap-5" onSubmit={async (e) => {
             e.preventDefault()
             e.stopPropagation()
@@ -578,6 +579,7 @@ function App() {
               {formSending ? '...' : t('home.formSubmit')}
             </button>
           </form>
+          </>
           )}
           </div>
         </div>
