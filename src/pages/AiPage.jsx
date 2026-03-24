@@ -416,9 +416,6 @@ export default function AiPage() {
                   <p className="text-lg text-gray-400 leading-relaxed mb-8 max-w-lg">
                     {inn.desc}
                   </p>
-                  <a href="/#contacto" className="inline-block bg-accent text-white px-8 py-3 rounded-lg text-sm font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                    {t('ai.consultCta')}
-                  </a>
                 </div>
               )
             })}

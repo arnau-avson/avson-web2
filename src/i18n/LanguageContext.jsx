@@ -4,7 +4,12 @@ import { translations } from './translations'
 const LanguageContext = createContext()
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('ES')
+  const [lang, setLangState] = useState(() => localStorage.getItem('avson-lang') || 'ES')
+
+  const setLang = (l) => {
+    setLangState(l)
+    localStorage.setItem('avson-lang', l)
+  }
 
   const t = (key) => {
     const keys = key.split('.')

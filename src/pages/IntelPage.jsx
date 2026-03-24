@@ -270,7 +270,7 @@ export default function IntelPage() {
               <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
                 NYCTOS
               </h1>
-              <a href="https://nyctos.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-4 py-1.5 rounded-full bg-green-500/15 text-green-400 hover:bg-green-500/25 transition-all mb-1">
+              <a href="https://nyctos.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-6 py-2.5 bg-green-500/20 text-green-400 border border-green-500/40 hover:bg-green-500/30 hover:border-green-400 hover:scale-105 transition-all cursor-pointer mb-1">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 {t('intel.version')}
               </a>
@@ -446,9 +446,6 @@ export default function IntelPage() {
                     {uc.challenge}
                   </p>
                 </div>
-                <a href="https://nyctos.ai/" target="_blank" rel="noopener noreferrer" className="inline-block bg-accent text-white px-8 py-3 rounded-lg text-sm font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                  {t('intel.demoBtn')}
-                </a>
               </div>
             ))}
           </div>

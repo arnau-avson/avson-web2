@@ -324,7 +324,7 @@ export default function GrcPage() {
             <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">{t('grc.tag')}</p>
             <div className="flex flex-wrap items-end gap-4 mb-3">
               <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">GRC</h1>
-              <a href="https://praesys.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-4 py-1.5 rounded-full bg-green-500/15 text-green-400 hover:bg-green-500/25 transition-all">
+              <a href="https://praesys.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-6 py-2.5 bg-green-500/20 text-green-400 border border-green-500/40 hover:bg-green-500/30 hover:border-green-400 hover:scale-105 transition-all cursor-pointer">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 {t('grc.platformActive')}
               </a>
@@ -404,9 +404,6 @@ export default function GrcPage() {
                   ))}
                 </ul>
 
-                <a href="/#contacto" className={`inline-block self-start border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${item.bg === '#ffffff' || item.bg === '#d4a017' ? 'border-gray-400 text-gray-900' : 'border-white/20 text-white'}`}>
-                  {t('grc.moreInfo')}
-                </a>
               </div>
 
               {/* Geometric shapes */}
@@ -504,9 +501,6 @@ export default function GrcPage() {
                         </li>
                       ))}
                     </ul>
-                    <a href="/#contacto" className="inline-block bg-accent text-white text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                      {t('grc.solCta')}
-                    </a>
                   </div>
                 </div>
               ))}

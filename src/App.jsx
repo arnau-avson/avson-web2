@@ -6,6 +6,7 @@ import BubblesBackground from './components/BubblesBackground'
 import SplashScreen from './components/SplashScreen'
 import Footer from './components/Footer'
 import GeoShape from './components/GeoShape'
+import CookieBanner from './components/CookieBanner'
 import { isMenuOpen } from './utils/menuOpen'
 import { useLanguage } from './i18n/LanguageContext'
 import './App.css'
@@ -262,6 +263,7 @@ function App() {
   return (
     <div>
       {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
+      <CookieBanner />
       {/* Section 0: Hero */}
       <section
         ref={heroRef}

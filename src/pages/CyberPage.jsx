@@ -357,9 +357,6 @@ export default function CyberPage() {
                   ))}
                 </ul>
 
-                <a href="/#contacto" className={`inline-block self-start border text-sm font-medium px-6 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all ${svc.bg === '#ffffff' ? 'border-gray-400 text-gray-900' : 'border-white/20 text-white'}`}>
-                  {t('cyber.evalBtn')}
-                </a>
               </div>
 
               {/* Geometric shapes */}
@@ -444,9 +441,6 @@ export default function CyberPage() {
                     </div>
                   ))}
                 </div>
-                <a href="/#contacto" className="inline-block bg-accent text-white px-8 py-3 rounded-lg text-sm font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all">
-                  {t('cyber.evalStrat')}
-                </a>
               </div>
             ))}
           </div>
