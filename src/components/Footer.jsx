@@ -11,7 +11,7 @@ const Footer = forwardRef(function Footer(props, ref) {
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
         <div>
-          <span className="text-2xl font-semibold text-white tracking-tight">avson</span>
+          <span className="text-2xl font-semibold text-white tracking-tight brand-ltr inline-block">avson</span>
           <p className="text-gray-500 text-sm mt-2 max-w-xs">
             {t('footer.desc')}
           </p>

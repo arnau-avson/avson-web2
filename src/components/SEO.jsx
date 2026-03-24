@@ -22,7 +22,7 @@ export default function SEO({ page = 'home', customTitle, customDescription }) {
 
   return (
     <Helmet>
-      <html lang={langToHtml[lang] || 'es'} dir={lang === 'HE' || lang === 'AR' ? 'rtl' : 'ltr'} />
+      <html lang={langToHtml[lang] || 'es'} />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={seo.keywords} />

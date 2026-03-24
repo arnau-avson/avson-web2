@@ -13,3 +13,20 @@ body {
   background: #000;
   font-family: 'Space Grotesk', system-ui, sans-serif;
 }
+
+/* RTL text support for Hebrew and Arabic */
+.rtl-text {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Keep brand name always LTR */
+.brand-ltr {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+/* Keep carousels and layouts always LTR */
+.layout-ltr {
+  direction: ltr;
+}

@@ -27,8 +27,10 @@ export function LanguageProvider({ children }) {
     return Array.isArray(result) ? result : []
   }
 
+  const isRTL = lang === 'HE' || lang === 'AR'
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t, ta }}>
+    <LanguageContext.Provider value={{ lang, setLang, t, ta, isRTL }}>
       {children}
     </LanguageContext.Provider>
   )

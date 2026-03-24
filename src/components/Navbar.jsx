@@ -14,7 +14,7 @@ const languages = [
 ]
 
 export default function Navbar() {
-  const { lang, setLang, t } = useLanguage()
+  const { lang, setLang, t, isRTL } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
@@ -48,7 +48,7 @@ export default function Navbar() {
     <>
       <nav className="bg-black w-full relative z-50">
         <div className="flex items-center justify-between px-6 py-6 md:px-12">
-          <Link to="/" className="text-2xl font-semibold tracking-tight text-white">
+          <Link to="/" className="text-2xl font-semibold tracking-tight text-white brand-ltr">
             avs<span className="inline-block border-t-[4px] border-white leading-[0.85]">on</span>
           </Link>
 
@@ -108,7 +108,7 @@ export default function Navbar() {
         }`}
       >
         <div className="h-full overflow-y-auto px-6 md:px-20 py-6 md:py-0 md:flex md:items-center md:justify-center">
-          <div className="max-w-6xl w-full flex flex-col md:flex-row gap-6 md:gap-20">
+          <div className={`max-w-6xl w-full flex flex-col md:flex-row gap-6 md:gap-20 ${isRTL ? 'rtl-text' : ''}`}>
             {/* Left: Navigation */}
             <div className="flex-1">
               <p className="text-xs uppercase tracking-widest text-gray-500 mb-4 md:mb-6">{t('nav.navigation')}</p>

@@ -115,7 +115,7 @@ function useIsMobile() {
 }
 
 export default function AiPage() {
-  const { t } = useLanguage()
+  const { t, isRTL } = useLanguage()
   const isMobile = useIsMobile()
   const solSteps = isMobile ? solutions.length : solutions.length - 1
   const innovSteps = innovations.length
@@ -251,7 +251,7 @@ export default function AiPage() {
         <ShieldBackground />
         <Navbar />
 
-        <div className="flex-1 flex flex-col justify-center px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left relative z-10">
+        <div className={`flex-1 flex flex-col justify-center px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center ${isRTL ? 'md:text-right' : 'md:text-left'} relative z-10`}>
           <div>
             <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors mb-6">
               <span>&larr;</span> {t('ai.back')}
@@ -281,7 +281,7 @@ export default function AiPage() {
         className="h-screen relative overflow-hidden bg-black"
       >
         <div
-          className="flex h-full transition-transform duration-700 ease-in-out will-change-transform"
+          className="layout-ltr flex h-full transition-transform duration-700 ease-in-out will-change-transform"
           style={{
             width: `${solutions.length * (isMobile ? 100 : 50)}vw`,
             transform: `translateX(-${activeSolIndex * (isMobile ? 100 : 50)}vw)`,

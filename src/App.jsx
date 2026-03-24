@@ -144,7 +144,7 @@ function useIsMobile() {
 }
 
 function App() {
-  const { t, ta } = useLanguage()
+  const { t, ta, isRTL } = useLanguage()
   const [showSplash, setShowSplash] = useState(() => {
     if (sessionStorage.getItem('avson-visited')) return false
     sessionStorage.setItem('avson-visited', '1')
@@ -275,8 +275,8 @@ function App() {
 
         <Navbar />
 
-        <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-8 md:items-start md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left">
-          <h1 className="text-[clamp(56px,10vw,120px)] font-bold leading-none tracking-[-3px] text-white">
+        <div className={`relative z-10 flex-1 flex flex-col justify-center items-center px-8 md:items-start md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left ${isRTL ? 'md:items-end md:text-right md:ml-auto md:mr-0' : ''}`}>
+          <h1 className="text-[clamp(56px,10vw,120px)] font-bold leading-none tracking-[-3px] text-white brand-ltr">
             avs<span className="inline-block border-t-[8px] border-white leading-[0.85]">on</span>
           </h1>
           <Typewriter
@@ -297,7 +297,7 @@ function App() {
         className="h-screen relative overflow-hidden bg-black"
       >
         <div
-          className="flex h-full transition-transform duration-700 ease-in-out will-change-transform"
+          className="flex h-full transition-transform duration-700 ease-in-out will-change-transform layout-ltr"
           style={{
             width: `${panels.length * (isMobile ? 100 : 50)}vw`,
             transform: `translateX(-${activePanelIndex * (isMobile ? 100 : 50)}vw)`,
@@ -329,7 +329,7 @@ function App() {
                 <div className={`text-[80px] md:text-[140px] font-bold leading-none tracking-tighter ${panel.iconColor}`}>
                   {panel.icon}
                 </div>
-                <div className="flex-1 text-left">
+                <div className={`flex-1 ${isRTL ? 'text-right' : 'text-left'}`}>
                   {(() => {
                     const tp = t(`home.panels.${i}`)
                     return (<>

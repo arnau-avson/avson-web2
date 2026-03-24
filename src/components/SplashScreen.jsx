@@ -38,7 +38,7 @@ export default function SplashScreen({ onFinish }) {
       }`}
     >
       <div className="flex items-center gap-4">
-        <span className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+        <span className="text-3xl md:text-5xl font-bold text-white tracking-tight brand-ltr">
           avson
         </span>
         <span className="w-px h-8 md:h-12 bg-white/30" />

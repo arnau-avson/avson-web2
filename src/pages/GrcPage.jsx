@@ -173,7 +173,7 @@ function useIsMobile() {
 }
 
 export default function GrcPage() {
-  const { t, ta } = useLanguage()
+  const { t, ta, isRTL } = useLanguage()
   const isMobile = useIsMobile()
   const normSteps = isMobile ? normativas.length : normativas.length - 1
   const solSteps = soluciones.length
@@ -318,14 +318,14 @@ export default function GrcPage() {
 
         <Navbar />
 
-        <div className="flex-1 flex flex-col justify-center px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left relative z-10">
+        <div className={`flex-1 flex flex-col justify-center px-8 md:px-20 gap-5 w-full md:max-w-[50%] text-center ${isRTL ? 'md:text-right' : 'md:text-left'} relative z-10`}>
           <div>
             <Link to="/" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors mb-6">
               <span>&larr;</span> {t('grc.back')}
             </Link>
             <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">{t('grc.tag')}</p>
             <div className="flex flex-wrap items-end gap-4 mb-3">
-              <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">GRC</h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight brand-ltr">GRC</h1>
               <a href="https://praesys.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-6 py-2.5 bg-green-500/20 text-green-400 border border-green-500/40 hover:bg-green-500/30 hover:border-green-400 hover:scale-105 transition-all cursor-pointer">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 {t('grc.platformActive')}
@@ -352,7 +352,7 @@ export default function GrcPage() {
         className="h-screen relative overflow-hidden bg-black"
       >
         <div
-          className="flex h-full transition-transform duration-700 ease-in-out will-change-transform"
+          className="layout-ltr flex h-full transition-transform duration-700 ease-in-out will-change-transform"
           style={{
             width: `${normativas.length * (isMobile ? 100 : 50)}vw`,
             transform: `translateX(-${activeNormIndex * (isMobile ? 100 : 50)}vw)`,
