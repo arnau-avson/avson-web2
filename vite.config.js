@@ -7,12 +7,12 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: '0.0.0.0',
-    port: 3000,
+    port: 3002,
     allowedHosts: ['avson.eu'],
   },
   preview: {
     host: '0.0.0.0',
-    port: 3000,
+    port: 3002,
     allowedHosts: ['avson.eu'],
   },
   build: {
