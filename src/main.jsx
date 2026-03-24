@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { LanguageProvider } from './i18n/LanguageContext'
 import './index.css'
 import App from './App.jsx'
@@ -11,6 +12,7 @@ import IntelPage from './pages/IntelPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <HelmetProvider>
     <LanguageProvider>
     <BrowserRouter>
       <Routes>
@@ -22,5 +24,6 @@ createRoot(document.getElementById('root')).render(
       </Routes>
     </BrowserRouter>
     </LanguageProvider>
+    </HelmetProvider>
   </StrictMode>,
 )

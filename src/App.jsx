@@ -7,6 +7,7 @@ import SplashScreen from './components/SplashScreen'
 import Footer from './components/Footer'
 import GeoShape from './components/GeoShape'
 import CookieBanner from './components/CookieBanner'
+import SEO from './components/SEO'
 import { isMenuOpen } from './utils/menuOpen'
 import { useLanguage } from './i18n/LanguageContext'
 import './App.css'
@@ -262,6 +263,7 @@ function App() {
 
   return (
     <div>
+      <SEO page="home" />
       {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
       <CookieBanner />
       {/* Section 0: Hero */}
@@ -275,7 +277,7 @@ function App() {
 
         <div className="relative z-10 flex-1 flex flex-col justify-center items-center px-8 md:items-start md:px-20 gap-5 w-full md:max-w-[50%] text-center md:text-left">
           <h1 className="text-[clamp(56px,10vw,120px)] font-bold leading-none tracking-[-3px] text-white">
-            avson
+            avs<span className="inline-block border-t-[8px] border-white leading-[0.85]">on</span>
           </h1>
           <Typewriter
             words={ta('home.typewriter')}

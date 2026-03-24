@@ -49,7 +49,7 @@ export default function Navbar() {
       <nav className="bg-black w-full relative z-50">
         <div className="flex items-center justify-between px-6 py-6 md:px-12">
           <Link to="/" className="text-2xl font-semibold tracking-tight text-white">
-            avson
+            avs<span className="inline-block border-t-[4px] border-white leading-[0.85]">on</span>
           </Link>
 
           {/* Language selector */}

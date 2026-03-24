@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShieldBackground from '../components/ShieldBackground'
+import SEO from '../components/SEO'
 import GeoShape from '../components/GeoShape'
 import { isMenuOpen } from '../utils/menuOpen'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -241,6 +242,7 @@ export default function IntelPage() {
 
   return (
     <div>
+      <SEO page="intel" />
       {/* Section 0: Hero */}
       <section
         ref={heroRef}
