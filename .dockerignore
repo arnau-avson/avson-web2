@@ -1,0 +1,4 @@
+code/node_modules
+code/server/node_modules
+code/dist
+.git

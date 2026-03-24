@@ -10,7 +10,7 @@ const TENANT = process.env.AZURE_TENANT_ID
 const CLIENT_ID = process.env.AZURE_CLIENT_ID
 const CLIENT_SECRET = process.env.AZURE_CLIENT_SECRET
 const SENDER = process.env.MAIL_SENDER || 'support@avson.eu'
-const RECIPIENT = process.env.MAIL_RECIPIENT || 'arnau@avson.eu'
+const RECIPIENT = process.env.MAIL_RECIPIENT || 'hello@avson.eu'
 
 function buildConfirmationEmail(name) {
   return `

@@ -1,0 +1,9 @@
+services:
+  avson:
+    build: .
+    ports:
+      - "3000:3000"
+      - "3011:3011"
+    env_file:
+      - code/server/.env
+    restart: unless-stopped
