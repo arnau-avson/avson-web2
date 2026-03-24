@@ -10,7 +10,7 @@ RUN npm run build
 
 # Install server dependencies
 WORKDIR /app/server
-RUN npm ci
+RUN npm install
 
 # Expose ports: 3000 (frontend) and 3011 (API)
 EXPOSE 3000 3011
