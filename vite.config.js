@@ -19,9 +19,9 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          three: ['three', '@react-three/fiber', '@react-three/drei'],
-          vendor: ['react', 'react-dom', 'react-router-dom'],
+        manualChunks(id) {
+          if (id.includes('three') || id.includes('@react-three')) return 'three'
+          if (id.includes('react-dom') || id.includes('react-router')) return 'vendor'
         },
       },
     },
