@@ -11,20 +11,29 @@ export function LanguageProvider({ children }) {
     localStorage.setItem('avson-lang', l)
   }
 
-  const t = (key) => {
+  const lookup = (source, key) => {
     const keys = key.split('.')
-    let val = translations[lang]
+    let val = source
     for (const k of keys) {
-      if (val == null) return key
+      if (val == null) return undefined
       val = val[k]
     }
-    return val ?? key
+    return val
+  }
+
+  const t = (key) => {
+    const val = lookup(translations[lang], key)
+    if (val != null) return val
+    const fallback = lookup(translations.ES, key)
+    return fallback ?? key
   }
 
   // For arrays (like bullet lists)
   const ta = (key) => {
     const result = t(key)
-    return Array.isArray(result) ? result : []
+    if (Array.isArray(result)) return result
+    const fallback = lookup(translations.ES, key)
+    return Array.isArray(fallback) ? fallback : []
   }
 
   const isRTL = lang === 'HE' || lang === 'AR'

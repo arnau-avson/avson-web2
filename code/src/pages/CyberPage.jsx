@@ -8,117 +8,11 @@ import GeoShape from '../components/GeoShape'
 import { isMenuOpen } from '../utils/menuOpen'
 import { useLanguage } from '../i18n/LanguageContext'
 
-const services = [
-  {
-    title: 'CISO as a Service',
-    subtitle: 'Nuestro servicio principal de ciberseguridad',
-    description: 'Acceso inmediato a liderazgo ejecutivo especializado en ciberseguridad, sin las complejidades de contratación interna. Un equipo multidisciplinar que integra estrategia, gobierno y operaciones de seguridad avanzada.',
-    items: [
-      'Liderazgo Estratégico: Reporte directo a dirección ejecutiva',
-      'Políticas & Governance: Desarrollo de marcos normativos completos',
-      'Respuesta a Incidentes: Gestión integral de crisis y recuperación',
-      'Experiencia ejecutiva inmediata: +25 años en organizaciones Fortune 500',
-    ],
-    bg: '#0f1b3d',
-    textColor: 'text-white',
-    descColor: 'text-blue-200/60',
-    itemColor: 'text-blue-100/80',
-    shapeColor: 'rgba(255,255,255,0.08)',
-    shapes: ['hexagon-outline', 'circle', 'square-outline'],
-  },
-  {
-    title: 'Threat Intelligence',
-    subtitle: 'IA predictiva contra amenazas',
-    description: 'IA avanzada que identifica patrones de ataque específicos para tu sector. Transforma datos en inteligencia accionable que fortalece tu postura defensiva.',
-    items: [
-      'Machine learning propietario para detección predictiva',
-      'Feeds premium de inteligencia multifuente',
-      'Contextualización específica por sector industrial',
-      'Fuentes de inteligencia: +50',
-    ],
-    bg: '#ffffff',
-    textColor: 'text-gray-900',
-    descColor: 'text-gray-500',
-    itemColor: 'text-gray-600',
-    shapeColor: 'rgba(0,0,0,0.15)',
-    shapes: ['circle-outline', 'square', 'hexagon'],
-  },
-  {
-    title: 'CISO as a Service',
-    subtitle: 'Tu Director de Seguridad Virtualizado',
-    description: 'Un CISO es el ejecutivo responsable de establecer y mantener la visión, estrategia y programa de seguridad de la información. Es el puente entre el riesgo cibernético y las decisiones de negocio.',
-    items: [
-      'Desarrollo de estrategia de ciberseguridad',
-      'Gestión de riesgos empresariales',
-      'Cumplimiento normativo y regulatorio',
-      'Comunicación ejecutiva y reporting',
-    ],
-    bg: '#0a2e1a',
-    textColor: 'text-white',
-    descColor: 'text-emerald-200/60',
-    itemColor: 'text-emerald-100/80',
-    shapeColor: 'rgba(255,255,255,0.07)',
-    shapes: ['square', 'hexagon-outline', 'circle-outline'],
-  },
-  {
-    title: 'Threat Intelligence',
-    subtitle: 'IA Predictiva en Acción',
-    description: 'Nuestra plataforma utiliza algoritmos propietarios para correlacionar patrones de amenazas con tu perfil de riesgo específico. Convertimos datos en decisiones.',
-    items: [
-      'Machine Learning avanzado: detección de amenazas emergentes por sector',
-      'Feeds Premium: correlación de +50 fuentes especializadas',
-      'Contextualización sectorial: IOCs y TTPs específicos por industria',
-      'Normalización con taxonomías STIX/TLP/MITRE ATT&CK',
-    ],
-    bg: '#2d1b4e',
-    textColor: 'text-white',
-    descColor: 'text-purple-200/60',
-    itemColor: 'text-purple-100/80',
-    shapeColor: 'rgba(255,255,255,0.08)',
-    shapes: ['hexagon', 'circle-outline', 'square-outline'],
-  },
-]
-
-const details = [
-  {
-    tag: 'CISO as a Service',
-    title: '¿Qué obtienes exactamente?',
-    subtitle: 'Valor tangible desde el primer mes',
-    items: [
-      'Liderazgo estratégico en ciberseguridad con reporte directo a dirección',
-      'Desarrollo e implementación de políticas y procedimientos de seguridad',
-      'Gestión integral de riesgos cibernéticos y planes de respuesta a incidentes',
-      'Supervisión de cumplimiento normativo (ISO 27001, NIS2, GDPR)',
-      'Comunicación ejecutiva: traducimos complejidad técnica en decisiones de negocio',
-      'Acceso a equipo especializado en forensia, threat intelligence y respuesta',
-    ],
-  },
-  {
-    tag: 'Threat Intelligence',
-    title: 'Capacidades Técnicas',
-    subtitle: 'Correlación, scoring y contextualización',
-    items: [
-      'Algoritmos propietarios de correlación y scoring de amenazas',
-      'Ingesta de fuentes OSINT, comerciales y comunidades de investigación',
-      'Normalización y enriquecimiento con STIX/TLP/MITRE ATT&CK',
-      'Cobertura global: monitorización en +150 países',
-      'Actualización continua: feeds cada 15 minutos, 24/7',
-      'Contextualización por perfil de riesgo específico',
-    ],
-  },
-  {
-    tag: 'Impacto',
-    title: 'Impacto Organizacional',
-    subtitle: 'Protección integral y ventaja competitiva',
-    items: [
-      'Protección de activos críticos de información',
-      'Continuidad del negocio ante ciberincidentes',
-      'Confianza reforzada de clientes y stakeholders',
-      'Ventaja competitiva sostenible en mercados regulados',
-      'Escalamos recursos según necesidades, sin compromisos a largo plazo',
-      'Integración con tu equipo interno para transferencia de conocimiento',
-    ],
-  },
+const serviceStyles = [
+  { bg: '#0f1b3d', textColor: 'text-white', descColor: 'text-blue-200/60', itemColor: 'text-blue-100/80', shapeColor: 'rgba(255,255,255,0.08)', shapes: ['hexagon-outline', 'circle', 'square-outline'] },
+  { bg: '#ffffff', textColor: 'text-gray-900', descColor: 'text-gray-500', itemColor: 'text-gray-600', shapeColor: 'rgba(0,0,0,0.15)', shapes: ['circle-outline', 'square', 'hexagon'] },
+  { bg: '#0a2e1a', textColor: 'text-white', descColor: 'text-emerald-200/60', itemColor: 'text-emerald-100/80', shapeColor: 'rgba(255,255,255,0.07)', shapes: ['square', 'hexagon-outline', 'circle-outline'] },
+  { bg: '#2d1b4e', textColor: 'text-white', descColor: 'text-purple-200/60', itemColor: 'text-purple-100/80', shapeColor: 'rgba(255,255,255,0.08)', shapes: ['hexagon', 'circle-outline', 'square-outline'] },
 ]
 
 const stats = [
@@ -143,7 +37,11 @@ function useIsMobile() {
 
 export default function CyberPage() {
   const isMobile = useIsMobile()
-  const { t, isRTL } = useLanguage()
+  const { t, ta, isRTL } = useLanguage()
+  const serviceContent = ta('cyber.serviceList')
+  const detailContent = ta('cyber.detailList')
+  const services = serviceStyles.map((s, i) => ({ ...s, ...(serviceContent[i] || {}) }))
+  const details = detailContent
   const svcSteps = isMobile ? services.length : services.length - 1
   const detailSteps = details.length
   const totalSections = 1 + svcSteps + detailSteps + 1
@@ -286,7 +184,7 @@ export default function CyberPage() {
             </Link>
             <p className="text-sm uppercase tracking-[0.3em] text-accent mb-3">{t('cyber.tag')}</p>
             <h1 className="text-4xl md:text-7xl font-bold text-white tracking-tight mb-3">
-              Ciberseguridad
+              {t('cyber.heroTitle')}
             </h1>
             <p className="text-sm md:text-base text-gray-500 mb-6">
               {t('cyber.subtitle')}

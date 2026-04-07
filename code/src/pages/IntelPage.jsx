@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback, useState } from 'react'
+import { useEffect, useRef, useCallback, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -7,6 +7,7 @@ import SEO from '../components/SEO'
 import GeoShape from '../components/GeoShape'
 import { isMenuOpen } from '../utils/menuOpen'
 import { useLanguage } from '../i18n/LanguageContext'
+import { mergeTranslatedData } from '../utils/mergeTranslations'
 
 const modules = [
   {
@@ -128,9 +129,11 @@ function useIsMobile() {
 
 export default function IntelPage() {
   const isMobile = useIsMobile()
-  const { t, isRTL } = useLanguage()
-  const modSteps = isMobile ? modules.length : modules.length - 1
-  const caseSteps = useCases.length
+  const { t, ta, isRTL } = useLanguage()
+  const modulesData = useMemo(() => mergeTranslatedData(modules, ta('intel.modules')), [ta])
+  const useCasesData = useMemo(() => mergeTranslatedData(useCases, ta('intel.useCases')), [ta])
+  const modSteps = isMobile ? modulesData.length : modulesData.length - 1
+  const caseSteps = useCasesData.length
   const totalSections = 1 + modSteps + caseSteps + 1
 
   const [sectionIndex, setSectionIndex] = useState(0)
@@ -303,11 +306,11 @@ export default function IntelPage() {
         <div
           className="layout-ltr flex h-full transition-transform duration-700 ease-in-out will-change-transform"
           style={{
-            width: `${modules.length * (isMobile ? 100 : 50)}vw`,
+            width: `${modulesData.length * (isMobile ? 100 : 50)}vw`,
             transform: `translateX(-${activeModIndex * (isMobile ? 100 : 50)}vw)`,
           }}
         >
-          {modules.map((mod, i) => (
+          {modulesData.map((mod, i) => (
             <div
               key={i}
               className="w-screen md:w-[50vw] h-full flex items-center justify-center relative shrink-0 px-8 md:px-16"
@@ -324,7 +327,7 @@ export default function IntelPage() {
               {/* Top-left tag */}
               <div className="absolute top-8 left-8 md:top-12 md:left-16 flex items-center gap-3">
                 <span className={`text-xs font-mono uppercase tracking-widest ${mod.bg === '#ffffff' || mod.bg === '#d4a017' ? 'text-gray-400' : 'text-white/20'}`}>
-                  {String(i + 1).padStart(2, '0')} / {String(modules.length).padStart(2, '0')}
+                  {String(i + 1).padStart(2, '0')} / {String(modulesData.length).padStart(2, '0')}
                 </span>
                 <div className={`w-12 h-px ${mod.bg === '#ffffff' || mod.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
               </div>
@@ -393,7 +396,7 @@ export default function IntelPage() {
 
               {/* Counter */}
               <div className={`absolute bottom-12 left-1/2 -translate-x-1/2 text-sm ${mod.descColor}`}>
-                {String(i + 1).padStart(2, '0')} / {String(modules.length).padStart(2, '0')}
+                {String(i + 1).padStart(2, '0')} / {String(modulesData.length).padStart(2, '0')}
               </div>
             </div>
           ))}
@@ -421,7 +424,7 @@ export default function IntelPage() {
         <div className="max-w-6xl w-full relative z-10 flex flex-col md:flex-row gap-10 md:gap-20 items-center">
           {/* Left: active case */}
           <div className="flex-1 relative min-h-[300px] overflow-hidden">
-            {useCases.map((uc, i) => (
+            {useCasesData.map((uc, i) => (
               <div
                 key={i}
                 className={`transition-all duration-700 ease-in-out ${
@@ -456,7 +459,7 @@ export default function IntelPage() {
 
           {/* Right: step indicators */}
           <div className="md:w-[280px] shrink-0 flex flex-col gap-3">
-            {useCases.map((uc, i) => (
+            {useCasesData.map((uc, i) => (
               <div
                 key={i}
                 className={`p-4 border transition-all duration-500 ${

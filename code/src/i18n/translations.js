@@ -90,9 +90,21 @@ const es = {
   // Cyber Page
   cyber: {
     back: 'Volver al inicio', tag: '03 — Ciberseguridad', scroll: 'Scroll',
+    heroTitle: 'Ciberseguridad',
     subtitle: 'Cada 11 segundos una empresa está bajo ataque',
     services: 'CISO as a Service \u2022 Threat Intelligence',
     svcTag: 'Servicios de Ciberseguridad', evalBtn: 'Solicitar Evaluación', evalStrat: 'Solicitar Evaluación Estratégica',
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'Nuestro servicio principal de ciberseguridad', description: 'Acceso inmediato a liderazgo ejecutivo especializado en ciberseguridad, sin las complejidades de contratación interna. Un equipo multidisciplinar que integra estrategia, gobierno y operaciones de seguridad avanzada.', items: ['Liderazgo Estratégico: Reporte directo a dirección ejecutiva', 'Políticas & Governance: Desarrollo de marcos normativos completos', 'Respuesta a Incidentes: Gestión integral de crisis y recuperación', 'Experiencia ejecutiva inmediata: +25 años en organizaciones Fortune 500'] },
+      { title: 'Threat Intelligence', subtitle: 'IA predictiva contra amenazas', description: 'IA avanzada que identifica patrones de ataque específicos para tu sector. Transforma datos en inteligencia accionable que fortalece tu postura defensiva.', items: ['Machine learning propietario para detección predictiva', 'Feeds premium de inteligencia multifuente', 'Contextualización específica por sector industrial', 'Fuentes de inteligencia: +50'] },
+      { title: 'CISO as a Service', subtitle: 'Tu Director de Seguridad Virtualizado', description: 'Un CISO es el ejecutivo responsable de establecer y mantener la visión, estrategia y programa de seguridad de la información. Es el puente entre el riesgo cibernético y las decisiones de negocio.', items: ['Desarrollo de estrategia de ciberseguridad', 'Gestión de riesgos empresariales', 'Cumplimiento normativo y regulatorio', 'Comunicación ejecutiva y reporting'] },
+      { title: 'Threat Intelligence', subtitle: 'IA Predictiva en Acción', description: 'Nuestra plataforma utiliza algoritmos propietarios para correlacionar patrones de amenazas con tu perfil de riesgo específico. Convertimos datos en decisiones.', items: ['Machine Learning avanzado: detección de amenazas emergentes por sector', 'Feeds Premium: correlación de +50 fuentes especializadas', 'Contextualización sectorial: IOCs y TTPs específicos por industria', 'Normalización con taxonomías STIX/TLP/MITRE ATT&CK'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: '¿Qué obtienes exactamente?', subtitle: 'Valor tangible desde el primer mes', items: ['Liderazgo estratégico en ciberseguridad con reporte directo a dirección', 'Desarrollo e implementación de políticas y procedimientos de seguridad', 'Gestión integral de riesgos cibernéticos y planes de respuesta a incidentes', 'Supervisión de cumplimiento normativo (ISO 27001, NIS2, GDPR)', 'Comunicación ejecutiva: traducimos complejidad técnica en decisiones de negocio', 'Acceso a equipo especializado en forensia, threat intelligence y respuesta'] },
+      { tag: 'Threat Intelligence', title: 'Capacidades Técnicas', subtitle: 'Correlación, scoring y contextualización', items: ['Algoritmos propietarios de correlación y scoring de amenazas', 'Ingesta de fuentes OSINT, comerciales y comunidades de investigación', 'Normalización y enriquecimiento con STIX/TLP/MITRE ATT&CK', 'Cobertura global: monitorización en +150 países', 'Actualización continua: feeds cada 15 minutos, 24/7', 'Contextualización por perfil de riesgo específico'] },
+      { tag: 'Impacto', title: 'Impacto Organizacional', subtitle: 'Protección integral y ventaja competitiva', items: ['Protección de activos críticos de información', 'Continuidad del negocio ante ciberincidentes', 'Confianza reforzada de clientes y stakeholders', 'Ventaja competitiva sostenible en mercados regulados', 'Escalamos recursos según necesidades, sin compromisos a largo plazo', 'Integración con tu equipo interno para transferencia de conocimiento'] },
+    ],
   },
   // Intel Page
   intel: {
@@ -102,6 +114,19 @@ const es = {
     version: 'v2.0 Activo', demoBtn: 'Solicitar Demo',
     modTag: 'Inteligencia & Defensa', sources: 'Fuentes de datos',
     caseTag: 'Casos de Uso', caseChallenge: 'Desafío',
+    modules: [
+      { status: 'Activo', title: 'Geopolítica', subtitle: 'Situational Awareness Global', description: 'Monitorización en tiempo real de conflictos armados, eventos geopolíticos críticos y movimientos de actores estatales a escala global.', capabilities: ['Globo 3D interactivo', 'Mapa de calor de conflictos', 'Alertas de severidad', 'Geolocalización automática por IA'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'Activo', title: 'OSINT', subtitle: 'Open Source Intelligence', description: 'Recopilación y análisis automatizado de fuentes abiertas con IA. Noticias, redes sociales, canales de Telegram y foros especializados.', capabilities: ['Análisis de sentimiento', 'Detección de patrones SOCMINT', 'Planes de infiltración IA', 'Filtros de correlación'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'Feeds especializados'] },
+      { status: 'Activo', title: 'Cyber Intelligence', subtitle: 'Threat Intelligence Platform', description: 'Inteligencia de amenazas cibernéticas en tiempo real. CVEs, IOCs, APTs, campañas activas y tendencias del panorama de amenazas global.', capabilities: ['Monitorización de CVEs', 'Feeds de IOCs', 'Detección de outages', 'Correlación de APTs'], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'Activo', title: 'Tracking', subtitle: 'Domain Awareness — Air & Sea', description: 'Seguimiento en tiempo real de buques y aeronaves. Detección de comportamientos anómalos, rutas sospechosas y activos de interés estratégico.', capabilities: ['Mapa de tráfico marítimo', 'Seguimiento aéreo', 'Detección de anomalías', 'Historial de tracks'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'Activo', title: 'Mercados', subtitle: 'Economic & Financial Intelligence', description: 'Inteligencia económica y financiera. Mercados globales, indicadores macroeconómicos y mercados de predicción para análisis de riesgo país.', capabilities: ['Datos de mercados en tiempo real', 'Indicadores macro FRED', 'Mercados de predicción', 'Correlación geopolítica-económica'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: 'Mando de Operaciones', type: 'Defensa', challenge: 'Necesidad de imagen operativa unificada durante operaciones en zona de conflicto con múltiples vectores de amenaza simultáneos.' },
+      { org: 'Centro Nacional de Ciberseguridad', type: 'Agencia Gubernamental', challenge: 'Monitorización de amenazas avanzadas persistentes (APT) coordinadas desde actores estatales contra infraestructuras críticas nacionales.' },
+      { org: 'Dirección General de Seguridad', type: 'Seguridad del Estado', challenge: 'Identificación temprana de movimientos de radicalización y coordinación de grupos violentos en plataformas digitales abiertas.' },
+      { org: 'Ministerio de Economía', type: 'Gobierno', challenge: 'Análisis de riesgo económico en tiempo real para decisiones de política monetaria y evaluación de impacto de sanciones internacionales.' },
+    ],
   },
 }
 
@@ -190,9 +215,21 @@ const en = {
   },
   cyber: {
     back: 'Back to home', tag: '03 — Cybersecurity', scroll: 'Scroll',
+    heroTitle: 'Cybersecurity',
     subtitle: 'Every 11 seconds a company is under attack',
     services: 'CISO as a Service \u2022 Threat Intelligence',
     svcTag: 'Cybersecurity Services', evalBtn: 'Request Evaluation', evalStrat: 'Request Strategic Evaluation',
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'Our flagship cybersecurity service', description: 'Immediate access to executive cybersecurity leadership without the complexities of internal hiring. A multidisciplinary team integrating strategy, governance and advanced security operations.', items: ['Strategic Leadership: Direct reporting to executive board', 'Policies & Governance: Development of complete regulatory frameworks', 'Incident Response: Comprehensive crisis and recovery management', 'Immediate executive experience: +25 years in Fortune 500 organizations'] },
+      { title: 'Threat Intelligence', subtitle: 'Predictive AI against threats', description: 'Advanced AI that identifies attack patterns specific to your sector. Transforms data into actionable intelligence that strengthens your defensive posture.', items: ['Proprietary machine learning for predictive detection', 'Premium multi-source intelligence feeds', 'Specific contextualization by industry sector', 'Intelligence sources: +50'] },
+      { title: 'CISO as a Service', subtitle: 'Your Virtualized Security Director', description: 'A CISO is the executive responsible for establishing and maintaining the vision, strategy and program of information security. The bridge between cyber risk and business decisions.', items: ['Cybersecurity strategy development', 'Enterprise risk management', 'Regulatory and compliance management', 'Executive communication and reporting'] },
+      { title: 'Threat Intelligence', subtitle: 'Predictive AI in Action', description: 'Our platform uses proprietary algorithms to correlate threat patterns with your specific risk profile. We turn data into decisions.', items: ['Advanced Machine Learning: emerging threat detection by sector', 'Premium Feeds: correlation of +50 specialized sources', 'Sector contextualization: industry-specific IOCs and TTPs', 'Normalization with STIX/TLP/MITRE ATT&CK taxonomies'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: 'What exactly do you get?', subtitle: 'Tangible value from the first month', items: ['Strategic cybersecurity leadership with direct reporting to the board', 'Development and implementation of security policies and procedures', 'Comprehensive cyber risk management and incident response plans', 'Regulatory compliance oversight (ISO 27001, NIS2, GDPR)', 'Executive communication: we translate technical complexity into business decisions', 'Access to a team specialized in forensics, threat intelligence and response'] },
+      { tag: 'Threat Intelligence', title: 'Technical Capabilities', subtitle: 'Correlation, scoring and contextualization', items: ['Proprietary algorithms for threat correlation and scoring', 'Ingestion of OSINT, commercial and research community sources', 'Normalization and enrichment with STIX/TLP/MITRE ATT&CK', 'Global coverage: monitoring in +150 countries', 'Continuous update: feeds every 15 minutes, 24/7', 'Contextualization by specific risk profile'] },
+      { tag: 'Impact', title: 'Organizational Impact', subtitle: 'Comprehensive protection and competitive advantage', items: ['Protection of critical information assets', 'Business continuity against cyber incidents', 'Reinforced customer and stakeholder trust', 'Sustainable competitive advantage in regulated markets', 'We scale resources as needed, without long-term commitments', 'Integration with your internal team for knowledge transfer'] },
+    ],
   },
   intel: {
     back: 'Back to home', tag: '04 — Intelligence & Defense', scroll: 'Scroll',
@@ -201,6 +238,19 @@ const en = {
     version: 'v2.0 Active', demoBtn: 'Request Demo',
     modTag: 'Intelligence & Defense', sources: 'Data sources',
     caseTag: 'Use Cases', caseChallenge: 'Challenge',
+    modules: [
+      { status: 'Active', title: 'Geopolitics', subtitle: 'Global Situational Awareness', description: 'Real-time monitoring of armed conflicts, critical geopolitical events and movements of state actors at a global scale.', capabilities: ['Interactive 3D globe', 'Conflict heat map', 'Severity alerts', 'Automatic AI geolocation'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'Active', title: 'OSINT', subtitle: 'Open Source Intelligence', description: 'Automated collection and analysis of open sources with AI. News, social networks, Telegram channels and specialized forums.', capabilities: ['Sentiment analysis', 'SOCMINT pattern detection', 'AI infiltration plans', 'Correlation filters'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'Specialized feeds'] },
+      { status: 'Active', title: 'Cyber Intelligence', subtitle: 'Threat Intelligence Platform', description: 'Real-time cyber threat intelligence. CVEs, IOCs, APTs, active campaigns and trends from the global threat landscape.', capabilities: ['CVE monitoring', 'IOC feeds', 'Outage detection', 'APT correlation'], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'Active', title: 'Tracking', subtitle: 'Domain Awareness — Air & Sea', description: 'Real-time tracking of vessels and aircraft. Detection of anomalous behaviors, suspicious routes and assets of strategic interest.', capabilities: ['Maritime traffic map', 'Air tracking', 'Anomaly detection', 'Track history'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'Active', title: 'Markets', subtitle: 'Economic & Financial Intelligence', description: 'Economic and financial intelligence. Global markets, macroeconomic indicators and prediction markets for country risk analysis.', capabilities: ['Real-time market data', 'FRED macro indicators', 'Prediction markets', 'Geopolitical-economic correlation'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: 'Operations Command', type: 'Defense', challenge: 'Need for a unified operational picture during operations in a conflict zone with multiple simultaneous threat vectors.' },
+      { org: 'National Cybersecurity Center', type: 'Government Agency', challenge: 'Monitoring of advanced persistent threats (APT) coordinated by state actors against national critical infrastructure.' },
+      { org: 'General Directorate of Security', type: 'State Security', challenge: 'Early identification of radicalization movements and coordination of violent groups on open digital platforms.' },
+      { org: 'Ministry of Economy', type: 'Government', challenge: 'Real-time economic risk analysis for monetary policy decisions and assessment of the impact of international sanctions.' },
+    ],
   },
 }
 
@@ -283,12 +333,37 @@ const ca = {
     ],
   },
   cyber: { back: 'Tornar a l\'inici', tag: '03 — Ciberseguretat', scroll: 'Scroll',
+    heroTitle: 'Ciberseguretat',
     subtitle: 'Cada 11 segons una empresa està sota atac', services: 'CISO as a Service \u2022 Threat Intelligence',
-    svcTag: 'Serveis de Ciberseguretat', evalBtn: "Sol·licitar Avaluació", evalStrat: "Sol·licitar Avaluació Estratègica" },
+    svcTag: 'Serveis de Ciberseguretat', evalBtn: "Sol·licitar Avaluació", evalStrat: "Sol·licitar Avaluació Estratègica",
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'El nostre servei principal de ciberseguretat', description: "Accés immediat a lideratge executiu especialitzat en ciberseguretat, sense les complexitats de contractació interna. Un equip multidisciplinari que integra estratègia, govern i operacions de seguretat avançada.", items: ['Lideratge Estratègic: Reporting directe a direcció executiva', 'Polítiques & Governance: Desenvolupament de marcs normatius complets', "Resposta a Incidents: Gestió integral de crisi i recuperació", "Experiència executiva immediata: +25 anys en organitzacions Fortune 500"] },
+      { title: 'Threat Intelligence', subtitle: 'IA predictiva contra amenaces', description: "IA avançada que identifica patrons d'atac específics per al teu sector. Transforma dades en intel·ligència accionable que enforteix la teva postura defensiva.", items: ['Machine learning propietari per a detecció predictiva', "Feeds premium d'intel·ligència multifont", 'Contextualització específica per sector industrial', "Fonts d'intel·ligència: +50"] },
+      { title: 'CISO as a Service', subtitle: 'El teu Director de Seguretat Virtualitzat', description: "Un CISO és l'executiu responsable d'establir i mantenir la visió, estratègia i programa de seguretat de la informació. És el pont entre el risc cibernètic i les decisions de negoci.", items: ["Desenvolupament d'estratègia de ciberseguretat", 'Gestió de riscos empresarials', 'Compliment normatiu i regulatori', 'Comunicació executiva i reporting'] },
+      { title: 'Threat Intelligence', subtitle: 'IA Predictiva en Acció', description: "La nostra plataforma utilitza algoritmes propietaris per correlacionar patrons d'amenaces amb el teu perfil de risc específic. Convertim dades en decisions.", items: ["Machine Learning avançat: detecció d'amenaces emergents per sector", 'Feeds Premium: correlació de +50 fonts especialitzades', 'Contextualització sectorial: IOCs i TTPs específics per indústria', 'Normalització amb taxonomies STIX/TLP/MITRE ATT&CK'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: 'Què obtens exactament?', subtitle: 'Valor tangible des del primer mes', items: ['Lideratge estratègic en ciberseguretat amb reporting directe a direcció', "Desenvolupament i implementació de polítiques i procediments de seguretat", 'Gestió integral de riscos cibernètics i plans de resposta a incidents', 'Supervisió de compliment normatiu (ISO 27001, NIS2, GDPR)', 'Comunicació executiva: traduïm complexitat tècnica en decisions de negoci', 'Accés a equip especialitzat en forensia, threat intelligence i resposta'] },
+      { tag: 'Threat Intelligence', title: 'Capacitats Tècniques', subtitle: 'Correlació, scoring i contextualització', items: ["Algoritmes propietaris de correlació i scoring d'amenaces", "Ingesta de fonts OSINT, comercials i comunitats d'investigació", 'Normalització i enriquiment amb STIX/TLP/MITRE ATT&CK', 'Cobertura global: monitorització en +150 països', 'Actualització contínua: feeds cada 15 minuts, 24/7', 'Contextualització per perfil de risc específic'] },
+      { tag: 'Impacte', title: 'Impacte Organitzacional', subtitle: 'Protecció integral i avantatge competitiu', items: ["Protecció d'actius crítics d'informació", 'Continuïtat del negoci davant ciberincidents', 'Confiança reforçada de clients i stakeholders', 'Avantatge competitiu sostenible en mercats regulats', 'Escalem recursos segons necessitats, sense compromisos a llarg termini', 'Integració amb el teu equip intern per a transferència de coneixement'] },
+    ] },
   intel: { back: 'Tornar a l\'inici', tag: '04 — Intel·ligència & Defensa', scroll: 'Scroll',
     subtitle: 'Intelligence Platform', desc: "Intel·ligència operativa en temps real per a organismes de defensa, forces de seguretat i governs. Cinc mòduls. Totes les amenaces.",
     version: 'v2.0 Actiu', demoBtn: 'Sol·licitar Demo', modTag: 'Intel·ligència & Defensa', sources: 'Fonts de dades',
-    caseTag: "Casos d'Ús", caseChallenge: 'Desafiament' },
+    caseTag: "Casos d'Ús", caseChallenge: 'Desafiament',
+    modules: [
+      { status: 'Actiu', title: 'Geopolítica', subtitle: 'Situational Awareness Global', description: "Monitorització en temps real de conflictes armats, esdeveniments geopolítics crítics i moviments d'actors estatals a escala global.", capabilities: ['Globus 3D interactiu', 'Mapa de calor de conflictes', 'Alertes de severitat', 'Geolocalització automàtica per IA'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'Actiu', title: 'OSINT', subtitle: 'Open Source Intelligence', description: 'Recopilació i anàlisi automatitzada de fonts obertes amb IA. Notícies, xarxes socials, canals de Telegram i fòrums especialitzats.', capabilities: ['Anàlisi de sentiment', 'Detecció de patrons SOCMINT', "Plans d'infiltració IA", 'Filtres de correlació'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'Feeds especialitzats'] },
+      { status: 'Actiu', title: 'Cyber Intelligence', subtitle: 'Threat Intelligence Platform', description: "Intel·ligència d'amenaces cibernètiques en temps real. CVEs, IOCs, APTs, campanyes actives i tendències del panorama d'amenaces global.", capabilities: ['Monitorització de CVEs', 'Feeds de IOCs', "Detecció d'outages", "Correlació d'APTs"], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'Actiu', title: 'Tracking', subtitle: 'Domain Awareness — Air & Sea', description: "Seguiment en temps real de vaixells i aeronaus. Detecció de comportaments anòmals, rutes sospitoses i actius d'interès estratègic.", capabilities: ['Mapa de trànsit marítim', 'Seguiment aeri', "Detecció d'anomalies", 'Historial de tracks'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'Actiu', title: 'Mercats', subtitle: 'Economic & Financial Intelligence', description: "Intel·ligència econòmica i financera. Mercats globals, indicadors macroeconòmics i mercats de predicció per a anàlisi de risc país.", capabilities: ['Dades de mercats en temps real', 'Indicadors macro FRED', 'Mercats de predicció', 'Correlació geopolítica-econòmica'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: "Comandament d'Operacions", type: 'Defensa', challenge: "Necessitat d'imatge operativa unificada durant operacions en zona de conflicte amb múltiples vectors d'amenaça simultanis." },
+      { org: 'Centre Nacional de Ciberseguretat', type: 'Agència Governamental', challenge: "Monitorització d'amenaces avançades persistents (APT) coordinades des d'actors estatals contra infraestructures crítiques nacionals." },
+      { org: 'Direcció General de Seguretat', type: "Seguretat de l'Estat", challenge: 'Identificació primerenca de moviments de radicalització i coordinació de grups violents en plataformes digitals obertes.' },
+      { org: "Ministeri d'Economia", type: 'Govern', challenge: "Anàlisi de risc econòmic en temps real per a decisions de política monetària i avaluació d'impacte de sancions internacionals." },
+    ] },
 }
 
 const eu = {
@@ -370,12 +445,37 @@ const eu = {
     ],
   },
   cyber: { back: 'Hasierara itzuli', tag: '03 — Zibersegurtasuna', scroll: 'Scroll',
+    heroTitle: 'Zibersegurtasuna',
     subtitle: '11 segundoro enpresa bat erasopean dago', services: 'CISO as a Service \u2022 Threat Intelligence',
-    svcTag: 'Zibersegurtasun Zerbitzuak', evalBtn: 'Ebaluazioa eskatu', evalStrat: 'Ebaluazio Estrategikoa eskatu' },
+    svcTag: 'Zibersegurtasun Zerbitzuak', evalBtn: 'Ebaluazioa eskatu', evalStrat: 'Ebaluazio Estrategikoa eskatu',
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'Gure zibersegurtasun zerbitzu nagusia', description: 'Berehalako sarbidea zibersegurtasunean espezializatutako lidergo exekutiborako, barne kontratazioaren konplexutasunik gabe. Estrategia, gobernantza eta segurtasun operazio aurreratuak integratzen dituen talde diziplinanitza.', items: ['Lidergo Estrategikoa: Zuzendaritza exekutiboari zuzeneko txostena', 'Politikak eta Gobernantza: Marko arautzaile osoen garapena', 'Gertakarien aurreko erantzuna: Krisi eta berreskurapen integralaren kudeaketa', 'Berehalako esperientzia exekutiboa: +25 urte Fortune 500 erakundeetan'] },
+      { title: 'Threat Intelligence', subtitle: 'IA prediktiboa mehatxuen aurka', description: 'Zure sektorerako eraso-ereduak identifikatzen dituen IA aurreratua. Datuak zure jarrera defentsiboa indartzen duen adimen eragingarrian bihurtzen ditu.', items: ['Detekzio prediktiborako machine learning propioa', 'Iturri anitzeko premium adimen-jarioak', 'Sektore industrialaren araberako kontestualizazioa', 'Adimen-iturriak: +50'] },
+      { title: 'CISO as a Service', subtitle: 'Zure Segurtasun Zuzendari Birtualizatua', description: 'CISOa informazio-segurtasunaren ikuspegia, estrategia eta programa ezartzeko eta mantentzeko ardura duen exekutiboa da. Ziber-arriskuaren eta negozio-erabakien arteko zubia.', items: ['Zibersegurtasun-estrategiaren garapena', 'Enpresa-arriskuen kudeaketa', 'Arautegi eta erregulazio betetzea', 'Komunikazio exekutiboa eta txostena'] },
+      { title: 'Threat Intelligence', subtitle: 'IA Prediktiboa Ekintzan', description: 'Gure plataformak algoritmo propioak erabiltzen ditu mehatxu-ereduak zure arrisku-profil espezifikoarekin korrelazionatzeko. Datuak erabakietan bihurtzen ditugu.', items: ['Machine Learning aurreratua: sektoreko mehatxu berrien detekzioa', 'Premium Feeds: +50 iturri espezializatuen korrelazioa', 'Sektore-kontestualizazioa: industriaren araberako IOC eta TTPak', 'STIX/TLP/MITRE ATT&CK taxonomiekin normalizazioa'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: 'Zer lortzen duzu zehazki?', subtitle: 'Lehen hilabetetik balio ukigarria', items: ['Zibersegurtasun lidergo estrategikoa zuzendaritzari zuzeneko txostenarekin', 'Segurtasun politiken eta prozeduren garapena eta inplementazioa', 'Ziber-arriskuen kudeaketa integrala eta gertakarien aurreko erantzun planak', 'Arautegi-betetzearen gainbegiratzea (ISO 27001, NIS2, GDPR)', 'Komunikazio exekutiboa: konplexutasun teknikoa negozio-erabakietan itzultzen dugu', 'Forensian, threat intelligence-an eta erantzunean espezializatutako talderako sarbidea'] },
+      { tag: 'Threat Intelligence', title: 'Gaitasun Teknikoak', subtitle: 'Korrelazioa, scoring-a eta kontestualizazioa', items: ['Mehatxuen korrelazio eta scoring algoritmo propioak', 'OSINT, merkataritza eta ikerketa komunitateetako iturrien sarrera', 'STIX/TLP/MITRE ATT&CK-rekin normalizazioa eta aberastea', 'Estaldura globala: +150 herrialdetan monitorizazioa', 'Etengabeko eguneraketa: feed-ak 15 minuturo, 24/7', 'Arrisku-profil espezifikoaren araberako kontestualizazioa'] },
+      { tag: 'Eragina', title: 'Erakundearen gaineko Eragina', subtitle: 'Babes integrala eta abantaila lehiakorra', items: ['Informazio-aktibo kritikoen babesa', 'Negozio-jarraitutasuna ziber-gertakarien aurrean', 'Bezero eta interesdunen konfiantza indartua', 'Merkatu erregulatuetan abantaila lehiakor jasangarria', 'Beharren arabera baliabideak eskalatzen ditugu, epe luzeko konpromisorik gabe', 'Zure barne taldearekin integrazioa ezagutza-transferentziarako'] },
+    ] },
   intel: { back: 'Hasierara itzuli', tag: '04 — Adimena & Defentsa', scroll: 'Scroll',
     subtitle: 'Intelligence Platform', desc: 'Denbora errealeko adimen operatiboa defentsa, segurtasun indar eta gobernuentzat.',
     version: 'v2.0 Aktibo', demoBtn: 'Demo eskatu', modTag: 'Adimena & Defentsa', sources: 'Datu iturriak',
-    caseTag: 'Erabilera Kasuak', caseChallenge: 'Erronka' },
+    caseTag: 'Erabilera Kasuak', caseChallenge: 'Erronka',
+    modules: [
+      { status: 'Aktibo', title: 'Geopolitika', subtitle: 'Situational Awareness Globala', description: 'Gatazka armatuen, gertakari geopolitiko kritikoen eta estatu-eragileen mugimenduen denbora errealeko monitorizazioa eskala globalean.', capabilities: ['3D globo interaktiboa', 'Gatazken bero-mapa', 'Larritasun-alertak', 'AAko geokokapen automatikoa'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'Aktibo', title: 'OSINT', subtitle: 'Open Source Intelligence', description: 'Iturri irekien bilketa eta analisi automatizatua AArekin. Albisteak, sare sozialak, Telegram kanalak eta foro espezializatuak.', capabilities: ['Sentimendu-analisia', 'SOCMINT eredu-detekzioa', 'AA infiltrazio-planak', 'Korrelazio-iragazkiak'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'Feed espezializatuak'] },
+      { status: 'Aktibo', title: 'Cyber Intelligence', subtitle: 'Threat Intelligence Platform', description: 'Mehatxu zibernetikoen adimena denbora errealean. CVEak, IOCak, APTak, kanpaina aktiboak eta mehatxu globalen joerak.', capabilities: ['CVEen monitorizazioa', 'IOC feedak', 'Outageen detekzioa', 'APTen korrelazioa'], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'Aktibo', title: 'Tracking', subtitle: 'Domain Awareness — Air & Sea', description: 'Itsasontzien eta hegazkinen denbora errealeko jarraipena. Jokabide anomaloen, ibilbide susmagarrien eta interes estrategikoko aktiboen detekzioa.', capabilities: ['Itsas trafikoaren mapa', 'Aireko jarraipena', 'Anomalien detekzioa', 'Tracken historiala'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'Aktibo', title: 'Merkatuak', subtitle: 'Economic & Financial Intelligence', description: 'Adimen ekonomiko eta finantzarioa. Merkatu globalak, adierazle makroekonomikoak eta iragarpen-merkatuak herrialdeko arrisku-analisirako.', capabilities: ['Merkatu-datuak denbora errealean', 'FRED makro adierazleak', 'Iragarpen-merkatuak', 'Korrelazio geopolitiko-ekonomikoa'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: 'Operazio Agintaritza', type: 'Defentsa', challenge: 'Irudi operatibo bateratuaren beharra gatazka-eremuko eragiketetan, aldi bereko mehatxu-bektore askorekin.' },
+      { org: 'Zibersegurtasunaren Zentro Nazionala', type: 'Gobernu Agentzia', challenge: 'Estatu-eragileek nazio-azpiegitura kritikoen aurka koordinatutako mehatxu pertsistente aurreratuen (APT) monitorizazioa.' },
+      { org: 'Segurtasunaren Zuzendaritza Nagusia', type: 'Estatuko Segurtasuna', challenge: 'Erradikalizazio-mugimenduen eta talde bortitzen koordinazioaren goiztiarreko identifikazioa plataforma digital irekietan.' },
+      { org: 'Ekonomia Ministerioa', type: 'Gobernua', challenge: 'Denbora errealeko arrisku ekonomikoaren analisia diru-politikako erabakietarako eta nazioarteko zigorren eraginaren ebaluaziorako.' },
+    ] },
 }
 
 const he = {
@@ -450,12 +550,37 @@ const he = {
     ],
   },
   cyber: { back: 'חזרה לעמוד הבית', tag: '03 — אבטחת סייבר', scroll: 'גלול',
+    heroTitle: 'אבטחת סייבר',
     subtitle: 'כל 11 שניות חברה נמצאת תחת מתקפה', services: 'CISO as a Service \u2022 Threat Intelligence',
-    svcTag: 'שירותי אבטחת סייבר', evalBtn: 'בקשת הערכה', evalStrat: 'בקשת הערכה אסטרטגית' },
+    svcTag: 'שירותי אבטחת סייבר', evalBtn: 'בקשת הערכה', evalStrat: 'בקשת הערכה אסטרטגית',
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'שירות אבטחת הסייבר המרכזי שלנו', description: 'גישה מיידית להנהגה ניהולית מומחית באבטחת סייבר, ללא מורכבויות הגיוס הפנימי. צוות רב-תחומי המשלב אסטרטגיה, ממשל ופעולות אבטחה מתקדמות.', items: ['הנהגה אסטרטגית: דיווח ישיר להנהלה הבכירה', 'מדיניות וממשל: פיתוח מסגרות רגולטוריות מלאות', 'תגובה לאירועים: ניהול מקיף של משברים והתאוששות', 'ניסיון ניהולי מיידי: +25 שנים בארגוני Fortune 500'] },
+      { title: 'Threat Intelligence', subtitle: 'AI חיזויי נגד איומים', description: 'AI מתקדם המזהה דפוסי תקיפה ספציפיים למגזר שלך. הופך נתונים למודיעין מעשי המחזק את עמדתך ההגנתית.', items: ['Machine learning קנייני לזיהוי חיזויי', 'הזנות פרימיום ממקורות מודיעין מרובים', 'הקשר ספציפי לפי מגזר תעשייתי', 'מקורות מודיעין: +50'] },
+      { title: 'CISO as a Service', subtitle: 'מנהל האבטחה הוירטואלי שלך', description: 'CISO הוא המנהל האחראי על קביעה ושמירה של החזון, האסטרטגיה והתוכנית של אבטחת המידע. הגשר בין סיכון סייבר להחלטות עסקיות.', items: ['פיתוח אסטרטגיית אבטחת סייבר', 'ניהול סיכונים ארגוניים', 'ניהול ציות רגולטורי', 'תקשורת ניהולית ודיווח'] },
+      { title: 'Threat Intelligence', subtitle: 'AI חיזויי בפעולה', description: 'הפלטפורמה שלנו משתמשת באלגוריתמים קנייניים כדי לקשר דפוסי איומים לפרופיל הסיכון הספציפי שלך. אנו הופכים נתונים להחלטות.', items: ['Machine Learning מתקדם: זיהוי איומים מתפתחים לפי מגזר', 'הזנות פרימיום: קישור של +50 מקורות מומחים', 'הקשר מגזרי: IOCs ו-TTPs ספציפיים לתעשייה', 'נירמול עם טקסונומיות STIX/TLP/MITRE ATT&CK'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: 'מה בדיוק מקבלים?', subtitle: 'ערך מוחשי מהחודש הראשון', items: ['הנהגה אסטרטגית באבטחת סייבר עם דיווח ישיר להנהלה', 'פיתוח ויישום של מדיניות ונהלי אבטחה', 'ניהול מקיף של סיכוני סייבר ותוכניות תגובה לאירועים', 'פיקוח על ציות רגולטורי (ISO 27001, NIS2, GDPR)', 'תקשורת ניהולית: מתרגמים מורכבות טכנית להחלטות עסקיות', 'גישה לצוות מומחה בפורנזיקה, threat intelligence ותגובה'] },
+      { tag: 'Threat Intelligence', title: 'יכולות טכניות', subtitle: 'מתאם, ניקוד והקשר', items: ['אלגוריתמים קנייניים למתאם וניקוד איומים', 'קליטת מקורות OSINT, מסחריים וקהילות מחקר', 'נירמול והעשרה עם STIX/TLP/MITRE ATT&CK', 'כיסוי גלובלי: ניטור ב-+150 מדינות', 'עדכון מתמשך: הזנות כל 15 דקות, 24/7', 'הקשר לפי פרופיל סיכון ספציפי'] },
+      { tag: 'השפעה', title: 'השפעה ארגונית', subtitle: 'הגנה מקיפה ויתרון תחרותי', items: ['הגנה על נכסי מידע קריטיים', 'המשכיות עסקית מול אירועי סייבר', 'אמון מחוזק של לקוחות ובעלי עניין', 'יתרון תחרותי בר-קיימא בשווקים מוסדרים', 'אנו משדרגים משאבים לפי הצורך, ללא התחייבויות לטווח ארוך', 'אינטגרציה עם הצוות הפנימי שלך להעברת ידע'] },
+    ] },
   intel: { back: 'חזרה לעמוד הבית', tag: '04 — מודיעין והגנה', scroll: 'גלול',
     subtitle: 'Intelligence Platform', desc: 'מודיעין תפעולי בזמן אמת לגופי הגנה, כוחות ביטחון וממשלות.',
     version: 'v2.0 פעיל', demoBtn: 'בקשת דמו', modTag: 'מודיעין והגנה', sources: 'מקורות נתונים',
-    caseTag: 'מקרי שימוש', caseChallenge: 'אתגר' },
+    caseTag: 'מקרי שימוש', caseChallenge: 'אתגר',
+    modules: [
+      { status: 'פעיל', title: 'גאופוליטיקה', subtitle: 'מודעות מצבית גלובלית', description: 'ניטור בזמן אמת של סכסוכים מזוינים, אירועים גאופוליטיים קריטיים ותנועות של גורמי מדינה בקנה מידה עולמי.', capabilities: ['גלובוס תלת-ממדי אינטראקטיבי', 'מפת חום של סכסוכים', 'התראות חומרה', 'גאו-לוקציה אוטומטית באמצעות AI'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'פעיל', title: 'OSINT', subtitle: 'מודיעין ממקורות גלויים', description: 'איסוף וניתוח אוטומטיים של מקורות גלויים באמצעות AI. חדשות, רשתות חברתיות, ערוצי טלגרם ופורומים מתמחים.', capabilities: ['ניתוח סנטימנט', 'זיהוי דפוסי SOCMINT', 'תוכניות חדירה מבוססות AI', 'מסנני קורלציה'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'פידים מתמחים'] },
+      { status: 'פעיל', title: 'Cyber Intelligence', subtitle: 'פלטפורמת מודיעין איומים', description: 'מודיעין איומי סייבר בזמן אמת. CVEs, IOCs, APTs, מבצעים פעילים ומגמות נוף האיומים העולמי.', capabilities: ['ניטור CVEs', 'פידי IOCs', 'זיהוי תקלות', 'קורלציה של APTs'], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'פעיל', title: 'מעקב', subtitle: 'מודעות תחום — אוויר וים', description: 'מעקב בזמן אמת אחר כלי שיט וכלי טיס. זיהוי התנהגויות חריגות, מסלולים חשודים ונכסים בעלי עניין אסטרטגי.', capabilities: ['מפת תנועה ימית', 'מעקב אווירי', 'זיהוי חריגות', 'היסטוריית מסלולים'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'פעיל', title: 'שווקים', subtitle: 'מודיעין כלכלי ופיננסי', description: 'מודיעין כלכלי ופיננסי. שווקים גלובליים, מדדים מאקרו-כלכליים ושווקי תחזית לניתוח סיכון מדינה.', capabilities: ['נתוני שווקים בזמן אמת', 'מדדי מאקרו של FRED', 'שווקי תחזית', 'קורלציה גאופוליטית-כלכלית'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: 'פיקוד מבצעים', type: 'הגנה', challenge: 'צורך בתמונה מבצעית מאוחדת במהלך פעולות באזור סכסוך עם מספר וקטורי איום בו-זמניים.' },
+      { org: 'המרכז הלאומי לאבטחת סייבר', type: 'סוכנות ממשלתית', challenge: 'ניטור איומים מתקדמים מתמשכים (APT) המתואמים על ידי גורמי מדינה נגד תשתיות לאומיות קריטיות.' },
+      { org: 'המנהל הכללי לביטחון', type: 'ביטחון המדינה', challenge: 'זיהוי מוקדם של תנועות הקצנה ותיאום של קבוצות אלימות בפלטפורמות דיגיטליות פתוחות.' },
+      { org: 'משרד הכלכלה', type: 'ממשלה', challenge: 'ניתוח סיכון כלכלי בזמן אמת להחלטות מדיניות מוניטרית והערכת השפעת סנקציות בינלאומיות.' },
+    ] },
 }
 
 const ar = {
@@ -530,12 +655,37 @@ const ar = {
     ],
   },
   cyber: { back: 'العودة للرئيسية', tag: '03 — الأمن السيبراني', scroll: 'تمرير',
+    heroTitle: 'الأمن السيبراني',
     subtitle: 'كل 11 ثانية شركة تتعرض لهجوم', services: 'CISO as a Service \u2022 Threat Intelligence',
-    svcTag: 'خدمات الأمن السيبراني', evalBtn: 'طلب تقييم', evalStrat: 'طلب تقييم استراتيجي' },
+    svcTag: 'خدمات الأمن السيبراني', evalBtn: 'طلب تقييم', evalStrat: 'طلب تقييم استراتيجي',
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'خدمتنا الرئيسية للأمن السيبراني', description: 'وصول فوري إلى قيادة تنفيذية متخصصة في الأمن السيبراني، دون تعقيدات التوظيف الداخلي. فريق متعدد التخصصات يدمج الاستراتيجية والحوكمة وعمليات الأمن المتقدمة.', items: ['القيادة الاستراتيجية: تقارير مباشرة للإدارة التنفيذية', 'السياسات والحوكمة: تطوير أطر تنظيمية كاملة', 'الاستجابة للحوادث: إدارة شاملة للأزمات والتعافي', 'خبرة تنفيذية فورية: +25 عاماً في مؤسسات Fortune 500'] },
+      { title: 'Threat Intelligence', subtitle: 'ذكاء اصطناعي تنبؤي ضد التهديدات', description: 'ذكاء اصطناعي متقدم يحدد أنماط الهجوم الخاصة بقطاعك. يحول البيانات إلى ذكاء قابل للتنفيذ يعزز موقفك الدفاعي.', items: ['تعلم آلي خاص للكشف التنبؤي', 'موجزات استخباراتية متعددة المصادر مميزة', 'سياق محدد حسب القطاع الصناعي', 'مصادر استخباراتية: +50'] },
+      { title: 'CISO as a Service', subtitle: 'مدير الأمن الافتراضي الخاص بك', description: 'CISO هو المسؤول التنفيذي عن وضع رؤية واستراتيجية وبرنامج أمن المعلومات والحفاظ عليها. الجسر بين المخاطر السيبرانية وقرارات الأعمال.', items: ['تطوير استراتيجية الأمن السيبراني', 'إدارة مخاطر المؤسسة', 'الامتثال التنظيمي والرقابي', 'التواصل التنفيذي وإعداد التقارير'] },
+      { title: 'Threat Intelligence', subtitle: 'الذكاء الاصطناعي التنبؤي في العمل', description: 'تستخدم منصتنا خوارزميات خاصة لربط أنماط التهديدات بملف المخاطر الخاص بك. نحول البيانات إلى قرارات.', items: ['تعلم آلي متقدم: اكتشاف التهديدات الناشئة حسب القطاع', 'موجزات مميزة: ربط +50 مصدراً متخصصاً', 'سياق قطاعي: مؤشرات IOCs وTTPs خاصة بالصناعة', 'التطبيع مع تصنيفات STIX/TLP/MITRE ATT&CK'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: 'ما الذي تحصل عليه بالضبط؟', subtitle: 'قيمة ملموسة منذ الشهر الأول', items: ['قيادة استراتيجية في الأمن السيبراني مع تقارير مباشرة للإدارة', 'تطوير وتنفيذ سياسات وإجراءات الأمن', 'إدارة شاملة للمخاطر السيبرانية وخطط الاستجابة للحوادث', 'الإشراف على الامتثال التنظيمي (ISO 27001, NIS2, GDPR)', 'التواصل التنفيذي: نترجم التعقيد الفني إلى قرارات أعمال', 'الوصول إلى فريق متخصص في التحقيق الجنائي والاستخبارات والاستجابة'] },
+      { tag: 'Threat Intelligence', title: 'القدرات التقنية', subtitle: 'الارتباط والتسجيل والسياق', items: ['خوارزميات خاصة لربط وتسجيل التهديدات', 'استيعاب مصادر OSINT والتجارية ومجتمعات البحث', 'التطبيع والإثراء مع STIX/TLP/MITRE ATT&CK', 'تغطية عالمية: مراقبة في +150 دولة', 'تحديث مستمر: موجزات كل 15 دقيقة، 24/7', 'سياق حسب ملف المخاطر المحدد'] },
+      { tag: 'الأثر', title: 'الأثر التنظيمي', subtitle: 'حماية شاملة وميزة تنافسية', items: ['حماية أصول المعلومات الحرجة', 'استمرارية الأعمال في مواجهة الحوادث السيبرانية', 'ثقة معززة من العملاء وأصحاب المصلحة', 'ميزة تنافسية مستدامة في الأسواق المنظمة', 'نوسع الموارد حسب الاحتياجات، دون التزامات طويلة الأمد', 'التكامل مع فريقك الداخلي لنقل المعرفة'] },
+    ] },
   intel: { back: 'العودة للرئيسية', tag: '04 — الاستخبارات والدفاع', scroll: 'تمرير',
     subtitle: 'Intelligence Platform', desc: 'استخبارات تشغيلية في الوقت الفعلي لأجهزة الدفاع وقوات الأمن والحكومات.',
     version: 'v2.0 نشط', demoBtn: 'طلب عرض', modTag: 'الاستخبارات والدفاع', sources: 'مصادر البيانات',
-    caseTag: 'حالات الاستخدام', caseChallenge: 'التحدي' },
+    caseTag: 'حالات الاستخدام', caseChallenge: 'التحدي',
+    modules: [
+      { status: 'نشط', title: 'الجيوسياسة', subtitle: 'الوعي الظرفي العالمي', description: 'مراقبة في الوقت الحقيقي للنزاعات المسلحة والأحداث الجيوسياسية الحرجة وتحركات الجهات الحكومية على نطاق عالمي.', capabilities: ['كرة أرضية ثلاثية الأبعاد تفاعلية', 'خريطة حرارية للنزاعات', 'تنبيهات الخطورة', 'تحديد الموقع الجغرافي التلقائي بالذكاء الاصطناعي'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'نشط', title: 'OSINT', subtitle: 'الاستخبارات من المصادر المفتوحة', description: 'جمع وتحليل آلي للمصادر المفتوحة بالذكاء الاصطناعي. الأخبار والشبكات الاجتماعية وقنوات تيليغرام والمنتديات المتخصصة.', capabilities: ['تحليل المشاعر', 'كشف أنماط SOCMINT', 'خطط الاختراق بالذكاء الاصطناعي', 'مرشحات الترابط'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'خلاصات متخصصة'] },
+      { status: 'نشط', title: 'Cyber Intelligence', subtitle: 'منصة استخبارات التهديدات', description: 'استخبارات التهديدات السيبرانية في الوقت الحقيقي. CVEs وIOCs وAPTs والحملات النشطة واتجاهات مشهد التهديدات العالمي.', capabilities: ['مراقبة CVEs', 'خلاصات IOCs', 'كشف الانقطاعات', 'ربط APTs'], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'نشط', title: 'التتبع', subtitle: 'الوعي بالمجال — جواً وبحراً', description: 'تتبع في الوقت الحقيقي للسفن والطائرات. كشف السلوكيات الشاذة والمسارات المشبوهة والأصول ذات الأهمية الاستراتيجية.', capabilities: ['خريطة حركة المرور البحرية', 'التتبع الجوي', 'كشف الشذوذ', 'سجل المسارات'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'نشط', title: 'الأسواق', subtitle: 'الاستخبارات الاقتصادية والمالية', description: 'الاستخبارات الاقتصادية والمالية. الأسواق العالمية والمؤشرات الاقتصادية الكلية وأسواق التنبؤ لتحليل مخاطر الدول.', capabilities: ['بيانات الأسواق في الوقت الحقيقي', 'مؤشرات الاقتصاد الكلي FRED', 'أسواق التنبؤ', 'الترابط الجيوسياسي-الاقتصادي'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: 'قيادة العمليات', type: 'الدفاع', challenge: 'الحاجة إلى صورة عملياتية موحدة أثناء العمليات في منطقة نزاع مع نواقل تهديد متعددة ومتزامنة.' },
+      { org: 'المركز الوطني للأمن السيبراني', type: 'وكالة حكومية', challenge: 'مراقبة التهديدات المستمرة المتقدمة (APT) المنسقة من جهات حكومية ضد البنى التحتية الوطنية الحيوية.' },
+      { org: 'المديرية العامة للأمن', type: 'أمن الدولة', challenge: 'التحديد المبكر لحركات التطرف وتنسيق الجماعات العنيفة على المنصات الرقمية المفتوحة.' },
+      { org: 'وزارة الاقتصاد', type: 'الحكومة', challenge: 'تحليل المخاطر الاقتصادية في الوقت الحقيقي لقرارات السياسة النقدية وتقييم تأثير العقوبات الدولية.' },
+    ] },
 }
 
 const pl = {
@@ -610,12 +760,37 @@ const pl = {
     ],
   },
   cyber: { back: 'Powrót do strony głównej', tag: '03 — Cyberbezpieczeństwo', scroll: 'Przewiń',
+    heroTitle: 'Cyberbezpieczeństwo',
     subtitle: 'Co 11 sekund firma jest atakowana', services: 'CISO as a Service \u2022 Threat Intelligence',
-    svcTag: 'Usługi cyberbezpieczeństwa', evalBtn: 'Poproś o ocenę', evalStrat: 'Poproś o ocenę strategiczną' },
+    svcTag: 'Usługi cyberbezpieczeństwa', evalBtn: 'Poproś o ocenę', evalStrat: 'Poproś o ocenę strategiczną',
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'Nasza główna usługa cyberbezpieczeństwa', description: 'Natychmiastowy dostęp do kierownictwa wykonawczego specjalizującego się w cyberbezpieczeństwie, bez złożoności rekrutacji wewnętrznej. Multidyscyplinarny zespół integrujący strategię, ład korporacyjny i zaawansowane operacje bezpieczeństwa.', items: ['Przywództwo strategiczne: Bezpośrednie raportowanie do zarządu', 'Polityki i ład: Rozwój kompletnych ram regulacyjnych', 'Reakcja na incydenty: Kompleksowe zarządzanie kryzysowe i odzyskiwanie', 'Natychmiastowe doświadczenie wykonawcze: +25 lat w organizacjach Fortune 500'] },
+      { title: 'Threat Intelligence', subtitle: 'Predykcyjna AI przeciwko zagrożeniom', description: 'Zaawansowana AI identyfikująca wzorce ataków specyficzne dla Twojego sektora. Przekształca dane w działający wywiad wzmacniający Twoją postawę obronną.', items: ['Własne uczenie maszynowe do detekcji predykcyjnej', 'Wielo-źródłowe premium źródła wywiadowcze', 'Kontekstualizacja specyficzna dla sektora przemysłowego', 'Źródła wywiadowcze: +50'] },
+      { title: 'CISO as a Service', subtitle: 'Twój wirtualny dyrektor bezpieczeństwa', description: 'CISO to kierownik odpowiedzialny za ustanawianie i utrzymywanie wizji, strategii i programu bezpieczeństwa informacji. Pomost między ryzykiem cybernetycznym a decyzjami biznesowymi.', items: ['Rozwój strategii cyberbezpieczeństwa', 'Zarządzanie ryzykiem korporacyjnym', 'Zgodność regulacyjna i normatywna', 'Komunikacja wykonawcza i raportowanie'] },
+      { title: 'Threat Intelligence', subtitle: 'Predykcyjna AI w działaniu', description: 'Nasza platforma wykorzystuje własne algorytmy do korelowania wzorców zagrożeń z Twoim profilem ryzyka. Zamieniamy dane w decyzje.', items: ['Zaawansowane Machine Learning: detekcja zagrożeń wg sektora', 'Premium Feeds: korelacja +50 specjalistycznych źródeł', 'Kontekstualizacja sektorowa: specyficzne IOCs i TTPs dla branży', 'Normalizacja z taksonomiami STIX/TLP/MITRE ATT&CK'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: 'Co dokładnie otrzymujesz?', subtitle: 'Wymierna wartość od pierwszego miesiąca', items: ['Strategiczne przywództwo w cyberbezpieczeństwie z bezpośrednim raportowaniem', 'Rozwój i wdrożenie polityk i procedur bezpieczeństwa', 'Kompleksowe zarządzanie ryzykiem cybernetycznym i plany reakcji na incydenty', 'Nadzór nad zgodnością regulacyjną (ISO 27001, NIS2, GDPR)', 'Komunikacja wykonawcza: tłumaczymy złożoność techniczną na decyzje biznesowe', 'Dostęp do zespołu specjalizującego się w forensyce, threat intelligence i reakcji'] },
+      { tag: 'Threat Intelligence', title: 'Możliwości techniczne', subtitle: 'Korelacja, scoring i kontekstualizacja', items: ['Własne algorytmy korelacji i scoringu zagrożeń', 'Pobieranie źródeł OSINT, komercyjnych i społeczności badawczych', 'Normalizacja i wzbogacanie z STIX/TLP/MITRE ATT&CK', 'Globalne pokrycie: monitorowanie w +150 krajach', 'Ciągła aktualizacja: feedy co 15 minut, 24/7', 'Kontekstualizacja wg specyficznego profilu ryzyka'] },
+      { tag: 'Wpływ', title: 'Wpływ organizacyjny', subtitle: 'Kompleksowa ochrona i przewaga konkurencyjna', items: ['Ochrona krytycznych zasobów informacyjnych', 'Ciągłość biznesowa wobec cyberincydentów', 'Wzmocnione zaufanie klientów i interesariuszy', 'Trwała przewaga konkurencyjna na rynkach regulowanych', 'Skalujemy zasoby zgodnie z potrzebami, bez długoterminowych zobowiązań', 'Integracja z Twoim wewnętrznym zespołem do transferu wiedzy'] },
+    ] },
   intel: { back: 'Powrót do strony głównej', tag: '04 — Wywiad i Obrona', scroll: 'Przewiń',
     subtitle: 'Intelligence Platform', desc: 'Wywiad operacyjny w czasie rzeczywistym dla agencji obrony, sił bezpieczeństwa i rządów.',
     version: 'v2.0 Aktywny', demoBtn: 'Poproś o demo', modTag: 'Wywiad i Obrona', sources: 'Źródła danych',
-    caseTag: 'Przypadki użycia', caseChallenge: 'Wyzwanie' },
+    caseTag: 'Przypadki użycia', caseChallenge: 'Wyzwanie',
+    modules: [
+      { status: 'Aktywny', title: 'Geopolityka', subtitle: 'Globalna świadomość sytuacyjna', description: 'Monitorowanie w czasie rzeczywistym konfliktów zbrojnych, krytycznych wydarzeń geopolitycznych i ruchów aktorów państwowych w skali globalnej.', capabilities: ['Interaktywny globus 3D', 'Mapa cieplna konfliktów', 'Alerty o powadze sytuacji', 'Automatyczna geolokalizacja AI'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'Aktywny', title: 'OSINT', subtitle: 'Wywiad ze źródeł otwartych', description: 'Automatyczne zbieranie i analiza źródeł otwartych z wykorzystaniem AI. Wiadomości, media społecznościowe, kanały Telegram i wyspecjalizowane fora.', capabilities: ['Analiza sentymentu', 'Wykrywanie wzorców SOCMINT', 'Plany infiltracji AI', 'Filtry korelacji'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'Wyspecjalizowane kanały'] },
+      { status: 'Aktywny', title: 'Cyber Intelligence', subtitle: 'Platforma wywiadu zagrożeń', description: 'Wywiad zagrożeń cybernetycznych w czasie rzeczywistym. CVE, IOC, APT, aktywne kampanie i trendy globalnego krajobrazu zagrożeń.', capabilities: ['Monitorowanie CVE', 'Kanały IOC', 'Wykrywanie awarii', 'Korelacja APT'], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'Aktywny', title: 'Tracking', subtitle: 'Świadomość domeny — powietrze i morze', description: 'Śledzenie w czasie rzeczywistym statków i samolotów. Wykrywanie nietypowych zachowań, podejrzanych tras i zasobów o znaczeniu strategicznym.', capabilities: ['Mapa ruchu morskiego', 'Śledzenie powietrzne', 'Wykrywanie anomalii', 'Historia tras'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'Aktywny', title: 'Rynki', subtitle: 'Wywiad ekonomiczny i finansowy', description: 'Wywiad ekonomiczny i finansowy. Globalne rynki, wskaźniki makroekonomiczne i rynki prognoz do analizy ryzyka kraju.', capabilities: ['Dane rynkowe w czasie rzeczywistym', 'Wskaźniki makro FRED', 'Rynki prognoz', 'Korelacja geopolityczno-ekonomiczna'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: 'Dowództwo Operacji', type: 'Obrona', challenge: 'Potrzeba zunifikowanego obrazu operacyjnego podczas operacji w strefie konfliktu z wieloma jednoczesnymi wektorami zagrożeń.' },
+      { org: 'Krajowe Centrum Cyberbezpieczeństwa', type: 'Agencja rządowa', challenge: 'Monitorowanie zaawansowanych trwałych zagrożeń (APT) koordynowanych przez aktorów państwowych przeciwko krajowej infrastrukturze krytycznej.' },
+      { org: 'Dyrekcja Generalna Bezpieczeństwa', type: 'Bezpieczeństwo państwa', challenge: 'Wczesna identyfikacja ruchów radykalizacji i koordynacji grup przemocy na otwartych platformach cyfrowych.' },
+      { org: 'Ministerstwo Gospodarki', type: 'Rząd', challenge: 'Analiza ryzyka ekonomicznego w czasie rzeczywistym dla decyzji polityki monetarnej i oceny wpływu sankcji międzynarodowych.' },
+    ] },
 }
 
 const hi = {
@@ -697,12 +872,37 @@ const hi = {
     ],
   },
   cyber: { back: 'होम पर वापस', tag: '03 — साइबर सुरक्षा', scroll: 'स्क्रॉल',
+    heroTitle: 'साइबर सुरक्षा',
     subtitle: 'हर 11 सेकंड में एक कंपनी पर हमला होता है', services: 'CISO as a Service • Threat Intelligence',
-    svcTag: 'साइबर सुरक्षा सेवाएं', evalBtn: 'मूल्यांकन का अनुरोध करें', evalStrat: 'रणनीतिक मूल्यांकन का अनुरोध करें' },
+    svcTag: 'साइबर सुरक्षा सेवाएं', evalBtn: 'मूल्यांकन का अनुरोध करें', evalStrat: 'रणनीतिक मूल्यांकन का अनुरोध करें',
+    serviceList: [
+      { title: 'CISO as a Service', subtitle: 'हमारी प्रमुख साइबर सुरक्षा सेवा', description: 'आंतरिक भर्ती की जटिलताओं के बिना साइबर सुरक्षा में विशेषज्ञ कार्यकारी नेतृत्व तक तत्काल पहुंच। एक बहु-विषयक टीम जो रणनीति, शासन और उन्नत सुरक्षा संचालन को एकीकृत करती है।', items: ['रणनीतिक नेतृत्व: कार्यकारी निदेशालय को सीधी रिपोर्टिंग', 'नीतियां और शासन: पूर्ण नियामक ढांचे का विकास', 'घटना प्रतिक्रिया: संकट और पुनर्प्राप्ति का व्यापक प्रबंधन', 'तत्काल कार्यकारी अनुभव: Fortune 500 संगठनों में +25 वर्ष'] },
+      { title: 'Threat Intelligence', subtitle: 'खतरों के विरुद्ध भविष्यसूचक AI', description: 'उन्नत AI जो आपके क्षेत्र के लिए विशिष्ट हमले के पैटर्न की पहचान करता है। डेटा को कार्रवाई योग्य खुफिया में बदलता है जो आपकी रक्षात्मक स्थिति को मजबूत करता है।', items: ['भविष्यसूचक पहचान के लिए स्वामित्व मशीन लर्निंग', 'मल्टी-सोर्स प्रीमियम इंटेलिजेंस फीड्स', 'औद्योगिक क्षेत्र के अनुसार विशिष्ट संदर्भीकरण', 'इंटेलिजेंस स्रोत: +50'] },
+      { title: 'CISO as a Service', subtitle: 'आपका वर्चुअलाइज्ड सुरक्षा निदेशक', description: 'CISO वह कार्यकारी है जो सूचना सुरक्षा की दृष्टि, रणनीति और कार्यक्रम स्थापित करने और बनाए रखने के लिए जिम्मेदार है। साइबर जोखिम और व्यावसायिक निर्णयों के बीच का सेतु।', items: ['साइबर सुरक्षा रणनीति का विकास', 'उद्यम जोखिम प्रबंधन', 'नियामक और अनुपालन प्रबंधन', 'कार्यकारी संचार और रिपोर्टिंग'] },
+      { title: 'Threat Intelligence', subtitle: 'क्रिया में भविष्यसूचक AI', description: 'हमारा प्लेटफ़ॉर्म आपके विशिष्ट जोखिम प्रोफ़ाइल के साथ खतरे के पैटर्न को सहसंबंधित करने के लिए स्वामित्व एल्गोरिदम का उपयोग करता है। हम डेटा को निर्णयों में बदलते हैं।', items: ['उन्नत मशीन लर्निंग: क्षेत्र के अनुसार उभरते खतरों का पता लगाना', 'प्रीमियम फीड्स: +50 विशेष स्रोतों का सहसंबंध', 'क्षेत्रीय संदर्भीकरण: उद्योग-विशिष्ट IOCs और TTPs', 'STIX/TLP/MITRE ATT&CK वर्गीकरण के साथ सामान्यीकरण'] },
+    ],
+    detailList: [
+      { tag: 'CISO as a Service', title: 'आपको वास्तव में क्या मिलता है?', subtitle: 'पहले महीने से मूर्त मूल्य', items: ['निदेशालय को सीधी रिपोर्टिंग के साथ साइबर सुरक्षा में रणनीतिक नेतृत्व', 'सुरक्षा नीतियों और प्रक्रियाओं का विकास और कार्यान्वयन', 'साइबर जोखिमों का व्यापक प्रबंधन और घटना प्रतिक्रिया योजनाएं', 'नियामक अनुपालन निरीक्षण (ISO 27001, NIS2, GDPR)', 'कार्यकारी संचार: हम तकनीकी जटिलता को व्यावसायिक निर्णयों में अनुवादित करते हैं', 'फोरेंसिक, threat intelligence और प्रतिक्रिया में विशेषज्ञ टीम तक पहुंच'] },
+      { tag: 'Threat Intelligence', title: 'तकनीकी क्षमताएं', subtitle: 'सहसंबंध, स्कोरिंग और संदर्भीकरण', items: ['खतरों के सहसंबंध और स्कोरिंग के लिए स्वामित्व एल्गोरिदम', 'OSINT, वाणिज्यिक और अनुसंधान समुदाय स्रोतों का अंतर्ग्रहण', 'STIX/TLP/MITRE ATT&CK के साथ सामान्यीकरण और संवर्धन', 'वैश्विक कवरेज: +150 देशों में निगरानी', 'निरंतर अद्यतन: हर 15 मिनट में फीड्स, 24/7', 'विशिष्ट जोखिम प्रोफ़ाइल के अनुसार संदर्भीकरण'] },
+      { tag: 'प्रभाव', title: 'संगठनात्मक प्रभाव', subtitle: 'व्यापक सुरक्षा और प्रतिस्पर्धात्मक लाभ', items: ['महत्वपूर्ण सूचना संपत्तियों की सुरक्षा', 'साइबर घटनाओं के विरुद्ध व्यावसायिक निरंतरता', 'ग्राहकों और हितधारकों का बढ़ा हुआ विश्वास', 'विनियमित बाजारों में स्थायी प्रतिस्पर्धात्मक लाभ', 'हम आवश्यकताओं के अनुसार संसाधनों को बढ़ाते हैं, बिना दीर्घकालिक प्रतिबद्धताओं के', 'ज्ञान हस्तांतरण के लिए आपकी आंतरिक टीम के साथ एकीकरण'] },
+    ] },
   intel: { back: 'होम पर वापस', tag: '04 — बुद्धिमत्ता और रक्षा', scroll: 'स्क्रॉल',
     subtitle: 'Intelligence Platform', desc: 'रक्षा एजेंसियों, सुरक्षा बलों और सरकारों के लिए वास्तविक समय परिचालन बुद्धिमत्ता।',
     version: 'v2.0 सक्रिय', demoBtn: 'डेमो का अनुरोध करें', modTag: 'बुद्धिमत्ता और रक्षा', sources: 'डेटा स्रोत',
-    caseTag: 'उपयोग के मामले', caseChallenge: 'चुनौती' },
+    caseTag: 'उपयोग के मामले', caseChallenge: 'चुनौती',
+    modules: [
+      { status: 'सक्रिय', title: 'भू-राजनीति', subtitle: 'वैश्विक स्थितिजन्य जागरूकता', description: 'सशस्त्र संघर्षों, महत्वपूर्ण भू-राजनीतिक घटनाओं और राज्य अभिकर्ताओं की गतिविधियों की वैश्विक स्तर पर वास्तविक समय में निगरानी।', capabilities: ['इंटरैक्टिव 3D ग्लोब', 'संघर्षों का हीट मैप', 'गंभीरता अलर्ट', 'AI द्वारा स्वचालित भू-स्थान निर्धारण'], sources: ['ACLED', 'GDELT', 'USGS Earthquakes', 'NASA FIRMS', 'OpenSky'] },
+      { status: 'सक्रिय', title: 'OSINT', subtitle: 'खुले स्रोत आसूचना', description: 'AI के साथ खुले स्रोतों का स्वचालित संग्रह और विश्लेषण। समाचार, सोशल मीडिया, Telegram चैनल और विशेषज्ञ फोरम।', capabilities: ['भावना विश्लेषण', 'SOCMINT पैटर्न पहचान', 'AI घुसपैठ योजनाएं', 'सहसंबंध फिल्टर'], sources: ['FreshRSS AI News', 'Reddit SOCMINT', 'Telegram', 'विशेषज्ञ फीड'] },
+      { status: 'सक्रिय', title: 'Cyber Intelligence', subtitle: 'खतरा आसूचना मंच', description: 'वास्तविक समय में साइबर खतरा आसूचना। CVEs, IOCs, APTs, सक्रिय अभियान और वैश्विक खतरा परिदृश्य की प्रवृत्तियाँ।', capabilities: ['CVEs की निगरानी', 'IOCs फीड', 'आउटेज पहचान', 'APTs का सहसंबंध'], sources: ['CVE Feeds', 'IOC Feeds', 'Cloudflare Radar', 'Threat Intelligence APIs'] },
+      { status: 'सक्रिय', title: 'ट्रैकिंग', subtitle: 'डोमेन जागरूकता — वायु और समुद्र', description: 'जहाजों और विमानों की वास्तविक समय में निगरानी। असामान्य व्यवहार, संदिग्ध मार्गों और रणनीतिक महत्व की संपत्तियों की पहचान।', capabilities: ['समुद्री यातायात मानचित्र', 'हवाई ट्रैकिंग', 'विसंगति पहचान', 'ट्रैक इतिहास'], sources: ['AIS Marine Traffic', 'ADS-B OpenSky', 'Vessel Finder', 'FlightAware'] },
+      { status: 'सक्रिय', title: 'बाजार', subtitle: 'आर्थिक और वित्तीय आसूचना', description: 'आर्थिक और वित्तीय आसूचना। वैश्विक बाजार, समष्टि-आर्थिक संकेतक और देश जोखिम विश्लेषण के लिए पूर्वानुमान बाजार।', capabilities: ['वास्तविक समय बाजार डेटा', 'FRED समष्टि संकेतक', 'पूर्वानुमान बाजार', 'भू-राजनीतिक-आर्थिक सहसंबंध'], sources: ['Finnhub Markets', 'FRED Economic Data', 'Prediction Markets', 'Commodity Feeds'] },
+    ],
+    useCases: [
+      { org: 'संचालन कमान', type: 'रक्षा', challenge: 'एक साथ कई खतरा वेक्टरों वाले संघर्ष क्षेत्र में संचालन के दौरान एकीकृत परिचालन चित्र की आवश्यकता।' },
+      { org: 'राष्ट्रीय साइबर सुरक्षा केंद्र', type: 'सरकारी एजेंसी', challenge: 'राष्ट्रीय महत्वपूर्ण अवसंरचना के विरुद्ध राज्य अभिकर्ताओं द्वारा समन्वित उन्नत सतत खतरों (APT) की निगरानी।' },
+      { org: 'सुरक्षा महानिदेशालय', type: 'राज्य सुरक्षा', challenge: 'खुले डिजिटल मंचों पर कट्टरपंथ की गतिविधियों और हिंसक समूहों के समन्वय की प्रारंभिक पहचान।' },
+      { org: 'अर्थव्यवस्था मंत्रालय', type: 'सरकार', challenge: 'मौद्रिक नीति निर्णयों और अंतर्राष्ट्रीय प्रतिबंधों के प्रभाव के मूल्यांकन के लिए वास्तविक समय में आर्थिक जोखिम विश्लेषण।' },
+    ] },
 }
 
 export const translations = { ES: es, EN: en, CA: ca, EU: eu, HI: hi, HE: he, AR: ar, PL: pl }
