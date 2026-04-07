@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback, useState } from 'react'
+import { useEffect, useRef, useCallback, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -7,6 +7,7 @@ import SEO from '../components/SEO'
 import GeoShape from '../components/GeoShape'
 import { isMenuOpen } from '../utils/menuOpen'
 import { useLanguage } from '../i18n/LanguageContext'
+import { mergeTranslatedData } from '../utils/mergeTranslations'
 
 const normativas = [
   {
@@ -174,8 +175,15 @@ function useIsMobile() {
 
 export default function GrcPage() {
   const { t, ta, isRTL } = useLanguage()
+
+  // Merge translated content with styling data
+  const normativasData = useMemo(() => {
+    const translated = ta('grc.normativas')
+    return mergeTranslatedData(normativas, translated)
+  }, [ta])
+
   const isMobile = useIsMobile()
-  const normSteps = isMobile ? normativas.length : normativas.length - 1
+  const normSteps = isMobile ? normativasData.length : normativasData.length - 1
   const solSteps = soluciones.length
   const totalSections = 1 + normSteps + solSteps + 1
 
@@ -282,7 +290,7 @@ export default function GrcPage() {
       ? normSteps - 1
       : 0
 
-  const norm = normativas[activeNormIndex]
+  const norm = normativasData[activeNormIndex]
 
   // Soluciones: which step (0 to solSteps-1)
   const solStartIndex = normSteps + 1
@@ -356,11 +364,11 @@ export default function GrcPage() {
         <div
           className="layout-ltr flex h-full transition-transform duration-700 ease-in-out will-change-transform"
           style={{
-            width: `${normativas.length * (isMobile ? 100 : 50)}vw`,
+            width: `${normativasData.length * (isMobile ? 100 : 50)}vw`,
             transform: `translateX(-${activeNormIndex * (isMobile ? 100 : 50)}vw)`,
           }}
         >
-          {normativas.map((item, i) => (
+          {normativasData.map((item, i) => (
             <div
               key={i}
               className="w-screen md:w-[50vw] h-full flex items-center justify-center relative shrink-0 px-8 md:px-16"
@@ -377,7 +385,7 @@ export default function GrcPage() {
               {/* Top-left tag */}
               <div className="absolute top-8 left-8 md:top-12 md:left-16 flex items-center gap-3">
                 <span className={`text-xs font-mono uppercase tracking-widest ${item.bg === '#ffffff' || item.bg === '#d4a017' ? 'text-gray-400' : 'text-white/20'}`}>
-                  {String(i + 1).padStart(2, '0')} / {String(normativas.length).padStart(2, '0')}
+                  {String(i + 1).padStart(2, '0')} / {String(normativasData.length).padStart(2, '0')}
                 </span>
                 <div className={`w-12 h-px ${item.bg === '#ffffff' || item.bg === '#d4a017' ? 'bg-gray-300' : 'bg-white/10'}`} />
               </div>
@@ -429,7 +437,7 @@ export default function GrcPage() {
 
               {/* Counter */}
               <div className={`absolute bottom-12 left-1/2 -translate-x-1/2 text-sm ${item.descColor}`}>
-                {String(i + 1).padStart(2, '0')} / {String(normativas.length).padStart(2, '0')}
+                {String(i + 1).padStart(2, '0')} / {String(normativasData.length).padStart(2, '0')}
               </div>
             </div>
           ))}

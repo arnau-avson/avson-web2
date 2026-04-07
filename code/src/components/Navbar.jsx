@@ -7,8 +7,9 @@ const languages = [
   { code: 'ES', label: 'Español' },
   { code: 'CA', label: 'Català' },
   { code: 'EU', label: 'Euskara' },
-  { code: 'HE', label: 'עברית' },
   { code: 'EN', label: 'English' },
+  { code: 'HI', label: 'हिंदी' },
+  { code: 'HE', label: 'עברית' },
   { code: 'AR', label: 'العربية' },
   { code: 'PL', label: 'Polski' },
 ]
