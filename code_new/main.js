@@ -95,8 +95,6 @@ function closeModal(id) {
   ];
 
   function injectChatWidget() {
-    // Don't inject on contacto or gracias pages
-    if (window.location.pathname.includes('contacto') || window.location.pathname.includes('gracias')) return;
 
     var widget = document.createElement('div');
     widget.id = 'chatWidgetRoot';
