@@ -112,7 +112,7 @@
         <span class="label-tag">Request your diagnosis</span>
         <div class="gold-line"></div>
         <h2 class="section-title">Tell us about<br>your project.</h2>
-        <form style="margin-top:40px" action="mailto:hola@avson.eu" method="get">
+        <form style="margin-top:40px" action="mailto:hello@avson.eu" method="get">
           <div class="form-group">
             <label class="form-label">Full name *</label>
             <input type="text" class="form-input" placeholder="Name Surname" required>
@@ -183,7 +183,7 @@
             <div style="margin-top:20px;display:flex;flex-direction:column;gap:16px">
               <div>
                 <div style="font-size:11px;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px">Email</div>
-                <a href="mailto:hola@avson.eu" style="font-size:15px;font-weight:500;color:var(--navy);text-decoration:none">hola@avson.eu</a>
+                <a href="mailto:hello@avson.eu" style="font-size:15px;font-weight:500;color:var(--navy);text-decoration:none">hello@avson.eu</a>
               </div>
               <div>
                 <div style="font-size:11px;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px">Address</div>
@@ -214,7 +214,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-item__question">How long after I contact you do you get in touch?<div class="faq-item__icon"></div></div>
-        <div class="faq-item__answer">Our commitment is to respond within 4 working hours. If you submit the form in the morning, you will have a reply before midday. If you do it in the afternoon, you will hear from us first thing the next day. For urgent cases (imminent tender deadlines, scheduled audits), email us directly at hola@avson.eu marking it as urgent.</div>
+        <div class="faq-item__answer">Our commitment is to respond within 4 working hours. If you submit the form in the morning, you will have a reply before midday. If you do it in the afternoon, you will hear from us first thing the next day. For urgent cases (imminent tender deadlines, scheduled audits), email us directly at hello@avson.eu marking it as urgent.</div>
       </div>
       <div class="faq-item">
         <div class="faq-item__question">What information do you need for the first meeting?<div class="faq-item__icon"></div></div>
@@ -240,7 +240,7 @@
         <span class="footer__logo">AVSON<span> · </span>GRC</span>
         <p class="footer__tagline">GRC consultancy specialised in ENS, ISO 27001, ISO 22301, DORA and NIS2. 87+ companies certified with guaranteed success.</p>
         <div class="footer__contact">
-          <a href="mailto:hola@avson.eu">hola@avson.eu</a><br>
+          <a href="mailto:hello@avson.eu">hello@avson.eu</a><br>
           Calle Martínez Izquierdo 90<br>
           28028 Madrid, Spain
         </div>
@@ -292,5 +292,6 @@ function toggleLang() { document.getElementById('langSwitcher').classList.toggle
 document.addEventListener('click', (e) => { const ls = document.getElementById('langSwitcher'); if (ls && !ls.contains(e.target)) ls.classList.remove('open'); });
 document.querySelectorAll('.faq-item__question').forEach(q => { q.addEventListener('click', () => { const item = q.closest('.faq-item'); const isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); if (!isOpen) item.classList.add('open'); }); });
 </script>
+<script src="../main.js"></script>
 </body>
 </html>
