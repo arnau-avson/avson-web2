@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog GRC — ENS, ISO 27001 y cumplimiento normativo | Avson GRC</title>
+  <meta name="description" content="Guías, análisis y recursos prácticos sobre ENS, ISO 27001, DORA y NIS2. Escritos por los consultores GRC de Avson.">
+  <link rel="canonical" href="https://avson.eu/blog/">
+  <meta property="og:title" content="Blog GRC — ENS, ISO 27001 y cumplimiento normativo | Avson GRC">
+  <meta property="og:description" content="Guías, análisis y recursos prácticos sobre ENS, ISO 27001, DORA y NIS2. Escritos por los consultores GRC de Avson.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://avson.eu/blog/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Avson GRC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem","position": 1,"name": "Inicio","item": "https://avson.eu"},
+      {"@type": "ListItem","position": 2,"name": "Blog","item": "https://avson.eu/blog/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ANNOUNCE BAR -->
+<div class="announce-bar">
+  🔒 <strong>Nueva normativa ENS en vigor</strong> &nbsp;·&nbsp; Diagnóstico gratuito para saber qué categoría necesitas &nbsp;·&nbsp; <a href="../contacto.html">Solicitar ahora →</a>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo">AVSON<span class="dot"> · </span>GRC</a>
+    <ul class="nav__links">
+      <li><a href="../ens.html">ENS</a></li>
+      <li class="nav__has-dropdown">
+        <a href="#">Certificaciones &#9662;</a>
+        <div class="nav__dropdown">
+          <a href="../ens.html" class="nav__dropdown-item">
+            <span class="nav__dropdown-title">ENS</span>
+            <span class="nav__dropdown-desc">Esquema Nacional de Seguridad</span>
+          </a>
+          <a href="../iso27001.html" class="nav__dropdown-item">
+            <span class="nav__dropdown-title">ISO 27001</span>
+            <span class="nav__dropdown-desc">Seguridad de la Información</span>
+          </a>
+          <a href="../iso22301.html" class="nav__dropdown-item">
+            <span class="nav__dropdown-title">ISO 22301</span>
+            <span class="nav__dropdown-desc">Continuidad de Negocio</span>
+          </a>
+          <a href="../dora.html" class="nav__dropdown-item">
+            <span class="nav__dropdown-title">DORA</span>
+            <span class="nav__dropdown-desc">Resiliencia Operacional Digital</span>
+          </a>
+          <a href="../nis2.html" class="nav__dropdown-item">
+            <span class="nav__dropdown-title">NIS 2</span>
+            <span class="nav__dropdown-desc">Directiva Europea de Ciberseguridad</span>
+          </a>
+          <a href="../tisax.html" class="nav__dropdown-item">
+            <span class="nav__dropdown-title">TISAX</span>
+            <span class="nav__dropdown-desc">Seguridad en Cadena de Suministro</span>
+          </a>
+          <a href="../otras.html" class="nav__dropdown-item">
+            <span class="nav__dropdown-title">Otras ISOs</span>
+            <span class="nav__dropdown-desc">ISO 9001, 14001, 22000, 55001</span>
+          </a>
+        </div>
+      </li>
+      <li><a href="../packs.html">Packs</a></li>
+      <li><a href="../equipo.html">Equipo</a></li>
+      <li><a href="index.html" style="color:var(--gold)">Blog</a></li>
+    </ul>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-switcher__btn" onclick="toggleLang()" aria-label="Cambiar idioma">
+        <span class="lang-switcher__flag">🌐</span>
+        <span id="langCurrent">ES</span>
+        <span class="lang-switcher__chevron">▼</span>
+      </button>
+      <div class="lang-switcher__dropdown">
+        <a href="../index.html" class="lang-switcher__item lang-switcher__item--active">
+          <span class="lang-switcher__item-flag">🇪🇸</span>
+          <span class="lang-switcher__item-label">Español</span>
+          <span class="lang-switcher__item-tag">ES</span>
+        </a>
+        <a href="../en/index.html" class="lang-switcher__item">
+          <span class="lang-switcher__item-flag">🇬🇧</span>
+          <span class="lang-switcher__item-label">English</span>
+          <span class="lang-switcher__item-tag">EN</span>
+        </a>
+      </div>
+    </div>
+    <a href="../contacto.html" class="nav__cta">Hablar con un experto →</a>
+    <div class="nav__hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay">
+  <a href="../ens.html" onclick="toggleNav()">ENS</a>
+  <a href="../iso27001.html" onclick="toggleNav()">ISO 27001</a>
+  <a href="../iso22301.html" onclick="toggleNav()">ISO 22301</a>
+  <a href="../dora.html" onclick="toggleNav()">DORA</a>
+  <a href="../nis2.html" onclick="toggleNav()">NIS 2</a>
+  <a href="../tisax.html" onclick="toggleNav()">TISAX</a>
+  <a href="../otras.html" onclick="toggleNav()">Otras ISOs</a>
+  <a href="../packs.html" onclick="toggleNav()">Packs</a>
+  <a href="../equipo.html" onclick="toggleNav()">Equipo</a>
+  <a href="index.html" onclick="toggleNav()">Blog</a>
+  <a href="../contacto.html" onclick="toggleNav()">Hablar con un experto →</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div style="background:var(--white);border-bottom:1px solid var(--border);padding:12px 0;margin-top:72px">
+  <div class="container">
+    <nav style="font-family:'Inter',sans-serif;font-size:12px;color:var(--text-muted);letter-spacing:0.04em">
+      <a href="../index.html" style="color:var(--text-muted);text-decoration:none">Inicio</a>
+      <span style="margin:0 8px">›</span>
+      <span style="color:var(--navy);font-weight:500">Blog</span>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO BLOG -->
+<section style="background:var(--pearl);padding:80px 0 60px;border-bottom:1px solid var(--border)">
+  <div class="container">
+    <span class="label-tag">Recursos GRC</span>
+    <div class="gold-line"></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:300;color:var(--navy);line-height:1.1;margin:0 0 20px;max-width:700px">
+      Blog GRC: guías prácticas para<br><em>entender y cumplir la normativa.</em>
+    </h1>
+    <p style="font-family:'Inter',sans-serif;font-size:17px;color:var(--text-muted);line-height:1.65;max-width:560px;margin:0 0 40px">
+      Análisis técnicos, guías paso a paso y recursos prácticos escritos por los consultores GRC de Avson. Sin teoría innecesaria.
+    </p>
+    <!-- CATEGORY PILLS -->
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--navy);color:var(--white);padding:8px 16px;cursor:pointer">Todos</span>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);color:var(--text-muted);border:1px solid var(--border);padding:8px 16px;cursor:pointer">ENS</span>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);color:var(--text-muted);border:1px solid var(--border);padding:8px 16px;cursor:pointer">ISO 27001</span>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);color:var(--text-muted);border:1px solid var(--border);padding:8px 16px;cursor:pointer">ISO 22301</span>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);color:var(--text-muted);border:1px solid var(--border);padding:8px 16px;cursor:pointer">DORA</span>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);color:var(--text-muted);border:1px solid var(--border);padding:8px 16px;cursor:pointer">NIS2</span>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);color:var(--text-muted);border:1px solid var(--border);padding:8px 16px;cursor:pointer">TISAX</span>
+      <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);color:var(--text-muted);border:1px solid var(--border);padding:8px 16px;cursor:pointer">Normativa</span>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section style="padding:80px 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+
+      <a href="ens-basico-guia-empresas.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS Básico</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">ENS Básico: Guía Completa para Empresas Proveedoras de la Administración</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Todo lo que necesitas saber para obtener el certificado ENS de nivel Básico: requisitos, proceso, coste y plazos.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="ens-sector-salud.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">Sector Salud</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">ENS en el Sector Salud: Obligaciones para Hospitales y Clínicas</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">El sector sanitario que trabaja con la Administración debe cumplir el ENS. Descubre qué nivel aplica y cómo implementarlo.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="gap-analysis-ens.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">Metodología</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Gap Analysis ENS: Cómo Identificar las Brechas de Cumplimiento</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">El análisis de brechas es el primer paso de toda implementación ENS. Aprende a realizarlo y qué esperar de él.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="auditoria-ens-proceso.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">Auditoría</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">La Auditoría ENS: Proceso, Fases y Cómo Superarla con Éxito</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Todo sobre el proceso de auditoría ENS: quién la realiza, qué se evalúa, cuánto dura y cómo prepararse.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="declaracion-conformidad-ens.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS Básico</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Declaración de Conformidad ENS: Qué Es y Cuándo Sustituye al Certificado</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">La declaración de conformidad ENS es una alternativa al certificado para nivel Básico. Descubre cuándo es válida y sus limitaciones.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="que-es-el-ens.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS · Guía completa</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Qué es el ENS: guía completa del Esquema Nacional de Seguridad</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Todo lo que necesitas saber sobre el RD 311/2022: qué es, a quién obliga, categorías y cómo obtener el certificado.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="certificado-ens-obligatorio.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS · Obligatoriedad</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">El ENS es obligatorio: ¿tu empresa necesita certificarse?</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Qué empresas están obligadas, qué contratos lo exigen y qué consecuencias tiene no tenerlo en 2026.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="certificado-ens-media-alta.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS · Categorías</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Certificado ENS Media vs Alta: diferencias y cómo saber cuál necesitas</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Comparativa completa de las tres categorías ENS: requisitos, controles exigidos y proceso de certificación según nivel.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="ens-vs-iso27001.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS · ISO 27001 · Comparativa</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">ENS vs ISO 27001: diferencias, similitudes y sinergia</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Por qué el ENS y la ISO 27001 comparten el 65% de requisitos y cómo aprovechar esa sinergia para certificarte en los dos a coste marginal.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="iso27001-pymes.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ISO 27001 · Pymes</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">ISO 27001 para pymes: guía práctica y errores más comunes</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Requisitos, costes, plazos y los errores que cometen las pymes al implantar ISO 27001. Guía práctica para empresas de menos de 50 empleados.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="renovacion-certificado-ens.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS · Renovación</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Renovación del certificado ENS: todo lo que necesitas saber</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Plazos, proceso de auditoría y cómo mantener tu certificación ENS vigente sin sorpresas ni pérdida de contratos.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="cuanto-cuesta-certificado-ens.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ENS · Precio</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Cuánto cuesta el certificado ENS: precios reales 2026</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Rangos de precio reales según categoría y tamaño de empresa. Qué incluye la consultoría ENS y cómo calcular el ROI.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="iso27001-requisitos-certificacion.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ISO 27001 · Requisitos</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">ISO 27001: requisitos y proceso de certificación en España</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Las 10 cláusulas, el Anexo A con 93 controles, la Declaración de Aplicabilidad y cómo funciona la auditoría de certificación.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="que-es-iso22301.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ISO 22301 · Guía completa</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Qué es ISO 22301: la norma de continuidad de negocio explicada</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Para qué sirve, quién debe certificarse, las 10 cláusulas de la norma y cómo obtener la certificación en España.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="plan-continuidad-negocio.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">ISO 22301 · BCP</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Plan de continuidad de negocio: qué es y cómo implementarlo</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Guía práctica para crear un BCP desde cero: diferencia con DRP, metodología BIA y los 6 pasos del proceso.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="que-es-dora-reglamento.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">DORA · Guía completa</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Qué es DORA: el reglamento europeo de resiliencia digital en finanzas</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">A quién aplica, los 5 pilares, sanciones y hoja de ruta para cumplir con el Reglamento UE 2022/2554 desde enero 2025.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="dora-entidades-financieras.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">DORA · Entidades financieras</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">DORA para entidades financieras: requisitos y cómo cumplir</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Bancos, aseguradoras y fintech: qué exige DORA concretamente, las pruebas TLPT y la gestión de proveedores TIC críticos.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="que-es-nis2-directiva.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">NIS2 · Guía completa</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Qué es NIS2: directiva europea de ciberseguridad para empresas españolas</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Si te afecta, qué debes implementar, las diferencias con NIS1 y cuáles son las sanciones por incumplimiento en España.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+      <a href="que-es-tisax.html" style="display:block;border:1px solid var(--border);padding:32px;text-decoration:none;transition:border-color 0.2s" onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E5E5E0'">
+        <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:12px">TISAX · Guía completa</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:12px">Qué es TISAX: certificación de seguridad para proveedores de automoción</h2>
+        <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.6;margin-bottom:20px">Por qué Volkswagen, BMW y Mercedes lo exigen, los tres niveles de assessment (AL1, AL2, AL3) y cómo obtenerlo.</p>
+        <span style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:#1A2744;letter-spacing:0.06em">Leer artículo →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section section--navy" style="text-align:center">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto">
+      <span class="label-tag">¿Tienes dudas?</span>
+      <div class="gold-line gold-line--center"></div>
+      <h2 class="section-title section-title--white">¿Listo para conseguir<br><em>tu certificación?</em></h2>
+      <p class="mt-24" style="font-size:17px;color:rgba(255,255,255,0.5);line-height:1.65">Diagnóstico gratuito. Sin compromiso. Respuesta en 24 horas.</p>
+      <div class="flex gap-24 mt-40" style="justify-content:center;flex-wrap:wrap">
+        <a href="../contacto.html" class="btn-primary btn-primary--white">Solicitar consulta gratuita</a>
+        <a href="../packs.html" class="btn-text btn-text--white">Ver nuestros packs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__logo">AVSON<span> · </span>GRC</span>
+        <p class="footer__tagline">Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. 87+ empresas certificadas con éxito garantizado.</p>
+        <div class="footer__contact">
+          <a href="mailto:hola@avson.eu">hola@avson.eu</a><br>
+          Calle Martínez Izquierdo 90<br>
+          28028 Madrid, España
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Certificaciones</div>
+        <ul class="footer__links">
+          <li><a href="../ens.html">ENS</a></li>
+          <li><a href="../iso27001.html">ISO 27001</a></li>
+          <li><a href="../iso22301.html">ISO 22301</a></li>
+          <li><a href="../dora.html">DORA</a></li>
+          <li><a href="../nis2.html">NIS2</a></li>
+          <li><a href="../tisax.html">TISAX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Empresa</div>
+        <ul class="footer__links">
+          <li><a href="../packs.html">Packs GRC</a></li>
+          <li><a href="../equipo.html">Equipo</a></li>
+          <li><a href="../webinars.html">Webinars</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Newsletter GRC</div>
+        <p class="footer__newsletter-text">Análisis mensual sobre ENS, ISO 27001 y cumplimiento normativo. Sin spam.</p>
+        <div class="footer__newsletter-form">
+          <input type="email" class="footer__newsletter-input" placeholder="tu@empresa.com">
+          <button class="footer__newsletter-btn">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.</span>
+      <ul class="footer__legal">
+        <li><a href="../privacidad.html">Política de privacidad</a></li>
+        <li><a href="../cookies.html">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+function toggleNav() {
+  document.getElementById('navOverlay').classList.toggle('open');
+  document.body.classList.toggle('no-overflow');
+}
+function toggleLang() {
+  document.getElementById('langSwitcher').classList.toggle('open');
+}
+document.addEventListener('click', (e) => {
+  const ls = document.getElementById('langSwitcher');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+});
+</script>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</body>
+</html>
