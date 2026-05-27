@@ -2,19 +2,17 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-# Install frontend dependencies and build
-COPY code/package.json code/package-lock.json ./
-RUN npm ci
-COPY code/ .
-RUN npm run build
-
-# Install server dependencies
+# Copy and install API server dependencies
+COPY code_old/server/ ./server/
 WORKDIR /app/server
 RUN npm install
 
-# Expose ports: 3000 (frontend) and 3011 (API)
-EXPOSE 3000 3011
-
-# Start both services
+# Copy static site files
 WORKDIR /app
-CMD sh -c "node server/index.js & npm run preview"
+COPY code_new/ ./public/
+
+# Expose port 3000 (serves both site and API)
+EXPOSE 3000
+
+# Start server
+CMD ["node", "server/index.js"]

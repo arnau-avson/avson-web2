@@ -1,4 +1,6 @@
-code/node_modules
-code/server/node_modules
-code/dist
+code_old/node_modules
+code_old/server/node_modules
+code_old/dist
+code_old/.vite
 .git
+node_modules
