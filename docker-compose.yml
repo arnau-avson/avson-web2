@@ -1,8 +1,8 @@
+version: '3.8'
+
 services:
-  avson:
+  avson-web:
     build: .
     ports:
       - "3000:3000"
-    env_file:
-      - code_old/server/.env
     restart: unless-stopped

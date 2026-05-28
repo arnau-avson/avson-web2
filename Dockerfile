@@ -2,17 +2,17 @@ FROM node:22-alpine
 
 WORKDIR /app
 
-# Copy and install API server dependencies
-COPY code_old/server/ ./server/
-WORKDIR /app/server
-RUN npm install
+# Copiar el proyecto React
+COPY code_new_react/ ./
 
-# Copy static site files
-WORKDIR /app
-COPY code_new/ ./public/
+# Instalar dependencias y construir
+RUN npm install && npm run build
 
-# Expose port 3000 (serves both site and API)
+# Instalar PM2 globalmente
+RUN npm install -g pm2
+
+# Exponer el puerto que usará pm2 serve
 EXPOSE 3000
 
-# Start server
-CMD ["node", "server/index.js"]
+# Servir el directorio dist con pm2 en primer plano (--no-daemon)
+CMD ["pm2", "serve", "./dist", "3000", "--spa", "--name", "avson-web", "--no-daemon"]
