@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import { useState, ReactNode } from 'react'
 
-export default function FaqAccordion({ items }) {
+interface FaqItem {
+  question: string
+  answer: string | ReactNode
+}
+
+export default function FaqAccordion({ items }: { items: FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState(-1)
 
-  const toggle = (i) => setOpenIndex(prev => prev === i ? -1 : i)
+  const toggle = (i: number) => setOpenIndex(prev => prev === i ? -1 : i)
 
   return (
     <div className="faq-list">

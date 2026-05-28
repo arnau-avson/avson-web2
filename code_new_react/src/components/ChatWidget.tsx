@@ -133,8 +133,7 @@ export default function ChatWidget() {
           {step === 'services' && (
             <div className="chat-options">
               {SERVICE_OPTIONS.map((opt, i) => (
-                <label key={i} className={selectedServices.includes(opt) ? 'selected' : ''}>
-                  <input type="checkbox" checked={selectedServices.includes(opt)} onChange={() => toggleService(opt)} />
+                <label key={i} className={selectedServices.includes(opt) ? 'selected' : ''} onClick={() => toggleService(opt)}>
                   {opt}
                 </label>
               ))}

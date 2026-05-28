@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, ReactNode } from 'react'
 
-export default function FadeIn({ children, className = 'anim-fade-up' }) {
-  const ref = useRef(null)
+export default function FadeIn({ children, className = 'anim-fade-up' }: { children: ReactNode, className?: string }) {
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const el = ref.current
