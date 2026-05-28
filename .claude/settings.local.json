@@ -3,7 +3,9 @@
     "allow": [
       "Bash(ls:*)",
       "Bash(xargs:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)"
     ],
     "additionalDirectories": [
       "c:\\Users\\arnau\\Desktop\\avson\\code_new\\en"
