@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificado ENS — Avson GRC | Garantía de éxito por escrito</title>
-  <meta name="description" content="Consigue tu certificado ENS con garantía de éxito por escrito. Si no lo obtienes, te devolvemos el dinero. 355+ empresas certificadas.">
+  <title>Cargando...</title>
+  <meta name="description" content="">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -199,99 +199,19 @@
 </head>
 <body>
 
-<div class="top-bar">⚠ <strong>El 85% de empresas sin ENS pierde sus licitaciones.</strong> Avson GRC — Certificado ENS con garantía de éxito por escrito.</div>
+<div class="top-bar" id="topBar"></div>
 
 <header class="ppc-header">
-  <a href="index.html" class="ppc-logo">AVSON<span> · </span>GRC</a>
-  <a href="tel:+34648414863" class="ppc-phone">📞 +34 648 414 863</a>
+  <a href="index.html" class="ppc-logo" id="headerLogo"></a>
+  <a href="tel:+34648414863" class="ppc-phone" id="headerPhone"></a>
 </header>
 
-<div class="ppc-hero">
-
-  <!-- Left: copy -->
-  <div>
-    <div class="fomo">⚠ Sin ENS tu oferta no se abre. Sin excepciones.</div>
-    <h1>Certificado ENS.<br><em>Con garantía de éxito<br>por escrito.</em></h1>
-    <p class="hero-sub">
-      Si no obtienes el certificado ENS, <strong>te devolvemos el dinero</strong>. Lo firmamos en el contrato. Los únicos del mercado que lo garantizan.
-    </p>
-    <div class="trust-row">
-      <span>355+ empresas certificadas</span>
-      <span>100% de éxito</span>
-      <span>15 consultores especializados</span>
-    </div>
-    <div class="ppc-stats">
-      <div class="ppc-stat"><strong>355+</strong><span>certificaciones</span></div>
-      <div class="ppc-stat"><strong>100%</strong><span>tasa de éxito</span></div>
-      <div class="ppc-stat"><strong>30 días</strong><span>con Express</span></div>
-    </div>
-  </div>
-
-  <!-- Right: form -->
-  <div class="form-card">
-    <span class="live-badge">🟢 Te llamamos hoy mismo</span>
-    <p class="form-title">Habla con un experto</p>
-    <p class="form-sub">Gratuito · Sin compromiso · 30 minutos</p>
-
-    <p class="qual-label">¿Qué necesitas?</p>
-    <div class="qual-grid">
-      <button type="button" class="qual-btn qual-btn--urgent" onclick="pickQ(this,'ENS Express urgente')">⚡ ENS urgente</button>
-      <button type="button" class="qual-btn" onclick="pickQ(this,'ENS estándar')">ENS estándar</button>
-      <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 27001')">ISO 27001</button>
-      <button type="button" class="qual-btn" onclick="pickQ(this,'No lo sé aún')">No lo sé aún</button>
-    </div>
-    <input type="hidden" id="pNecesidad" value="">
-
-    <form id="ppcForm" onsubmit="avsonSubmitLead(event,{source:'ppc_ens',event:'ppc_lead'})" novalidate>
-      <div class="form-group">
-        <input type="text"  id="pNombre" name="nombre" placeholder="Tu nombre *" autocomplete="given-name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" id="pEmail"  name="email"  placeholder="Tu email *" autocomplete="email" required>
-      </div>
-      <div class="rgpd">
-        <input type="checkbox" id="pRgpd" required>
-        <label for="pRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <a href="privacidad.html" target="_blank">Política de privacidad</a></label>
-      </div>
-      <button type="submit" class="btn-cta">Habla con un experto →</button>
-      <p class="lock-text">🔒 Gratuito · Sin compromiso · Confidencial</p>
-    </form>
-
-    <div class="alt-phone">
-      <span>¿Prefieres llamar?</span>
-      <a href="tel:+34648414863">+34 648 414 863</a>
-    </div>
-  </div>
-
-</div>
+<div class="ppc-hero" id="heroSection"></div>
 
 <!-- Testimonials -->
-<div class="testi-strip">
-  <div class="testi">
-    <div class="testi-stars">★★★★★</div>
-    <p class="testi-quote">"Llevábamos dos años perdiendo licitaciones. Avson nos lo resolvió en <strong>9 semanas</strong>. Al siguiente concurso, ganamos el contrato."</p>
-    <p class="testi-author">Javier M. — Director de Sistemas · Integradora TIC, Madrid</p>
-    <p class="testi-result">ENS Media certificado ✓</p>
-  </div>
-  <div class="testi">
-    <div class="testi-stars">★★★★★</div>
-    <p class="testi-quote">"Otros consultores decían un año. Avson lo hizo en <strong>14 semanas</strong> y superamos la auditoría ENAC a la primera."</p>
-    <p class="testi-author">Silvia R. — CISO · Proveedor cloud sector público</p>
-    <p class="testi-result">ENS Alta + ISO 27001 ✓</p>
-  </div>
-  <div class="testi">
-    <div class="testi-stars">★★★★★</div>
-    <p class="testi-quote">"La garantía por escrito fue lo que nos decidió. El proceso duró <strong>7 semanas</strong> sin una sola incidencia."</p>
-    <p class="testi-author">Andrés D. — CEO · Consultora tecnológica</p>
-    <p class="testi-result">ENS Básica certificado ✓</p>
-  </div>
-</div>
+<div class="testi-strip" id="testiStrip"></div>
 
-<footer class="ppc-footer">
-  © 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·
-  <a href="privacidad.html">Privacidad</a> ·
-  <a href="cookies.html">Cookies</a>
-</footer>
+<footer class="ppc-footer" id="ppcFooter"></footer>
 
 <script>
 function pickQ(btn, val) {
@@ -305,6 +225,112 @@ function submitPPC(e) {
   if (window.dataLayer) dataLayer.push({ event: 'ppc_lead', ...d });
   window.location.href = 'gracias.html?nombre=' + encodeURIComponent(d.nombre) + '&source=ppc_ens';
 }
+
+async function loadContent() {
+  try {
+    const response = await fetch('assets/palabras.json');
+    const data = await response.json();
+    const lang = "es";
+    const t = data[lang]?.ensPpc;
+    if (!t) throw new Error('No se encontraron datos para "ensPpc"');
+
+    // 1. Meta
+    document.title = t.meta.title;
+    document.querySelector('meta[name="description"]').setAttribute('content', t.meta.description);
+
+    // 2. Top bar
+    document.getElementById('topBar').innerHTML = `${t.topBar.icon} <strong>${t.topBar.text}</strong> ${t.topBar.suffix}`;
+
+    // 3. Header
+    document.getElementById('headerLogo').innerHTML = `${t.header.logoPrefix}<span>${t.header.logoDot}</span>${t.header.logoSuffix}`;
+    document.getElementById('headerPhone').innerHTML = t.header.phone;
+
+    // 4. Hero section
+    const qualBtns = t.form.qualButtons.map(btn => {
+      const urgentClass = btn.urgent ? ' qual-btn--urgent' : '';
+      return `<button type="button" class="qual-btn${urgentClass}" onclick="pickQ(this,'${btn.value}')">${btn.label}</button>`;
+    }).join('');
+
+    const statsHTML = t.stats.map(stat =>
+      `<div class="ppc-stat"><strong>${stat.value}</strong><span>${stat.label}</span></div>`
+    ).join('');
+
+    const trustItems = t.hero.trustItems.map(item =>
+      `<span>${item}</span>`
+    ).join('');
+
+    document.getElementById('heroSection').innerHTML = `
+      <!-- Left: copy -->
+      <div>
+        <div class="fomo">${t.hero.fomo}</div>
+        <h1>${t.hero.title}</h1>
+        <p class="hero-sub">${t.hero.subtitle}</p>
+        <div class="trust-row">${trustItems}</div>
+        <div class="ppc-stats">${statsHTML}</div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="form-card">
+        <span class="live-badge">${t.form.liveBadge}</span>
+        <p class="form-title">${t.form.title}</p>
+        <p class="form-sub">${t.form.subtitle}</p>
+
+        <p class="qual-label">${t.form.qualLabel}</p>
+        <div class="qual-grid">${qualBtns}</div>
+        <input type="hidden" id="pNecesidad" value="">
+
+        <form id="ppcForm" onsubmit="avsonSubmitLead(event,{source:'ppc_ens',event:'ppc_lead'})" novalidate>
+          <div class="form-group">
+            <input type="text" id="pNombre" name="nombre" placeholder="${t.form.namePlaceholder}" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="pEmail" name="email" placeholder="${t.form.emailPlaceholder}" autocomplete="email" required>
+          </div>
+          <div class="rgpd">
+            <input type="checkbox" id="pRgpd" required>
+            <label for="pRgpd">${t.form.rgpdText} <a href="privacidad.html" target="_blank">${t.form.rgpdLink}</a></label>
+          </div>
+          <button type="submit" class="btn-cta">${t.form.submitButton}</button>
+          <p class="lock-text">${t.form.lockText}</p>
+        </form>
+
+        <div class="alt-phone">
+          <span>${t.form.altPhoneLabel}</span>
+          <a href="tel:+34648414863">${t.form.altPhoneNumber}</a>
+        </div>
+      </div>
+    `;
+
+    // 5. Testimonials
+    const testisHTML = t.testimonials.map(testi => `
+      <div class="testi">
+        <div class="testi-stars">${testi.stars}</div>
+        <p class="testi-quote">${testi.quote}</p>
+        <p class="testi-author">${testi.author}</p>
+        <p class="testi-result">${testi.result}</p>
+      </div>
+    `).join('');
+    document.getElementById('testiStrip').innerHTML = testisHTML;
+
+    // 6. Footer
+    document.getElementById('ppcFooter').innerHTML = `
+      ${t.footer.copyright}
+      <a href="privacidad.html">${t.footer.links.privacy}</a> ·
+      <a href="cookies.html">${t.footer.links.cookies}</a>
+    `;
+
+    initInteractions();
+  } catch(error) {
+    console.error('Error cargando el JSON:', error);
+    document.getElementById('heroSection').innerHTML = '<div style="text-align:center;padding:100px 20px;font-family:Inter,sans-serif">Error cargando contenido</div>';
+  }
+}
+
+function initInteractions() {
+  // No standard nav/overlay on PPC pages - minimal interactions only
+}
+
+loadContent();
 </script>
 
 </body>

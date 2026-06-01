@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ENS Express — Certificado ENS Urgente en tiempo récord | Avson GRC</title>
-  <meta name="description" content="¿Tu pliego cierra pronto? ENS Express: certificado ENS urgente. Equipo dedicado, arranque en 24h, misma garantía de éxito por escrito.">
+  <title>Cargando...</title>
+  <meta name="description" content="">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -136,6 +136,19 @@
       font-size:36px; font-weight:500; color:var(--gold); line-height:1; }
     .trust-item span { font-family:'Inter',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); }
 
+    /* ── Testimonials ── */
+    .testi-section { max-width:1080px; margin:0 auto; padding:8px 24px 56px; }
+    .testi-section__title {
+      font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300;
+      color:#fff; text-align:center; margin:0 0 28px;
+    }
+    .testi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+    .testi-card { background:#fff; border-radius:12px; padding:24px; }
+    .testi-card__stars { color:var(--gold); font-size:14px; letter-spacing:2px; margin-bottom:10px; }
+    .testi-card__quote { font-family:'Inter',sans-serif; font-size:14px; color:var(--navy); line-height:1.6; margin:0 0 14px; }
+    .testi-card__author { font-family:'Inter',sans-serif; font-size:12px; color:var(--muted); font-weight:600; margin:0; }
+    .testi-card__result { font-family:'Inter',sans-serif; font-size:11px; color:var(--gold); margin:4px 0 0; }
+
     /* ── Footer ── */
     .ppc-footer { text-align:center; padding:20px; font-size:12px;
       color:rgba(255,255,255,0.3); border-top:1px solid rgba(255,255,255,0.08); }
@@ -154,113 +167,21 @@
 </head>
 <body>
 
-<div class="urgency-bar">⚡ ENS Express — Para pliegos que cierran pronto. Arranque en 24 horas.</div>
+<div class="urgency-bar" id="urgencyBar"></div>
 
 <header class="header">
-  <a href="index.html" class="logo">AVSON<span> · </span>GRC</a>
-  <a href="tel:+34648414863" class="header-phone">📞 +34 648 414 863</a>
+  <a href="index.html" class="logo" id="headerLogo"></a>
+  <a href="tel:+34648414863" class="header-phone" id="headerPhone"></a>
 </header>
 
-<div class="hero">
+<div class="hero" id="heroSection"></div>
 
-  <!-- Left -->
-  <div>
-    <div class="express-badge">⚡ ENS Express — Plazos urgentes</div>
-    <h1>Certificado ENS<br>cuando no puedes<br><em>esperar.</em></h1>
-    <p class="hero-sub">
-      ¿Tu pliego cierra pronto? Equipo dedicado exclusivamente a tu proyecto. <strong>Arranque en 24 horas.</strong> Misma garantía de devolución que en nuestro servicio estándar.
-    </p>
+<div class="trust-strip" id="trustStrip"></div>
 
-    <div class="how">
-      <div class="how-step">
-        <div class="how-step__num">48h</div>
-        <p class="how-step__text">Arranque del proyecto</p>
-      </div>
-      <div class="how-step">
-        <div class="how-step__num">1</div>
-        <p class="how-step__text">Equipo dedicado exclusivo</p>
-      </div>
-      <div class="how-step">
-        <div class="how-step__num">✓</div>
-        <p class="how-step__text">Misma garantía de devolución</p>
-      </div>
-    </div>
+<!-- Testimonials -->
+<div class="testi-section" id="testiSection"></div>
 
-    <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.5)">
-      Disponible para: ENS Básica · Media · Alta según categoría del pliego
-    </p>
-  </div>
-
-  <!-- Right: form -->
-  <div class="form-card">
-    <span class="live-badge">🟢 Verificamos disponibilidad hoy</span>
-    <p class="form-title">Consultar disponibilidad</p>
-    <p class="form-sub">Gratuito · Sin compromiso</p>
-    <p class="form-urgency">⚡ Cuéntanos cuándo cierra tu pliego y te decimos si llegamos</p>
-
-    <form id="expressForm" onsubmit="avsonSubmitLead(event,{source:'ppc_express',event:'ppc_express_lead'})" novalidate>
-      <div class="form-group">
-        <input type="text"  id="eNombre" name="nombre" placeholder="Tu nombre *" autocomplete="given-name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" id="eEmail"  name="email"  placeholder="Tu email *" autocomplete="email" required>
-      </div>
-      <div class="form-group">
-        <input type="text" id="ePliego" name="pliego" placeholder="¿Cuándo cierra el pliego? (ej: 15 julio)" autocomplete="off">
-      </div>
-      <div class="rgpd">
-        <input type="checkbox" id="eRgpd" required>
-        <label for="eRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <a href="privacidad.html" target="_blank">Política de privacidad</a></label>
-      </div>
-      <button type="submit" class="btn-cta">⚡ Verificar disponibilidad →</button>
-      <p class="lock-text">🔒 Sin presión · Gratuito · Te respondemos hoy</p>
-    </form>
-
-    <div class="alt-phone">
-      <span>Urgente — llámanos ahora:</span>
-      <a href="tel:+34648414863">+34 648 414 863</a>
-    </div>
-  </div>
-
-</div>
-
-<div class="trust-strip">
-  <div class="trust-item"><strong>355+</strong><span>empresas certificadas</span></div>
-  <div class="trust-item"><strong>100%</strong><span>tasa de éxito</span></div>
-  <div class="trust-item"><strong>48h</strong><span>arranque garantizado</span></div>
-  <div class="trust-item"><strong>30 días</strong><span>certificación Express</span></div>
-</div>
-
-<!-- ═══ TESTIMONIOS (PROVISIONALES · sustituir por reseñas reales de clientes) ═══ -->
-<div style="max-width:1080px;margin:0 auto;padding:8px 24px 56px">
-  <p style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;text-align:center;margin:0 0 28px">Pliegos salvados a contrarreloj.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
-    <div style="background:#fff;border-radius:12px;padding:24px">
-      <div style="color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px">★★★★★</div>
-      <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--navy);line-height:1.6;margin:0 0 14px">"El pliego cerraba en 5 semanas y no teníamos ENS. Pensábamos que era imposible. Avson arrancó en 48h y lo certificamos a tiempo. Presentamos la oferta y la ganamos."</p>
-      <p style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin:0">Javier M. — Director de Sistemas · Integradora TIC</p>
-      <p style="font-family:'Inter',sans-serif;font-size:11px;color:var(--gold);margin:4px 0 0">ENS Express ✓</p>
-    </div>
-    <div style="background:#fff;border-radius:12px;padding:24px">
-      <div style="color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px">★★★★★</div>
-      <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--navy);line-height:1.6;margin:0 0 14px">"Nos enteramos tarde de que la renovación exigía ENS. Express fue nuestra única opción. Tres consultores dedicados, 30 días, certificado en mano."</p>
-      <p style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin:0">Silvia R. — CISO · Proveedor cloud sector público</p>
-      <p style="font-family:'Inter',sans-serif;font-size:11px;color:var(--gold);margin:4px 0 0">ENS Express ✓</p>
-    </div>
-    <div style="background:#fff;border-radius:12px;padding:24px">
-      <div style="color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px">★★★★★</div>
-      <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--navy);line-height:1.6;margin:0 0 14px">"Lo que nos decidió fue la garantía por escrito incluso en el formato urgente. Cumplieron el plazo sin una sola incidencia en la auditoría."</p>
-      <p style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin:0">Andrés D. — CEO · Consultora tecnológica</p>
-      <p style="font-family:'Inter',sans-serif;font-size:11px;color:var(--gold);margin:4px 0 0">ENS Express ✓</p>
-    </div>
-  </div>
-</div>
-
-<footer class="ppc-footer">
-  © 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·
-  <a href="privacidad.html">Privacidad</a> ·
-  <a href="index.html">Inicio</a>
-</footer>
+<footer class="ppc-footer" id="ppcFooter"></footer>
 
 <script>
 function submitExpress(e) {
@@ -272,6 +193,116 @@ function submitExpress(e) {
   if (window.dataLayer) dataLayer.push({ event: 'express_lead', ...d });
   window.location.href = 'gracias.html?nombre=' + encodeURIComponent(d.nombre) + '&source=express';
 }
+
+async function loadContent() {
+  try {
+    const response = await fetch('assets/palabras.json');
+    const data = await response.json();
+    const lang = "es";
+    const t = data[lang]?.ensExpressPpc;
+    if (!t) throw new Error('No se encontraron datos para "ensExpressPpc"');
+
+    // 1. Meta
+    document.title = t.meta.title;
+    document.querySelector('meta[name="description"]').setAttribute('content', t.meta.description);
+
+    // 2. Urgency bar
+    document.getElementById('urgencyBar').innerHTML = t.urgencyBar;
+
+    // 3. Header
+    document.getElementById('headerLogo').innerHTML = `${t.header.logoPrefix}<span>${t.header.logoDot}</span>${t.header.logoSuffix}`;
+    document.getElementById('headerPhone').innerHTML = t.header.phone;
+
+    // 4. Hero section
+    const howSteps = t.hero.howSteps.map(step =>
+      `<div class="how-step"><div class="how-step__num">${step.num}</div><p class="how-step__text">${step.text}</p></div>`
+    ).join('');
+
+    document.getElementById('heroSection').innerHTML = `
+      <!-- Left -->
+      <div>
+        <div class="express-badge">${t.hero.badge}</div>
+        <h1>${t.hero.title}</h1>
+        <p class="hero-sub">${t.hero.subtitle}</p>
+
+        <div class="how">${howSteps}</div>
+
+        <p style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.5)">
+          ${t.hero.availableNote}
+        </p>
+      </div>
+
+      <!-- Right: form -->
+      <div class="form-card">
+        <span class="live-badge">${t.form.liveBadge}</span>
+        <p class="form-title">${t.form.title}</p>
+        <p class="form-sub">${t.form.subtitle}</p>
+        <p class="form-urgency">${t.form.urgencyNote}</p>
+
+        <form id="expressForm" onsubmit="avsonSubmitLead(event,{source:'ppc_express',event:'ppc_express_lead'})" novalidate>
+          <div class="form-group">
+            <input type="text" id="eNombre" name="nombre" placeholder="${t.form.namePlaceholder}" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="eEmail" name="email" placeholder="${t.form.emailPlaceholder}" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="ePliego" name="pliego" placeholder="${t.form.pliegoPlaceholder}" autocomplete="off">
+          </div>
+          <div class="rgpd">
+            <input type="checkbox" id="eRgpd" required>
+            <label for="eRgpd">${t.form.rgpdText} <a href="privacidad.html" target="_blank">${t.form.rgpdLink}</a></label>
+          </div>
+          <button type="submit" class="btn-cta">${t.form.submitButton}</button>
+          <p class="lock-text">${t.form.lockText}</p>
+        </form>
+
+        <div class="alt-phone">
+          <span>${t.form.altPhoneLabel}</span>
+          <a href="tel:+34648414863">${t.form.altPhoneNumber}</a>
+        </div>
+      </div>
+    `;
+
+    // 5. Trust strip
+    const trustItems = t.trustStrip.map(item =>
+      `<div class="trust-item"><strong>${item.value}</strong><span>${item.label}</span></div>`
+    ).join('');
+    document.getElementById('trustStrip').innerHTML = trustItems;
+
+    // 6. Testimonials
+    const testisHTML = t.testimonials.items.map(testi => `
+      <div class="testi-card">
+        <div class="testi-card__stars">${testi.stars}</div>
+        <p class="testi-card__quote">${testi.quote}</p>
+        <p class="testi-card__author">${testi.author}</p>
+        <p class="testi-card__result">${testi.result}</p>
+      </div>
+    `).join('');
+    document.getElementById('testiSection').innerHTML = `
+      <p class="testi-section__title">${t.testimonials.title}</p>
+      <div class="testi-grid">${testisHTML}</div>
+    `;
+
+    // 7. Footer
+    document.getElementById('ppcFooter').innerHTML = `
+      ${t.footer.copyright}
+      <a href="privacidad.html">${t.footer.links.privacy}</a> ·
+      <a href="index.html">${t.footer.links.home}</a>
+    `;
+
+    initInteractions();
+  } catch(error) {
+    console.error('Error cargando el JSON:', error);
+    document.getElementById('heroSection').innerHTML = '<div style="text-align:center;padding:100px 20px;font-family:Inter,sans-serif;color:#fff">Error cargando contenido</div>';
+  }
+}
+
+function initInteractions() {
+  // No standard nav/overlay on PPC pages - minimal interactions only
+}
+
+loadContent();
 </script>
 </body>
 </html>

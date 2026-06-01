@@ -12,7 +12,8 @@
       "Bash(LC_ALL=C uniq:*)",
       "Read(//c/Users/arnau/Downloads/avson-web/avson-web/**)",
       "Bash(comm:*)",
-      "Read(//c/Users/arnau/Downloads/avson-web/**)"
+      "Read(//c/Users/arnau/Downloads/avson-web/**)",
+      "Read(//c/Users/arnau/Desktop/avson/**)"
     ],
     "additionalDirectories": [
       "c:\\Users\\arnau\\Desktop\\avson\\code_new\\en",

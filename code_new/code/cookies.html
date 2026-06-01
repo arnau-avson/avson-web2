@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" href="favicon.svg">
   <meta name="theme-color" content="#1A2744">
-  <title>Política de Cookies | Avson GRC</title>
-  <meta name="description" content="Política de cookies de Avson Consultoría Estratégica SLU. Información sobre las cookies utilizadas en avson.eu conforme a la LSSI-CE y el RGPD.">
+  <title>Cargando...</title>
+  <meta name="description" content="">
   <link rel="canonical" href="https://avson.eu/cookies.html">
   <meta name="robots" content="noindex, follow">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://avson.eu/cookies.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Avson GRC">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
   {
@@ -31,334 +41,472 @@
     }
   }
   </script>
-  <!-- Google Tag Manager — conectar en avson.eu/es/admin -->
-  <!-- GTM-XXXXXXX -->
-  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");
   </script>
   <script src="avson-leads.js" defer></script>
+  <style>
+    .loader {
+      text-align: center;
+      padding: 100px 20px;
+      font-family: 'Inter', sans-serif;
+      color: #1A2744;
+    }
+
+    .lang-switcher {
+      position: relative;
+      margin-left: 20px;
+    }
+
+    .lang-switcher__btn {
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 40px;
+      transition: background 0.2s;
+    }
+
+    .lang-switcher__btn:hover {
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    .lang-switcher__dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+      min-width: 180px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all 0.2s;
+      z-index: 100;
+    }
+
+    .lang-switcher.open .lang-switcher__dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .lang-switcher__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--text-body);
+      transition: background 0.2s;
+    }
+
+    .lang-switcher__item:hover {
+      background: var(--pearl);
+    }
+
+    .lang-switcher__item--active {
+      background: var(--pearl);
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    .lang-switcher__item-flag {
+      font-size: 16px;
+    }
+
+    .lang-switcher__item-tag {
+      margin-left: auto;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .v3-nav__links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin: 0;
+    }
+
+    @media (max-width: 860px) {
+      .v3-nav__links {
+        display: none;
+      }
+
+      .lang-switcher {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 
-<!-- ANNOUNCE BAR -->
-<div class="announce-bar">
-  🔒 <strong>Nueva normativa ENS en vigor</strong> &nbsp;·&nbsp; Pide presupuesto para saber qué categoría necesitas &nbsp;·&nbsp; <a href="contacto.html">Solicitar ahora →</a>
-</div>
+  <div
+    style="background:#1A2744;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;font-size:12px;font-weight:400;letter-spacing:0.04em;text-align:center;padding:10px 40px;position:relative;z-index:200"
+    id="topBar"></div>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="index.html" class="nav__logo">AVSON<span class="dot"> · </span>GRC</a>
-    <ul class="nav__links">
-      <li><a href="ens.html">ENS</a></li>
-      <li><a href="ens-express.html" class="nav-express">⚡ ENS Express</a></li>
-      <li><a href="iso22301.html">ISO 22301</a></li>
-      <li><a href="iso27001.html">ISO 27001</a></li>
-      <li><a href="otras.html">Otras certificaciones</a></li>
-    </ul>
-    <div class="lang-switcher" id="langSwitcher">
-      <button class="lang-switcher__btn" onclick="toggleLang()" aria-label="Cambiar idioma">
-        <span class="lang-switcher__flag">🌐</span>
-        <span id="langCurrent">ES</span>
-        <span class="lang-switcher__chevron">▼</span>
-      </button>
-      <div class="lang-switcher__dropdown">
-        <a href="index.html" class="lang-switcher__item lang-switcher__item--active"><span class="lang-switcher__item-flag">🇪🇸</span><span class="lang-switcher__item-label">Español</span><span class="lang-switcher__item-tag">ES</span></a>
-        <a href="en/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇬🇧</span><span class="lang-switcher__item-label">English</span><span class="lang-switcher__item-tag">EN</span></a>
-        <a href="fr/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇫🇷</span><span class="lang-switcher__item-label">Français</span><span class="lang-switcher__item-tag">FR</span></a>
-        <a href="de/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇩🇪</span><span class="lang-switcher__item-label">Deutsch</span><span class="lang-switcher__item-tag">DE</span></a>
-        <a href="pt/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇵🇹</span><span class="lang-switcher__item-label">Português</span><span class="lang-switcher__item-tag">PT</span></a>
-        <a href="it/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇮🇹</span><span class="lang-switcher__item-label">Italiano</span><span class="lang-switcher__item-tag">IT</span></a>
+  <nav class="v3-nav" id="mainNav">
+    <div class="v3-nav__inner">
+      <a href="index.html" class="v3-nav__logo" id="navLogo">AVSON<span>·</span>GRC</a>
+      <ul class="v3-nav__links" id="navLinks"></ul>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-switcher__btn" onclick="toggleLang()" aria-label="Cambiar idioma">
+          <span class="lang-switcher__flag">🌐</span>
+          <span id="langCurrent">ES</span>
+          <span class="lang-switcher__chevron">▼</span>
+        </button>
+        <div class="lang-switcher__dropdown">
+          <a href="index.html" class="lang-switcher__item lang-switcher__item--active"><span
+              class="lang-switcher__item-flag">🇪🇸</span><span class="lang-switcher__item-label">Español</span><span
+              class="lang-switcher__item-tag">ES</span></a>
+          <a href="en/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇬🇧</span><span
+              class="lang-switcher__item-label">English</span><span class="lang-switcher__item-tag">EN</span></a>
+          <a href="fr/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇫🇷</span><span
+              class="lang-switcher__item-label">Français</span><span class="lang-switcher__item-tag">FR</span></a>
+          <a href="de/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇩🇪</span><span
+              class="lang-switcher__item-label">Deutsch</span><span class="lang-switcher__item-tag">DE</span></a>
+          <a href="pt/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇵🇹</span><span
+              class="lang-switcher__item-label">Português</span><span class="lang-switcher__item-tag">PT</span></a>
+          <a href="it/index.html" class="lang-switcher__item"><span class="lang-switcher__item-flag">🇮🇹</span><span
+              class="lang-switcher__item-label">Italiano</span><span class="lang-switcher__item-tag">IT</span></a>
+        </div>
       </div>
+      <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--sm v3-nav__cta" id="navCta"></a>
+      <button class="v3-nav__burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
-    <a href="contacto.html" class="nav__cta">Pide presupuesto →</a>
-    <div class="nav__hamburger" id="hamburger" onclick="toggleNav()">
-      <span></span><span></span><span></span>
+  </nav>
+  <div class="v3-nav__overlay" id="navOverlay">
+    <button class="v3-nav__overlay-close" id="navClose">✕</button>
+    <div id="navOverlayLinks"></div>
+    <a href="contacto.html" class="v3-btn v3-btn--gold" id="navOverlayCta"></a>
+  </div>
+
+  <main id="app"></main>
+  <footer class="footer" id="footer"></footer>
+
+  <a href="contacto.html" class="floating-cta" id="floatingCta"></a>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner"
+    style="display:none;position:fixed;bottom:20px;left:20px;right:20px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 24px;box-shadow:0 12px 28px rgba(0,0,0,0.1);z-index:1000;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <p class="cookie-banner__text"
+      style="margin:0;font-family:'Inter',sans-serif;font-size:13px;color:var(--text-body);flex:1" id="cookieText"></p>
+    <div class="cookie-banner__actions" style="display:flex;gap:12px">
+      <button class="cookie-accept" id="cookieAccept"
+        style="background:var(--navy);color:#fff;border:none;padding:8px 20px;border-radius:40px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;cursor:pointer"></button>
+      <button class="cookie-decline" id="cookieDecline"
+        style="background:transparent;border:1px solid var(--border);padding:8px 20px;border-radius:40px;font-family:'Inter',sans-serif;font-size:12px;cursor:pointer"></button>
     </div>
   </div>
-</nav>
-<div class="nav-overlay" id="navOverlay">
-  <a href="ens.html" onclick="toggleNav()">ENS</a>
-  <a href="ens-express.html" onclick="toggleNav()">⚡ ENS Express</a>
-  <a href="iso22301.html" onclick="toggleNav()">ISO 22301</a>
-  <a href="iso27001.html" onclick="toggleNav()">ISO 27001</a>
-  <a href="otras.html" onclick="toggleNav()">Otras certificaciones</a>
-  <a href="contacto.html" onclick="toggleNav()">Habla con un experto →</a>
-</div>
 
-<!-- CONTENIDO -->
-<section style="padding:140px 0 80px;background:var(--pearl)">
-  <div class="container" style="max-width:800px">
-    <span class="label-tag">Legal</span>
-    <div class="gold-line"></div>
-    <h1 style="font-family:var(--font-serif);font-size:clamp(36px,4vw,56px);font-weight:300;color:var(--navy);margin-bottom:32px">Política de Cookies</h1>
-    <p style="font-size:13px;color:var(--text-muted);margin-bottom:48px">Última actualización: junio de 2025</p>
+  <div id="exitModal"
+    style="display:none;position:fixed;inset:0;background:rgba(26,39,68,0.72);z-index:9999;align-items:center;justify-content:center;padding:20px">
+    <div style="background:#fff;max-width:520px;width:100%;padding:48px 40px;position:relative">
+      <button onclick="this.parentElement.parentElement.style.display='none'"
+        style="position:absolute;top:16px;right:20px;font-size:22px;color:#7A8499;cursor:pointer;background:none;border:none;font-family:inherit">×</button>
+      <span
+        style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:16px"
+        id="exitModalLabel"></span>
+      <h2
+        style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:16px"
+        id="exitModalTitle"></h2>
+      <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.65;margin-bottom:28px"
+        id="exitModalDesc"></p>
+      <a href="contacto.html" id="exitModalCta"
+        style="display:block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#1A2744;border:1px solid #C9A84C;padding:14px 28px;text-align:center;text-decoration:none"></a>
+      <p style="font-family:'Inter',sans-serif;font-size:12px;color:#7A8499;text-align:center;margin-top:12px;cursor:pointer;text-decoration:underline"
+        onclick="document.getElementById('exitModal').style.display='none'" id="exitModalDismiss"></p>
+    </div>
+  </div>
 
-    <div style="display:flex;flex-direction:column;gap:48px">
+  <div id="stickyBar"
+    style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:500;background:#1A2744;border-top:1px solid rgba(255,255,255,0.08);padding:14px 20px;justify-content:space-between;gap:12px;align-items:center">
+    <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.7)"
+      id="stickyBarText"></span>
+    <a href="contacto.html"
+      style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#fff;border:1px solid #fff;padding:10px 20px;text-decoration:none;white-space:nowrap"
+      id="stickyBarCta"></a>
+  </div>
 
-      <!-- 1 -->
-      <div>
-        <h2 style="font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">1. ¿Qué son las cookies?</h2>
-        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:12px">Las cookies son pequeños archivos de texto que los sitios web instalan en el dispositivo del usuario (ordenador, smartphone, tablet) cuando este los visita. Permiten al sitio web recordar información sobre la visita —como el idioma preferido y otras opciones— para facilitar la próxima visita y hacer el sitio más útil para usted.</p>
-        <p style="font-size:15px;line-height:1.8;color:var(--text)">La presente política de cookies se rige por el artículo 22.2 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), así como por el Reglamento (UE) 2016/679 (RGPD) en lo relativo al tratamiento de datos personales a través de cookies.</p>
-      </div>
+  <a href="https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
+    class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" id="whatsappLink">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
 
-      <!-- 2 -->
-      <div>
-        <h2 style="font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">2. Tipos de cookies que utilizamos</h2>
-        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:20px">En avson.eu utilizamos los siguientes tipos de cookies:</p>
+  <script>
+    function toggleLang() {
+      document.getElementById('langSwitcher').classList.toggle('open');
+    }
+    document.addEventListener('click', (e) => {
+      const ls = document.getElementById('langSwitcher');
+      if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+    });
 
-        <div style="display:flex;flex-direction:column;gap:20px">
-          <div style="background:var(--white);border:1px solid var(--border);overflow:hidden">
-            <div style="background:var(--navy);padding:16px 24px;display:flex;align-items:center;gap:12px">
-              <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--white)">Cookies Propias — Técnicas / Sesión</span>
-            </div>
-            <div style="padding:20px 24px">
-              <p style="font-size:14px;line-height:1.7;color:var(--text);margin:0">Son cookies estrictamente necesarias para el funcionamiento del sitio web. Permiten recordar sus preferencias de privacidad (aceptación del banner de cookies) y garantizan la correcta navegación. <strong>No requieren consentimiento</strong> según el art. 22.2 LSSI-CE.</p>
-            </div>
-          </div>
+    async function loadContent() {
+      try {
+        const response = await fetch('assets/palabras.json');
+        const data = await response.json();
+        const lang = "es";
+        const pageData = data[lang]?.cookies;
+        if (!pageData) throw new Error(`No se encontró el idioma "${lang}" o la clave "cookies"`);
+        const t = pageData;
 
-          <div style="background:var(--white);border:1px solid var(--border);overflow:hidden">
+        // Meta
+        document.title = t.meta.title;
+        document.querySelector('meta[name="description"]').setAttribute('content', t.meta.description);
+        document.querySelector('meta[property="og:title"]').setAttribute('content', t.meta.ogTitle);
+        document.querySelector('meta[property="og:description"]').setAttribute('content', t.meta.ogDescription);
+
+        // Top bar
+        document.getElementById('topBar').innerHTML = `🔒 <strong>${t.topBar.text}</strong> &nbsp;·&nbsp; <a href="contacto.html" style="color:#C9A84C;text-decoration:none;font-weight:500">${t.topBar.cta}</a>`;
+
+        // Nav
+        const navLinks = document.getElementById('navLinks');
+        navLinks.innerHTML = `
+      <li><a href="ens.html">${t.nav.links.ens}</a></li>
+      <li><a href="ens-express.html" class="nav-express">${t.nav.links.ensExpress}</a></li>
+      <li><a href="iso22301.html">${t.nav.links.iso22301}</a></li>
+      <li><a href="iso27001.html">${t.nav.links.iso27001}</a></li>
+      <li><a href="otras.html">${t.nav.links.otras}</a></li>
+    `;
+        document.getElementById('navCta').innerHTML = t.nav.cta;
+        document.getElementById('navOverlayLinks').innerHTML = `
+      <a href="ens.html">${t.nav.links.ens}</a>
+      <a href="ens-express.html">${t.nav.links.ensExpress}</a>
+      <a href="iso22301.html">${t.nav.links.iso22301}</a>
+      <a href="iso27001.html">${t.nav.links.iso27001}</a>
+      <a href="otras.html">${t.nav.links.otras}</a>
+    `;
+        document.getElementById('navOverlayCta').innerHTML = t.nav.cta;
+
+        // Cookie banner
+        const cookieBanner = document.getElementById('cookieBanner');
+        document.getElementById('cookieText').innerHTML = `${t.cookieBanner.text} <a href="cookies.html" style="color:var(--navy)">${t.cookieBanner.cookiesLink}</a>.`;
+        document.getElementById('cookieAccept').innerHTML = t.cookieBanner.accept;
+        document.getElementById('cookieDecline').innerHTML = t.cookieBanner.decline;
+        if (!localStorage.getItem('cookieAccepted')) {
+          setTimeout(() => cookieBanner.style.display = 'flex', 1200);
+        }
+        document.getElementById('cookieAccept').onclick = () => { localStorage.setItem('cookieAccepted', 'true'); cookieBanner.style.display = 'none'; };
+        document.getElementById('cookieDecline').onclick = () => { localStorage.setItem('cookieAccepted', 'false'); cookieBanner.style.display = 'none'; };
+
+        // Floating elements
+        document.getElementById('floatingCta').innerHTML = t.floatingCta;
+        document.getElementById('whatsappLink').href = t.whatsapp.url;
+
+        // Exit modal
+        document.getElementById('exitModalLabel').innerHTML = t.exitModal.label;
+        document.getElementById('exitModalTitle').innerHTML = t.exitModal.title;
+        document.getElementById('exitModalDesc').innerHTML = t.exitModal.desc;
+        document.getElementById('exitModalCta').innerHTML = t.exitModal.cta;
+        document.getElementById('exitModalDismiss').innerHTML = t.exitModal.dismiss;
+
+        // Sticky bar
+        document.getElementById('stickyBarText').innerHTML = t.stickyBar.text;
+        document.getElementById('stickyBarCta').innerHTML = t.stickyBar.cta;
+        if (window.innerWidth <= 768) document.getElementById('stickyBar').style.display = 'flex';
+
+        // Build main content
+        const sectionsHTML = t.sections.map(section => {
+          let sectionHtml = `<div style="margin-bottom:48px">`;
+          sectionHtml += `<h2 style="font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">${section.title}</h2>`;
+          if (section.content) sectionHtml += `<div style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:16px">${section.content}</div>`;
+
+          // Cookie types (section 2)
+          if (section.cookieTypes) {
+            sectionHtml += `<div style="display:flex;flex-direction:column;gap:20px">`;
+            section.cookieTypes.forEach(ct => {
+              sectionHtml += `<div style="background:var(--white);border:1px solid var(--border);overflow:hidden">
             <div style="background:var(--navy);padding:16px 24px">
-              <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--white)">Cookies Analíticas — Google Analytics</span>
+              <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--white)">${ct.label}</span>
             </div>
             <div style="padding:20px 24px">
-              <p style="font-size:14px;line-height:1.7;color:var(--text);margin:0">Proporcionadas por Google LLC a través de Google Analytics. Nos permiten medir el tráfico del sitio web, el comportamiento de los usuarios y el rendimiento del contenido. Los datos se agregan y anonimizan. <strong>Requieren su consentimiento previo.</strong></p>
+              <p style="font-size:14px;line-height:1.7;color:var(--text);margin:0">${ct.text}</p>
+            </div>
+          </div>`;
+            });
+            sectionHtml += `</div>`;
+          }
+
+          // Cookie table (section 3)
+          if (section.cookieTable) {
+            sectionHtml += `<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px;min-width:600px">
+          <thead><tr style="background:var(--navy);color:var(--white)">${section.cookieTable.headers.map(h => `<th style="padding:12px 14px;text-align:left;font-weight:500">${h}</th>`).join('')}</tr></thead>
+          <tbody>${section.cookieTable.rows.map((row, idx) => `<tr style="border-bottom:1px solid var(--border);${idx % 2 === 1 ? 'background:var(--pearl)' : ''}">
+            <td style="padding:12px 14px;color:var(--navy);font-weight:500;font-family:monospace">${row[0]}</td>
+            <td style="padding:12px 14px;color:var(--text)">${row[1]}</td>
+            <td style="padding:12px 14px;color:var(--text);line-height:1.5">${row[2]}</td>
+            <td style="padding:12px 14px;color:var(--text)">${row[3]}</td>
+            <td style="padding:12px 14px;color:var(--text)">${row[4]}</td>
+          </tr>`).join('')}</tbody>
+        </table></div>`;
+            if (section.tableFootnote) sectionHtml += `<p style="font-size:12px;color:var(--text-muted);margin-top:12px">${section.tableFootnote}</p>`;
+          }
+
+          // Cookie panel + browsers (section 4)
+          if (section.cookiePanel) {
+            sectionHtml += `<div style="background:var(--white);border:1px solid var(--border);padding:20px 24px;margin-bottom:20px">
+          <p style="font-size:14px;font-weight:600;color:var(--navy);margin:0 0 8px">${section.cookiePanel.title}</p>
+          <p style="font-size:14px;line-height:1.6;color:var(--text);margin:0">${section.cookiePanel.text}</p>
+        </div>`;
+          }
+
+          if (section.browserLabel) {
+            sectionHtml += `<p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:16px">${section.browserLabel}</p>`;
+          }
+
+          if (section.browsers) {
+            sectionHtml += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">`;
+            section.browsers.forEach(b => {
+              sectionHtml += `<div style="background:var(--white);border:1px solid var(--border);padding:20px 24px">
+            <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0 0 10px">${b.name}</p>
+            <p style="font-size:13px;line-height:1.6;color:var(--text);margin:0 0 10px">${b.instructions}</p>
+            <a href="${b.linkUrl}" target="_blank" rel="noopener" style="font-size:12px;color:var(--navy)">${b.linkText}</a>
+          </div>`;
+            });
+            sectionHtml += `</div>`;
+          }
+
+          if (section.optOut) {
+            sectionHtml += `<div style="background:var(--white);border:1px solid var(--border);padding:20px 24px;margin-top:16px">
+          <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0 0 8px">${section.optOut.title}</p>
+          <p style="font-size:13px;line-height:1.6;color:var(--text);margin:0">${section.optOut.text}</p>
+        </div>`;
+          }
+
+          if (section.disclaimer) {
+            sectionHtml += `<p style="font-size:13px;line-height:1.7;color:var(--text-muted);margin-top:16px">${section.disclaimer}</p>`;
+          }
+
+          // Contact box (section 5)
+          if (section.contactBox) {
+            sectionHtml += `<div style="background:var(--white);border:1px solid var(--border);padding:24px 28px;font-size:14px;line-height:2">`;
+            section.contactBox.items.forEach(item => {
+              sectionHtml += `<p style="margin:0">${item.label}${item.value}</p>`;
+            });
+            sectionHtml += `</div>`;
+          }
+
+          if (section.moreInfo) {
+            sectionHtml += `<p style="font-size:14px;line-height:1.7;color:var(--text);margin-top:16px">${section.moreInfo}</p>`;
+          }
+
+          if (section.privacyLink) {
+            sectionHtml += `<p style="font-size:14px;line-height:1.7;color:var(--text);margin-top:12px">${section.privacyLink}</p>`;
+          }
+
+          sectionHtml += `</div>`;
+          return sectionHtml;
+        }).join('');
+
+        const mainHTML = `
+      <section style="padding:140px 0 80px;background:var(--pearl)">
+        <div class="container" style="max-width:800px">
+          <span class="label-tag">${t.page.label}</span>
+          <div class="gold-line"></div>
+          <h1 style="font-family:var(--font-serif);font-size:clamp(36px,4vw,56px);font-weight:300;color:var(--navy);margin-bottom:32px">${t.page.title}</h1>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:48px">${t.page.lastUpdate}</p>
+          <div style="display:flex;flex-direction:column;gap:48px">${sectionsHTML}</div>
+        </div>
+      </section>
+    `;
+
+        // Footer
+        const footerHTML = `
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <span class="footer__logo">${t.footer.logo}</span>
+            <p class="footer__tagline">${t.footer.tagline}</p>
+            <div class="footer__contact">
+              <a href="mailto:${t.footer.contact.email}">${t.footer.contact.email}</a><br>
+              <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--font-sans);font-size:12px;color:var(--gold);letter-spacing:0.04em">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                ${t.footer.contact.linkedin}
+              </a>
+              <a href="tel:${t.footer.contact.phone.replace(/\s/g, '')}">${t.footer.contact.phone}</a><br>
+              ${t.footer.contact.address}
             </div>
           </div>
-
-          <div style="background:var(--white);border:1px solid var(--border);overflow:hidden">
-            <div style="background:var(--navy);padding:16px 24px">
-              <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--white)">Cookies de Terceros — Google Fonts</span>
+          <div>
+            <div class="footer__col-title">${t.footer.certifications.title}</div>
+            <ul class="footer__links">${t.footer.certifications.items.map(i => `<li><a href="${i === 'ENS' ? 'ens.html' : i === '⚡ ENS Express' ? 'ens-express.html' : i === 'ISO 27001' ? 'iso27001.html' : i === 'ISO 22301' ? 'iso22301.html' : i === 'DORA' ? 'dora.html' : i === 'NIS2' ? 'nis2.html' : i === 'TISAX' ? 'tisax.html' : i === 'Otras ISOs' ? 'otras.html' : '#'}">${i}</a></li>`).join('')}</ul>
+          </div>
+          <div>
+            <div class="footer__col-title">${t.footer.company.title}</div>
+            <ul class="footer__links">${t.footer.company.items.map(i => `<li><a href="${i === 'Packs GRC' ? 'packs.html' : i === 'Equipo' ? 'equipo.html' : i === 'Webinars' ? 'webinars.html' : i === 'Contacto' ? 'contacto.html' : '#'}">${i}</a></li>`).join('')}</ul>
+          </div>
+          <div>
+            <div class="footer__col-title">${t.footer.newsletter.title}</div>
+            <p class="footer__newsletter-text">${t.footer.newsletter.text}</p>
+            <div class="footer__newsletter-form">
+              <input type="email" class="footer__newsletter-input" placeholder="${t.footer.newsletter.placeholder}">
+              <button class="footer__newsletter-btn">→</button>
             </div>
-            <div style="padding:20px 24px">
-              <p style="font-size:14px;line-height:1.7;color:var(--text);margin:0">Google Fonts puede establecer cookies o registrar solicitudes de fuentes tipográficas. No utilizamos dichas cookies con finalidades de seguimiento. La carga de fuentes se realiza en el contexto de la prestación del servicio tipográfico.</p>
-            </div>
           </div>
         </div>
-      </div>
-
-      <!-- 3 -->
-      <div>
-        <h2 style="font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">3. Tabla de cookies</h2>
-        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:20px">A continuación se detallan las cookies concretas utilizadas en avson.eu:</p>
-        <div style="overflow-x:auto">
-          <table style="width:100%;border-collapse:collapse;font-size:12px;min-width:600px">
-            <thead>
-              <tr style="background:var(--navy);color:var(--white)">
-                <th style="padding:12px 14px;text-align:left;font-weight:500">Nombre</th>
-                <th style="padding:12px 14px;text-align:left;font-weight:500">Tipo</th>
-                <th style="padding:12px 14px;text-align:left;font-weight:500">Finalidad</th>
-                <th style="padding:12px 14px;text-align:left;font-weight:500">Duración</th>
-                <th style="padding:12px 14px;text-align:left;font-weight:500">Proveedor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom:1px solid var(--border)">
-                <td style="padding:12px 14px;color:var(--navy);font-weight:500;font-family:monospace">cookieAccepted</td>
-                <td style="padding:12px 14px;color:var(--text)">Propia · Técnica</td>
-                <td style="padding:12px 14px;color:var(--text);line-height:1.5">Almacena la preferencia de aceptación del banner de cookies (localStorage)</td>
-                <td style="padding:12px 14px;color:var(--text)">Persistente</td>
-                <td style="padding:12px 14px;color:var(--text)">avson.eu</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border);background:var(--pearl)">
-                <td style="padding:12px 14px;color:var(--navy);font-weight:500;font-family:monospace">exitShown</td>
-                <td style="padding:12px 14px;color:var(--text)">Propia · Sesión</td>
-                <td style="padding:12px 14px;color:var(--text);line-height:1.5">Controla si el modal de exit-intent ya ha sido mostrado en la sesión actual</td>
-                <td style="padding:12px 14px;color:var(--text)">Sesión</td>
-                <td style="padding:12px 14px;color:var(--text)">avson.eu</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border)">
-                <td style="padding:12px 14px;color:var(--navy);font-weight:500;font-family:monospace">_ga</td>
-                <td style="padding:12px 14px;color:var(--text)">Terceros · Analítica</td>
-                <td style="padding:12px 14px;color:var(--text);line-height:1.5">Distingue usuarios únicos asignando un número generado aleatoriamente como identificador de cliente</td>
-                <td style="padding:12px 14px;color:var(--text)">2 años</td>
-                <td style="padding:12px 14px;color:var(--text)">Google Analytics</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border);background:var(--pearl)">
-                <td style="padding:12px 14px;color:var(--navy);font-weight:500;font-family:monospace">_ga_XXXXXXXX</td>
-                <td style="padding:12px 14px;color:var(--text)">Terceros · Analítica</td>
-                <td style="padding:12px 14px;color:var(--text);line-height:1.5">Almacena el estado de la sesión (Google Analytics 4)</td>
-                <td style="padding:12px 14px;color:var(--text)">2 años</td>
-                <td style="padding:12px 14px;color:var(--text)">Google Analytics</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border)">
-                <td style="padding:12px 14px;color:var(--navy);font-weight:500;font-family:monospace">_gid</td>
-                <td style="padding:12px 14px;color:var(--text)">Terceros · Analítica</td>
-                <td style="padding:12px 14px;color:var(--text);line-height:1.5">Distingue usuarios. Almacena información sobre cómo usan el sitio</td>
-                <td style="padding:12px 14px;color:var(--text)">24 horas</td>
-                <td style="padding:12px 14px;color:var(--text)">Google Analytics</td>
-              </tr>
-              <tr style="background:var(--pearl)">
-                <td style="padding:12px 14px;color:var(--navy);font-weight:500;font-family:monospace">_gat</td>
-                <td style="padding:12px 14px;color:var(--text)">Terceros · Analítica</td>
-                <td style="padding:12px 14px;color:var(--text);line-height:1.5">Limita la tasa de solicitudes al servidor de Google Analytics</td>
-                <td style="padding:12px 14px;color:var(--text)">1 minuto</td>
-                <td style="padding:12px 14px;color:var(--text)">Google Analytics</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="font-size:12px;color:var(--text-muted);margin-top:12px">(*) Las cookies analíticas de Google solo se instalan si el usuario acepta las cookies a través del banner de consentimiento.</p>
-      </div>
-
-      <!-- 4 -->
-      <div>
-        <h2 style="font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">4. Cómo gestionar y desactivar las cookies</h2>
-        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:20px">Puede retirar su consentimiento o gestionar las cookies en cualquier momento a través de las siguientes vías:</p>
-
-        <div style="background:var(--white);border:1px solid var(--border);padding:20px 24px;margin-bottom:20px">
-          <p style="font-size:14px;font-weight:600;color:var(--navy);margin:0 0 8px">Desde nuestro panel de cookies</p>
-          <p style="font-size:14px;line-height:1.6;color:var(--text);margin:0">Elimine la entrada <code style="background:var(--pearl);padding:2px 6px;font-size:12px">cookieAccepted</code> de su localStorage (puede hacerlo desde las herramientas de desarrollo del navegador, pestaña Application &gt; Local Storage) para que vuelva a aparecer el banner de consentimiento.</p>
-        </div>
-
-        <p style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:16px">O configurando su navegador:</p>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-          <div style="background:var(--white);border:1px solid var(--border);padding:20px 24px">
-            <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0 0 10px">Google Chrome</p>
-            <p style="font-size:13px;line-height:1.6;color:var(--text);margin:0 0 10px">Menú (⋮) → Configuración → Privacidad y seguridad → Cookies y otros datos de sitios</p>
-            <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener" style="font-size:12px;color:var(--navy)">Instrucciones de Google →</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);padding:20px 24px">
-            <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0 0 10px">Mozilla Firefox</p>
-            <p style="font-size:13px;line-height:1.6;color:var(--text);margin:0 0 10px">Menú (☰) → Opciones → Privacidad y Seguridad → Cookies y datos del sitio</p>
-            <a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-" target="_blank" rel="noopener" style="font-size:12px;color:var(--navy)">Instrucciones de Mozilla →</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);padding:20px 24px">
-            <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0 0 10px">Apple Safari</p>
-            <p style="font-size:13px;line-height:1.6;color:var(--text);margin:0 0 10px">Safari → Preferencias → Privacidad → Gestionar datos de sitios web</p>
-            <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener" style="font-size:12px;color:var(--navy)">Instrucciones de Apple →</a>
-          </div>
-          <div style="background:var(--white);border:1px solid var(--border);padding:20px 24px">
-            <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0 0 10px">Microsoft Edge</p>
-            <p style="font-size:13px;line-height:1.6;color:var(--text);margin:0 0 10px">Menú (…) → Configuración → Privacidad, búsqueda y servicios → Cookies y permisos del sitio</p>
-            <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener" style="font-size:12px;color:var(--navy)">Instrucciones de Microsoft →</a>
-          </div>
-        </div>
-
-        <div style="background:var(--white);border:1px solid var(--border);padding:20px 24px;margin-top:16px">
-          <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0 0 8px">Opt-out de Google Analytics</p>
-          <p style="font-size:13px;line-height:1.6;color:var(--text);margin:0">También puede instalar el <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color:var(--navy)">complemento de inhabilitación de Google Analytics</a> para su navegador, que impide que JavaScript de Google Analytics recopile información sobre sus visitas a cualquier sitio web.</p>
-        </div>
-
-        <p style="font-size:13px;line-height:1.7;color:var(--text-muted);margin-top:16px">Tenga en cuenta que desactivar determinadas cookies puede afectar a la funcionalidad del sitio web o impedir el correcto funcionamiento de algunas secciones.</p>
-      </div>
-
-      <!-- 5 -->
-      <div>
-        <h2 style="font-family:var(--font-serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)">5. Más información</h2>
-        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:12px">Para cualquier consulta relacionada con el uso de cookies en avson.eu, puede contactarnos en:</p>
-        <div style="background:var(--white);border:1px solid var(--border);padding:24px 28px;font-size:14px;line-height:2">
-          <p style="margin:0"><strong>Avson Consultoría Estratégica SLU</strong></p>
-          <p style="margin:0">Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)</p>
-          <p style="margin:0"><a href="mailto:hola@avson.eu" style="color:var(--navy)">hola@avson.eu</a></p>
-        </div>
-        <p style="font-size:14px;line-height:1.7;color:var(--text);margin-top:16px">Para más información general sobre cookies y cómo le afectan, puede visitar la <a href="https://www.aepd.es" target="_blank" rel="noopener" style="color:var(--navy)">web de la Agencia Española de Protección de Datos (AEPD)</a> y la <a href="https://www.youronlinechoices.eu" target="_blank" rel="noopener" style="color:var(--navy)">plataforma Your Online Choices</a>.</p>
-        <p style="font-size:14px;line-height:1.7;color:var(--text);margin-top:12px">Consulte también nuestra <a href="privacidad.html" style="color:var(--navy);font-weight:500">Política de Privacidad</a> para información completa sobre el tratamiento de datos personales.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <span class="footer__logo">AVSON<span> · </span>GRC</span>
-        <p class="footer__tagline">Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. 355+ empresas certificadas con éxito garantizado.</p>
-        <div class="footer__contact">
-          <a href="mailto:hola@avson.eu">hola@avson.eu</a><br>
-          <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--font-sans);font-size:12px;color:var(--gold);letter-spacing:0.04em">
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-  LinkedIn · Avson GRC
-</a>
-          <a href="tel:+34648414863">+34 648 41 48 63</a><br>
-          Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)
+        <div class="footer__bottom">
+          <span class="footer__copy">${t.footer.bottom.copyright}</span>
+          <ul class="footer__legal">${t.footer.bottom.links.map(l => `<li><a href="${l.url}">${l.text}</a></li>`).join('')}</ul>
         </div>
       </div>
-      <div>
-        <div class="footer__col-title">Certificaciones</div>
-        <ul class="footer__links">
-          <li><a href="ens.html">ENS</a></li>
-          <li><a href="ens-express.html">⚡ ENS Express</a></li>
-          <li><a href="iso27001.html">ISO 27001</a></li>
-          <li><a href="iso22301.html">ISO 22301</a></li>
-          <li><a href="dora.html">DORA</a></li>
-          <li><a href="nis2.html">NIS2</a></li>
-          <li><a href="tisax.html">TISAX</a></li>
-          <li><a href="otras.html">Otras ISOs</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer__col-title">Empresa</div>
-        <ul class="footer__links">
-          <li><a href="packs.html">Packs GRC</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="webinars.html">Webinars</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer__col-title">Newsletter GRC</div>
-        <p class="footer__newsletter-text">Análisis mensual sobre ENS, ISO 27001 y cumplimiento normativo. Sin spam.</p>
-        <div class="footer__newsletter-form">
-          <input type="email" class="footer__newsletter-input" placeholder="tu@empresa.com">
-          <button class="footer__newsletter-btn">→</button>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span class="footer__copy">© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.</span>
-      <ul class="footer__legal">
-        <li><a href="privacidad.html">Política de privacidad</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+    `;
 
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-banner__text">Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. <a href="cookies.html">Política de cookies</a>.</p>
-  <div class="cookie-banner__actions">
-    <button class="cookie-accept" onclick="closeCookie()">Aceptar</button>
-    <button class="cookie-decline" onclick="closeCookie()">Rechazar</button>
-  </div>
-</div>
+        document.getElementById('app').innerHTML = mainHTML;
+        document.getElementById('footer').innerHTML = footerHTML;
 
-<script>
-window.addEventListener('scroll', () => {
-  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
-});
-function toggleLang() { document.getElementById('langSwitcher').classList.toggle('open'); }
-document.addEventListener('click', (e) => { const ls = document.getElementById('langSwitcher'); if (ls && !ls.contains(e.target)) ls.classList.remove('open'); });
-function toggleNav() {
-  document.getElementById('navOverlay').classList.toggle('open');
-  document.body.classList.toggle('no-overflow');
-}
-window.addEventListener('load', () => {
-  if (!localStorage.getItem('cookieAccepted')) {
-    setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1200);
-  }
-});
-function closeCookie() {
-  localStorage.setItem('cookieAccepted', 'true');
-  document.getElementById('cookieBanner').classList.remove('visible');
-}
-const animEls = document.querySelectorAll('.anim-fade-up, .anim-fade');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, { threshold: 0.12 });
-animEls.forEach(el => observer.observe(el));
-</script>
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        initInteractions();
+      } catch (error) {
+        console.error('Error cargando el JSON:', error);
+        document.getElementById('app').innerHTML = '<div class="loader">Error al cargar el contenido. Por favor, recarga la página.</div>';
+      }
+    }
+
+    function initInteractions() {
+      const burger = document.getElementById('navBurger');
+      const overlay = document.getElementById('navOverlay');
+      const close = document.getElementById('navClose');
+      const toggleNav = (open) => {
+        overlay.classList.toggle('open', open);
+        document.body.classList.toggle('no-scroll', open);
+      };
+      burger?.addEventListener('click', () => toggleNav(!overlay.classList.contains('open')));
+      close?.addEventListener('click', () => toggleNav(false));
+      overlay?.addEventListener('click', (e) => { if (e.target === overlay) toggleNav(false); });
+
+      const nav = document.getElementById('mainNav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('v3-nav--scrolled', window.scrollY > 40);
+      });
+
+      let exitShown = false;
+      document.addEventListener('mouseleave', (e) => {
+        if (e.clientY < 0 && !exitShown && !sessionStorage.getItem('_exitShown')) {
+          document.getElementById('exitModal').style.display = 'flex';
+          exitShown = true;
+          sessionStorage.setItem('_exitShown', '1');
+        }
+      });
+    }
+
+    loadContent();
+  </script>
 </body>
+
 </html>

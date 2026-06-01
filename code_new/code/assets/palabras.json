@@ -2188,8 +2188,779 @@
                 "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
             }
         },
-
-
-        
+        "gracias": {
+            "meta": {
+                "title": "Solicitud recibida | Avson GRC"
+            },
+            "logo": {
+                "text": "AVSON",
+                "separator": " · ",
+                "suffix": "GRC"
+            },
+            "hero": {
+                "titleDefault": "Tu solicitud ha llegado.",
+                "titleEmphasis": "Te llamamos hoy.",
+                "titlePersonalized": "tu solicitud ha llegado.",
+                "subtitle": "Antes de las <strong>18:00h</strong> te llama un miembro de nuestro equipo desde el <strong>+34 648 414 863</strong>. Guarda el número — no queremos que pierdas la llamada."
+            },
+            "steps": [
+                { "num": "1", "text": "Revisamos tu solicitud y asignamos el experto adecuado" },
+                { "num": "2", "text": "Te llamamos hoy para entender tu situación en 15 minutos" },
+                { "num": "3", "text": "Te damos el presupuesto en la misma llamada y la propuesta por escrito después" }
+            ],
+            "cta": {
+                "href": "ens.html",
+                "text": "Qué va a pasar en la llamada →"
+            },
+            "separator": "— o —",
+            "linkedin": {
+                "href": "https://www.linkedin.com/avson",
+                "text": "Seguirnos en LinkedIn"
+            },
+            "footnote": {
+                "text": "© 2026 Avson Consultoría Estratégica SLU · CIF B10560795 · ",
+                "privacyLink": "Privacidad"
+            }
+        },
+        "contacto": {
+            "meta": {
+                "title": "Habla con un experto ENS | Avson GRC",
+                "description": "Habla con un experto en certificación ENS. Gratuito, sin compromiso. Te llamamos hoy mismo."
+            },
+            "nav": {
+                "logo": { "text": "AVSON", "separator": "·", "suffix": "GRC" },
+                "links": [
+                    { "href": "ens.html", "text": "ENS" },
+                    { "href": "ens-express.html", "text": "⚡ ENS Express", "className": "express" },
+                    { "href": "iso22301.html", "text": "ISO 22301" },
+                    { "href": "iso27001.html", "text": "ISO 27001" },
+                    { "href": "otras.html", "text": "Otras certificaciones" }
+                ]
+            },
+            "fomoBar": "⚠ El 85% de empresas sin ENS pierde sus licitaciones",
+            "card": {
+                "badge": "🟢 Te llamamos hoy mismo",
+                "title": "Habla con un experto.",
+                "subtitle": "Gratuito · Sin compromiso · En 30 min sabrás exactamente qué necesitas"
+            },
+            "form": {
+                "qualLabel": "¿Qué necesitas?",
+                "qualButtons": [
+                    { "label": "⚡ ENS urgente", "value": "ENS Express urgente", "urgent": true },
+                    { "label": "ENS estándar", "value": "ENS estándar", "urgent": false },
+                    { "label": "ISO 27001", "value": "ISO 27001", "urgent": false },
+                    { "label": "ISO 22301", "value": "ISO 22301", "urgent": false },
+                    { "label": "DORA", "value": "DORA", "urgent": false },
+                    { "label": "No lo sé aún", "value": "No lo sé aún", "urgent": false },
+                    { "label": "Otras", "value": "Otras", "urgent": false }
+                ],
+                "namePlaceholder": "Tu nombre *",
+                "emailPlaceholder": "Tu email *",
+                "rgpdText": "Al enviar, acepto que Avson me contacte para responder mi consulta.",
+                "rgpdLink": "Política de privacidad",
+                "submitButton": "Habla con un experto →",
+                "lockText": "🔒 Gratuito · Sin compromiso · Confidencial",
+                "altPhone": {
+                    "label": "¿Prefieres llamar?",
+                    "number": "+34 648 414 863"
+                }
+            },
+            "trustStrip": [
+                "355+ empresas certificadas",
+                "100% de éxito",
+                "Garantía por escrito"
+            ],
+            "footer": {
+                "logo": { "text": "AVSON", "separator": " · ", "suffix": "GRC" },
+                "description": "Consultora GRC especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. Tu socio estratégico en compliance.",
+                "contactInfo": "hola@avson.eu · +34 648 41 48 63<br>Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)",
+                "linkedin": { "href": "https://www.linkedin.com/avson", "text": "LinkedIn · Avson GRC" },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        { "href": "ens.html", "text": "ENS" },
+                        { "href": "ens-express.html", "text": "⚡ ENS Express" },
+                        { "href": "iso27001.html", "text": "ISO 27001" },
+                        { "href": "iso22301.html", "text": "ISO 22301" },
+                        { "href": "otras.html", "text": "Otras certificaciones" }
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        { "href": "index.html", "text": "Inicio" },
+                        { "href": "packs.html", "text": "Packs" },
+                        { "href": "equipo.html", "text": "Equipo" },
+                        { "href": "unete.html", "text": "Únete al equipo" }
+                    ]
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU · CIF B10560795",
+                    "links": [
+                        { "href": "privacidad.html", "text": "Privacidad" },
+                        { "href": "cookies.html", "text": "Cookies" }
+                    ]
+                }
+            }
+        },
+        "ensPpc": {
+            "meta": {
+                "title": "Certificado ENS — Avson GRC | Garantía de éxito por escrito",
+                "description": "Consigue tu certificado ENS con garantía de éxito por escrito. Si no lo obtienes, te devolvemos el dinero. 355+ empresas certificadas."
+            },
+            "topBar": {
+                "icon": "⚠",
+                "text": "El 85% de empresas sin ENS pierde sus licitaciones.",
+                "suffix": "Avson GRC — Certificado ENS con garantía de éxito por escrito."
+            },
+            "header": {
+                "logoPrefix": "AVSON",
+                "logoDot": " · ",
+                "logoSuffix": "GRC",
+                "phone": "📞 +34 648 414 863"
+            },
+            "hero": {
+                "fomo": "⚠ Sin ENS tu oferta no se abre. Sin excepciones.",
+                "title": "Certificado ENS.<br><em>Con garantía de éxito<br>por escrito.</em>",
+                "subtitle": "Si no obtienes el certificado ENS, <strong>te devolvemos el dinero</strong>. Lo firmamos en el contrato. Los únicos del mercado que lo garantizan.",
+                "trustItems": [
+                    "355+ empresas certificadas",
+                    "100% de éxito",
+                    "15 consultores especializados"
+                ]
+            },
+            "stats": [
+                { "value": "355+", "label": "certificaciones" },
+                { "value": "100%", "label": "tasa de éxito" },
+                { "value": "30 días", "label": "con Express" }
+            ],
+            "form": {
+                "liveBadge": "🟢 Te llamamos hoy mismo",
+                "title": "Habla con un experto",
+                "subtitle": "Gratuito · Sin compromiso · 30 minutos",
+                "qualLabel": "¿Qué necesitas?",
+                "qualButtons": [
+                    { "label": "⚡ ENS urgente", "value": "ENS Express urgente", "urgent": true },
+                    { "label": "ENS estándar", "value": "ENS estándar", "urgent": false },
+                    { "label": "ISO 27001", "value": "ISO 27001", "urgent": false },
+                    { "label": "No lo sé aún", "value": "No lo sé aún", "urgent": false }
+                ],
+                "namePlaceholder": "Tu nombre *",
+                "emailPlaceholder": "Tu email *",
+                "rgpdText": "Al enviar, acepto que Avson me contacte para responder mi consulta.",
+                "rgpdLink": "Política de privacidad",
+                "submitButton": "Habla con un experto →",
+                "lockText": "🔒 Gratuito · Sin compromiso · Confidencial",
+                "altPhoneLabel": "¿Prefieres llamar?",
+                "altPhoneNumber": "+34 648 414 863"
+            },
+            "testimonials": [
+                {
+                    "stars": "★★★★★",
+                    "quote": "\"Llevábamos dos años perdiendo licitaciones. Avson nos lo resolvió en <strong>9 semanas</strong>. Al siguiente concurso, ganamos el contrato.\"",
+                    "author": "Javier M. — Director de Sistemas · Integradora TIC, Madrid",
+                    "result": "ENS Media certificado ✓"
+                },
+                {
+                    "stars": "★★★★★",
+                    "quote": "\"Otros consultores decían un año. Avson lo hizo en <strong>14 semanas</strong> y superamos la auditoría ENAC a la primera.\"",
+                    "author": "Silvia R. — CISO · Proveedor cloud sector público",
+                    "result": "ENS Alta + ISO 27001 ✓"
+                },
+                {
+                    "stars": "★★★★★",
+                    "quote": "\"La garantía por escrito fue lo que nos decidió. El proceso duró <strong>7 semanas</strong> sin una sola incidencia.\"",
+                    "author": "Andrés D. — CEO · Consultora tecnológica",
+                    "result": "ENS Básica certificado ✓"
+                }
+            ],
+            "footer": {
+                "copyright": "© 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·",
+                "links": { "privacy": "Privacidad", "cookies": "Cookies" }
+            }
+        },
+        "ensExpressPpc": {
+            "meta": {
+                "title": "ENS Express — Certificado ENS Urgente en tiempo récord | Avson GRC",
+                "description": "¿Tu pliego cierra pronto? ENS Express: certificado ENS urgente. Equipo dedicado, arranque en 24h, misma garantía de éxito por escrito."
+            },
+            "urgencyBar": "⚡ ENS Express — Para pliegos que cierran pronto. Arranque en 24 horas.",
+            "header": {
+                "logoPrefix": "AVSON",
+                "logoDot": " · ",
+                "logoSuffix": "GRC",
+                "phone": "📞 +34 648 414 863"
+            },
+            "hero": {
+                "badge": "⚡ ENS Express — Plazos urgentes",
+                "title": "Certificado ENS<br>cuando no puedes<br><em>esperar.</em>",
+                "subtitle": "¿Tu pliego cierra pronto? Equipo dedicado exclusivamente a tu proyecto. <strong>Arranque en 24 horas.</strong> Misma garantía de devolución que en nuestro servicio estándar.",
+                "howSteps": [
+                    { "num": "48h", "text": "Arranque del proyecto" },
+                    { "num": "1", "text": "Equipo dedicado exclusivo" },
+                    { "num": "✓", "text": "Misma garantía de devolución" }
+                ],
+                "availableNote": "Disponible para: ENS Básica · Media · Alta según categoría del pliego"
+            },
+            "form": {
+                "liveBadge": "🟢 Verificamos disponibilidad hoy",
+                "title": "Consultar disponibilidad",
+                "subtitle": "Gratuito · Sin compromiso",
+                "urgencyNote": "⚡ Cuéntanos cuándo cierra tu pliego y te decimos si llegamos",
+                "namePlaceholder": "Tu nombre *",
+                "emailPlaceholder": "Tu email *",
+                "pliegoPlaceholder": "¿Cuándo cierra el pliego? (ej: 15 julio)",
+                "rgpdText": "Al enviar, acepto que Avson me contacte para responder mi consulta.",
+                "rgpdLink": "Política de privacidad",
+                "submitButton": "⚡ Verificar disponibilidad →",
+                "lockText": "🔒 Sin presión · Gratuito · Te respondemos hoy",
+                "altPhoneLabel": "Urgente — llámanos ahora:",
+                "altPhoneNumber": "+34 648 414 863"
+            },
+            "trustStrip": [
+                { "value": "355+", "label": "empresas certificadas" },
+                { "value": "100%", "label": "tasa de éxito" },
+                { "value": "48h", "label": "arranque garantizado" },
+                { "value": "30 días", "label": "certificación Express" }
+            ],
+            "testimonials": {
+                "title": "Pliegos salvados a contrarreloj.",
+                "items": [
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"El pliego cerraba en 5 semanas y no teníamos ENS. Pensábamos que era imposible. Avson arrancó en 48h y lo certificamos a tiempo. Presentamos la oferta y la ganamos.\"",
+                        "author": "Javier M. — Director de Sistemas · Integradora TIC",
+                        "result": "ENS Express ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Nos enteramos tarde de que la renovación exigía ENS. Express fue nuestra única opción. Tres consultores dedicados, 30 días, certificado en mano.\"",
+                        "author": "Silvia R. — CISO · Proveedor cloud sector público",
+                        "result": "ENS Express ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Lo que nos decidió fue la garantía por escrito incluso en el formato urgente. Cumplieron el plazo sin una sola incidencia en la auditoría.\"",
+                        "author": "Andrés D. — CEO · Consultora tecnológica",
+                        "result": "ENS Express ✓"
+                    }
+                ]
+            },
+            "footer": {
+                "copyright": "© 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·",
+                "links": { "privacy": "Privacidad", "home": "Inicio" }
+            }
+        },
+        "notFound": {
+            "meta": {
+                "title": "Página no encontrada | Avson GRC",
+                "description": "La página que buscas no existe o ha cambiado de dirección. Encuentra lo que necesitas desde aquí."
+            },
+            "announceBar": {
+                "text": "Garantía de éxito al 100% por escrito · Pide presupuesto sin compromiso · Respuesta en 24h",
+                "cta": "Contactar →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "hero": {
+                "bigNumber": "404",
+                "title": "Esta página no existe.",
+                "description": "Puede que el enlace haya cambiado o que hayas seguido un enlace desactualizado. Te llevamos a donde necesitas ir.",
+                "search": {
+                    "placeholder": "Buscar en avson.eu...",
+                    "button": "Buscar",
+                    "hint": "Búsqueda directa en avson.eu vía Google"
+                }
+            },
+            "navCards": {
+                "title": "¿A dónde quieres ir?",
+                "items": [
+                    {
+                        "href": "index.html",
+                        "iconPath": "<path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><polyline points=\"9 22 9 12 15 12 15 22\"/>",
+                        "label": "Principal",
+                        "title": "Inicio",
+                        "description": "Vuelve a la página principal de Avson GRC y descubre todos nuestros servicios de certificación."
+                    },
+                    {
+                        "href": "ens.html",
+                        "iconPath": "<path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/>",
+                        "label": "Servicio estrella",
+                        "title": "Certificado ENS",
+                        "description": "Todo sobre el Esquema Nacional de Seguridad: qué es, quién lo necesita y cómo obtenerlo en 3–4 meses."
+                    },
+                    {
+                        "href": "contacto.html",
+                        "iconPath": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"/>",
+                        "label": "Contactar",
+                        "title": "Hablar con un consultor",
+                        "description": "Pide presupuesto sin compromiso. Te respondemos en menos de 24 horas."
+                    },
+                    {
+                        "href": "contacto.html",
+                        "iconPath": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\"/><line x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\"/>",
+                        "label": "Herramienta",
+                        "title": "¿Qué certificación necesito?",
+                        "description": "Responde 10 preguntas y descubre qué certificados son obligatorios o recomendables para tu empresa."
+                    }
+                ]
+            },
+            "footer": {
+                "logo": "AVSON · GRC",
+                "description": "Certificaciones ENS e ISO con garantía de éxito. El socio GRC que permanece.",
+                "contact": {
+                    "email": "hola@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC"
+                },
+                "certifications": {
+                    "title": "Servicios",
+                    "items": ["ENS", "ISO 27001", "ISO 22301", "DORA", "NIS2", "TISAX"]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": ["Equipo", "Packs", "Webinars", "Contacto"]
+                },
+                "legal": {
+                    "title": "Legal",
+                    "items": [
+                        { "text": "Política de privacidad", "href": "privacidad.html" },
+                        { "text": "Política de cookies", "href": "cookies.html" }
+                    ]
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson GRC S.L. Todos los derechos reservados.",
+                    "links": ["Privacidad", "Aviso Legal", "Cookies"]
+                }
+            },
+            "floatingCta": "Habla con un experto →",
+            "exitModal": {
+                "title": "Espera",
+                "question": "¿Tienes dudas?",
+                "description": "Pide presupuesto en 24h. Un consultor senior te responde personalmente.",
+                "cta": "Solicitar presupuesto sin compromiso →",
+                "dismiss": "No me interesa ahora"
+            },
+            "stickyBar": {
+                "text": "¿Necesitas certificarte?",
+                "cta": "Habla con un experto →"
+            },
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp",
+                "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
+            }
+        },
+        "cookies": {
+            "meta": {
+                "title": "Política de Cookies | Avson GRC",
+                "description": "Política de cookies de Avson Consultoría Estratégica SLU. Información sobre las cookies utilizadas en avson.eu conforme a la LSSI-CE y el RGPD.",
+                "ogTitle": "Política de Cookies | Avson GRC",
+                "ogDescription": "Política de cookies de Avson Consultoría Estratégica SLU. Información sobre cookies conforme a la LSSI-CE y el RGPD."
+            },
+            "topBar": {
+                "text": "Nueva normativa ENS en vigor",
+                "cta": "Solicitar ahora →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Pide presupuesto →"
+            },
+            "page": {
+                "label": "Legal",
+                "title": "Política de Cookies",
+                "lastUpdate": "Última actualización: junio de 2025"
+            },
+            "sections": [
+                {
+                    "title": "1. ¿Qué son las cookies?",
+                    "content": "<p>Las cookies son pequeños archivos de texto que los sitios web instalan en el dispositivo del usuario (ordenador, smartphone, tablet) cuando este los visita. Permiten al sitio web recordar información sobre la visita —como el idioma preferido y otras opciones— para facilitar la próxima visita y hacer el sitio más útil para usted.</p><p>La presente política de cookies se rige por el artículo 22.2 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), así como por el Reglamento (UE) 2016/679 (RGPD) en lo relativo al tratamiento de datos personales a través de cookies.</p>"
+                },
+                {
+                    "title": "2. Tipos de cookies que utilizamos",
+                    "content": "<p>En avson.eu utilizamos los siguientes tipos de cookies:</p>",
+                    "cookieTypes": [
+                        {
+                            "label": "Cookies Propias — Técnicas / Sesión",
+                            "text": "Son cookies estrictamente necesarias para el funcionamiento del sitio web. Permiten recordar sus preferencias de privacidad (aceptación del banner de cookies) y garantizan la correcta navegación. <strong>No requieren consentimiento</strong> según el art. 22.2 LSSI-CE."
+                        },
+                        {
+                            "label": "Cookies Analíticas — Google Analytics",
+                            "text": "Proporcionadas por Google LLC a través de Google Analytics. Nos permiten medir el tráfico del sitio web, el comportamiento de los usuarios y el rendimiento del contenido. Los datos se agregan y anonimizan. <strong>Requieren su consentimiento previo.</strong>"
+                        },
+                        {
+                            "label": "Cookies de Terceros — Google Fonts",
+                            "text": "Google Fonts puede establecer cookies o registrar solicitudes de fuentes tipográficas. No utilizamos dichas cookies con finalidades de seguimiento. La carga de fuentes se realiza en el contexto de la prestación del servicio tipográfico."
+                        }
+                    ]
+                },
+                {
+                    "title": "3. Tabla de cookies",
+                    "content": "<p>A continuación se detallan las cookies concretas utilizadas en avson.eu:</p>",
+                    "cookieTable": {
+                        "headers": ["Nombre", "Tipo", "Finalidad", "Duración", "Proveedor"],
+                        "rows": [
+                            ["cookieAccepted", "Propia · Técnica", "Almacena la preferencia de aceptación del banner de cookies (localStorage)", "Persistente", "avson.eu"],
+                            ["exitShown", "Propia · Sesión", "Controla si el modal de exit-intent ya ha sido mostrado en la sesión actual", "Sesión", "avson.eu"],
+                            ["_ga", "Terceros · Analítica", "Distingue usuarios únicos asignando un número generado aleatoriamente como identificador de cliente", "2 años", "Google Analytics"],
+                            ["_ga_XXXXXXXX", "Terceros · Analítica", "Almacena el estado de la sesión (Google Analytics 4)", "2 años", "Google Analytics"],
+                            ["_gid", "Terceros · Analítica", "Distingue usuarios. Almacena información sobre cómo usan el sitio", "24 horas", "Google Analytics"],
+                            ["_gat", "Terceros · Analítica", "Limita la tasa de solicitudes al servidor de Google Analytics", "1 minuto", "Google Analytics"]
+                        ]
+                    },
+                    "tableFootnote": "(*) Las cookies analíticas de Google solo se instalan si el usuario acepta las cookies a través del banner de consentimiento."
+                },
+                {
+                    "title": "4. Cómo gestionar y desactivar las cookies",
+                    "content": "<p>Puede retirar su consentimiento o gestionar las cookies en cualquier momento a través de las siguientes vías:</p>",
+                    "cookiePanel": {
+                        "title": "Desde nuestro panel de cookies",
+                        "text": "Elimine la entrada <code style=\"background:var(--pearl);padding:2px 6px;font-size:12px\">cookieAccepted</code> de su localStorage (puede hacerlo desde las herramientas de desarrollo del navegador, pestaña Application > Local Storage) para que vuelva a aparecer el banner de consentimiento."
+                    },
+                    "browserLabel": "O configurando su navegador:",
+                    "browsers": [
+                        {
+                            "name": "Google Chrome",
+                            "instructions": "Menú (⋮) → Configuración → Privacidad y seguridad → Cookies y otros datos de sitios",
+                            "linkText": "Instrucciones de Google →",
+                            "linkUrl": "https://support.google.com/chrome/answer/95647"
+                        },
+                        {
+                            "name": "Mozilla Firefox",
+                            "instructions": "Menú (☰) → Opciones → Privacidad y Seguridad → Cookies y datos del sitio",
+                            "linkText": "Instrucciones de Mozilla →",
+                            "linkUrl": "https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-"
+                        },
+                        {
+                            "name": "Apple Safari",
+                            "instructions": "Safari → Preferencias → Privacidad → Gestionar datos de sitios web",
+                            "linkText": "Instrucciones de Apple →",
+                            "linkUrl": "https://support.apple.com/es-es/guide/safari/sfri11471/mac"
+                        },
+                        {
+                            "name": "Microsoft Edge",
+                            "instructions": "Menú (…) → Configuración → Privacidad, búsqueda y servicios → Cookies y permisos del sitio",
+                            "linkText": "Instrucciones de Microsoft →",
+                            "linkUrl": "https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                        }
+                    ],
+                    "optOut": {
+                        "title": "Opt-out de Google Analytics",
+                        "text": "También puede instalar el <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--navy)\">complemento de inhabilitación de Google Analytics</a> para su navegador, que impide que JavaScript de Google Analytics recopile información sobre sus visitas a cualquier sitio web."
+                    },
+                    "disclaimer": "Tenga en cuenta que desactivar determinadas cookies puede afectar a la funcionalidad del sitio web o impedir el correcto funcionamiento de algunas secciones."
+                },
+                {
+                    "title": "5. Más información",
+                    "content": "<p>Para cualquier consulta relacionada con el uso de cookies en avson.eu, puede contactarnos en:</p>",
+                    "contactBox": {
+                        "items": [
+                            { "label": "", "value": "<strong>Avson Consultoría Estratégica SLU</strong>" },
+                            { "label": "", "value": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)" },
+                            { "label": "", "value": "<a href=\"mailto:hola@avson.eu\" style=\"color:var(--navy)\">hola@avson.eu</a>" }
+                        ]
+                    },
+                    "moreInfo": "Para más información general sobre cookies y cómo le afectan, puede visitar la <a href=\"https://www.aepd.es\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--navy)\">web de la Agencia Española de Protección de Datos (AEPD)</a> y la <a href=\"https://www.youronlinechoices.eu\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--navy)\">plataforma Your Online Choices</a>.",
+                    "privacyLink": "Consulte también nuestra <a href=\"privacidad.html\" style=\"color:var(--navy);font-weight:500\">Política de Privacidad</a> para información completa sobre el tratamiento de datos personales."
+                }
+            ],
+            "footer": {
+                "logo": "AVSON · GRC",
+                "tagline": "Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. 355+ empresas certificadas con éxito garantizado.",
+                "contact": {
+                    "email": "hola@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        "ENS",
+                        "⚡ ENS Express",
+                        "ISO 27001",
+                        "ISO 22301",
+                        "DORA",
+                        "NIS2",
+                        "TISAX",
+                        "Otras ISOs"
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        "Packs GRC",
+                        "Equipo",
+                        "Webinars",
+                        "Contacto"
+                    ]
+                },
+                "newsletter": {
+                    "title": "Newsletter GRC",
+                    "text": "Análisis mensual sobre ENS, ISO 27001 y cumplimiento normativo. Sin spam.",
+                    "placeholder": "tu@empresa.com"
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.",
+                    "links": [
+                        {
+                            "text": "Política de privacidad",
+                            "url": "privacidad.html"
+                        },
+                        {
+                            "text": "Cookies",
+                            "url": "cookies.html"
+                        }
+                    ]
+                }
+            },
+            "cookieBanner": {
+                "text": "Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico.",
+                "cookiesLink": "Política de cookies",
+                "accept": "Aceptar",
+                "decline": "Rechazar"
+            },
+            "floatingCta": "Habla con un experto →",
+            "exitModal": {
+                "label": "Espera",
+                "title": "¿Tienes dudas sobre las cookies de este sitio?",
+                "desc": "Nuestro equipo puede resolver cualquier cuestión sobre privacidad y cookies. Contáctanos sin compromiso.",
+                "cta": "Contactar con el delegado de protección de datos →",
+                "dismiss": "No, gracias"
+            },
+            "stickyBar": {
+                "text": "¿Necesitas asesoramiento en privacidad?",
+                "cta": "Habla con un experto →"
+            },
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp",
+                "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
+            }
+        },
+        "index": {
+            "meta": {
+                "title": "Consultoría ENS España | Certificado ENS Garantizado | Avson GRC",
+                "description": "Consigue tu certificado ENS con garantía de éxito por escrito. Si no lo obtienes, te devolvemos el dinero. 355+ empresas certificadas. Habla con un experto hoy.",
+                "keywords": "consultoría ENS, certificado ENS, ENS España, Esquema Nacional de Seguridad, certificación ENS garantizada, ENS sector público, ENS licitaciones, ISO 27001, ISO 22301, Avson GRC",
+                "ogTitle": "Certificado ENS Garantizado | Avson GRC",
+                "ogDescription": "El 85% de empresas sin ENS pierde sus licitaciones. Consíguelo con garantía de devolución por escrito.",
+                "twitterTitle": "Certificado ENS Garantizado | Avson GRC",
+                "twitterDescription": "El 85% de empresas sin ENS pierde sus licitaciones. Consíguelo con garantía de devolución por escrito."
+            },
+            "stickyBar": {
+                "text": "Avson GRC — <strong>Si no te certificamos, te devolvemos el dinero</strong>",
+                "cta": "Habla con un experto →"
+            },
+            "nav": {
+                "logo": "AVSON<span>·</span>GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "hero": {
+                "sectors": ["Tecnología", "Cloud", "Software", "Telecomunicaciones", "Consultoría", "Mantenimiento"],
+                "fomoChip": "⚠ El 85% de empresas sin ENS pierde sus licitaciones públicas",
+                "title": "Tu certificado ENS,<br><em>con garantía de devolución.</em>",
+                "subtitle": "<strong>Los únicos del mercado que lo garantizan por escrito.</strong> Si no obtienes el certificado ENS, te devolvemos el dinero. Firmado en el contrato.",
+                "form": {
+                    "liveBadge": "🟢 Te llamamos hoy mismo",
+                    "title": "Habla con un experto",
+                    "subtitle": "Gratuito · Sin compromiso · En 30 minutos sabrás qué necesitas",
+                    "namePlaceholder": "Tu nombre *",
+                    "emailPlaceholder": "Tu email *",
+                    "rgpdLabel": "Al enviar, acepto que Avson me contacte para responder mi consulta.",
+                    "rgpdLink": "Política de privacidad",
+                    "submitButton": "Habla con un experto →",
+                    "lockText": "🔒 Gratuito · Sin compromiso · Confidencial",
+                    "phoneText": "¿Prefieres llamar?",
+                    "phoneNumber": "+34 648 414 863"
+                }
+            },
+            "stats": [
+                { "value": "355+", "label": "empresas certificadas", "counterTarget": "355", "counterSuffix": "+" },
+                { "value": "100%", "label": "tasa de éxito" },
+                { "value": "4.9★", "label": "valoración de clientes" },
+                { "value": "30 días", "label": "con ENS Express" }
+            ],
+            "ensExplain": {
+                "label": "¿Qué es el ENS?",
+                "title": "El certificado que el Estado exige para vender al sector público.",
+                "paragraph1": "<strong>Sin él, tu oferta no se abre.</strong> Sin excepciones. Sin importar lo buena que sea tu propuesta.",
+                "paragraph2": "Obligatorio para: tecnología, cloud, software, telecomunicaciones, consultoría, mantenimiento y seguridad para organismos públicos.",
+                "cta": "Calcula tu presupuesto →",
+                "fearCards": [
+                    { "num": "85%", "text": "de empresas sin ENS pierde licitaciones antes de que lean su oferta" },
+                    { "num": "3.200M€", "text": "mueve el sector TIC público en España. Sin ENS, no entras." },
+                    { "num": "4 de cada 5", "text": "pliegos TIC lo exigen como requisito eliminatorio. El resto, lo valorará." }
+                ]
+            },
+            "ensExpress": {
+                "label": "⚡ Producto estrella",
+                "title": "ENS Express.<br>Para cuando no puedes esperar.",
+                "subtitle": "¿Tienes un pliego que cierra pronto? Equipo dedicado exclusivamente a tu proyecto. Arranque en 24 horas.",
+                "cta": "Lo necesito urgente →",
+                "cardLabel": "¿Cuándo lo necesitas?",
+                "urgentTitle": "Urgente",
+                "urgentText": "Pliego cierra en menos de 8 semanas → ENS Express",
+                "noUrgencyTitle": "Sin urgencia",
+                "noUrgencyText": "Sin pliego inminente → ENS estándar",
+                "cardCta": "Ver cómo funciona →"
+            },
+            "packs": {
+                "label": "Packs de certificación",
+                "title": "Elige tu pack.<br><em>Empezamos hoy.</em>",
+                "items": [
+                    { "badge": "Acceso al sector público", "name": "ENS", "description": "Básica · Media · Alta según tu pliego", "cta": "Me interesa →", "featured": false },
+                    { "badge": "⭐ El más solicitado", "name": "ENS + ISO 27001", "description": "Dos certificaciones, un proyecto. Ahorro real.", "cta": "Me interesa →", "featured": true },
+                    { "badge": "Servicios críticos", "name": "ENS + ISO 22301", "description": "Continuidad de negocio certificada", "cta": "Me interesa →", "featured": false },
+                    { "badge": "Cobertura total", "name": "Pack Triple", "description": "ENS + ISO 27001 + ISO 22301", "cta": "Me interesa →", "featured": false }
+                ],
+                "note": "¿DORA, NIS2 o TISAX?",
+                "noteCta": "Pregúntanos →"
+            },
+            "testimonials": {
+                "label": "Lo que dicen nuestros clientes",
+                "title": "Resultados reales.<br><em>0 fracasos.</em>",
+                "items": [
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Llevábamos dos años perdiendo licitaciones por no tener el ENS. Avson nos lo resolvió en <strong>9 semanas</strong>. Al siguiente concurso, ganamos el contrato.\"",
+                        "initials": "JM",
+                        "avatarClass": "",
+                        "name": "Javier M.",
+                        "role": "Director de Sistemas · Integradora TIC, Madrid",
+                        "result": "ENS Media ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Otros consultores nos dijeron que tardaría un año. Avson lo hizo en <strong>14 semanas</strong> y superamos la auditoría ENAC a la primera.\"",
+                        "initials": "SR",
+                        "avatarClass": "v3-testi__avatar--navy",
+                        "name": "Silvia R.",
+                        "role": "CISO · Proveedor cloud sector público",
+                        "result": "ENS Alta + ISO 27001 ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Ningún otro proveedor ponía la garantía por escrito. Avson sí. El proceso duró <strong>7 semanas</strong> y sin una sola incidencia en la auditoría.\"",
+                        "initials": "AD",
+                        "avatarClass": "v3-testi__avatar--green",
+                        "name": "Andrés D.",
+                        "role": "CEO · Consultora tecnológica",
+                        "result": "ENS Básica ✓"
+                    }
+                ]
+            },
+            "faq": {
+                "label": "Preguntas frecuentes",
+                "title": "Lo que todos<br><em>preguntan primero.</em>",
+                "helpText": "¿No está tu pregunta?",
+                "helpCta": "Habla con un experto →",
+                "items": [
+                    {
+                        "question": "¿Cuánto cuesta la consultoría ENS?",
+                        "answer": "El coste depende del tamaño de la empresa, la categoría ENS (Básica, Media o Alta) y los sistemas en alcance. No publicamos tarifas fijas porque cada proyecto es diferente. En la llamada gratuita de 30 minutos te orientamos el presupuesto. Proyectos adaptados a pymes y a enterprise."
+                    },
+                    {
+                        "question": "¿Qué incluye exactamente la garantía de éxito?",
+                        "answer": "Si no superas la auditoría de certificación por causas imputables a nuestra consultoría, te devolvemos el dinero. Sin letra pequeña. Consta por escrito en el contrato desde el primer día. Somos los únicos del mercado que ofrecen esta garantía firmada."
+                    },
+                    {
+                        "question": "Si ya tengo ISO 27001, ¿cuánto trabajo queda para el ENS?",
+                        "answer": "El 65-70% del trabajo ya está hecho. ISO 27001 e ENS comparten la mayoría de controles y documentación. El proceso de adaptación es significativamente más corto y económico que empezar desde cero."
+                    },
+                    {
+                        "question": "¿Es obligatorio el ENS para proveedores del sector público?",
+                        "answer": "Sí. El RD 311/2022 lo establece como requisito para la Administración Pública y sus proveedores TIC. Más del 80% de los pliegos TIC ya incluyen el ENS como criterio eliminatorio. Sin él, tu oferta no se abre."
+                    },
+                    {
+                        "question": "¿Qué diferencia hay entre el ENS y la ISO 27001?",
+                        "answer": "El ENS es obligatorio para vender al sector público español. La ISO 27001 es el estándar internacional reconocido en el mercado privado y en contratos enterprise europeos. Comparten el 65% de controles. Muchas empresas implementan ambos en un solo proyecto con Avson, ahorrando tiempo y coste."
+                    }
+                ]
+            },
+            "finalCta": {
+                "title": "Un experto te responde hoy.<br><em>Sin papeles. Sin esperar.</em>",
+                "subtitle": "En 30 minutos sabes exactamente qué necesitas y cuándo lo tienes.",
+                "cta": "Habla con un experto →"
+            },
+            "footer": {
+                "logo": "AVSON<span>·</span>GRC",
+                "description": "La consultora ENS más rápida de España. 355+ empresas certificadas.",
+                "contact": {
+                    "email": "hola@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "addresses": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)",
+                    "linkedin": "LinkedIn · Avson GRC"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        { "label": "ENS", "href": "ens.html" },
+                        { "label": "⚡ ENS Express", "href": "ens-express.html" },
+                        { "label": "ISO 27001", "href": "iso27001.html" },
+                        { "label": "ISO 22301", "href": "iso22301.html" },
+                        { "label": "DORA", "href": "dora.html" },
+                        { "label": "NIS2", "href": "nis2.html" }
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        { "label": "Packs GRC", "href": "packs.html" },
+                        { "label": "Equipo", "href": "equipo.html" },
+                        { "label": "Únete al equipo", "href": "unete.html" },
+                        { "label": "Blog", "href": "blog/index.html" },
+                        { "label": "Contacto", "href": "contacto.html" }
+                    ]
+                },
+                "companyCta": "Habla con un experto →",
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU · CIF B10560795",
+                    "links": [
+                        { "label": "Privacidad", "href": "privacidad.html" },
+                        { "label": "Cookies", "href": "cookies.html" },
+                        { "label": "Aviso legal", "href": "privacidad.html" }
+                    ]
+                }
+            },
+            "whatsapp": {
+                "badge": "💬 Responde en <5 min"
+            },
+            "mobileCta": "Habla con un experto →",
+            "cookie": {
+                "text": "Usamos cookies para analizar el tráfico.",
+                "moreInfo": "Más info",
+                "reject": "Rechazar",
+                "accept": "Aceptar"
+            },
+            "exitPopup": {
+                "icon": "⚠️",
+                "title": "¿Tu competencia ya tiene el ENS?",
+                "subtitle": "El 85% de empresas sin ENS pierde licitaciones. Una llamada de 15 minutos te dice si estás en riesgo.",
+                "cta": "Habla con un experto gratis →",
+                "dismiss": "No me interesa por ahora"
+            }
+        }
     }
 }

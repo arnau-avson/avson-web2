@@ -3,26 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solicitud recibida | Avson GRC</title>
-  <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#1A2744">
+  <title>Cargando...</title>
+  <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");</script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({ event: 'lead_generated', form_type: 'contact' });
-    // Personalize with name from URL
-    document.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const nombre = params.get('nombre');
-      const titulo = document.getElementById('graciasTitulo');
-      if (nombre && titulo) {
-        titulo.innerHTML = nombre.charAt(0).toUpperCase() + nombre.slice(1) + ', tu solicitud ha llegado.<br><em>Te llamamos hoy.</em>';
-      }
-    });
-  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --navy:#1A2744; --gold:#C9A84C; --pearl:#F7F7F5; --white:#FFFFFF; --border:#E5E5E0; --muted:#7A8499; }
@@ -144,51 +132,96 @@
 </head>
 <body>
 
-  <a href="index.html" class="logo">AVSON<span> · </span>GRC</a>
+  <main id="app"></main>
 
-  <div class="check-circle">
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-      <path d="M7 18.5L14.5 26L29 11" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
+  <script>
+    async function loadContent() {
+      try {
+        const response = await fetch('assets/palabras.json');
+        const data = await response.json();
+        const lang = "es";
+        const t = data[lang]?.gracias;
+        if (!t) throw new Error('No se encontro el idioma o la clave "gracias"');
 
-  <h1 id="graciasTitulo">Tu solicitud ha llegado.<br><em>Te llamamos hoy.</em></h1>
+        // Update meta
+        document.title = t.meta.title;
 
-  <p class="sub">
-    Antes de las <strong>18:00h</strong> te llama un miembro de nuestro equipo desde el <strong>+34 648 414 863</strong>. Guarda el número — no queremos que pierdas la llamada.
-  </p>
+        // Build HTML
+        const appHTML = `
+          <a href="index.html" class="logo">${t.logo.text}<span>${t.logo.separator}</span>${t.logo.suffix}</a>
 
-  <div class="steps">
-    <div class="step">
-      <div class="step__num">1</div>
-      <p class="step__text">Revisamos tu solicitud y asignamos el experto adecuado</p>
-    </div>
-    <div class="step">
-      <div class="step__num">2</div>
-      <p class="step__text">Te llamamos hoy para entender tu situación en 15 minutos</p>
-    </div>
-    <div class="step">
-      <div class="step__num">3</div>
-      <p class="step__text">Te damos el presupuesto en la misma llamada y la propuesta por escrito después</p>
-    </div>
-  </div>
+          <div class="check-circle">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M7 18.5L14.5 26L29 11" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
 
-  <a href="ens.html" class="secondary-cta">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-    Qué va a pasar en la llamada →
-  </a>
+          <h1 id="graciasTitulo">${t.hero.titleDefault}<br><em>${t.hero.titleEmphasis}</em></h1>
 
-  <p class="separator">— o —</p>
+          <p class="sub">
+            ${t.hero.subtitle}
+          </p>
 
-  <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" class="linkedin-cta">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    Seguirnos en LinkedIn
-  </a>
+          <div class="steps">
+            ${t.steps.map(step => `
+              <div class="step">
+                <div class="step__num">${step.num}</div>
+                <p class="step__text">${step.text}</p>
+              </div>
+            `).join('')}
+          </div>
 
-  <p class="footnote">
-    © 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·
-    <a href="privacidad.html">Privacidad</a>
-  </p>
+          <a href="${t.cta.href}" class="secondary-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            ${t.cta.text}
+          </a>
 
+          <p class="separator">${t.separator}</p>
+
+          <a href="${t.linkedin.href}" target="_blank" rel="noopener" class="linkedin-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            ${t.linkedin.text}
+          </a>
+
+          <p class="footnote">
+            ${t.footnote.text}
+            <a href="privacidad.html">${t.footnote.privacyLink}</a>
+          </p>
+        `;
+
+        document.getElementById('app').innerHTML = appHTML;
+
+        initInteractions();
+      } catch(error) {
+        console.error('Error cargando el JSON:', error);
+      }
+    }
+
+    function initInteractions() {
+      // DataLayer push for conversion tracking
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({ event: 'lead_generated', form_type: 'contact' });
+
+      // Personalize with name from URL parameter
+      const params = new URLSearchParams(window.location.search);
+      const nombre = params.get('nombre');
+      const titulo = document.getElementById('graciasTitulo');
+      if (nombre && titulo) {
+        // Fetch the personalized template from the already-loaded JSON
+        fetch('assets/palabras.json').then(r => r.json()).then(data => {
+          const t = data["es"]?.gracias;
+          if (t) {
+            const capitalizedName = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+            titulo.innerHTML = capitalizedName + ', ' + t.hero.titlePersonalized + '<br><em>' + t.hero.titleEmphasis + '</em>';
+          }
+        }).catch(() => {
+          // Fallback: just prepend name
+          titulo.innerHTML = nombre.charAt(0).toUpperCase() + nombre.slice(1) + ', tu solicitud ha llegado.<br><em>Te llamamos hoy.</em>';
+        });
+      }
+    }
+
+    loadContent();
+  </script>
 </body>
 </html>
