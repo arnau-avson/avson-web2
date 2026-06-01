@@ -28,10 +28,10 @@ export default function QueEsIso22301() {
     .toc a:hover { color:#C9A84C; }` }} />
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>Qué es ISO 22301</span>
     </nav>
@@ -44,16 +44,16 @@ export default function QueEsIso22301() {
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">ISO 22301 · Continuidad de Negocio · Actualizado mayo 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         Qué es ISO 22301: la norma de continuidad de negocio explicada paso a paso.
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         ISO 22301 es la norma internacional que define cómo implantar y certificar un Sistema de Gestión de la Continuidad de Negocio. Esta guía explica qué exige, quién debe certificarse y cómo funciona el proceso en España.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 10 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>✍️ Por el equipo de Avson GRC</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 10 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>✍️ Por el equipo de Avson GRC</span>
       </div>
     </div>
   </div>
@@ -89,8 +89,8 @@ export default function QueEsIso22301() {
     <p>El término oficial en castellano es <strong>Gestión de la Continuidad del Negocio (GCN)</strong>, aunque en la práctica se usan indistintamente Business Continuity Management (BCM), continuidad de negocio, continuidad operacional y gestión de crisis. ISO 22301 cubre todos estos conceptos dentro de un marco integrado y auditable.</p>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Necesitas la certificación ISO 22301?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Necesitas la certificación ISO 22301?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2 id="para-que-sirve">Para qué sirve ISO 22301: objetivos del SGCN</h2>
@@ -189,46 +189,46 @@ export default function QueEsIso22301() {
 
     <div className="cta-inline-box anim-fade-up">
       <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Necesitas la certificación ISO 22301?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Garantía de éxito al 100% por escrito. Tiempo medio: 3-4 meses.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Solicitar diagnóstico gratuito →</Link>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Solicitar presupuesto sin compromiso →</Link>
     </div>
 
     <h2 id="faq">Preguntas frecuentes sobre ISO 22301</h2>
 
     <div className="faq-article">
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Es obligatoria la ISO 22301 en España?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Es obligatoria la ISO 22301 en España?</div>
         <div className="faq-article-a">ISO 22301 no es una norma de obligado cumplimiento legal con carácter general en España. Sin embargo, determinados sectores como el financiero (DORA), el de infraestructuras críticas (Ley PIC) o las entidades sujetas al ENS de categoría media o alta la exigen de facto o la recomiendan con fuerza. Muchos concursos públicos y contratos corporativos la incorporan como requisito o criterio de valoración, por lo que en la práctica puede ser obligatoria para acceder a determinados mercados.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Cuánto tiempo lleva certificarse en ISO 22301?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Cuánto tiempo lleva certificarse en ISO 22301?</div>
         <div className="faq-article-a">Con el acompañamiento de una consultora especializada, el proceso desde diagnóstico hasta certificado tarda entre 3 y 4 meses. Sin asesoramiento experto, el plazo puede extenderse a 9-12 meses, principalmente debido a la complejidad del BIA, la elaboración de planes de continuidad operativos y la preparación para los ejercicios y pruebas requeridos por la norma. El punto más crítico en tiempo es el BIA, que requiere entrevistar a los responsables de todos los procesos críticos y construir los análisis de impacto desde cero.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿ISO 22301 y continuidad de negocio son lo mismo?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿ISO 22301 y continuidad de negocio son lo mismo?</div>
         <div className="faq-article-a">No exactamente. La continuidad de negocio es la disciplina de gestión orientada a mantener las operaciones durante disrupciones. ISO 22301 es la norma internacional que estandariza cómo implementar y certificar un Sistema de Gestión de la Continuidad de Negocio (SGCN). Tener un plan de continuidad no equivale a estar certificado en ISO 22301; la norma exige un enfoque sistémico con ciclo de vida PDCA, evidencias auditables de implementación, pruebas periódicas documentadas y mejora continua verificable.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Qué es el BIA en ISO 22301?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Qué es el BIA en ISO 22301?</div>
         <div className="faq-article-a">El BIA (Business Impact Analysis o Análisis de Impacto en el Negocio) es el análisis central de ISO 22301. Consiste en identificar los procesos críticos de la organización, determinar el impacto que su interrupción causaría a lo largo del tiempo —financiero, reputacional, legal, operativo— y establecer los parámetros de recuperación: el RTO (Recovery Time Objective, tiempo máximo de recuperación tolerable antes de que el impacto sea inaceptable) y el RPO (Recovery Point Objective, máxima pérdida de datos tolerable). El BIA es la base sobre la que se diseñan todas las estrategias y planes de continuidad.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">Si ya tengo ENS, ¿cuánto me falta para ISO 22301?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>Si ya tengo ENS, ¿cuánto me falta para ISO 22301?</div>
         <div className="faq-article-a">Si tu organización ya está certificada en ENS de categoría media o alta, tienes cubierto aproximadamente el 55% de los requisitos de ISO 22301. Los controles de gestión de incidentes, continuidad del servicio, gestión de riesgos y estructura documental del ENS son directamente reutilizables. El trabajo adicional se concentra en el BIA formal con RTOs y RPOs explícitos por proceso, los planes de continuidad con el nivel de detalle operativo que exige ISO 22301 y la evidencia documentada de ejercicios y pruebas periódicas.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Listo para certificarte en ISO 22301?</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Diagnóstico gratuito · Sin compromiso · Respuesta en 24 horas</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar diagnóstico gratuito →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Listo para certificarte en ISO 22301?</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Pide presupuesto · Sin compromiso · Respuesta en 24 horas</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto sin compromiso →</Link>
     </div>
 
     <div style={{marginTop:'48px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/que-es-el-ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS: guía completa →</Link>
-        <Link to="/ens-vs-iso27001" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001 →</Link>
-        <Link to="/plan-continuidad-negocio" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Plan de continuidad de negocio →</Link>
+        <Link to="/blog/que-es-el-ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS: guía completa →</Link>
+        <Link to="/blog/ens-vs-iso27001" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001 →</Link>
+        <Link to="/blog/plan-continuidad-negocio" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Plan de continuidad de negocio →</Link>
       </div>
     </div>
 
