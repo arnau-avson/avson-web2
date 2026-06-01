@@ -26,39 +26,38 @@ export default function PlanContinuidadNegocio() {
     .toc li { font-family:'Inter',sans-serif; font-size:14px; color:#3A4560; margin-bottom:8px; }
     .toc a { color:#1A2744; text-decoration:none; border-bottom:none; }
     .toc a:hover { color:#C9A84C; }` }} />
+
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>Plan de Continuidad de Negocio</span>
     </nav>
   </div>
 </div>
 
-
 <section style={{background:'var(--pearl)',padding:'72px 0 56px',borderBottom:'1px solid var(--border)'}}>
   <div className="container">
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">Continuidad de Negocio · BCP · Guía práctica 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         Plan de continuidad de negocio: qué es y cómo implementarlo en tu empresa.
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         Un Plan de Continuidad de Negocio (BCP) define cómo sobrevive tu empresa a una interrupción grave. Esta guía explica qué es, cómo hacerlo paso a paso y cómo se conecta con la certificación ISO 22301.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 9 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>✍️ Por el equipo de Avson GRC</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Lectura: 9 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Por el equipo de Avson GRC</span>
       </div>
     </div>
   </div>
 </section>
-
 
 <article style={{padding:'72px 0 80px',background:'var(--white)'}}>
   <div className="article-body">
@@ -88,8 +87,8 @@ export default function PlanContinuidadNegocio() {
     <p>Un buen BCP no es un documento que se elabora una vez y se guarda en un cajón. Es un documento vivo que debe revisarse, actualizarse y probarse periódicamente para garantizar que sigue siendo relevante y que el personal que debe activarlo lo conoce y lo sabe ejecutar bajo presión.</p>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Necesitas un Plan de Continuidad de Negocio?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Necesitas un Plan de Continuidad de Negocio?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2 id="por-que">Por qué tu empresa necesita un BCP</h2>
@@ -108,7 +107,7 @@ export default function PlanContinuidadNegocio() {
 
     <p><strong>DRP (Disaster Recovery Plan):</strong> es el plan que cubre específicamente la recuperación de los sistemas de TI y la infraestructura tecnológica. Detalla los procedimientos para restaurar servidores, bases de datos, aplicaciones y redes dentro de los tiempos de recuperación definidos (RTO) y con la mínima pérdida de datos posible (RPO). El DRP es un componente técnico del BCP, no un sustituto.</p>
 
-    <p><strong>SGCN (Sistema de Gestión de la Continuidad de Negocio):</strong> es el marco de gestión completo que engloba todos los planes, políticas, procesos, roles, auditorías y mecanismos de mejora continua de la continuidad. El SGCN es lo que certifica la norma <Link to="/que-es-iso22301">ISO 22301</Link>. El BCP y el DRP son componentes del SGCN, junto con el BIA, el análisis de riesgos, los ejercicios de prueba y la revisión por la dirección.</p>
+    <p><strong>SGCN (Sistema de Gestión de la Continuidad de Negocio):</strong> es el marco de gestión completo que engloba todos los planes, políticas, procesos, roles, auditorías y mecanismos de mejora continua de la continuidad. El SGCN es lo que certifica la norma <Link to="/blog/que-es-iso22301">ISO 22301</Link>. El BCP y el DRP son componentes del SGCN, junto con el BIA, el análisis de riesgos, los ejercicios de prueba y la revisión por la dirección.</p>
 
     <p>Una analogía útil: si el SGCN es el sistema de gestión de la seguridad vial de una empresa de transporte, el BCP es el protocolo de actuación ante un accidente, el DRP es el plan de reparación y sustitución de los vehículos, y el BIA es el análisis de qué rutas son críticas y qué impacto tendría su interrupción.</p>
 
@@ -147,7 +146,7 @@ export default function PlanContinuidadNegocio() {
 
     <h2 id="iso22301">Plan de continuidad de negocio e ISO 22301</h2>
 
-    <p>La norma <Link to="/que-es-iso22301">ISO 22301</Link> es el estándar internacional que certifica que el Sistema de Gestión de la Continuidad de Negocio de una organización cumple con los requisitos internacionales de gestión sistémica, auditabilidad y mejora continua. El BCP es uno de los productos documentales que el SGCN debe generar, pero la norma va mucho más allá del documento en sí.</p>
+    <p>La norma <Link to="/blog/que-es-iso22301">ISO 22301</Link> es el estándar internacional que certifica que el Sistema de Gestión de la Continuidad de Negocio de una organización cumple con los requisitos internacionales de gestión sistémica, auditabilidad y mejora continua. El BCP es uno de los productos documentales que el SGCN debe generar, pero la norma va mucho más allá del documento en sí.</p>
 
     <p>ISO 22301 exige que el BCP no sea solo un documento elaborado en un momento dado, sino el resultado de un proceso de gestión continuo: análisis de contexto, evaluación de riesgos, BIA formal, estrategias documentadas, planes probados periódicamente, auditorías internas, revisión por la dirección y mejora continua verificable. La diferencia entre tener un BCP y estar certificado en ISO 22301 es la diferencia entre tener un plan y tener un sistema de gestión que garantiza que ese plan es siempre relevante, probado y mejorado.</p>
 
@@ -167,51 +166,52 @@ export default function PlanContinuidadNegocio() {
     </ul>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Necesitas revisar o crear tu plan de continuidad?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Necesitas revisar o crear tu plan de continuidad?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2 id="faq">Preguntas frecuentes sobre el plan de continuidad de negocio</h2>
 
     <div className="faq-article">
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Qué diferencia hay entre un BCP y un DRP?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Qué diferencia hay entre un BCP y un DRP?</div>
         <div className="faq-article-a">El BCP (Business Continuity Plan) cubre la continuidad de los procesos de negocio en su conjunto: personas, comunicaciones, instalaciones, procesos manuales alternativos y relación con clientes y proveedores durante la crisis. El DRP (Disaster Recovery Plan) se centra específicamente en la recuperación de los sistemas de TI y la infraestructura tecnológica. El DRP es un componente técnico del BCP, no un sustituto. Una empresa puede tener un DRP excelente y carecer de BCP, lo que significa que sabe cómo recuperar sus sistemas pero no cómo operar mientras tanto.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Cuánto tiempo lleva elaborar un BCP?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Cuánto tiempo lleva elaborar un BCP?</div>
         <div className="faq-article-a">Un BCP básico para una organización mediana puede elaborarse en 4-8 semanas con el acompañamiento de una consultora especializada. El tiempo depende principalmente del número de procesos críticos a analizar, la disponibilidad del equipo interno para participar en el BIA y la madurez previa de la organización en gestión de riesgos. Un BCP completo con evidencias de prueba y orientado a la certificación ISO 22301 requiere entre 3 y 4 meses.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Es obligatorio tener un plan de continuidad de negocio en España?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Es obligatorio tener un plan de continuidad de negocio en España?</div>
         <div className="faq-article-a">No existe una obligación legal general de tener un BCP en España. Sin embargo, sectores específicos sí tienen obligaciones: el financiero (DORA exige planes de continuidad desde enero 2025), operadores de infraestructuras críticas (Ley PIC), sector sanitario y administración pública. Adicionalmente, muchos contratos corporativos y pliegos de licitación pública incluyen la acreditación de un BCP vigente como requisito de contratación.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿El BCP necesita actualizarse?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿El BCP necesita actualizarse?</div>
         <div className="faq-article-a">Sí, con periodicidad mínima anual y siempre que se produzcan cambios significativos en la organización: nuevos sistemas críticos, cambio de proveedores estratégicos, reorganizaciones, nuevas ubicaciones o cambios regulatorios relevantes. Un BCP desactualizado puede ser peor que no tener ninguno, porque genera una falsa sensación de seguridad y puede llevar a tomar decisiones erróneas durante una crisis real.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Qué es el RTO y el RPO en un plan de continuidad?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Qué es el RTO y el RPO en un plan de continuidad?</div>
         <div className="faq-article-a">El RTO (Recovery Time Objective) es el tiempo máximo tolerable que un proceso puede estar interrumpido antes de que el impacto sea inaceptable para la organización. Por ejemplo, un RTO de 4 horas para el sistema de facturación significa que ese sistema debe estar operativo en menos de 4 horas desde la interrupción. El RPO (Recovery Point Objective) es la cantidad máxima de datos que se puede perder, medida en tiempo: un RPO de 1 hora significa que los datos no pueden tener más de 1 hora de antigüedad en el momento de la recuperación. Ambos parámetros se definen en el BIA y determinan las soluciones técnicas necesarias.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Listo para proteger la continuidad de tu negocio?</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Diagnóstico gratuito · Sin compromiso · Respuesta en 24 horas</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar diagnóstico gratuito →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Listo para proteger la continuidad de tu negocio?</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Pide presupuesto · Sin compromiso · Respuesta en 24 horas</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto sin compromiso →</Link>
     </div>
 
     <div style={{marginTop:'48px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/que-es-iso22301" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es ISO 22301 →</Link>
-        <Link to="/que-es-el-ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
-        <Link to="/iso22301" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Certificación ISO 22301 con Avson →</Link>
+        <Link to="/blog/que-es-iso22301" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es ISO 22301 →</Link>
+        <Link to="/blog/que-es-el-ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
+        <Link to="/iso22301" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Certificación ISO 22301 con Avson →</Link>
       </div>
     </div>
 
   </div>
-</article></>
+</article>
+    </>
   )
 }

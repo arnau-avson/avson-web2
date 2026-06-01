@@ -1,12 +1,32 @@
+import { useState, FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function WebinarsPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [nlNombre, setNlNombre] = useState('')
+  const [nlEmail, setNlEmail] = useState('')
+  const [nlTopics, setNlTopics] = useState<Record<string, boolean>>({ ens: false, iso27001: false, nis2: false, dora: false })
+
+  const toggleFaq = (idx: number) => {
+    setOpenFaq(openFaq === idx ? null : idx)
+  }
+
+  const handleNewsletterSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    alert('¡Suscripción recibida! Te avisaremos del próximo webinar.')
+  }
+
+  const faqs = [
+    { q: '¿Son realmente gratuitos?', a: 'Sí, completamente gratuitos. No hay costes de inscripción, no hay suscripciones de pago requeridas, ni "freemium" que te bloquee el acceso al contenido más relevante. Solo necesitas registrarte con tu email para recibir el enlace de acceso. Las grabaciones también son gratuitas.' },
+    { q: '¿Hay que registrarse?', a: 'Sí, el registro previo es necesario para gestionar el enlace de acceso a la sala virtual y para enviarte el aviso de recordatorio antes de la sesión. El registro solo requiere nombre y email. No compartimos los datos con terceros.' },
+    { q: '¿Puedo ver las grabaciones después?', a: 'Sí. Todas las sesiones se graban y quedan disponibles en nuestra biblioteca de grabaciones. Si no pudiste asistir en directo o quieres revisar un contenido específico, puedes solicitar acceso a la grabación a través del formulario de contacto o del enlace directo en cada ficha de sesión anterior. El acceso es gratuito.' },
+    { q: '¿Los imparten consultores reales?', a: 'Sí. Todos los webinars son impartidos por consultores del equipo de Avson que trabajan a diario en proyectos de certificación. No son comerciales ni community managers. El contenido de cada webinar está basado en la experiencia práctica real de implementar y auditar los marcos que se explican.' },
+    { q: '¿Puedo hacer preguntas durante el webinar?', a: 'Sí. Todas las sesiones tienen un bloque de Q&A al final donde los asistentes pueden hacer preguntas directamente al consultor. También hay un chat durante toda la sesión donde puedes dejar preguntas que el conductor irá respondiendo en el Q&A final. La interacción es uno de los puntos más valorados de las sesiones.' },
+    { q: '¿Con qué frecuencia hay webinars?', a: 'Durante los meses de junio y julio de 2025 hay una sesión semanal (los domingos, según la agenda publicada). El resto del año, la frecuencia es mensual, con sesiones los terceros jueves de cada mes. Suscribiéndote recibirás un aviso una semana antes de cada sesión para que puedas apuntarla en tu agenda.' },
+  ]
+
   return (
     <>
-<div style={{background:'#1A2744',color:'rgba(255,255,255,0.85)',fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'400',letterSpacing:'0.04em',textAlign:'center',padding:'10px 40px',position:'relative',zIndex:'200'}}>
-  🔒 <strong>Garantía de éxito al 100% por escrito</strong>  ·  Diagnóstico gratuito sin compromiso · Respuesta en 24h  ·  <Link to="/contacto" style={{color:'#C9A84C',textDecoration:'none',fontWeight:'500'}}>Contactar →</Link>
-</div>
-
 
 <section className="section section--pearl" style={{paddingTop:'160px',paddingBottom:'100px'}}>
   <div className="container">
@@ -47,16 +67,16 @@ export default function WebinarsPage() {
     <h2 className="section-title" style={{maxWidth:'480px'}}>Próximas<br /><em>sesiones.</em></h2>
     <div style={{background:'var(--navy)',padding:'40px',display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'1px',backgroundColor:'rgba(255,255,255,0.08)',marginBottom:'48px',marginTop:'40px'}}>
       <div style={{background:'var(--navy)',padding:'28px 24px',textAlign:'center'}}>
-        <div style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'40px',fontWeight:'300',color:'#C9A84C'}}>60</div>
-        <div style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',color:'rgba(255,255,255,0.5)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'6px'}}>minutos por sesión</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'40px',fontWeight:'300',color:'#C9A84C'}}>60</div>
+        <div style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',color:'rgba(255,255,255,0.5)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'6px'}}>minutos por sesión</div>
       </div>
       <div style={{background:'var(--navy)',padding:'28px 24px',textAlign:'center'}}>
-        <div style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'40px',fontWeight:'300',color:'#C9A84C'}}>100%</div>
-        <div style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',color:'rgba(255,255,255,0.5)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'6px'}}>gratuitos</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'40px',fontWeight:'300',color:'#C9A84C'}}>100%</div>
+        <div style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',color:'rgba(255,255,255,0.5)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'6px'}}>gratuitos</div>
       </div>
       <div style={{background:'var(--navy)',padding:'28px 24px',textAlign:'center'}}>
-        <div style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'40px',fontWeight:'300',color:'#C9A84C'}}>Q&A</div>
-        <div style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',color:'rgba(255,255,255,0.5)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'6px'}}>en vivo incluido</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'40px',fontWeight:'300',color:'#C9A84C'}}>Q&A</div>
+        <div style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',color:'rgba(255,255,255,0.5)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'6px'}}>en vivo incluido</div>
       </div>
     </div>
     <div style={{display:'flex',flexDirection:'column',gap:'24px',marginTop:'0'}}>
@@ -184,7 +204,7 @@ export default function WebinarsPage() {
     </div>
 
     <div style={{background:'var(--pearl)',border:'1px solid var(--border)',borderLeft:'3px solid #C9A84C',padding:'32px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'32px',flexWrap:'wrap',marginTop:'48px'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'var(--navy)',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>¿Prefieres una consulta individual en lugar de un webinar? Sin compromiso, 30 minutos con un experto.</span>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'var(--navy)',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>¿Prefieres una consulta individual en lugar de un webinar? Sin compromiso, 30 minutos con un experto.</span>
       <Link to="/contacto" className="btn-primary">Solicitar consulta individual →</Link>
     </div>
   </div>
@@ -269,27 +289,27 @@ export default function WebinarsPage() {
       <div>
         <div style={{background:'rgba(255,255,255,0.06)',padding:'40px',border:'1px solid rgba(255,255,255,0.12)'}}>
           <h3 style={{fontFamily:'var(--font-sans)',fontSize:'14px',fontWeight:'600',color:'#fff',marginBottom:'24px'}}>Recibir avisos de próximas sesiones</h3>
-          <div style={{display:'flex',flexDirection:'column',gap:'16px'}}>
+          <form onSubmit={handleNewsletterSubmit} style={{display:'flex',flexDirection:'column',gap:'16px'}}>
             <div>
               <label style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.6)',display:'block',marginBottom:'8px',textTransform:'uppercase',letterSpacing:'0.06em'}}>Nombre</label>
-              <input type="text" placeholder="Tu nombre" style={{width:'100%',padding:'14px 16px',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.15)',color:'#fff',fontFamily:'var(--font-sans)',fontSize:'14px',outline:'none',boxSizing:'border-box'}} />
+              <input type="text" placeholder="Tu nombre" value={nlNombre} onChange={(e) => setNlNombre(e.target.value)} style={{width:'100%',padding:'14px 16px',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.15)',color:'#fff',fontFamily:'var(--font-sans)',fontSize:'14px',outline:'none',boxSizing:'border-box'}} />
             </div>
             <div>
               <label style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.6)',display:'block',marginBottom:'8px',textTransform:'uppercase',letterSpacing:'0.06em'}}>Email</label>
-              <input type="email" placeholder="tu@empresa.com" style={{width:'100%',padding:'14px 16px',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.15)',color:'#fff',fontFamily:'var(--font-sans)',fontSize:'14px',outline:'none',boxSizing:'border-box'}} />
+              <input type="email" placeholder="tu@empresa.com" value={nlEmail} onChange={(e) => setNlEmail(e.target.value)} style={{width:'100%',padding:'14px 16px',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.15)',color:'#fff',fontFamily:'var(--font-sans)',fontSize:'14px',outline:'none',boxSizing:'border-box'}} />
             </div>
             <div>
               <label style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.6)',display:'block',marginBottom:'8px',textTransform:'uppercase',letterSpacing:'0.06em'}}>Temas de interés</label>
               <div style={{display:'flex',gap:'8px',flexWrap:'wrap'}}>
-                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} /> ENS</label>
-                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} /> ISO 27001</label>
-                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} /> NIS2</label>
-                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} /> DORA</label>
+                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} checked={nlTopics.ens} onChange={(e) => setNlTopics(prev => ({...prev, ens: e.target.checked}))} /> ENS</label>
+                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} checked={nlTopics.iso27001} onChange={(e) => setNlTopics(prev => ({...prev, iso27001: e.target.checked}))} /> ISO 27001</label>
+                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} checked={nlTopics.nis2} onChange={(e) => setNlTopics(prev => ({...prev, nis2: e.target.checked}))} /> NIS2</label>
+                <label style={{display:'flex',alignItems:'center',gap:'6px',fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.7)',cursor:'pointer'}}><input type="checkbox" style={{margin:'0'}} checked={nlTopics.dora} onChange={(e) => setNlTopics(prev => ({...prev, dora: e.target.checked}))} /> DORA</label>
               </div>
             </div>
-            <button onClick={() => alert('¡Suscripción recibida! Te avisaremos del próximo webinar.')} className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff',width:'100%',justifyContent:'center',padding:'16px'}}>Suscribirme →</button>
+            <button type="submit" className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff',width:'100%',justifyContent:'center',padding:'16px'}}>Suscribirme →</button>
             <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'rgba(255,255,255,0.4)',textAlign:'center'}}>Sin spam. Sin ventas. Solo avisos de webinars.</p>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -303,30 +323,12 @@ export default function WebinarsPage() {
     <div className="gold-line"></div>
     <h2 className="section-title" style={{maxWidth:'480px'}}>Sobre los<br /><em>webinars.</em></h2>
     <div style={{marginTop:'48px'}}>
-      <div className="faq-item">
-        <div className="faq-item__question">¿Son realmente gratuitos?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>Sí, completamente gratuitos. No hay costes de inscripción, no hay suscripciones de pago requeridas, ni "freemium" que te bloquee el acceso al contenido más relevante. Solo necesitas registrarte con tu email para recibir el enlace de acceso. Las grabaciones también son gratuitas.</p></div>
-      </div>
-      <div className="faq-item">
-        <div className="faq-item__question">¿Hay que registrarse?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>Sí, el registro previo es necesario para gestionar el enlace de acceso a la sala virtual y para enviarte el aviso de recordatorio antes de la sesión. El registro solo requiere nombre y email. No compartimos los datos con terceros.</p></div>
-      </div>
-      <div className="faq-item">
-        <div className="faq-item__question">¿Puedo ver las grabaciones después?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>Sí. Todas las sesiones se graban y quedan disponibles en nuestra biblioteca de grabaciones. Si no pudiste asistir en directo o quieres revisar un contenido específico, puedes solicitar acceso a la grabación a través del formulario de contacto o del enlace directo en cada ficha de sesión anterior. El acceso es gratuito.</p></div>
-      </div>
-      <div className="faq-item">
-        <div className="faq-item__question">¿Los imparten consultores reales?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>Sí. Todos los webinars son impartidos por consultores del equipo de Avson que trabajan a diario en proyectos de certificación. No son comerciales ni community managers. El contenido de cada webinar está basado en la experiencia práctica real de implementar y auditar los marcos que se explican.</p></div>
-      </div>
-      <div className="faq-item">
-        <div className="faq-item__question">¿Puedo hacer preguntas durante el webinar?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>Sí. Todas las sesiones tienen un bloque de Q&A al final donde los asistentes pueden hacer preguntas directamente al consultor. También hay un chat durante toda la sesión donde puedes dejar preguntas que el conductor irá respondiendo en el Q&A final. La interacción es uno de los puntos más valorados de las sesiones.</p></div>
-      </div>
-      <div className="faq-item">
-        <div className="faq-item__question">¿Con qué frecuencia hay webinars?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>Durante los meses de junio y julio de 2025 hay una sesión semanal (los domingos, según la agenda publicada). El resto del año, la frecuencia es mensual, con sesiones los terceros jueves de cada mes. Suscribiéndote recibirás un aviso una semana antes de cada sesión para que puedas apuntarla en tu agenda.</p></div>
-      </div>
+      {faqs.map((faq, i) => (
+        <div key={i} className={`faq-item${openFaq === i ? ' open' : ''}`}>
+          <div className="faq-item__question" onClick={() => toggleFaq(i)}>{faq.q}<div className="faq-item__icon">{openFaq === i ? '\u00D7' : '+'}</div></div>
+          <div className="faq-item__answer"><p>{faq.a}</p></div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
@@ -344,10 +346,7 @@ export default function WebinarsPage() {
     </p>
     <Link to="/contacto" className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff',fontSize:'15px',padding:'18px 36px'}}>Consulta individual gratuita →</Link>
   </div>
-</section><div id="stickyBar" style={{display:'none',position:'fixed',bottom:'0',left:'0',right:'0',zIndex:'500',background:'#1A2744',borderTop:'1px solid rgba(255,255,255,0.08)',padding:'14px 20px',justifyContent:'space-between',gap:'12px',alignItems:'center'}}>
-  <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'rgba(255,255,255,0.7)'}}>¿Necesitas certificarte?</span>
-  <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#fff',border:'1px solid #fff',padding:'10px 20px',textDecoration:'none',whiteSpace:'nowrap'}}>Diagnóstico gratuito →</Link>
-</div>
+</section>
     </>
   )
 }

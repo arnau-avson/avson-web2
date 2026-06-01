@@ -25,10 +25,10 @@ export default function RenovacionCertificadoEns() {
     .faq-article-item.open .faq-article-a { display:block; }` }} />
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>Renovación certificado ENS</span>
     </nav>
@@ -40,15 +40,15 @@ export default function RenovacionCertificadoEns() {
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">ENS · Renovación · Actualizado mayo 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         Renovación del certificado ENS: todo lo que necesitas saber
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         El certificado ENS caduca a los 2 años. Muchas empresas lo descubren demasiado tarde y pierden contratos activos. Esta guía explica cuándo iniciar la renovación, qué implica y cómo evitar lagunas de certificación.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 8 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 8 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
       </div>
     </div>
   </div>
@@ -96,8 +96,8 @@ export default function RenovacionCertificadoEns() {
     <p>La implicación práctica es que el coste de una renovación bien mantenida es considerablemente menor que el de una primera certificación. Sin embargo, si la organización ha descuidado el mantenimiento del sistema de seguridad durante los dos años de vigencia del certificado, la renovación puede ser tan costosa como una primera certificación.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Avson GRC ofrece mantenimiento continuo del ENS entre renovaciones. Tu certificado siempre al día, sin sorpresas.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Consultar →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Avson GRC ofrece mantenimiento continuo del ENS entre renovaciones. Tu certificado siempre al día, sin sorpresas.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Consultar →</Link>
     </div>
 
     <h2>Plazos: cuándo iniciar el proceso de renovación</h2>
@@ -178,66 +178,65 @@ export default function RenovacionCertificadoEns() {
     <p>Avson GRC ofrece <strong>servicio de mantenimiento continuo ENS</strong>: una suscripción anual que garantiza que el sistema de seguridad se mantiene al día durante todo el período de vigencia del certificado, con revisiones trimestrales, gestión de cambios y preparación para la auditoría de renovación. Es la forma más eficiente de gestionar el ciclo de vida del certificado ENS a largo plazo.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Relación vitalicia: somos el socio GRC a largo plazo de nuestros clientes. Gestión completa del ciclo de vida del certificado ENS.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Más información →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Relación vitalicia: somos el socio GRC a largo plazo de nuestros clientes. Gestión completa del ciclo de vida del certificado ENS.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Más información →</Link>
     </div>
 
-    
-<section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
-  <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
-  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
-    <Link to="/certificado-ens-media-alta" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS Media y Alta: requisitos adicionales y cómo certificarse</p>
-    </Link>
-    <Link to="/certificado-ens-obligatorio" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Es obligatorio el certificado ENS? Quién debe cumplirlo</p>
-    </Link>
-  </div>
-</section>
+    <section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
+      <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
+        <Link to="/blog/certificado-ens-media-alta" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS Media y Alta: requisitos adicionales y cómo certificarse</p>
+        </Link>
+        <Link to="/blog/certificado-ens-obligatorio" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Es obligatorio el certificado ENS? Quién debe cumplirlo</p>
+        </Link>
+      </div>
+    </section>
 
-<h2>Preguntas frecuentes sobre la renovación</h2>
+    <h2>Preguntas frecuentes sobre la renovación</h2>
 
     <div className="faq-article">
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Cada cuánto hay que renovar el certificado ENS?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Cada cuánto hay que renovar el certificado ENS?</div>
         <div className="faq-article-a">El certificado ENS tiene una vigencia de 2 años a partir de la fecha de emisión. Transcurrido ese plazo, debe renovarse mediante una nueva auditoría de certificación realizada por una entidad acreditada ENAC. No hay prórrogas automáticas.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Qué pasa si el certificado ENS caduca sin renovación?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Qué pasa si el certificado ENS caduca sin renovación?</div>
         <div className="faq-article-a">Si el certificado caduca, la empresa pierde su acreditación ENS y no puede acreditar el cumplimiento en nuevas licitaciones. Además, si tiene contratos activos con la AAPP que exigen ENS, puede incurrir en incumplimiento contractual. Es fundamental iniciar el proceso de renovación con 3-4 meses de antelación.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿La renovación es tan costosa como la primera certificación?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿La renovación es tan costosa como la primera certificación?</div>
         <div className="faq-article-a">Si la empresa ha mantenido activo el sistema de seguridad durante los dos años, no. El coste de renovación suele ser entre el 40% y el 60% del coste del proyecto inicial. Si el mantenimiento ha sido deficiente, la renovación puede acercarse en coste a una primera certificación.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Puedo cambiar de entidad de certificación en la renovación?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Puedo cambiar de entidad de certificación en la renovación?</div>
         <div className="faq-article-a">Sí. No hay obligación de renovar con la misma entidad que emitió el certificado original. La empresa puede elegir cualquier entidad de certificación acreditada ENAC para el esquema ENS. Sin embargo, cambiar de entidad implica que la nueva entidad debe revisar toda la documentación desde el principio, lo que puede alargarse el proceso.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Qué ocurre si durante la auditoría de renovación hay no conformidades?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Qué ocurre si durante la auditoría de renovación hay no conformidades?</div>
         <div className="faq-article-a">Si se detectan no conformidades menores, la organización tiene un plazo (típicamente 90 días) para subsanarlas y presentar evidencias de corrección. Si las no conformidades son mayores, el certificado puede no renovarse hasta que se resuelvan. La entidad de certificación establece el plan de subsanación.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿El alcance puede cambiar en la renovación?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿El alcance puede cambiar en la renovación?</div>
         <div className="faq-article-a">Sí. En la renovación, la empresa puede ampliar o reducir el alcance del certificado. Si el nuevo alcance incluye sistemas adicionales, el proceso de auditoría será más extenso. Si se reduce el alcance, debe justificarse adecuadamente. Cualquier cambio de alcance debe comunicarse a la entidad de certificación con suficiente antelación.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Se acerca tu renovación ENS?</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Planifícala con tiempo. Con Avson GRC, sin sorpresas ni lagunas de certificación.</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Consultar sobre renovación →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Se acerca tu renovación ENS?</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Planifícala con tiempo. Con Avson GRC, sin sorpresas ni lagunas de certificación.</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Consultar sobre renovación →</Link>
     </div>
 
     <div style={{marginTop:'48px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/que-es-el-ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
-        <Link to="/certificado-ens-media-alta" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta →</Link>
-        <Link to="/certificado-ens-obligatorio" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS obligatorio →</Link>
+        <Link to="/blog/que-es-el-ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
+        <Link to="/blog/certificado-ens-media-alta" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta →</Link>
+        <Link to="/blog/certificado-ens-obligatorio" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS obligatorio →</Link>
       </div>
     </div>
 

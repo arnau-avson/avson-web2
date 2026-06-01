@@ -18,42 +18,46 @@ export default function CuantoCuestaCertificadoEns() {
     .faq-article { border-top:1px solid #E5E5E0; }
     .faq-article-item { border-bottom:1px solid #E5E5E0; }
     .faq-article-q { font-family:'Inter',sans-serif; font-size:16px; font-weight:500; color:#1A2744; padding:20px 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
-    .faq-article-q::after { content:'＋'; font-size:20px; color:#C9A84C; flex-shrink:0; }
-    .faq-article-item.open .faq-article-q::after { content:'－'; }
+    .faq-article-q::after { content:'\\FF0B'; font-size:20px; color:#C9A84C; flex-shrink:0; }
+    .faq-article-item.open .faq-article-q::after { content:'\\FF0D'; }
     .faq-article-a { font-family:'Inter',sans-serif; font-size:15px; color:#3A4560; line-height:1.75; padding:0 0 20px; display:none; }
     .faq-article-item.open .faq-article-a { display:block; }
     .cta-inline-box { background:#F7F7F5; border:1px solid #E5E5E0; border-left:3px solid #C9A84C; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; margin:40px 0; }` }} />
+
+{/* BREADCRUMB */}
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>Cuánto cuesta el certificado ENS</span>
     </nav>
   </div>
 </div>
 
+{/* ARTICLE HERO */}
 <section style={{background:'var(--pearl)',padding:'72px 0 56px',borderBottom:'1px solid var(--border)'}}>
   <div className="container">
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">ENS · Precios · Consultoría · Mayo 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         Cuánto cuesta el certificado ENS: precios reales y qué incluye la consultoría.
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         Sin eufemismos ni letra pequeña. Rangos de precio reales para empresas de distintos tamaños, qué está incluido, qué no, y cómo calcular si el certificado ENS tiene sentido económico para tu empresa.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 11 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Lectura: 11 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Actualizado: mayo 2026</span>
       </div>
     </div>
   </div>
 </section>
 
+{/* ARTICLE BODY */}
 <article style={{padding:'72px 0 80px',background:'var(--white)'}}>
   <div className="article-body">
 
@@ -79,8 +83,8 @@ export default function CuantoCuestaCertificadoEns() {
     </ul>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ENS?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ENS?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2>Rangos de precio reales para consultoría ENS</h2>
@@ -149,8 +153,8 @@ export default function CuantoCuestaCertificadoEns() {
     <p><strong>3. Tiempo interno del equipo del cliente:</strong> A menudo el coste más infravalorado. El proceso de certificación requiere dedicación del personal técnico y directivo del cliente: reuniones de análisis, implementación de controles, aprobación de documentación, formación. Estimamos entre 40 y 120 horas de dedicación interna para una pyme, dependiendo de la categoría y el nivel de delegación en la consultora.</p>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ENS?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ENS?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2>El coste de NO tener ENS: contratos perdidos</h2>
@@ -194,52 +198,53 @@ export default function CuantoCuestaCertificadoEns() {
     <p>Combinada con nuestro plazo de 3 a 4 meses (frente a los 6-12 meses del mercado), la garantía convierte la certificación ENS en una decisión de inversión con riesgo controlado y retorno predecible.</p>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ENS?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ENS?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <div style={{marginTop:'64px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/que-es-el-ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
-        <Link to="/certificado-ens-media-alta" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta →</Link>
-        <Link to="/ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Servicio ENS →</Link>
-        <Link to="/precio" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Precios Avson →</Link>
+        <Link to="/blog/que-es-el-ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
+        <Link to="/blog/certificado-ens-media-alta" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta →</Link>
+        <Link to="/ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Servicio ENS →</Link>
+        <Link to="/precio" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Precios Avson →</Link>
       </div>
     </div>
 
     <h2>Preguntas frecuentes sobre el precio del ENS</h2>
 
     <div className="faq-article">
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Está incluida la auditoría externa en el precio?</div>
         <div className="faq-article-a">Depende de la consultora. En Avson, la consultoría de preparación y la auditoría externa son contratos separados, lo que permite al cliente elegir la entidad de certificación que prefiera. La auditoría externa con una entidad acreditada ENAC tiene un coste adicional que suele oscilar entre 2.500 y 8.000 euros para pymes, dependiendo de la categoría ENS y la entidad certificadora elegida. Siempre especificamos esto con claridad antes de firmar el contrato.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Hay ayudas o subvenciones para el ENS?</div>
         <div className="faq-article-a">Actualmente no existe una línea de subvención estatal específica para la certificación ENS en empresas privadas. Sin embargo, algunas comunidades autónomas (especialmente Madrid, Cataluña y País Vasco) tienen programas de digitalización y ciberseguridad que pueden cubrir parcialmente costes de consultoría de seguridad. El Kit Digital (programa ACELERA PYME) puede financiar servicios de ciberseguridad que forman parte del proceso ENS en algunos casos. Consultamos estas opciones en cada proyecto.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿El precio cambia si ya tengo ISO 27001?</div>
         <div className="faq-article-a">Sí, significativamente. Una empresa con ISO 27001 ya tiene implementado aproximadamente el 65% de los controles del ENS. Esto reduce el trabajo de consultoría en una proporción equivalente. En función de la categoría ENS objetivo y el nivel de implementación de ISO 27001, el coste de la consultoría ENS puede reducirse entre un 40% y un 60% respecto a partir de cero. Es uno de los argumentos más poderosos para hacer ENS + ISO 27001 de forma conjunta o secuencial.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Puedo financiar la consultoría ENS?</div>
         <div className="faq-article-a">Avson ofrece la posibilidad de fraccionar el pago de la consultoría en hitos ligados al avance del proyecto. Esto evita un desembolso inicial elevado y alinea los pagos con la generación de valor. Contacta con nosotros para conocer las opciones de pago adaptadas a tu tamaño y situación.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Por qué hay tanta diferencia de precios entre consultoras?</div>
         <div className="faq-article-a">La diferencia de precios entre consultoras ENS refleja diferencias reales en la propuesta de valor: algunas ofrecen documentación genérica y poco trabajo de implementación técnica real; otras, como Avson, ofrecen implementación completa con garantía de éxito. También influyen la experiencia del equipo consultor, el número de horas dedicadas, la inclusión o no de herramientas, y la ratio de éxito histórico. El precio más bajo raramente es el coste total más bajo una vez se tienen en cuenta los reintentos de auditoría y el tiempo perdido.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>Presupuesto cerrado para tu ENS en 24 horas.</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Cuéntanos tu situación y te damos un presupuesto real, desglosado y sin letra pequeña. Con garantía de éxito incluida.</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>Presupuesto cerrado para tu ENS en 24 horas.</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Cuéntanos tu situación y te damos un presupuesto real, desglosado y sin letra pequeña. Con garantía de éxito incluida.</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto →</Link>
     </div>
 
   </div>
-</article></>
+</article>
+    </>
   )
 }

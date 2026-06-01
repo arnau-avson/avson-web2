@@ -25,10 +25,10 @@ export default function Iso27001RequisitosCertificacion() {
     .cta-inline-box { background:#F7F7F5; border:1px solid #E5E5E0; border-left:3px solid #C9A84C; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; margin:40px 0; }` }} />
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>ISO 27001: Requisitos y Certificación</span>
     </nav>
@@ -40,15 +40,15 @@ export default function Iso27001RequisitosCertificacion() {
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">ISO 27001 · SGSI · Certificación · Mayo 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         ISO 27001: requisitos, controles y proceso de certificación en España.
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         Guía completa y actualizada para 2026: qué exige ISO 27001:2022, cuántos controles tiene, cómo es el proceso de auditoría y qué significa la Declaración de Aplicabilidad.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 13 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 13 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
       </div>
     </div>
   </div>
@@ -80,8 +80,8 @@ export default function Iso27001RequisitosCertificacion() {
     </ul>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ISO 27001?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ISO 27001?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2>El Anexo A de ISO 27001: los 93 controles</h2>
@@ -154,8 +154,8 @@ export default function Iso27001RequisitosCertificacion() {
     <p>La SoA es un documento vivo que evoluciona con el SGSI. Es uno de los primeros documentos que revisa el auditor externo durante la certificación, porque permite entender de un vistazo el perímetro y la profundidad del sistema de gestión implantado. Una SoA bien construida simplifica enormemente la auditoría de certificación.</p>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ISO 27001?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ISO 27001?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2>Proceso de certificación ISO 27001: etapas y auditoría</h2>
@@ -194,17 +194,17 @@ export default function Iso27001RequisitosCertificacion() {
     <p>En la práctica, Avson completa el paso de ENS a ISO 27001 en aproximadamente <strong>6 a 8 semanas</strong> de trabajo adicional para organizaciones con ENS Media o Alta ya certificadas.</p>
 
     <div className="cta-inline-box anim-fade-up">
-      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ISO 27001?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Diagnóstico gratuito en 24 horas. Sin compromiso.</p></div>
-      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Hablar con un experto →</Link>
+      <div><strong style={{fontFamily:'var(--font-serif)',fontSize:'1.1rem'}}>¿Tu empresa necesita cumplir ISO 27001?</strong><p style={{marginTop:'8px',color:'var(--navy-60)'}}>Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <Link to="/contacto" className="btn-primary" style={{whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <div style={{marginTop:'64px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/iso27001-pymes" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ISO 27001 para pymes →</Link>
-        <Link to="/ens-vs-iso27001" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001 →</Link>
-        <Link to="/iso27001" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Servicio ISO 27001 →</Link>
-        <Link to="/ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Servicio ENS →</Link>
+        <Link to="/blog/iso27001-pymes" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ISO 27001 para pymes →</Link>
+        <Link to="/blog/ens-vs-iso27001" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001 →</Link>
+        <Link to="/iso27001" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Servicio ISO 27001 →</Link>
+        <Link to="/ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Servicio ENS →</Link>
       </div>
     </div>
 
@@ -212,31 +212,31 @@ export default function Iso27001RequisitosCertificacion() {
 
     <div className="faq-article">
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Cuántos controles tiene ISO 27001?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Cuántos controles tiene ISO 27001?</div>
         <div className="faq-article-a">ISO 27001:2022 tiene 93 controles en el Anexo A, organizados en 4 categorías: controles organizativos (37), controles de personas (8), controles físicos (14) y controles tecnológicos (34). No todos los controles son obligatorios para todas las organizaciones: la norma exige seleccionar los controles aplicables en función del análisis de riesgos y documentar las razones para excluir los que no aplican en la Declaración de Aplicabilidad (SoA).</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Qué auditores certifican ISO 27001 en España?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Qué auditores certifican ISO 27001 en España?</div>
         <div className="faq-article-a">En España, la certificación ISO 27001 es emitida por entidades de certificación acreditadas por ENAC (Entidad Nacional de Acreditación) bajo el esquema ISO/IEC 17021. Las principales entidades de certificación que operan en España incluyen AENOR, Bureau Veritas, TÜV Rheinland, SGS, Lloyd's Register, BSI y DNV. La elección de la entidad certificadora no afecta al valor del certificado, pero puede influir en el reconocimiento internacional y en el coste.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿ISO 27001 tiene que renovarse?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿ISO 27001 tiene que renovarse?</div>
         <div className="faq-article-a">El certificado ISO 27001 tiene una vigencia de 3 años. Durante ese período, la entidad de certificación realiza auditorías de seguimiento anuales (generalmente más cortas que la auditoría de certificación inicial) para verificar que el SGSI sigue siendo conforme y efectivo. Al tercer año, se realiza una auditoría de renovación completa para obtener un nuevo certificado por otros 3 años.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Cuánto tiempo lleva la auditoría de certificación ISO 27001?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Cuánto tiempo lleva la auditoría de certificación ISO 27001?</div>
         <div className="faq-article-a">La duración de la auditoría de certificación depende del tamaño de la organización y el alcance del SGSI. Para una pyme de 20-50 empleados con alcance limitado, la auditoría de Fase 2 (auditoría principal) suele durar 1-2 días. Para organizaciones medianas (50-200 empleados), puede durar 3-4 días. Para grandes organizaciones con múltiples ubicaciones, puede extenderse varias semanas. Previamente, la Fase 1 (revisión documental) suele durar medio día o un día completo.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿ISO 27001 es obligatoria en España?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿ISO 27001 es obligatoria en España?</div>
         <div className="faq-article-a">ISO 27001 es una norma voluntaria a nivel general. Sin embargo, puede ser de obligado cumplimiento contractual en numerosos contextos: algunos pliegos de licitación pública la exigen, muchos contratos con grandes empresas la requieren como condición de entrada en la cadena de suministro, y sectores como banca, seguros o salud la consideran requisito de facto. En el contexto de NIS2 y DORA, la certificación ISO 27001 se reconoce como evidencia de cumplimiento de obligaciones de gestión de riesgos.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>ISO 27001 en 3-4 meses. Con garantía de éxito por escrito.</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Analizamos tu situación actual y te decimos exactamente qué falta, cuánto tiempo llevará y qué coste tendrá. Sin letra pequeña.</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar diagnóstico gratuito →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>ISO 27001 en 3-4 meses. Con garantía de éxito por escrito.</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Analizamos tu situación actual y te decimos exactamente qué falta, cuánto tiempo llevará y qué coste tendrá. Sin letra pequeña.</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto sin compromiso →</Link>
     </div>
 
   </div>

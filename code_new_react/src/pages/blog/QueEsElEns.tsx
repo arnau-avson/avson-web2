@@ -15,44 +15,46 @@ export default function QueEsElEns() {
     .faq-article { border-top:1px solid #E5E5E0; }
     .faq-article-item { border-bottom:1px solid #E5E5E0; }
     .faq-article-q { font-family:'Inter',sans-serif; font-size:16px; font-weight:500; color:#1A2744; padding:20px 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
-    .faq-article-q::after { content:'＋'; font-size:20px; color:#C9A84C; flex-shrink:0; }
-    .faq-article-item.open .faq-article-q::after { content:'－'; }
+    .faq-article-q::after { content:'\\FF0B'; font-size:20px; color:#C9A84C; flex-shrink:0; }
+    .faq-article-item.open .faq-article-q::after { content:'\\FF0D'; }
     .faq-article-a { font-family:'Inter',sans-serif; font-size:15px; color:#3A4560; line-height:1.75; padding:0 0 20px; display:none; }
     .faq-article-item.open .faq-article-a { display:block; }` }} />
+
+{/* BREADCRUMB */}
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>Qué es el ENS</span>
     </nav>
   </div>
 </div>
 
-
+{/* ARTICLE HERO */}
 <section style={{background:'var(--pearl)',padding:'72px 0 56px',borderBottom:'1px solid var(--border)'}}>
   <div className="container">
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">ENS · Guía completa · Actualizado mayo 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         Qué es el ENS: guía completa del Esquema Nacional de Seguridad
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         Si tu empresa presta cualquier servicio tecnológico a organismos públicos en España, el ENS no es opcional. Esta guía explica qué es, cómo funciona y qué necesitas para certificarte.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 8 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>✍️ Por el equipo de Avson GRC</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Lectura: 8 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Por el equipo de Avson GRC</span>
       </div>
     </div>
   </div>
 </section>
 
-
+{/* ARTICLE BODY */}
 <article style={{padding:'72px 0 80px',background:'var(--white)'}}>
   <div className="article-body">
 
@@ -65,8 +67,8 @@ export default function QueEsElEns() {
     <p>El ENS no es una norma voluntaria ni una recomendación de buenas prácticas: es de <strong>obligado cumplimiento</strong> según el Real Decreto 311/2022, que derogó y sustituyó al anterior RD 3/2010. El incumplimiento tiene consecuencias directas: exclusión de licitaciones públicas, imposibilidad de renovar contratos con la Administración y, en algunos casos, responsabilidades legales.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>¿No sabes si el ENS aplica a tu empresa? Un diagnóstico gratuito te lo resuelve en 5 días hábiles.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Diagnóstico gratuito →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>¿No sabes si el ENS aplica a tu empresa? Un presupuesto sin compromiso te lo resuelve en 5 días hábiles.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2>Historia y evolución del ENS: del RD 3/2010 al RD 311/2022</h2>
@@ -100,8 +102,8 @@ export default function QueEsElEns() {
     <p>La clave práctica para una empresa privada es sencilla: si tu empresa licita o tiene contratos vigentes con organismos públicos en los que se gestionen, almacenen o transmitan datos de la Administración o se presten servicios TIC de cualquier tipo, el ENS te aplica. Esto incluye proveedores de software, integradores de sistemas, proveedores de servicios en la nube (IaaS, PaaS, SaaS), consultoras IT, empresas de telecomunicaciones y cualquier otro proveedor tecnológico.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>87 empresas ya tienen su certificado ENS con Avson. Tiempo medio: 3,5 meses. Tasa de éxito: 100%.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Empezar ahora →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>87 empresas ya tienen su certificado ENS con Avson. Tiempo medio: 3,5 meses. Tasa de éxito: 100%.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Empezar ahora →</Link>
     </div>
 
     <h2>Categorías del ENS: Básica, Media y Alta</h2>
@@ -122,7 +124,7 @@ export default function QueEsElEns() {
 
     <p><strong>Categoría MEDIA:</strong> aplica cuando el impacto sería grave. Es la categoría más común para proveedores TIC de tamaño medio y empresas que gestionan datos sensibles de ciudadanos o sistemas que soportan servicios públicos esenciales. Exige aproximadamente 60 medidas con controles más estrictos: doble factor de autenticación obligatorio, análisis de vulnerabilidades periódico, monitorización de seguridad continua y planes de continuidad formalizados.</p>
 
-    <p><strong>Categoría ALTA:</strong> aplica cuando el impacto sería muy grave o catastrófico. Típica de infraestructuras críticas, sistemas de defensa nacional, servicios esenciales del Estado o sistemas que manejan información clasificada. Exige las 75 medidas en sus niveles más exigentes, incluyendo controles avanzados de criptografía, segregación física de redes, respuesta a incidentes formalizada y auditorías de penetración regulares.</p>
+    <p><strong>Categoría ALTA:</strong> aplica cuando el impacto sería muy grave o catastrófico. Típica de infraestructuras críticas, sistemas de defensa nacional, servicios esenciales del Estado o sistemas que manejan información clasificada. Exige las 73 medidas en sus niveles más exigentes, incluyendo controles avanzados de criptografía, segregación física de redes, respuesta a incidentes formalizada y auditorías de penetración regulares.</p>
 
     <p>La determinación de la categoría es el primer paso crítico de cualquier proceso de implantación ENS. Herramientas como <strong>PILAR</strong> (desarrollada por el CCN) facilitan esta valoración mediante un análisis estructurado de activos y amenazas.</p>
 
@@ -149,8 +151,8 @@ export default function QueEsElEns() {
     <p>La entidad auditora debe estar acreditada por ENAC bajo el esquema específico de certificación del ENS. El CCN publica en su web el listado actualizado de entidades acreditadas.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Garantía de éxito al 100% por escrito. Si no superas la auditoría siguiendo nuestro plan, repetimos sin coste.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Ver garantía →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Garantía de éxito al 100% por escrito. Si no superas la auditoría siguiendo nuestro plan, repetimos sin coste.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Ver garantía →</Link>
     </div>
 
     <h2>Cómo obtener el certificado ENS paso a paso</h2>
@@ -169,70 +171,71 @@ export default function QueEsElEns() {
 
     <p>Con el acompañamiento de una consultora especializada como Avson GRC, este proceso completo tarda entre 3 y 4 meses. El factor más determinante del plazo no es la documentación — que puede generarse con eficiencia usando herramientas especializadas — sino la implementación de controles técnicos y la disponibilidad del equipo interno para validar y proporcionar evidencias.</p>
 
-    
-<section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
-  <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
-  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
-    <Link to="/certificado-ens-obligatorio" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Es obligatorio el certificado ENS? Quién debe cumplirlo</p>
-    </Link>
-    <Link to="/ens-vs-iso27001" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS · ISO 27001</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS vs ISO 27001: diferencias clave y cuál necesitas</p>
-    </Link>
-    <Link to="/certificado-ens-media-alta" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS Media y Alta: requisitos adicionales y cómo certificarse</p>
-    </Link>
-  </div>
-</section>
+    {/* RELATED ARTICLES */}
+    <section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
+      <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
+        <Link to="/blog/certificado-ens-obligatorio" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Es obligatorio el certificado ENS? Quién debe cumplirlo</p>
+        </Link>
+        <Link to="/blog/ens-vs-iso27001" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS · ISO 27001</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS vs ISO 27001: diferencias clave y cuál necesitas</p>
+        </Link>
+        <Link to="/blog/certificado-ens-media-alta" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS Media y Alta: requisitos adicionales y cómo certificarse</p>
+        </Link>
+      </div>
+    </section>
 
-<h2>Preguntas frecuentes sobre el ENS</h2>
+    <h2>Preguntas frecuentes sobre el ENS</h2>
 
     <div className="faq-article">
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Qué es el ENS exactamente?</div>
         <div className="faq-article-a">El ENS (Esquema Nacional de Seguridad) es el marco normativo español, establecido por el RD 311/2022, que regula la seguridad de los sistemas de información de las Administraciones Públicas y de sus proveedores TIC. Define los principios, requisitos y medidas de seguridad de obligado cumplimiento para garantizar la protección adecuada de los sistemas que soportan servicios públicos.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Es obligatorio el ENS para empresas privadas?</div>
         <div className="faq-article-a">Sí, para las empresas privadas que prestan servicios TIC a organismos del sector público español. El RD 311/2022 extiende la obligación a proveedores y subcontratistas. Si tu empresa vende software, servicios cloud, consultoría IT o cualquier servicio tecnológico a una Administración Pública, necesitas cumplir con el ENS en la categoría que corresponda.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Cuánto tiempo lleva obtener el certificado ENS?</div>
         <div className="faq-article-a">Con una consultora especializada como Avson GRC, el proceso completo desde diagnóstico hasta certificado dura entre 3 y 4 meses. Sin asesoramiento experto, puede extenderse a 12 meses o más, principalmente por los errores en la determinación del alcance, la generación de documentación incorrecta y la falta de preparación para la auditoría.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Qué diferencia hay entre Declaración de Conformidad y Certificado ENS?</div>
         <div className="faq-article-a">La Declaración de Conformidad es un documento autoevaluado válido solo para ENS Básica. El Certificado ENS es emitido por una entidad de certificación acreditada por ENAC tras una auditoría independiente. La mayoría de licitaciones públicas exigen el certificado completo, incluso para categoría Básica.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Cuánto cuesta obtener el certificado ENS?</div>
-        <div className="faq-article-a">El coste depende de la categoría del sistema (Básica, Media o Alta), el número de sistemas en alcance, la madurez de los controles existentes y el tamaño de la organización. El diagnóstico gratuito de Avson incluye una propuesta económica personalizada. Como referencia, el coste es significativamente inferior al valor del primer contrato público que la certificación permite ganar.</div>
+        <div className="faq-article-a">El coste depende de la categoría del sistema (Básica, Media o Alta), el número de sistemas en alcance, la madurez de los controles existentes y el tamaño de la organización. El presupuesto sin compromiso de Avson incluye una propuesta económica personalizada. Como referencia, el coste es significativamente inferior al valor del primer contrato público que la certificación permite ganar.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿El certificado ENS tiene fecha de caducidad?</div>
         <div className="faq-article-a">Sí. El certificado ENS tiene una vigencia de 2 años a partir de la fecha de emisión. Transcurrido ese plazo, debe renovarse mediante una nueva auditoría de certificación. Es recomendable iniciar el proceso de renovación 3-4 meses antes de la caducidad para evitar periodos sin certificado vigente.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Listo para certificarte en ENS?</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Diagnóstico gratuito · Sin compromiso · Respuesta en 24 horas</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar diagnóstico gratuito →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Listo para certificarte en ENS?</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Pide presupuesto · Sin compromiso · Respuesta en 24 horas</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto sin compromiso →</Link>
     </div>
 
     <div style={{marginTop:'48px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/certificado-ens-obligatorio" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>¿El ENS es obligatorio para mi empresa? →</Link>
-        <Link to="/certificado-ens-media-alta" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta: diferencias →</Link>
-        <Link to="/ens-vs-iso27001" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001: sinergia →</Link>
+        <Link to="/blog/certificado-ens-obligatorio" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>¿El ENS es obligatorio para mi empresa? →</Link>
+        <Link to="/blog/certificado-ens-media-alta" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta: diferencias →</Link>
+        <Link to="/blog/ens-vs-iso27001" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001: sinergia →</Link>
       </div>
     </div>
 
   </div>
-</article></>
+</article>
+    </>
   )
 }

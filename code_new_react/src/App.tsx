@@ -52,13 +52,19 @@ const QueEsDoraReglamento = lazy(() => import('./pages/blog/QueEsDoraReglamento'
 const DoraEntidadesFinancieras = lazy(() => import('./pages/blog/DoraEntidadesFinancieras'))
 const QueEsNis2Directiva = lazy(() => import('./pages/blog/QueEsNis2Directiva'))
 const QueEsTisax = lazy(() => import('./pages/blog/QueEsTisax'))
-const Iso27001Pymes2 = lazy(() => import('./pages/blog/Iso27001Pymes'))
+const UnetePage = lazy(() => import('./pages/UnetePage'))
+const EnsPpcPage = lazy(() => import('./pages/EnsPpcPage'))
+const EnsExpressPpcPage = lazy(() => import('./pages/EnsExpressPpcPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 export default function App() {
   return (
     <Suspense fallback={null}>
       <Routes>
+        {/* PPC landing pages — standalone layout (no shared nav/footer) */}
+        <Route path="/ens-ppc" element={<EnsPpcPage />} />
+        <Route path="/ens-express-ppc" element={<EnsExpressPpcPage />} />
+
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/ens" element={<EnsPage />} />
@@ -74,6 +80,7 @@ export default function App() {
           <Route path="/ens-medio" element={<EnsMedioPage />} />
           <Route path="/ens-alto" element={<EnsAltoPage />} />
           <Route path="/equipo" element={<EquipoPage />} />
+          <Route path="/unete" element={<UnetePage />} />
           <Route path="/contacto" element={<ContactoPage />} />
           <Route path="/consultoria-ens-espana" element={<ConsultoriaEnsPage />} />
           <Route path="/diagnostico" element={<DiagnosticoPage />} />

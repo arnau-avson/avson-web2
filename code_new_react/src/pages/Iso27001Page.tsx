@@ -1,48 +1,227 @@
+import { useState, useEffect, FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 
+const testimonials = [
+  {
+    quote: '"Llevábamos dos años perdiendo licitaciones por no tener el ENS. Avson nos lo resolvió en 9 semanas. Al siguiente concurso, ganamos el contrato."',
+    author: '— Director de Sistemas · Integradora TIC, Madrid',
+    result: 'ENS Media ✓',
+  },
+  {
+    quote: '"Otros consultores nos decían un año. Avson lo hizo en 14 semanas y superamos la auditoría a la primera, sin una sola no conformidad."',
+    author: '— CISO · Proveedor cloud del sector público',
+    result: 'ENS Alta + ISO 27001 ✓',
+  },
+  {
+    quote: '"Un cliente enterprise nos exigía la ISO 27001 para renovar el contrato. La certificamos en cuatro meses y medio sin parar el negocio."',
+    author: '— CTO · Empresa de software de gestión',
+    result: 'ISO 27001 ✓',
+  },
+  {
+    quote: '"Después del ransomware de 2023 la dirección quiso ISO 22301. Avson montó el plan de continuidad y certificamos sin sobresaltos."',
+    author: '— Responsable de Riesgos · Servicios financieros',
+    result: 'ISO 22301 ✓',
+  },
+  {
+    quote: '"Somos proveedores TIC de tres bancos. Cuando entró DORA nos pidieron evidencias y Avson demostró que el 60% ya estaba hecho con el ENS."',
+    author: '— CISO · Proveedor financiero',
+    result: 'DORA ✓',
+  },
+  {
+    quote: '"Lo que nos decidió fue la garantía por escrito. Cumplieron el plazo y el presupuesto que firmamos, sin una sola sorpresa."',
+    author: '— CEO · Consultora tecnológica',
+    result: 'ENS Básica ✓',
+  },
+]
+
 export default function Iso27001Page() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const totalSlides = testimonials.length
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [totalSlides])
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides)
+  }
+
+  const handleHeroSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    window.location.href = '/gracias'
+  }
+
   return (
     <>
-<section className="section section--pearl" style={{paddingTop:'160px',paddingBottom:'100px'}}>
+{/* HERO */}
+<section className="section section--pearl" style={{paddingTop:'120px',paddingBottom:'64px'}}>
   <div className="container">
-    <span className="label-tag">ISO 27001:2022 · 93 controles · Revisión 2022</span>
-    <div className="gold-line"></div>
-    <h1 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(48px,6vw,80px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 32px',maxWidth:'720px'}}>
-      ISO 27001: el SGSI que<br /><em>abre mercados.</em>
-    </h1>
-    <p className="body-large" style={{maxWidth:'600px',marginBottom:'40px'}}>
-      El Sistema de Gestión de la Seguridad de la Información (SGSI) certificado bajo ISO 27001 es el estándar más reconocido del mundo en materia de seguridad de la información. Te permite demostrar a clientes, socios y reguladores que gestionas los riesgos de seguridad de forma sistemática y continua.
-    </p>
-    <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginBottom:'52px'}}>
-      <Link to="/contacto" className="btn-primary">Diagnóstico gratuito →</Link>
-      <Link to="/packs" className="btn-text">Ver packs ISO 27001 →</Link>
-    </div>
-    <div style={{display:'flex',gap:'40px',flexWrap:'wrap'}}>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>4–5</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>meses a certificado</span>
+    <div className="hero-conv">
+
+      {/* IZQUIERDA: propuesta + KPIs + prueba social */}
+      <div>
+        <span className="label-tag">ISO 27001:2022 · Certificación</span>
+        <h1 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(40px,5.2vw,68px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.08',margin:'14px 0 18px'}}>
+          El sello que te abre<br /><em>el mercado privado.</em>
+        </h1>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'17px',lineHeight:'1.6',color:'var(--text-body)',maxWidth:'520px',margin:'0'}}>
+          La certificación de seguridad que exigen los contratos enterprise e internacionales. <strong style={{color:'var(--navy)'}}>Si ya tienes ENS, el 65% está hecho.</strong>
+        </p>
+
+        <div className="hero-conv__kpis">
+          <div className="hero-conv__kpi"><strong>355+</strong><span>empresas certificadas</span></div>
+          <div className="hero-conv__kpi"><strong>100%</strong><span>tasa de éxito</span></div>
+          <div className="hero-conv__kpi"><strong>4.9★</strong><span>valoración clientes</span></div>
+        </div>
+
+        <div style={{display:'flex',alignItems:'center',gap:'14px',flexWrap:'wrap'}}>
+          <div style={{display:'inline-flex',alignItems:'center',gap:'8px',border:'1px solid #C9A84C',padding:'9px 16px',borderRadius:'8px'}}>
+            <span style={{fontSize:'16px',color:'#C9A84C'}}>✦</span>
+            <span style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',fontWeight:'600',letterSpacing:'0.06em',textTransform:'uppercase',color:'#1A2744'}}>Garantía de éxito al 100% por escrito</span>
+          </div>
+        </div>
+
+        {/* Prueba social */}
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',color:'var(--text-body)',lineHeight:'1.6',margin:'22px 0 0',maxWidth:'480px'}}>
+          <span style={{color:'#C9A84C',letterSpacing:'1px'}}>★★★★★</span><br />
+          <em>"Un cliente enterprise nos exigía ISO 27001 para renovar. Avson lo hizo en 4 meses y medio, sin parar el negocio."</em> — Director de Sistemas, proveedor cloud
+        </p>
       </div>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>93</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>controles en la norma</span>
+
+      {/* DERECHA: formulario de captura en el hero */}
+      <div style={{background:'#fff',border:'1px solid #E5E5E0',borderRadius:'14px',padding:'30px',boxShadow:'0 18px 50px rgba(26,39,68,0.12)'}}>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'13px',fontWeight:'700',color:'#16a34a',margin:'0 0 4px'}}>🟢 Te respondemos hoy</p>
+        <p style={{fontFamily:'var(--font-serif)',fontSize:'26px',color:'var(--navy)',margin:'0 0 4px'}}>Pide tu presupuesto</p>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'13px',color:'var(--text-muted)',margin:'0 0 18px'}}>Gratuito · Sin compromiso · En 30 min sabes qué necesitas</p>
+        <form onSubmit={handleHeroSubmit} style={{display:'flex',flexDirection:'column',gap:'11px'}}>
+          <input type="text" name="nombre" placeholder="Tu nombre *" required style={{padding:'13px 16px',border:'1.5px solid #E5E5E0',borderRadius:'8px',fontFamily:'var(--font-sans)',fontSize:'15px',color:'#1A2744',outline:'none'}} />
+          <input type="email" name="email" placeholder="Tu email *" required style={{padding:'13px 16px',border:'1.5px solid #E5E5E0',borderRadius:'8px',fontFamily:'var(--font-sans)',fontSize:'15px',color:'#1A2744',outline:'none'}} />
+          <div style={{display:'flex',gap:'8px',alignItems:'flex-start'}}>
+            <input type="checkbox" required style={{width:'15px',height:'15px',flexShrink:'0',marginTop:'3px',accentColor:'#1A2744'}} />
+            <label style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'#7A8499',lineHeight:'1.4'}}>Al enviar, acepto que Avson me contacte para responder mi consulta. <Link to="/privacidad" target="_blank" style={{color:'#1A2744'}}>Política de privacidad</Link></label>
+          </div>
+          <button type="submit" className="v3-btn v3-btn--gold v3-btn--full v3-btn--xl v3-btn--pulse">Quiero certificarme →</button>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'#B0B8C4',textAlign:'center',margin:'0'}}>🔒 Gratuito · Sin compromiso · Confidencial</p>
+        </form>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'13px',color:'var(--text-muted)',textAlign:'center',margin:'14px 0 0'}}>¿Prefieres escribirnos? <a href="mailto:hello@avson.eu" style={{color:'var(--navy)',fontWeight:'600'}}>hello@avson.eu</a></p>
       </div>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>65%</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>solapamiento con ENS</span>
-      </div>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>100%</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>garantía de éxito</span>
-      </div>
-    </div>
-    <div style={{display:'inline-flex',alignItems:'center',gap:'10px',border:'1px solid #C9A84C',padding:'10px 18px',marginTop:'24px'}}>
-      <span style={{fontSize:'18px',color:'#C9A84C'}}>✦</span>
-      <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',fontWeight:'500',letterSpacing:'0.08em',textTransform:'uppercase',color:'#1A2744',lineHeight:'1.4'}}>Garantía de éxito<br />al 100% por escrito</span>
+
     </div>
   </div>
 </section>
 
+{/* CARRUSEL OPINIONES */}
+<section className="section section--white">
+  <div className="container">
+    <span className="label-tag" style={{display:'block',textAlign:'center'}}>Opiniones de clientes</span>
+    <h2 className="section-title" style={{textAlign:'center',maxWidth:'640px',margin:'6px auto 0'}}>Lo que dicen quienes<br /><em>ya están certificados.</em></h2>
+    <div className="tcar" style={{marginTop:'36px'}}>
+      <button className="tcar__arrow tcar__arrow--prev" aria-label="Anterior" onClick={prevSlide}>‹</button>
+      <button className="tcar__arrow tcar__arrow--next" aria-label="Siguiente" onClick={nextSlide}>›</button>
+      <div className="tcar__view">
+        <div className="tcar__track" style={{transform: `translateX(-${currentSlide * 100}%)`}}>
+          {testimonials.map((t, i) => (
+            <div className="tcar__slide" key={i}>
+              <div className="tcar__card">
+                <div className="tcar__stars">★★★★★</div>
+                <p className="tcar__quote">{t.quote}</p>
+                <p className="tcar__author">{t.author}</p>
+                <p className="tcar__result">{t.result}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="tcar__dots">
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            className={`tcar__dot${i === currentSlide ? ' active' : ''}`}
+            aria-label={`Opinión ${i + 1}`}
+            onClick={() => goToSlide(i)}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
+{/* PROCESO */}
+<section className="section section--pearl" id="proceso">
+  <div className="container">
+    <span className="label-tag">Nuestro proceso</span>
+    <div className="gold-line"></div>
+    <h2 className="section-title" style={{maxWidth:'520px'}}>De cero a certificado<br /><em>en 4–5 meses.</em></h2>
+    <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',maxWidth:'640px',marginBottom:'52px'}}>
+      Nuestra metodología elimina el trabajo redundante y prioriza lo que realmente importa en la auditoría de certificación. Sin burocracia innecesaria, sin documentos que nadie leerá. Solo lo que necesitas para certificarte y para que el SGSI funcione de verdad.
+    </p>
+    <div style={{display:'flex',flexDirection:'column',gap:'0'}}>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 1–2</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 01</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Diagnóstico y definición del alcance</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Analizamos el contexto organizacional, identificamos las partes interesadas y sus requisitos de seguridad, y definimos con precisión el alcance del SGSI. Una definición correcta del alcance en esta fase es determinante para optimizar el coste y el plazo del proyecto. También realizamos el inventario inicial de activos de información y sistemas de soporte.</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 3–4</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 02</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Análisis y tratamiento de riesgos</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Realizamos el análisis de riesgos de seguridad de la información con metodología cuantitativa y cualitativa. Identificamos amenazas, vulnerabilidades y calculamos el impacto potencial sobre la confidencialidad, la integridad y la disponibilidad de los activos. El resultado es el Plan de Tratamiento de Riesgos (PTR) con los controles seleccionados del Anexo A y su justificación en la Declaración de Aplicabilidad (SoA).</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 5–12</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 03</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Implementación de controles y documentación</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Implementamos los controles seleccionados y desarrollamos toda la documentación del SGSI: política de seguridad de la información, procedimientos operativos, registros de actividad, instrucciones técnicas y guías de usuario. Cada documento está diseñado para ser funcional, no decorativo. Paralelamente, llevamos a cabo los programas de formación y concienciación para el personal en alcance.</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 13–16</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 04</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Auditoría interna y revisión por la dirección</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Realizamos una auditoría interna completa del SGSI para identificar y corregir cualquier no conformidad antes de la auditoría de certificación. La revisión por la dirección formaliza el compromiso de la organización con el sistema de gestión y proporciona el input necesario para la auditoría. Esta fase es crítica: es donde se identifican y resuelven los puntos débiles.</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 17–20</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 05</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Auditoría de certificación</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>La auditoría de certificación se desarrolla en dos fases: la Fase 1 es una revisión documental en la que el auditor de la entidad certificadora acreditada verifica que el SGSI está correctamente diseñado y documentado. La Fase 2 es la auditoría in situ, donde se verifica la implementación efectiva de los controles. Avson acompaña al equipo durante todo el proceso de auditoría. Con nuestra garantía de éxito, si no superamos la auditoría, cubrimos la siguiente sin coste adicional.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* QUÉ ES ISO 27001 */}
 <section className="section section--white" id="que-es">
   <div className="container">
     <span className="label-tag">ISO 27001 · Qué es</span>
@@ -50,14 +229,14 @@ export default function Iso27001Page() {
     <h2 className="section-title" style={{maxWidth:'580px'}}>El estándar internacional de<br /><em>seguridad de la información.</em></h2>
     <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'60px',marginTop:'52px',alignItems:'start'}}>
       <div>
-        <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',marginBottom:'24px'}}>
-          La norma ISO/IEC 27001:2022, publicada en octubre de 2022 por la Organización Internacional de Normalización (ISO) y la Comisión Electrotécnica Internacional (IEC), es el referente mundial para la gestión de la seguridad de la información. Define los requisitos para establecer, implementar, mantener y mejorar continuamente un Sistema de Gestión de la Seguridad de la Información (SGSI).
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'17px',lineHeight:'1.75',color:'var(--text-body)',marginBottom:'20px',fontWeight:'500'}}>
+          ISO 27001 es el estándar que abre el mercado privado e internacional. Si ya tienes ENS, el 65% del trabajo está hecho.
         </p>
-        <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',marginBottom:'24px'}}>
-          La versión 2022 supuso una revisión significativa respecto a su predecesora de 2013, actualizando y reorganizando los controles del Anexo A para reflejar la realidad de las amenazas actuales: ciberseguridad en la nube, teletrabajo, gestión de identidades digitales, inteligencia de amenazas y detección de incidentes proactiva.
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',marginBottom:'20px'}}>
+          El estándar internacional de seguridad de la información más reconocido del mundo. Exigido en contratos enterprise, licitaciones internacionales y como requisito previo en sectores regulados (banca, salud, energía). Con la versión ISO 27001:2022, los 93 controles del Anexo A se alinean con las amenazas actuales: cloud, teletrabajo e inteligencia de amenazas.
         </p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)'}}>
-          La norma adopta el ciclo PDCA (Planificar-Hacer-Verificar-Actuar) como base de su enfoque de mejora continua, y exige un enfoque basado en el riesgo para seleccionar los controles aplicables a cada organización. No hay dos SGSI iguales: el alcance, los controles y el nivel de profundidad se adaptan al contexto, los activos y los objetivos de negocio de cada empresa.
+          La norma exige un enfoque basado en riesgo específico a tu organización — no hay dos implementaciones iguales. Avson diseña el alcance y selecciona los controles según tu contexto real, no una plantilla genérica.
         </p>
       </div>
       <div style={{display:'flex',flexDirection:'column',gap:'24px'}}>
@@ -86,7 +265,7 @@ export default function Iso27001Page() {
   </div>
 </section>
 
-
+{/* QUIÉN NECESITA ISO 27001 */}
 <section className="section section--pearl" id="quien-necesita">
   <div className="container">
     <span className="label-tag">¿Te aplica?</span>
@@ -154,13 +333,13 @@ export default function Iso27001Page() {
       </div>
     </div>
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'32px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'32px',flexWrap:'wrap',marginTop:'48px'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'22px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>"Si ya tienes ENS, el 65% del trabajo para ISO 27001 está hecho. El resto lo hacemos nosotros."</span>
-      <Link to="/contacto" className="btn-primary">Diagnóstico gratuito →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'22px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>"Si ya tienes ENS, el 65% del trabajo para ISO 27001 está hecho. El resto lo hacemos nosotros."</span>
+      <Link to="/packs" className="v3-btn v3-btn--gold">Calcula tu presupuesto →</Link>
     </div>
   </div>
 </section>
 
-
+{/* LOS 93 CONTROLES */}
 <section className="section section--white" id="controles">
   <div className="container">
     <span className="label-tag">ISO 27001:2022 · Estructura</span>
@@ -179,7 +358,7 @@ export default function Iso27001Page() {
           </div>
         </div>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'rgba(255,255,255,0.75)'}}>
-          El bloque más amplio incluye los controles relacionados con la gestión y el gobierno de la seguridad de la información: políticas de seguridad, roles y responsabilidades, gestión de activos, clasificación y etiquetado de información, relaciones con proveedores, gestión de incidentes de seguridad, continuidad de negocio (<Link to="/iso22301">ISO 22301</Link>) desde la perspectiva de seguridad de la información, y cumplimiento con requisitos legales y regulatorios. Son los controles que establecen el marco de referencia sobre el que se construye todo el SGSI.
+          El bloque más amplio incluye los controles relacionados con la gestión y el gobierno de la seguridad de la información: políticas de seguridad, roles y responsabilidades, gestión de activos, clasificación y etiquetado de información, relaciones con proveedores, gestión de incidentes de seguridad, continuidad de negocio (<Link to="/iso22301" style={{color:'rgba(255,255,255,0.75)'}}>ISO 22301</Link>) desde la perspectiva de seguridad de la información, y cumplimiento con requisitos legales y regulatorios. Son los controles que establecen el marco de referencia sobre el que se construye todo el SGSI.
         </p>
       </div>
       <div className="anim-fade-up" style={{background:'var(--pearl)',padding:'40px'}}>
@@ -222,8 +401,8 @@ export default function Iso27001Page() {
   </div>
 </section>
 
-
-<section className="section section--navy" id="ens-trampolín">
+{/* EL ENS COMO TRAMPOLÍN */}
+<section className="section section--navy" id="ens-trampolin">
   <div className="container">
     <span className="label-tag" style={{borderColor:'rgba(255,255,255,0.2)',color:'rgba(255,255,255,0.6)'}}>Sinergia ENS → ISO 27001</span>
     <div className="gold-line"></div>
@@ -265,71 +444,7 @@ export default function Iso27001Page() {
   </div>
 </section>
 
-
-<section className="section section--pearl" id="proceso">
-  <div className="container">
-    <span className="label-tag">Nuestro proceso</span>
-    <div className="gold-line"></div>
-    <h2 className="section-title" style={{maxWidth:'520px'}}>De cero a certificado<br /><em>en 4–5 meses.</em></h2>
-    <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',maxWidth:'640px',marginBottom:'52px'}}>
-      Nuestra metodología elimina el trabajo redundante y prioriza lo que realmente importa en la auditoría de certificación. Sin burocracia innecesaria, sin documentos que nadie leerá. Solo lo que necesitas para certificarte y para que el SGSI funcione de verdad.
-    </p>
-    <div style={{display:'flex',flexDirection:'column',gap:'0'}}>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 1–2</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 01</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Diagnóstico y definición del alcance</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Analizamos el contexto organizacional, identificamos las partes interesadas y sus requisitos de seguridad, y definimos con precisión el alcance del SGSI. Una definición correcta del alcance en esta fase es determinante para optimizar el coste y el plazo del proyecto. También realizamos el inventario inicial de activos de información y sistemas de soporte.</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 3–4</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 02</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Análisis y tratamiento de riesgos</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Realizamos el análisis de riesgos de seguridad de la información con metodología cuantitativa y cualitativa. Identificamos amenazas, vulnerabilidades y calculamos el impacto potencial sobre la confidencialidad, la integridad y la disponibilidad de los activos. El resultado es el Plan de Tratamiento de Riesgos (PTR) con los controles seleccionados del Anexo A y su justificación en la Declaración de Aplicabilidad (SoA).</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 5–12</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 03</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Implementación de controles y documentación</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Implementamos los controles seleccionados y desarrollamos toda la documentación del SGSI: política de seguridad de la información, procedimientos operativos, registros de actividad, instrucciones técnicas y guías de usuario. Cada documento está diseñado para ser funcional, no decorativo. Paralelamente, llevamos a cabo los programas de formación y concienciación para el personal en alcance.</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 13–16</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 04</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Auditoría interna y revisión por la dirección</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Realizamos una auditoría interna completa del SGSI para identificar y corregir cualquier no conformidad antes de la auditoría de certificación. La revisión por la dirección formaliza el compromiso de la organización con el sistema de gestión y proporciona el input necesario para la auditoría. Esta fase es crítica: es donde se identifican y resuelven los puntos débiles.</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 17–20</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 05</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Auditoría de certificación</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>La auditoría de certificación se desarrolla en dos fases: la Fase 1 es una revisión documental en la que el auditor de la entidad certificadora acreditada verifica que el SGSI está correctamente diseñado y documentado. La Fase 2 es la auditoría in situ, donde se verifica la implementación efectiva de los controles. Avson acompaña al equipo durante todo el proceso de auditoría. Con nuestra garantía de éxito, si no superamos la auditoría, cubrimos la siguiente sin coste adicional.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+{/* PACKS */}
 <section className="section section--white" id="packs">
   <div className="container">
     <span className="label-tag">Packs ISO 27001</span>
@@ -350,7 +465,7 @@ export default function Iso27001Page() {
         </ul>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'var(--text-muted)',marginBottom:'8px'}}>Plazo: 4–5 meses</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',marginBottom:'20px'}}>Para: empresas que no necesitan ENS</p>
-        <Link to="/contacto" className="btn-text">Solicitar presupuesto →</Link>
+        <Link to="/contacto" className="btn-text">Habla con un experto →</Link>
       </div>
       <div className="anim-fade-up" style={{background:'var(--navy)',padding:'40px',display:'flex',flexDirection:'column',position:'relative'}}>
         <div style={{position:'absolute',top:'0',right:'0',background:'var(--gold)',padding:'6px 16px',fontFamily:'var(--font-sans)',fontSize:'10px',fontWeight:'600',color:'#fff',letterSpacing:'0.08em',textTransform:'uppercase'}}>Más solicitado</div>
@@ -367,7 +482,7 @@ export default function Iso27001Page() {
         </ul>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.5)',marginBottom:'8px'}}>Plazo: 5–6 meses</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'rgba(255,255,255,0.4)',marginBottom:'20px'}}>Para: proveedores TIC públicos y privados</p>
-        <Link to="/contacto" className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff',textAlign:'center',justifyContent:'center'}}>Solicitar presupuesto →</Link>
+        <Link to="/contacto" className="v3-btn v3-btn--gold" style={{borderColor:'var(--gold)',color:'#fff',textAlign:'center',justifyContent:'center'}}>Habla con un experto →</Link>
       </div>
       <div className="anim-fade-up" style={{border:'1px solid var(--border)',padding:'40px',display:'flex',flexDirection:'column'}}>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'20px'}}>Opción C</p>
@@ -383,39 +498,13 @@ export default function Iso27001Page() {
         </ul>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'var(--text-muted)',marginBottom:'8px'}}>Plazo: 7–9 meses</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',marginBottom:'20px'}}>Para: la hoja de ruta GRC completa</p>
-        <Link to="/contacto" className="btn-text">Solicitar presupuesto →</Link>
+        <Link to="/contacto" className="btn-text">Habla con un experto →</Link>
       </div>
     </div>
   </div>
 </section>
 
-
-<section className="section section--pearl" id="casos">
-  <div className="container">
-    <span className="label-tag">ISO 27001 · Casos de éxito</span>
-    <div className="gold-line"></div>
-    <h2 className="section-title" style={{maxWidth:'560px'}}>Lo que dicen nuestros<br /><em>clientes certificados.</em></h2>
-    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'24px',marginTop:'52px'}}>
-      <div className="anim-fade-up" style={{background:'var(--navy)',padding:'48px 40px',display:'flex',flexDirection:'column',justifyContent:'space-between',minHeight:'280px'}}>
-        <blockquote style={{fontFamily:'var(--font-serif)',fontSize:'22px',fontWeight:'300',color:'#fff',lineHeight:'1.5',margin:'0',fontStyle:'italic'}}>&ldquo;Llevábamos dos años diciendo que íbamos a certificar ISO 27001. Con Avson lo hicimos en cuatro meses y medio. Lo que más me sorprendió fue que el proceso no paralizó el negocio: trabajaron con lo que ya teníamos del ENS y añadieron lo que faltaba.&rdquo;</blockquote>
-        <div style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid rgba(255,255,255,0.15)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',fontWeight:'500',color:'#fff',margin:'0'}}>Santiago Blanco</p>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'rgba(255,255,255,0.45)',margin:'4px 0 0',letterSpacing:'0.06em',textTransform:'uppercase'}}>CTO · Empresa de desarrollo de software · Madrid</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{background:'var(--white)',border:'1px solid var(--border)',padding:'48px 40px',display:'flex',flexDirection:'column',justifyContent:'space-between',minHeight:'280px'}}>
-        <blockquote style={{fontFamily:'var(--font-serif)',fontSize:'22px',fontWeight:'300',color:'var(--navy)',lineHeight:'1.5',margin:'0',fontStyle:'italic'}}>&ldquo;Teníamos un cliente enterprise que nos exigía ISO 27001 para renovar el contrato. Teníamos tres meses. Avson lo hizo posible. No sé si otro proveedor lo habría conseguido en ese plazo, pero ellos sí lo consiguieron y sin incidencias en la auditoría.&rdquo;</blockquote>
-        <div style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--border)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',fontWeight:'500',color:'var(--navy)',margin:'0'}}>Elena Fuertes</p>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',margin:'4px 0 0',letterSpacing:'0.06em',textTransform:'uppercase'}}>Directora General · Consultora de datos · Barcelona</p>
-        </div>
-      </div>
-    </div>
-    <div style={{textAlign:'center',marginTop:'48px'}}><Link to="/contacto" className="btn-primary">Hablar con un experto →</Link></div>
-  </div>
-</section>
-
-
+{/* FAQ */}
 <section className="section section--pearl" id="faq">
   <div className="container" style={{maxWidth:'760px'}}>
     <span className="label-tag">Preguntas frecuentes</span>
@@ -423,61 +512,55 @@ export default function Iso27001Page() {
     <h2 className="section-title" style={{maxWidth:'480px'}}>Todo lo que necesitas<br /><em>saber sobre ISO 27001.</em></h2>
     <div style={{marginTop:'48px'}}>
       <div className="faq-item">
-        <div className="faq-item__question">¿Cuánto cuesta certificarse en ISO 27001?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>El coste depende del tamaño de la empresa, la complejidad de los sistemas de información, el alcance del SGSI y si ya tienes otras certificaciones previas. Una empresa con ENS certificado puede acceder a ISO 27001 por una fracción del coste de partida cero, gracias al solapamiento del 65%. Ofrecemos un diagnóstico gratuito sin compromiso en el que analizamos tu situación y te damos un presupuesto personalizado y detallado antes de firmar nada.</p></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Cuánto cuesta certificarse en ISO 27001?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__answer"><p>El coste depende del tamaño de la empresa, la complejidad de los sistemas de información, el alcance del SGSI y si ya tienes otras certificaciones previas. Una empresa con ENS certificado puede acceder a ISO 27001 por una fracción del coste de partida cero, gracias al solapamiento del 65%. Ofrecemos un presupuesto sin compromiso en el que analizamos tu situación y te damos un presupuesto personalizado y detallado antes de firmar nada.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Cuánto tiempo lleva la certificación ISO 27001?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Cuánto tiempo lleva la certificación ISO 27001?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>Con la metodología de Avson GRC, el proceso completo desde el inicio hasta la obtención del certificado dura entre 4 y 5 meses. El mercado habitual trabaja en plazos de 6 a 12 meses. Nuestra ventaja radica en una metodología probada, plantillas reutilizables, y la experiencia de haber hecho este proceso decenas de veces. Si ya tienes el ENS, podemos reducir el plazo aún más al aprovechar la documentación existente.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿La ISO 27001:2022 obliga a migrar desde la versión 2013?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿La ISO 27001:2022 obliga a migrar desde la versión 2013?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>Sí. Las certificaciones emitidas bajo ISO 27001:2013 tuvieron un plazo de transición hasta octubre de 2025 para migrar a la versión 2022. A partir de esa fecha, todas las certificaciones vigentes deben ser bajo la versión 2022. Si tienes una certificación 2013 que no ha migrado, técnicamente ha expirado como certificación válida bajo el estándar actual. Todas las certificaciones nuevas que gestionamos en Avson son bajo la versión 2022 desde su publicación.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Qué diferencia hay entre ISO 27001 y ENS?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Qué diferencia hay entre ISO 27001 y ENS?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>El ENS (Esquema Nacional de Seguridad) es un marco normativo de obligado cumplimiento para los proveedores TIC de la Administración Pública española, establecido por Real Decreto 311/2022. Es específico de España y está orientado al ámbito público. La ISO 27001 es un estándar internacional voluntario (aunque cada vez más exigido contractualmente) reconocido en todo el mundo, tanto en el sector público internacional como en el privado. Ambos comparten el 65% de los controles y la misma filosofía de gestión del riesgo, lo que los hace perfectamente complementarios.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Qué es el alcance del SGSI?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Qué es el alcance del SGSI?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>El alcance define qué partes de la organización, qué procesos, qué sistemas y qué servicios están cubiertos por la certificación ISO 27001. Un alcance bien definido es fundamental: demasiado amplio encarece el proyecto; demasiado estrecho puede no satisfacer las expectativas del cliente que exige la certificación. En Avson dedicamos una fase específica a definir el alcance óptimo para cada cliente, maximizando el valor comercial del certificado mientras se optimiza el coste y el plazo del proyecto.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Necesito personal técnico interno para implementar ISO 27001?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Necesito personal técnico interno para implementar ISO 27001?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>No es estrictamente necesario tener un equipo técnico interno especializado. Avson gestiona íntegramente el proyecto de implementación y documentación. Lo que sí se necesita es el compromiso y la implicación de la dirección de la organización (la norma lo exige explícitamente) y un punto de contacto interno que pueda facilitar el acceso a la información y coordinar las revisiones internas. El tiempo de dedicación interna necesario es menor de lo que la mayoría de empresas espera.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿ISO 27001 sirve para cumplir con NIS2 o DORA?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿ISO 27001 sirve para cumplir con NIS2 o DORA?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>Sí, de forma muy significativa. La ISO 27001 proporciona entre el 60 y el 70% de los controles y medidas que NIS2 exige a las entidades esenciales e importantes. Para DORA, ISO 27001 cubre de forma directa los requisitos del pilar de gestión del riesgo TIC y parte importante de la gestión de incidentes. Certificarse en ISO 27001 primero es la estrategia más eficiente si también necesitas adecuarte a NIS2 o DORA, ya que reduce el coste y el esfuerzo de adecuación posterior de forma muy significativa.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Cuánto dura la certificación ISO 27001?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Cuánto dura la certificación ISO 27001?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>El certificado ISO 27001 tiene una vigencia de 3 años, con auditorías de seguimiento anuales (en los años 1 y 2) y una auditoría de renovación en el año 3. Las auditorías de seguimiento verifican que el SGSI se mantiene activo y que los controles siguen siendo efectivos. Avson ofrece un bono de mantenimiento anual para gestionar las auditorías periódicas, actualizar la documentación cuando cambia el contexto de la organización y dar soporte continuo al equipo interno responsable del SGSI.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-
+{/* FINAL CTA */}
 <section className="section section--navy">
   <div className="container" style={{textAlign:'center'}}>
-    <span className="label-tag" style={{borderColor:'rgba(255,255,255,0.2)',color:'rgba(255,255,255,0.6)'}}>ISO 27001 · Diagnóstico gratuito</span>
+    <span className="label-tag" style={{borderColor:'rgba(255,255,255,0.2)',color:'rgba(255,255,255,0.6)'}}>ISO 27001 · Pide presupuesto</span>
     <div className="gold-line" style={{margin:'20px auto 0'}}></div>
     <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(36px,4.5vw,58px)',fontWeight:'300',color:'#fff',lineHeight:'1.15',margin:'32px 0 24px'}}>
       ¿Quieres saber si ISO 27001<br /><em>es lo que necesitas?</em>
     </h2>
     <p style={{fontFamily:'var(--font-sans)',fontSize:'17px',color:'rgba(255,255,255,0.65)',maxWidth:'520px',margin:'0 auto 40px',lineHeight:'1.7'}}>
-      Diagnóstico gratuito. Sin compromiso. Un consultor senior te explica exactamente qué necesitas y qué no, y si tiene sentido certificar ISO 27001 solo o combinado con el ENS.
+      Pide presupuesto. Sin compromiso. Un consultor senior te explica exactamente qué necesitas y qué no, y si tiene sentido certificar ISO 27001 solo o combinado con el ENS.
     </p>
-    <Link to="/contacto" className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff',fontSize:'15px',padding:'18px 36px'}}>Solicitar diagnóstico gratuito →</Link>
+    <Link to="/contacto" className="v3-btn v3-btn--gold" style={{borderColor:'var(--gold)',color:'#fff',fontSize:'15px',padding:'18px 36px'}}>Habla con un experto →</Link>
   </div>
 </section>
-
-
-<div style={{display:'none',position:'fixed',bottom:'0',left:'0',right:'0',zIndex:'500',background:'#1A2744',borderTop:'1px solid rgba(255,255,255,0.08)',padding:'14px 20px',justifyContent:'space-between',gap:'12px',alignItems:'center'}} id="stickyBar">
-  <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'rgba(255,255,255,0.7)'}}>¿Dudas sobre tu certificación?</span>
-  <Link to="/contacto" className="btn-primary btn-primary--white" style={{fontSize:'11px',padding:'10px 20px',whiteSpace:'nowrap'}}>Diagnóstico gratuito →</Link>
-</div>
     </>
   )
 }

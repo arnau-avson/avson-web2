@@ -21,10 +21,10 @@ export default function Iso27001Pymes() {
     .faq-article-item.open .faq-article-a { display:block; }` }} />
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>ISO 27001 para pymes</span>
     </nav>
@@ -36,15 +36,15 @@ export default function Iso27001Pymes() {
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">ISO 27001 · Pymes · Guía práctica 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         ISO 27001 para pymes: guía práctica y errores más comunes
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         Muchas pymes creen que ISO 27001 es solo para grandes empresas. Es un error costoso. Esta guía explica cómo hacerlo viable siendo pequeño, a qué errores prestar atención y cuánto cuesta realmente.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 9 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 9 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
       </div>
     </div>
   </div>
@@ -75,8 +75,8 @@ export default function Iso27001Pymes() {
     </ul>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>¿Es viable la ISO 27001 para tu pyme? Diagnóstico gratuito: te decimos si es el momento y cómo hacerlo en 3-4 meses.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Diagnóstico gratuito →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>¿Es viable la ISO 27001 para tu pyme? Pide presupuesto: te decimos si es el momento y cómo hacerlo en 3-4 meses.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
     <h2>Alcance del SGSI: clave para que sea viable en pymes</h2>
@@ -143,8 +143,8 @@ export default function Iso27001Pymes() {
     <p>El proceso completo para una pyme con alcance acotado tarda típicamente entre <strong>3 y 5 meses</strong> con una consultora eficiente.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Con Avson GRC, garantizamos el éxito de la certificación por escrito. Incluso para pymes con cero experiencia previa en seguridad.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Ver garantía →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Con Avson GRC, garantizamos el éxito de la certificación por escrito. Incluso para pymes con cero experiencia previa en seguridad.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Ver garantía →</Link>
     </div>
 
     <h2>Errores más comunes al implantar ISO 27001 en pymes</h2>
@@ -188,58 +188,57 @@ export default function Iso27001Pymes() {
 
     <p>Avson GRC ha diseñado específicamente el <Link to="/packs">Pack ENS + ISO 27001</Link> para aprovechar esta sinergia. En un único proyecto coordinado, la empresa obtiene ambas certificaciones en un plazo total de 5-6 meses y a un coste total inferior al de hacerlas por separado con distintas consultoras.</p>
 
-    
-<section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
-  <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
-  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
-    <Link to="/ens-vs-iso27001" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS · ISO 27001</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS vs ISO 27001: diferencias clave y cuál necesitas</p>
-    </Link>
-    <Link to="/que-es-el-ens" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Qué es el ENS? Guía completa del Esquema Nacional de Seguridad</p>
-    </Link>
-  </div>
-</section>
+    <section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
+      <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
+        <Link to="/blog/ens-vs-iso27001" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS · ISO 27001</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS vs ISO 27001: diferencias clave y cuál necesitas</p>
+        </Link>
+        <Link to="/blog/que-es-el-ens" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Qué es el ENS? Guía completa del Esquema Nacional de Seguridad</p>
+        </Link>
+      </div>
+    </section>
 
-<h2>Preguntas frecuentes</h2>
+    <h2>Preguntas frecuentes</h2>
 
     <div className="faq-article">
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Puede una pyme de 10 empleados certificarse en ISO 27001?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Puede una pyme de 10 empleados certificarse en ISO 27001?</div>
         <div className="faq-article-a">Sí. El tamaño no es un impedimento. La ISO 27001 es escalable: el alcance del SGSI puede definirse de forma acotada para que sea viable para una pyme. Lo crítico es definir bien el alcance desde el principio y no intentar abarcar toda la organización en la primera certificación.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Cuánto cuesta certificarse en ISO 27001 siendo una pyme?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Cuánto cuesta certificarse en ISO 27001 siendo una pyme?</div>
         <div className="faq-article-a">El coste total (consultoría + auditoría + tecnología) para una pyme de 10-50 empleados con alcance acotado suele estar entre 15.000 y 40.000 euros dependiendo del punto de partida, el sector y la complejidad del alcance. Con el pack ENS + ISO 27001 de Avson, el coste combinado es significativamente menor.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Cuánto tiempo dedica el equipo interno durante el proyecto?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Cuánto tiempo dedica el equipo interno durante el proyecto?</div>
         <div className="faq-article-a">Con Avson GRC, el equipo interno dedica tipicamente entre 2 y 4 horas semanales durante el proyecto. El grueso del trabajo (documentación, coordinación con auditores, seguimiento de controles) lo gestiona la consultora. El cliente valida, aprueba y proporciona acceso a sistemas.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Es necesario contratar tecnología cara para implementar ISO 27001?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Es necesario contratar tecnología cara para implementar ISO 27001?</div>
         <div className="faq-article-a">No necesariamente. Muchos controles pueden implementarse con herramientas ya existentes o de bajo coste. Sin embargo, algunos controles técnicos relevantes (MFA, gestión de vulnerabilidades, cifrado) requieren cierta inversión. El análisis GAP inicial identifica exactamente qué necesitas y qué ya tienes cubierto.</div>
       </div>
       <div className="faq-article-item">
-        <div className="faq-article-q">¿Qué pasa si no supero la auditoría de certificación?</div>
+        <div className="faq-article-q" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-article-item')?.classList.toggle('open')}>¿Qué pasa si no supero la auditoría de certificación?</div>
         <div className="faq-article-a">Con Avson GRC, si no superas la auditoría de certificación habiendo seguido nuestro plan, repetimos el proceso sin coste adicional. Esta garantía por escrito es posible porque nuestro proceso de preparación para la auditoría es exhaustivo y nuestra tasa de éxito en primera convocatoria es del 100%.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Lista tu pyme para ISO 27001?</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Diagnóstico gratuito · Sin compromiso · Respuesta en 24 horas</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar diagnóstico gratuito →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿Lista tu pyme para ISO 27001?</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Pide presupuesto · Sin compromiso · Respuesta en 24 horas</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto sin compromiso →</Link>
     </div>
 
     <div style={{marginTop:'48px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/ens-vs-iso27001" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001 →</Link>
-        <Link to="/certificado-ens-obligatorio" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS obligatorio →</Link>
-        <Link to="/que-es-el-ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
+        <Link to="/blog/ens-vs-iso27001" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS vs ISO 27001 →</Link>
+        <Link to="/blog/certificado-ens-obligatorio" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS obligatorio →</Link>
+        <Link to="/blog/que-es-el-ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
       </div>
     </div>
 

@@ -3,7 +3,7 @@ FROM node:22-alpine
 WORKDIR /app
 
 # Copiar el proyecto React
-COPY code_new_react/ ./
+COPY code_new/ ./
 
 # Instalar dependencias y construir
 RUN npm install && npm run build

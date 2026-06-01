@@ -1,48 +1,223 @@
+import { useState, useEffect, FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 
+const testimonials = [
+  {
+    quote: '"Llevábamos dos años perdiendo licitaciones por no tener el ENS. Avson nos lo resolvió en 9 semanas. Al siguiente concurso, ganamos el contrato."',
+    author: '— Director de Sistemas · Integradora TIC, Madrid',
+    result: 'ENS Media ✓',
+  },
+  {
+    quote: '"Otros consultores nos decían un año. Avson lo hizo en 14 semanas y superamos la auditoría a la primera, sin una sola no conformidad."',
+    author: '— CISO · Proveedor cloud del sector público',
+    result: 'ENS Alta + ISO 27001 ✓',
+  },
+  {
+    quote: '"Un cliente enterprise nos exigía la ISO 27001 para renovar el contrato. La certificamos en cuatro meses y medio sin parar el negocio."',
+    author: '— CTO · Empresa de software de gestión',
+    result: 'ISO 27001 ✓',
+  },
+  {
+    quote: '"Después del ransomware de 2023 la dirección quiso ISO 22301. Avson montó el plan de continuidad y certificamos sin sobresaltos."',
+    author: '— Responsable de Riesgos · Servicios financieros',
+    result: 'ISO 22301 ✓',
+  },
+  {
+    quote: '"Somos proveedores TIC de tres bancos. Cuando entró DORA nos pidieron evidencias y Avson demostró que el 60% ya estaba hecho con el ENS."',
+    author: '— CISO · Proveedor financiero',
+    result: 'DORA ✓',
+  },
+  {
+    quote: '"Lo que nos decidió fue la garantía por escrito. Cumplieron el plazo y el presupuesto que firmamos, sin una sola sorpresa."',
+    author: '— CEO · Consultora tecnológica',
+    result: 'ENS Básica ✓',
+  },
+]
+
 export default function Iso22301Page() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const totalSlides = testimonials.length
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [totalSlides])
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides)
+  }
+
+  const handleHeroSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    window.location.href = '/gracias'
+  }
+
   return (
     <>
-<section className="section section--pearl" style={{paddingTop:'160px',paddingBottom:'100px'}}>
+{/* HERO */}
+<section className="section section--pearl" style={{paddingTop:'120px',paddingBottom:'64px'}}>
   <div className="container">
-    <span className="label-tag">ISO 22301:2019 · SGCN · BCP</span>
-    <div className="gold-line"></div>
-    <h1 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(48px,6vw,80px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 32px',maxWidth:'720px'}}>
-      ISO 22301: cuando parar<br /><em>no es una opción.</em>
-    </h1>
-    <p className="body-large" style={{maxWidth:'620px',marginBottom:'40px'}}>
-      El Sistema de Gestión de Continuidad de Negocio (SGCN) certificado bajo ISO 22301 garantiza que tu empresa puede mantener sus operaciones críticas ante cualquier interrupción — un ciberataque, un fallo de infraestructura, una pandemia o un desastre natural. La norma más robusta del mundo para la resiliencia empresarial.
-    </p>
-    <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginBottom:'52px'}}>
-      <Link to="/contacto" className="btn-primary">Diagnóstico gratuito →</Link>
-      <Link to="/packs" className="btn-text">Ver packs ISO 22301 →</Link>
-    </div>
-    <div style={{display:'flex',gap:'40px',flexWrap:'wrap'}}>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>5–6</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>meses a certificado</span>
+    <div className="hero-conv">
+
+      <div>
+        <span className="label-tag">ISO 22301:2019 · Continuidad de negocio</span>
+        <h1 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(40px,5.2vw,68px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.08',margin:'14px 0 18px'}}>
+          Cuando parar<br /><em>no es una opción.</em>
+        </h1>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'17px',lineHeight:'1.6',color:'var(--text-body)',maxWidth:'520px',margin:'0'}}>
+          La certificación de continuidad que exigen los grandes contratos. <strong style={{color:'var(--navy)'}}>Si ya tienes ENS o ISO 27001, hasta el 60% está hecho.</strong>
+        </p>
+
+        <div className="hero-conv__kpis">
+          <div className="hero-conv__kpi"><strong>355+</strong><span>empresas certificadas</span></div>
+          <div className="hero-conv__kpi"><strong>100%</strong><span>tasa de éxito</span></div>
+          <div className="hero-conv__kpi"><strong>4.9★</strong><span>valoración clientes</span></div>
+        </div>
+
+        <div style={{display:'inline-flex',alignItems:'center',gap:'8px',border:'1px solid #C9A84C',padding:'9px 16px',borderRadius:'8px'}}>
+          <span style={{fontSize:'16px',color:'#C9A84C'}}>✦</span>
+          <span style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',fontWeight:'600',letterSpacing:'0.06em',textTransform:'uppercase',color:'#1A2744'}}>Garantía de éxito al 100% por escrito</span>
+        </div>
+
+        {/* Prueba social */}
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',color:'var(--text-body)',lineHeight:'1.6',margin:'22px 0 0',maxWidth:'480px'}}>
+          <span style={{color:'#C9A84C',letterSpacing:'1px'}}>★★★★★</span><br />
+          <em>"Después del ransomware de 2023, la dirección quiso ISO 22301. Avson nos montó el plan de continuidad y certificamos sin sobresaltos."</em> — Responsable de Riesgos
+        </p>
       </div>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>55%</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>solapamiento con ENS</span>
+
+      <div style={{background:'#fff',border:'1px solid #E5E5E0',borderRadius:'14px',padding:'30px',boxShadow:'0 18px 50px rgba(26,39,68,0.12)'}}>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'13px',fontWeight:'700',color:'#16a34a',margin:'0 0 4px'}}>🟢 Te respondemos hoy</p>
+        <p style={{fontFamily:'var(--font-serif)',fontSize:'26px',color:'var(--navy)',margin:'0 0 4px'}}>Pide tu presupuesto</p>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'13px',color:'var(--text-muted)',margin:'0 0 18px'}}>Gratuito · Sin compromiso · En 30 min sabes qué necesitas</p>
+        <form onSubmit={handleHeroSubmit} style={{display:'flex',flexDirection:'column',gap:'11px'}}>
+          <input type="text" name="nombre" placeholder="Tu nombre *" required style={{padding:'13px 16px',border:'1.5px solid #E5E5E0',borderRadius:'8px',fontFamily:'var(--font-sans)',fontSize:'15px',color:'#1A2744',outline:'none'}} />
+          <input type="email" name="email" placeholder="Tu email *" required style={{padding:'13px 16px',border:'1.5px solid #E5E5E0',borderRadius:'8px',fontFamily:'var(--font-sans)',fontSize:'15px',color:'#1A2744',outline:'none'}} />
+          <div style={{display:'flex',gap:'8px',alignItems:'flex-start'}}>
+            <input type="checkbox" required style={{width:'15px',height:'15px',flexShrink:'0',marginTop:'3px',accentColor:'#1A2744'}} />
+            <label style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'#7A8499',lineHeight:'1.4'}}>Al enviar, acepto que Avson me contacte para responder mi consulta. <Link to="/privacidad" target="_blank" style={{color:'#1A2744'}}>Política de privacidad</Link></label>
+          </div>
+          <button type="submit" className="v3-btn v3-btn--gold v3-btn--full v3-btn--xl v3-btn--pulse">Quiero certificarme →</button>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'#B0B8C4',textAlign:'center',margin:'0'}}>🔒 Gratuito · Sin compromiso · Confidencial</p>
+        </form>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'13px',color:'var(--text-muted)',textAlign:'center',margin:'14px 0 0'}}>¿Prefieres escribirnos? <a href="mailto:hello@avson.eu" style={{color:'var(--navy)',fontWeight:'600'}}>hello@avson.eu</a></p>
       </div>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>60%</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>solapamiento con ISO 27001</span>
-      </div>
-      <div style={{display:'flex',flexDirection:'column'}}>
-        <span style={{fontFamily:'var(--font-serif)',fontSize:'36px',fontWeight:'300',color:'var(--navy)'}}>100%</span>
-        <span style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase'}}>garantía de éxito</span>
-      </div>
-    </div>
-    <div style={{display:'inline-flex',alignItems:'center',gap:'10px',border:'1px solid #C9A84C',padding:'10px 18px',marginTop:'24px'}}>
-      <span style={{fontSize:'18px',color:'#C9A84C'}}>✦</span>
-      <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',fontWeight:'500',letterSpacing:'0.08em',textTransform:'uppercase',color:'#1A2744',lineHeight:'1.4'}}>Garantía de éxito<br />al 100% por escrito</span>
+
     </div>
   </div>
 </section>
 
+{/* CARRUSEL OPINIONES */}
+<section className="section section--white">
+  <div className="container">
+    <span className="label-tag" style={{display:'block',textAlign:'center'}}>Opiniones de clientes</span>
+    <h2 className="section-title" style={{textAlign:'center',maxWidth:'640px',margin:'6px auto 0'}}>Lo que dicen quienes<br /><em>ya están certificados.</em></h2>
+    <div className="tcar" style={{marginTop:'36px'}}>
+      <button className="tcar__arrow tcar__arrow--prev" aria-label="Anterior" onClick={prevSlide}>‹</button>
+      <button className="tcar__arrow tcar__arrow--next" aria-label="Siguiente" onClick={nextSlide}>›</button>
+      <div className="tcar__view">
+        <div className="tcar__track" style={{transform: `translateX(-${currentSlide * 100}%)`}}>
+          {testimonials.map((t, i) => (
+            <div className="tcar__slide" key={i}>
+              <div className="tcar__card">
+                <div className="tcar__stars">★★★★★</div>
+                <p className="tcar__quote">{t.quote}</p>
+                <p className="tcar__author">{t.author}</p>
+                <p className="tcar__result">{t.result}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="tcar__dots">
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            className={`tcar__dot${i === currentSlide ? ' active' : ''}`}
+            aria-label={`Opinión ${i + 1}`}
+            onClick={() => goToSlide(i)}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
+{/* PROCESO */}
+<section className="section section--pearl" id="proceso">
+  <div className="container">
+    <span className="label-tag">Nuestro proceso</span>
+    <div className="gold-line"></div>
+    <h2 className="section-title" style={{maxWidth:'520px'}}>De cero a certificado<br /><em>en 5–6 meses.</em></h2>
+    <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',maxWidth:'640px',marginBottom:'52px'}}>
+      La implementación de ISO 22301 empieza siempre por entender el negocio, no por copiar plantillas. Un plan de continuidad que no refleja la realidad operativa de tu empresa no te protegerá cuando lo necesites.
+    </p>
+    <div style={{display:'flex',flexDirection:'column',gap:'0'}}>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 1–3</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 01</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Business Impact Analysis (BIA)</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Identificamos todos los procesos de negocio, los clasificamos por criticidad y analizamos el impacto de su interrupción en diferentes horizontes temporales (1 hora, 4 horas, 24 horas, 72 horas, 1 semana). Definimos el RTO y el RPO para cada proceso crítico. El BIA es el documento más importante del SGCN: determina qué se protege, en qué orden y con qué nivel de inversión.</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 4–6</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 02</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Análisis de riesgos de continuidad</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Identificamos las amenazas específicas que pueden interrumpir los procesos críticos definidos en el BIA: fallos tecnológicos, desastres naturales, ciberataques, fallos de proveedores críticos, pandemias o crisis de personal clave. Para cada amenaza, evaluamos la probabilidad y el impacto, y definimos las estrategias de continuidad más adecuadas.</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 7–14</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 03</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Diseño y documentación del BCP y DRP</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Desarrollamos el Plan de Continuidad de Negocio (BCP) con los procedimientos de activación, los roles del equipo de crisis, las alternativas operativas para cada proceso crítico y los planes de comunicación de emergencia. Paralelamente, elaboramos el Plan de Recuperación ante Desastres (DRP) con los procedimientos técnicos específicos para recuperar sistemas e infraestructura en los RTOs definidos.</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 15–18</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 04</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Ejercicios de prueba y simulacros</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>ISO 22301 exige demostrar que los planes funcionan. Diseñamos y ejecutamos ejercicios de escritorio (tabletop exercises) y simulacros técnicos para validar los RTOs y RPOs definidos, identificar gaps en los procedimientos y entrenar al equipo de crisis. Los resultados de los ejercicios se documentan y se incorporan como mejoras al plan. Esta fase es la que más diferencia a Avson de otros consultores: los planes se prueban de verdad.</p>
+        </div>
+      </div>
+      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0'}}>
+        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 19–24</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 05</p>
+        </div>
+        <div style={{padding:'32px 0 32px 32px'}}>
+          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Auditoría interna y certificación</h3>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Realizamos la auditoría interna del SGCN para verificar su conformidad con la norma y preparar al equipo para la auditoría de certificación. La auditoría de certificación con entidad acreditada se desarrolla en dos fases: revisión documental y auditoría in situ. Avson acompaña al equipo en todo el proceso y, con nuestra garantía de éxito, si no superamos la primera auditoría cubrimos la siguiente sin coste adicional.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* QUÉ ES */}
 <section className="section section--white" id="que-es">
   <div className="container">
     <span className="label-tag">ISO 22301 · Qué es</span>
@@ -83,7 +258,7 @@ export default function Iso22301Page() {
   </div>
 </section>
 
-
+{/* QUIÉN NECESITA */}
 <section className="section section--pearl" id="quien-necesita">
   <div className="container">
     <span className="label-tag">¿Te aplica?</span>
@@ -151,13 +326,13 @@ export default function Iso22301Page() {
       </div>
     </div>
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'32px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'32px',flexWrap:'wrap',marginTop:'48px'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'22px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>"Si ya tienes ENS, el 55% del trabajo para ISO 22301 está hecho. El resto lo hacemos nosotros."</span>
-      <Link to="/contacto" className="btn-primary">Diagnóstico gratuito →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'22px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>"Si ya tienes ENS, el 55% del trabajo para ISO 22301 está hecho. El resto lo hacemos nosotros."</span>
+      <Link to="/packs" className="v3-btn v3-btn--gold">Calcula tu presupuesto →</Link>
     </div>
   </div>
 </section>
 
-
+{/* RELACIÓN CON OTROS MARCOS */}
 <section className="section section--navy" id="sinergias">
   <div className="container">
     <span className="label-tag" style={{borderColor:'rgba(255,255,255,0.2)',color:'rgba(255,255,255,0.6)'}}>Sinergias ISO 22301</span>
@@ -182,78 +357,14 @@ export default function Iso22301Page() {
       <div style={{background:'rgba(255,255,255,0.06)',padding:'32px',border:'1px solid rgba(255,255,255,0.12)',textAlign:'center'}}>
         <p style={{fontFamily:'var(--font-serif)',fontSize:'52px',fontWeight:'300',color:'var(--gold)',marginBottom:'8px'}}>70%</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',fontWeight:'600',color:'#fff',marginBottom:'8px'}}>ISO 22301 cubre DORA</p>
-        <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.5)',lineHeight:'1.6'}}>El reglamento <Link to="/dora">DORA</Link> exige planes de continuidad para entidades financieras. ISO 22301 cubre este pilar de DORA de forma muy significativa.</p>
+        <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.5)',lineHeight:'1.6'}}>El reglamento <Link to="/dora" style={{color:'rgba(255,255,255,0.5)'}}>DORA</Link> exige planes de continuidad para entidades financieras. ISO 22301 cubre este pilar de DORA de forma muy significativa.</p>
       </div>
     </div>
     <Link to="/packs" className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff'}}>Ver todos los packs disponibles →</Link>
   </div>
 </section>
 
-
-<section className="section section--pearl" id="proceso">
-  <div className="container">
-    <span className="label-tag">Nuestro proceso</span>
-    <div className="gold-line"></div>
-    <h2 className="section-title" style={{maxWidth:'520px'}}>De cero a certificado<br /><em>en 5–6 meses.</em></h2>
-    <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',maxWidth:'640px',marginBottom:'52px'}}>
-      La implementación de ISO 22301 empieza siempre por entender el negocio, no por copiar plantillas. Un plan de continuidad que no refleja la realidad operativa de tu empresa no te protegerá cuando lo necesites.
-    </p>
-    <div style={{display:'flex',flexDirection:'column',gap:'0'}}>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 1–3</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 01</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Business Impact Analysis (BIA)</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Identificamos todos los procesos de negocio, los clasificamos por criticidad y analizamos el impacto de su interrupción en diferentes horizontes temporales (1 hora, 4 horas, 24 horas, 72 horas, 1 semana). Definimos el RTO y el RPO para cada proceso crítico. El BIA es el documento más importante del SGCN: determina qué se protege, en qué orden y con qué nivel de inversión.</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 4–6</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 02</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Análisis de riesgos de continuidad</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Identificamos las amenazas específicas que pueden interrumpir los procesos críticos definidos en el BIA: fallos tecnológicos, desastres naturales, ciberataques, fallos de proveedores críticos, pandemias o crisis de personal clave. Para cada amenaza, evaluamos la probabilidad y el impacto, y definimos las estrategias de continuidad más adecuadas.</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 7–14</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 03</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Diseño y documentación del BCP y DRP</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Desarrollamos el Plan de Continuidad de Negocio (BCP) con los procedimientos de activación, los roles del equipo de crisis, las alternativas operativas para cada proceso crítico y los planes de comunicación de emergencia. Paralelamente, elaboramos el Plan de Recuperación ante Desastres (DRP) con los procedimientos técnicos específicos para recuperar sistemas e infraestructura en los RTOs definidos.</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0',borderBottom:'1px solid rgba(0,0,0,0.08)'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 15–18</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 04</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Ejercicios de prueba y simulacros</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>ISO 22301 exige demostrar que los planes funcionan. Diseñamos y ejecutamos ejercicios de escritorio (tabletop exercises) y simulacros técnicos para validar los RTOs y RPOs definidos, identificar gaps en los procedimientos y entrenar al equipo de crisis. Los resultados de los ejercicios se documentan y se incorporan como mejoras al plan. Esta fase es la que más diferencia a Avson de otros consultores: los planes se prueban de verdad.</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{display:'grid',gridTemplateColumns:'140px 1fr',gap:'0'}}>
-        <div style={{padding:'32px 24px 32px 0',borderRight:'2px solid var(--gold)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--gold)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'4px'}}>Semanas 19–24</p>
-          <p style={{fontFamily:'var(--font-serif)',fontSize:'28px',fontWeight:'300',color:'var(--navy)'}}>Fase 05</p>
-        </div>
-        <div style={{padding:'32px 0 32px 32px'}}>
-          <h3 style={{fontFamily:'var(--font-sans)',fontSize:'16px',fontWeight:'600',color:'var(--navy)',marginBottom:'12px'}}>Auditoría interna y certificación</h3>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',lineHeight:'1.7',color:'var(--text-body)'}}>Realizamos la auditoría interna del SGCN para verificar su conformidad con la norma y preparar al equipo para la auditoría de certificación. La auditoría de certificación con entidad acreditada se desarrolla en dos fases: revisión documental y auditoría in situ. Avson acompaña al equipo en todo el proceso y, con nuestra garantía de éxito, si no superamos la primera auditoría cubrimos la siguiente sin coste adicional.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+{/* PACKS */}
 <section className="section section--white" id="packs">
   <div className="container">
     <span className="label-tag">Packs ISO 22301</span>
@@ -274,7 +385,7 @@ export default function Iso22301Page() {
         </ul>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'var(--text-muted)',marginBottom:'8px'}}>Plazo: 5–6 meses</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',marginBottom:'20px'}}>Para: empresas que no necesitan ENS</p>
-        <Link to="/contacto" className="btn-text">Solicitar presupuesto →</Link>
+        <Link to="/contacto" className="btn-text">Habla con un experto →</Link>
       </div>
       <div className="anim-fade-up" style={{background:'var(--navy)',padding:'40px',display:'flex',flexDirection:'column',position:'relative'}}>
         <div style={{position:'absolute',top:'0',right:'0',background:'var(--gold)',padding:'6px 16px',fontFamily:'var(--font-sans)',fontSize:'10px',fontWeight:'600',color:'#fff',letterSpacing:'0.08em',textTransform:'uppercase'}}>Más eficiente</div>
@@ -291,7 +402,7 @@ export default function Iso22301Page() {
         </ul>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.5)',marginBottom:'8px'}}>Plazo: 5–6 meses</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'rgba(255,255,255,0.4)',marginBottom:'20px'}}>Para: proveedores TIC y servicios esenciales</p>
-        <Link to="/contacto" className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff',textAlign:'center',justifyContent:'center'}}>Solicitar presupuesto →</Link>
+        <Link to="/contacto" className="v3-btn v3-btn--gold" style={{borderColor:'var(--gold)',color:'#fff',textAlign:'center',justifyContent:'center'}}>Habla con un experto →</Link>
       </div>
       <div className="anim-fade-up" style={{border:'1px solid var(--border)',padding:'40px',display:'flex',flexDirection:'column'}}>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'20px'}}>Opción C</p>
@@ -307,39 +418,13 @@ export default function Iso22301Page() {
         </ul>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'var(--text-muted)',marginBottom:'8px'}}>Plazo: 7–9 meses</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',marginBottom:'20px'}}>Para: organizaciones con máxima resiliencia</p>
-        <Link to="/contacto" className="btn-text">Solicitar presupuesto →</Link>
+        <Link to="/contacto" className="btn-text">Habla con un experto →</Link>
       </div>
     </div>
   </div>
 </section>
 
-
-<section className="section section--pearl" id="casos">
-  <div className="container">
-    <span className="label-tag">ISO 22301 · Casos de éxito</span>
-    <div className="gold-line"></div>
-    <h2 className="section-title" style={{maxWidth:'560px'}}>Lo que dicen nuestros<br /><em>clientes certificados.</em></h2>
-    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'24px',marginTop:'52px'}}>
-      <div className="anim-fade-up" style={{background:'var(--navy)',padding:'48px 40px',display:'flex',flexDirection:'column',justifyContent:'space-between',minHeight:'280px'}}>
-        <blockquote style={{fontFamily:'var(--font-serif)',fontSize:'22px',fontWeight:'300',color:'#fff',lineHeight:'1.5',margin:'0',fontStyle:'italic'}}>&ldquo;Nuestro cliente más grande nos exigió ISO 22301 como condición para renovar un contrato de cinco años. Avson nos lo consiguió en cinco meses y medio, y el auditor no encontró ni una sola no conformidad mayor. La inversión se recuperó en el primer mes de contrato renovado.&rdquo;</blockquote>
-        <div style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid rgba(255,255,255,0.15)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',fontWeight:'500',color:'#fff',margin:'0'}}>Javier Olmedo</p>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'rgba(255,255,255,0.45)',margin:'4px 0 0',letterSpacing:'0.06em',textTransform:'uppercase'}}>CEO · Proveedor de servicios cloud · Valencia</p>
-        </div>
-      </div>
-      <div className="anim-fade-up" style={{background:'var(--white)',border:'1px solid var(--border)',padding:'48px 40px',display:'flex',flexDirection:'column',justifyContent:'space-between',minHeight:'280px'}}>
-        <blockquote style={{fontFamily:'var(--font-serif)',fontSize:'22px',fontWeight:'300',color:'var(--navy)',lineHeight:'1.5',margin:'0',fontStyle:'italic'}}>&ldquo;Después del ransomware que sufrimos en 2023, la dirección decidió que nunca más estaríamos en esa situación sin un plan. Avson diseñó el BCP y el DRP en paralelo con el ENS, y el resultado es un sistema de gestión que realmente usamos, no una carpeta guardada en un cajón.&rdquo;</blockquote>
-        <div style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--border)'}}>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'14px',fontWeight:'500',color:'var(--navy)',margin:'0'}}>Beatriz Sánchez</p>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',color:'var(--text-muted)',margin:'4px 0 0',letterSpacing:'0.06em',textTransform:'uppercase'}}>Directora de Operaciones · Empresa de logística · Bilbao</p>
-        </div>
-      </div>
-    </div>
-    <div style={{textAlign:'center',marginTop:'48px'}}><Link to="/contacto" className="btn-primary">Hablar con un experto →</Link></div>
-  </div>
-</section>
-
-
+{/* FAQ */}
 <section className="section section--pearl" id="faq">
   <div className="container" style={{maxWidth:'760px'}}>
     <span className="label-tag">Preguntas frecuentes</span>
@@ -347,61 +432,55 @@ export default function Iso22301Page() {
     <h2 className="section-title" style={{maxWidth:'520px'}}>Todo sobre<br /><em>ISO 22301.</em></h2>
     <div style={{marginTop:'48px'}}>
       <div className="faq-item">
-        <div className="faq-item__question">¿Qué es exactamente el BCP y por qué es tan importante?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Qué es exactamente el BCP y por qué es tan importante?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>El Business Continuity Plan (Plan de Continuidad de Negocio) es el documento operativo que describe cómo la organización continuará funcionando durante una crisis o interrupción. Incluye los procedimientos de activación del plan, los roles y responsabilidades del equipo de crisis, las alternativas operativas para cada proceso crítico, los planes de comunicación interna y externa, y los criterios para declarar el fin de la emergencia y volver a la normalidad. Es el corazón del SGCN: sin un BCP funcional y probado, no hay continuidad.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Cuánto tiempo lleva el BIA?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Cuánto tiempo lleva el BIA?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>El Business Impact Analysis es la fase más intensiva en términos de colaboración con el cliente. Requiere entrevistas con los responsables de cada área funcional y un análisis detallado de los procesos, las dependencias tecnológicas y los impactos en diferentes horizontes temporales. Normalmente dedicamos entre 2 y 4 semanas al BIA, dependiendo de la complejidad de la organización. Un BIA bien hecho es la inversión más importante del proyecto: determina el RTO y el RPO de cada proceso y, por tanto, el nivel de inversión en continuidad que se necesita.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Cuánto tiempo lleva la certificación ISO 22301?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Cuánto tiempo lleva la certificación ISO 22301?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>Con la metodología de Avson, el proceso completo desde el kick-off hasta la obtención del certificado dura entre 5 y 6 meses. Si ya tienes el ENS o ISO 27001 certificados, podemos reducir este plazo aprovechando el 55-60% de documentación y controles que se comparten entre los marcos. El plazo es uno de nuestros principales diferenciadores: el mercado trabaja habitualmente en 8-14 meses para esta certificación.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Qué sectores tienen más necesidad de ISO 22301?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Qué sectores tienen más necesidad de ISO 22301?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>ISO 22301 es especialmente relevante en sectores donde una interrupción tiene un impacto inmediato en clientes o ciudadanos: servicios financieros y de seguros, telecomunicaciones, salud y servicios sanitarios, administración pública, logística y transporte, energía y utilities, y proveedores de tecnología y cloud. También es cada vez más solicitada en empresas industriales con cadenas de suministro complejas, donde la pandemia y los conflictos geopolíticos han evidenciado la fragilidad de las operaciones ante interrupciones imprevistas.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Qué diferencia un plan de contingencia de un SGCN certificado?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Qué diferencia un plan de contingencia de un SGCN certificado?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>La diferencia fundamental es la sistematización, la evidencia y la mejora continua. Un plan de contingencia tradicional es un documento estático que rara vez se actualiza y casi nunca se prueba. Un SGCN certificado bajo ISO 22301 exige pruebas periódicas documentadas, revisiones por la dirección, análisis de la eficacia de los controles y mejoras continuas basadas en evidencias. Además, la certificación proporciona una validación externa independiente de que el sistema funciona realmente, no solo en papel.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿DORA exige ISO 22301?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿DORA exige ISO 22301?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>DORA no exige ISO 22301 específicamente, pero sí exige que las entidades financieras y sus proveedores TIC críticos tengan planes de continuidad del negocio documentados, probados y revisados periódicamente, lo que es exactamente lo que ISO 22301 certifica. Tener ISO 22301 es la forma más eficiente de demostrar el cumplimiento de los requisitos de continuidad de DORA. El solapamiento entre ISO 22301 y el pilar de continuidad de DORA es de aproximadamente el 70%.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Cuánto cuesta la certificación ISO 22301?<div className="faq-item__icon">+</div></div>
-        <div className="faq-item__answer"><p>El coste depende del tamaño de la organización, la complejidad de los procesos críticos, el alcance del SGCN y si ya tienes otros marcos implementados. Ofrecemos un diagnóstico gratuito en el que analizamos tu situación y te damos un presupuesto detallado y transparente antes de firmar. Si ya tienes el ENS o ISO 27001, el coste de ISO 22301 se reduce significativamente gracias al solapamiento de controles y documentación.</p></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Cuánto cuesta la certificación ISO 22301?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__answer"><p>El coste depende del tamaño de la organización, la complejidad de los procesos críticos, el alcance del SGCN y si ya tienes otros marcos implementados. Ofrecemos un presupuesto sin compromiso en el que analizamos tu situación y te damos un presupuesto detallado y transparente antes de firmar. Si ya tienes el ENS o ISO 27001, el coste de ISO 22301 se reduce significativamente gracias al solapamiento de controles y documentación.</p></div>
       </div>
       <div className="faq-item">
-        <div className="faq-item__question">¿Cuánto dura el certificado ISO 22301?<div className="faq-item__icon">+</div></div>
+        <div className="faq-item__question" onClick={(e) => (e.currentTarget as HTMLElement).closest('.faq-item')?.classList.toggle('open')}>¿Cuánto dura el certificado ISO 22301?<div className="faq-item__icon">+</div></div>
         <div className="faq-item__answer"><p>El certificado ISO 22301 tiene una vigencia de 3 años, con auditorías de seguimiento anuales en los años 1 y 2, y auditoría de renovación en el año 3. Avson ofrece un bono de mantenimiento anual para gestionar las auditorías periódicas, actualizar los planes cuando cambia la organización (nuevos sistemas, nuevos procesos, cambios de alcance) y asegurar que el SGCN se mantiene vivo y efectivo a lo largo del tiempo.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-
+{/* FINAL CTA */}
 <section className="section section--navy">
   <div className="container" style={{textAlign:'center'}}>
-    <span className="label-tag" style={{borderColor:'rgba(255,255,255,0.2)',color:'rgba(255,255,255,0.6)'}}>ISO 22301 · Diagnóstico gratuito</span>
+    <span className="label-tag" style={{borderColor:'rgba(255,255,255,0.2)',color:'rgba(255,255,255,0.6)'}}>ISO 22301 · Pide presupuesto</span>
     <div className="gold-line" style={{margin:'20px auto 0'}}></div>
     <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(36px,4.5vw,58px)',fontWeight:'300',color:'#fff',lineHeight:'1.15',margin:'32px 0 24px'}}>
       ¿Tu empresa puede<br /><em>permitirse parar?</em>
     </h2>
     <p style={{fontFamily:'var(--font-sans)',fontSize:'17px',color:'rgba(255,255,255,0.65)',maxWidth:'520px',margin:'0 auto 40px',lineHeight:'1.7'}}>
-      Diagnóstico gratuito. Sin compromiso. Un consultor senior analiza tu situación y te dice qué nivel de continuidad necesitas realmente y cómo conseguirlo en el menor tiempo posible.
+      Pide presupuesto. Sin compromiso. Un consultor senior analiza tu situación y te dice qué nivel de continuidad necesitas realmente y cómo conseguirlo en el menor tiempo posible.
     </p>
-    <Link to="/contacto" className="btn-primary" style={{borderColor:'var(--gold)',color:'#fff',fontSize:'15px',padding:'18px 36px'}}>Solicitar diagnóstico gratuito →</Link>
+    <Link to="/contacto" className="v3-btn v3-btn--gold" style={{borderColor:'var(--gold)',color:'#fff',fontSize:'15px',padding:'18px 36px'}}>Habla con un experto →</Link>
   </div>
 </section>
-
-
-<div style={{display:'none',position:'fixed',bottom:'0',left:'0',right:'0',zIndex:'500',background:'#1A2744',borderTop:'1px solid rgba(255,255,255,0.08)',padding:'14px 20px',justifyContent:'space-between',gap:'12px',alignItems:'center'}} id="stickyBar">
-  <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'rgba(255,255,255,0.7)'}}>¿Dudas sobre tu certificación?</span>
-  <Link to="/contacto" className="btn-primary btn-primary--white" style={{fontSize:'11px',padding:'10px 20px',whiteSpace:'nowrap'}}>Diagnóstico gratuito →</Link>
-</div>
     </>
   )
 }

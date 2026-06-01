@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom'
 export default function EquipoPage() {
   return (
     <>
-<div style={{background:'#1A2744',color:'rgba(255,255,255,0.85)',fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'400',letterSpacing:'0.04em',textAlign:'center',padding:'10px 40px',position:'relative',zIndex:'200'}}>
-  🔒 <strong>Garantía de éxito al 100% por escrito</strong>  ·  Diagnóstico gratuito sin compromiso · Respuesta en 24h  ·  <Link to="/contacto" style={{color:'#C9A84C',textDecoration:'none',fontWeight:'500'}}>Contactar →</Link>
-</div>
-
 
 <section className="section section--pearl" style={{paddingTop:'160px',paddingBottom:'80px'}}>
   <div className="container">
@@ -21,20 +17,20 @@ export default function EquipoPage() {
   <div className="container">
     <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1px',background:'var(--border)',border:'1px solid var(--border)'}}>
       <div style={{background:'var(--white)',padding:'36px 28px',textAlign:'center'}}>
-        <div style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>87+</div>
-        <div style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>Empresas certificadas</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>355+</div>
+        <div style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>ENS gestionados este año</div>
       </div>
       <div style={{background:'var(--white)',padding:'36px 28px',textAlign:'center'}}>
-        <div style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>100%</div>
-        <div style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>Tasa de éxito</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>100%</div>
+        <div style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>Tasa de éxito</div>
       </div>
       <div style={{background:'var(--white)',padding:'36px 28px',textAlign:'center'}}>
-        <div style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>3–4</div>
-        <div style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>Meses promedio</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>Nº1</div>
+        <div style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>ENS en España</div>
       </div>
       <div style={{background:'var(--white)',padding:'36px 28px',textAlign:'center'}}>
-        <div style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>12</div>
-        <div style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>Consultores especializados</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'52px',fontWeight:'300',color:'var(--navy)',lineHeight:'1'}}>15</div>
+        <div style={{fontFamily:"'Inter',sans-serif",fontSize:'11px',color:'var(--text-muted)',letterSpacing:'0.08em',textTransform:'uppercase',marginTop:'8px'}}>Personas en el equipo</div>
       </div>
     </div>
   </div>
@@ -46,23 +42,49 @@ export default function EquipoPage() {
 
     <div className="team-grid">
 
-      
+      {/* 1 - CEO */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Pablo García" className="team-photo" loading="lazy" />
+          <img src="/assets/team/pablo-avson.svg" alt="Pablo — CEO y Fundador" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
-          <h3 className="team-name">Pablo García</h3>
+          <h3 className="team-name">Pablo</h3>
           <span className="team-role">CEO y Fundador</span>
-          <span className="team-badge">ISO 27001 Lead Auditor</span>
-          <p className="team-bio">Lleva años acompañando a empresas en sus procesos de certificación. Su especialidad es el ENS y la gestión del riesgo en entornos de licitación pública.</p>
+          <span className="team-badge">Estrategia · ENS · ISO 27001</span>
+          <p className="team-bio">Fundador de Avson. Define la estrategia de la firma y acompaña los proyectos más críticos. Su obsesión: convertir el cumplimiento en una ventaja de negocio real para el cliente, no en papeleo.</p>
         </div>
       </div>
 
-      
+      {/* 2 - CFO */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Laura Sánchez" className="team-photo" loading="lazy" />
+          <img src="/assets/team/elena-navarro.svg" alt="Elena Navarro — CFO" className="team-photo" loading="lazy" />
+        </div>
+        <div className="team-info">
+          <h3 className="team-name">Elena Navarro</h3>
+          <span className="team-role">CFO · Dirección Financiera</span>
+          <span className="team-badge">Finanzas · Control de gestión</span>
+          <p className="team-bio">Responsable de las finanzas y de un crecimiento sostenible. Garantiza que cada proyecto y cada incorporación se apoyan en una base financiera sólida.</p>
+        </div>
+      </div>
+
+      {/* 3 - Business Development */}
+      <div className="team-card anim-fade-up">
+        <div className="team-photo-wrap">
+          <img src="/assets/team/daniel-romero.svg" alt="Daniel Romero — Business Development" className="team-photo" loading="lazy" />
+        </div>
+        <div className="team-info">
+          <h3 className="team-name">Daniel Romero</h3>
+          <span className="team-role">Business Development</span>
+          <span className="team-badge">Desarrollo de negocio · Alianzas</span>
+          <p className="team-bio">Lidera el desarrollo de negocio y las alianzas estratégicas. Conecta las necesidades del sector público y privado con la propuesta de valor de Avson.</p>
+        </div>
+      </div>
+
+      {/* 4 - Laura */}
+      <div className="team-card anim-fade-up">
+        <div className="team-photo-wrap">
+          <img src="/assets/team/laura-s-nchez.svg" alt="Laura Sánchez" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Laura Sánchez</h3>
@@ -72,10 +94,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 5 - Carlos */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Carlos Jiménez" className="team-photo" loading="lazy" />
+          <img src="/assets/team/carlos-jim-nez.svg" alt="Carlos Jiménez" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Carlos Jiménez</h3>
@@ -85,10 +107,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 6 - Ana */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Ana Rodríguez" className="team-photo" loading="lazy" />
+          <img src="/assets/team/ana-rodr-guez.svg" alt="Ana Rodríguez" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Ana Rodríguez</h3>
@@ -98,10 +120,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 7 - Miguel */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Miguel Torres" className="team-photo" loading="lazy" />
+          <img src="/assets/team/miguel-torres.svg" alt="Miguel Torres" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Miguel Torres</h3>
@@ -111,10 +133,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 8 - Isabel */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/women/38.jpg" alt="Isabel Fernández" className="team-photo" loading="lazy" />
+          <img src="/assets/team/isabel-fern-ndez.svg" alt="Isabel Fernández" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Isabel Fernández</h3>
@@ -124,10 +146,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 9 - Alejandro */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Alejandro Martín" className="team-photo" loading="lazy" />
+          <img src="/assets/team/alejandro-mart-n.svg" alt="Alejandro Martín" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Alejandro Martín</h3>
@@ -137,10 +159,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 10 - Carmen */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Carmen López" className="team-photo" loading="lazy" />
+          <img src="/assets/team/carmen-l-pez.svg" alt="Carmen López" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Carmen López</h3>
@@ -150,10 +172,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 11 - David */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="David Sanz" className="team-photo" loading="lazy" />
+          <img src="/assets/team/david-sanz.svg" alt="David Sanz" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">David Sanz</h3>
@@ -163,10 +185,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 12 - Marta */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/women/61.jpg" alt="Marta Peña" className="team-photo" loading="lazy" />
+          <img src="/assets/team/marta-pe-a.svg" alt="Marta Peña" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Marta Peña</h3>
@@ -176,10 +198,10 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 13 - Roberto */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Roberto Núñez" className="team-photo" loading="lazy" />
+          <img src="/assets/team/roberto-n-ez.svg" alt="Roberto Núñez" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Roberto Núñez</h3>
@@ -189,16 +211,29 @@ export default function EquipoPage() {
         </div>
       </div>
 
-      
+      {/* 14 - Sofía */}
       <div className="team-card anim-fade-up">
         <div className="team-photo-wrap">
-          <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Sofía Blanco" className="team-photo" loading="lazy" />
+          <img src="/assets/team/sof-a-blanco.svg" alt="Sofía Blanco" className="team-photo" loading="lazy" />
         </div>
         <div className="team-info">
           <h3 className="team-name">Sofía Blanco</h3>
           <span className="team-role">Analista GRC</span>
           <span className="team-badge">Risk Management</span>
           <p className="team-bio">Elabora análisis de riesgos, informes de cumplimiento y cuadros de mando para los clientes. Lleva el seguimiento del estado de certificación de cada proyecto.</p>
+        </div>
+      </div>
+
+      {/* 15 - Nuria */}
+      <div className="team-card anim-fade-up">
+        <div className="team-photo-wrap">
+          <img src="/assets/team/nuria-gil.svg" alt="Nuria Gil" className="team-photo" loading="lazy" />
+        </div>
+        <div className="team-info">
+          <h3 className="team-name">Nuria Gil</h3>
+          <span className="team-role">Consultora ENS</span>
+          <span className="team-badge">ENS · Sector público</span>
+          <p className="team-bio">Acompaña a empresas TIC proveedoras de la Administración en todo el proceso ENS, desde la categorización del sistema hasta la salida de la auditoría.</p>
         </div>
       </div>
 
@@ -212,7 +247,7 @@ export default function EquipoPage() {
   <div className="container">
     <span className="label-tag">Nuestra forma de trabajar</span>
     <div className="gold-line"></div>
-    <h2 className="section-title" style={{maxWidth:'560px'}}>Un equipo pequeño que<br /><em>trabaja como uno grande.</em></h2>
+    <h2 className="section-title" style={{maxWidth:'560px'}}>15 profesionales especializados.<br /><em>El equipo GRC que garantiza tu certificación.</em></h2>
     <p style={{fontFamily:'var(--font-sans)',fontSize:'16px',lineHeight:'1.8',color:'var(--text-body)',maxWidth:'640px',marginBottom:'52px'}}>
       Avson es un equipo especializado, no una consultora de propósito general. Esa especialización tiene un precio — no hacemos de todo — pero también tiene una ventaja clara: cuando nos contratas para un proyecto GRC, estás trabajando con las personas que más proyectos de ese tipo han hecho en España.
     </p>
@@ -291,7 +326,7 @@ export default function EquipoPage() {
       </div>
       <div className="anim-fade-up" style={{background:'var(--navy)',padding:'28px',textAlign:'center'}}>
         <div style={{fontFamily:'var(--font-serif)',fontSize:'20px',fontWeight:'600',color:'var(--gold)',marginBottom:'8px'}}>ENS</div>
-        <div style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'rgba(255,255,255,0.6)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'12px'}}>Auditora Acreditada ENAC</div>
+        <div style={{fontFamily:'var(--font-sans)',fontSize:'11px',fontWeight:'600',color:'rgba(255,255,255,0.6)',textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:'12px'}}>Auditora Acreditada por ENAC</div>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'rgba(255,255,255,0.6)',lineHeight:'1.5'}}>Acreditación ENAC para auditorías oficiales del Esquema Nacional de Seguridad</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'10px',color:'rgba(255,255,255,0.4)',marginTop:'8px'}}>ENAC / CCN</p>
       </div>
@@ -309,17 +344,14 @@ export default function EquipoPage() {
       <p style={{fontSize:'17px',color:'rgba(255,255,255,0.55)',lineHeight:'1.65',marginTop:'24px',maxWidth:'520px',marginLeft:'auto',marginRight:'auto'}}>Si nuestro equipo lleva tu proyecto y no supera la auditoría de certificación, la repetimos sin coste adicional. Sin letras pequeñas. Por escrito desde el primer día.</p>
       <div style={{display:'inline-flex',alignItems:'center',gap:'10px',border:'1px solid rgba(201,168,76,0.4)',padding:'14px 24px',marginTop:'32px',marginBottom:'40px'}}>
         <span style={{fontSize:'20px',color:'#C9A84C'}}>✦</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,255,255,0.8)'}}>Garantía de éxito al 100% · Por escrito</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,255,255,0.8)'}}>Garantía de éxito al 100% · Por escrito</span>
       </div>
       <div style={{display:'block'}}>
         <Link to="/contacto" className="btn-primary btn-primary--white">Hablar con el equipo →</Link>
       </div>
     </div>
   </div>
-</section><div id="stickyBar" style={{display:'none',position:'fixed',bottom:'0',left:'0',right:'0',zIndex:'500',background:'#1A2744',borderTop:'1px solid rgba(255,255,255,0.08)',padding:'14px 20px',justifyContent:'space-between',gap:'12px',alignItems:'center'}}>
-  <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'rgba(255,255,255,0.7)'}}>¿Necesitas certificarte?</span>
-  <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'11px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#fff',border:'1px solid #fff',padding:'10px 20px',textDecoration:'none',whiteSpace:'nowrap'}}>Diagnóstico gratuito →</Link>
-</div>
+</section>
     </>
   )
 }

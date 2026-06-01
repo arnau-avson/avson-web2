@@ -18,41 +18,45 @@ export default function EnsVsIso27001() {
     .faq-article { border-top:1px solid #E5E5E0; }
     .faq-article-item { border-bottom:1px solid #E5E5E0; }
     .faq-article-q { font-family:'Inter',sans-serif; font-size:16px; font-weight:500; color:#1A2744; padding:20px 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
-    .faq-article-q::after { content:'＋'; font-size:20px; color:#C9A84C; flex-shrink:0; }
-    .faq-article-item.open .faq-article-q::after { content:'－'; }
+    .faq-article-q::after { content:'\\FF0B'; font-size:20px; color:#C9A84C; flex-shrink:0; }
+    .faq-article-item.open .faq-article-q::after { content:'\\FF0D'; }
     .faq-article-a { font-family:'Inter',sans-serif; font-size:15px; color:#3A4560; line-height:1.75; padding:0 0 20px; display:none; }
     .faq-article-item.open .faq-article-a { display:block; }` }} />
+
+{/* BREADCRUMB */}
 <div style={{background:'var(--white)',borderBottom:'1px solid var(--border)',padding:'12px 0',marginTop:'72px'}}>
   <div className="container">
-    <nav style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
+    <nav style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)',letterSpacing:'0.04em'}}>
       <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Inicio</Link>
       <span style={{margin:'0 8px'}}>›</span>
-      <Link to="/" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
+      <Link to="/blog" style={{color:'var(--text-muted)',textDecoration:'none'}}>Blog</Link>
       <span style={{margin:'0 8px'}}>›</span>
       <span style={{color:'var(--navy)',fontWeight:'500'}}>ENS vs ISO 27001</span>
     </nav>
   </div>
 </div>
 
+{/* ARTICLE HERO */}
 <section style={{background:'var(--pearl)',padding:'72px 0 56px',borderBottom:'1px solid var(--border)'}}>
   <div className="container">
     <div style={{maxWidth:'800px'}}>
       <span className="label-tag">ENS · ISO 27001 · Comparativa · Mayo 2026</span>
       <div className="gold-line"></div>
-      <h1 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
+      <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(36px,5vw,56px)',fontWeight:'300',color:'var(--navy)',lineHeight:'1.1',margin:'0 0 24px'}}>
         ENS vs ISO 27001: diferencias, similitudes y sinergia
       </h1>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'17px',color:'var(--text-muted)',lineHeight:'1.65',maxWidth:'640px',margin:'0'}}>
         Los dos estándares de seguridad más exigidos en España. Entender su relación puede ahorrarte meses de trabajo y decenas de miles de euros en certificación.
       </p>
       <div style={{display:'flex',gap:'24px',marginTop:'28px',flexWrap:'wrap'}}>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>⏱ Lectura: 10 minutos</span>
-        <span style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'var(--text-muted)'}}>📅 Actualizado: mayo 2026</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Lectura: 10 minutos</span>
+        <span style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',color:'var(--text-muted)'}}>Actualizado: mayo 2026</span>
       </div>
     </div>
   </div>
 </section>
 
+{/* ARTICLE BODY */}
 <article style={{padding:'72px 0 80px',background:'var(--white)'}}>
   <div className="article-body">
 
@@ -160,8 +164,8 @@ export default function EnsVsIso27001() {
     <p>La implicación práctica es poderosa: una empresa que se certifica en ENS Media con Avson tiene, al terminar el proyecto, aproximadamente el <strong>65% del trabajo necesario para ISO 27001 ya realizado</strong>. La documentación, los controles técnicos y el sistema de gestión implementados para el ENS son directamente reutilizables para ISO 27001. Solo hay que abordar los requisitos diferenciales.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Pack ENS + ISO 27001: la combinación más demandada por pymes tecnológicas españolas que quieren licitar y crecer.</span>
-      <Link to="/packs" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Ver pack →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Pack ENS + ISO 27001: la combinación más demandada por pymes tecnológicas españolas que quieren licitar y crecer.</span>
+      <Link to="/packs" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Ver pack →</Link>
     </div>
 
     <h2>¿Cuándo necesitas solo el ENS?</h2>
@@ -198,70 +202,71 @@ export default function EnsVsIso27001() {
     <p>La estrategia óptima para la mayoría de pymes TIC españolas es: <strong>ENS primero, ISO 27001 a continuación</strong>. El ENS desbloquea contratos públicos de forma inmediata (hay demanda garantizada), y una vez obtenido, el camino hacia ISO 27001 está en gran parte recorrido.</p>
 
     <div style={{background:'#F7F7F5',border:'1px solid #E5E5E0',borderLeft:'3px solid #C9A84C',padding:'28px 32px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:'24px',flexWrap:'wrap',margin:'40px 0'}}>
-      <span style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Certificaciones en cascada: ENS en 3-4 meses, ISO 27001 a continuación en 2 meses adicionales. Todo con la misma garantía.</span>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Diagnóstico gratuito →</Link>
+      <span style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'20px',fontWeight:'400',color:'#1A2744',lineHeight:'1.3',flex:'1',minWidth:'200px'}}>Certificaciones en cascada: ENS en 3-4 meses, ISO 27001 a continuación en 2 meses adicionales. Todo con la misma garantía.</span>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'#1A2744',border:'1px solid #C9A84C',padding:'12px 24px',textDecoration:'none',whiteSpace:'nowrap'}}>Pide presupuesto →</Link>
     </div>
 
-    
-<section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
-  <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
-  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
-    <Link to="/que-es-el-ens" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Qué es el ENS? Guía completa del Esquema Nacional de Seguridad</p>
-    </Link>
-    <Link to="/iso27001-pymes" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ISO 27001</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ISO 27001 para pymes: guía práctica de certificación</p>
-    </Link>
-    <Link to="/certificado-ens-media-alta" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
-      <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
-      <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS Media y Alta: requisitos adicionales y cómo certificarse</p>
-    </Link>
-  </div>
-</section>
+    {/* RELATED ARTICLES */}
+    <section style={{maxWidth:'800px',margin:'0 auto 64px',padding:'0 var(--pad-x)'}}>
+      <h2 style={{fontFamily:'var(--font-serif)',fontSize:'clamp(20px,2.5vw,26px)',fontWeight:'400',color:'var(--navy)',marginBottom:'24px'}}>Artículos relacionados</h2>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'16px'}}>
+        <Link to="/blog/que-es-el-ens" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>¿Qué es el ENS? Guía completa del Esquema Nacional de Seguridad</p>
+        </Link>
+        <Link to="/blog/iso27001-pymes" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ISO 27001</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ISO 27001 para pymes: guía práctica de certificación</p>
+        </Link>
+        <Link to="/blog/certificado-ens-media-alta" style={{display:'block',padding:'20px 24px',border:'1px solid var(--border)',borderLeft:'3px solid var(--gold)',textDecoration:'none',background:'var(--pearl)'}}>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'0.08em',color:'var(--gold)',marginBottom:'8px'}}>ENS</p>
+          <p style={{fontFamily:'var(--font-serif)',fontSize:'17px',color:'var(--navy)',lineHeight:'1.4'}}>ENS Media y Alta: requisitos adicionales y cómo certificarse</p>
+        </Link>
+      </div>
+    </section>
 
-<h2>Preguntas frecuentes</h2>
+    <h2>Preguntas frecuentes</h2>
 
     <div className="faq-article">
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Es lo mismo el ENS que la ISO 27001?</div>
         <div className="faq-article-a">No. El ENS es el marco normativo español de obligado cumplimiento para organismos públicos y sus proveedores TIC. La ISO 27001 es un estándar internacional voluntario para cualquier organización. Ambos abordan la seguridad de la información pero con enfoques y alcances distintos. Sin embargo, comparten aproximadamente el 65% de sus requisitos.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">Si tengo ISO 27001, ¿necesito también el ENS?</div>
         <div className="faq-article-a">Si prestas servicios TIC al sector público español, sí. Tener ISO 27001 no exime del cumplimiento del ENS. Sin embargo, una organización con ISO 27001 ya tiene implementada la mayor parte de los controles del ENS, lo que reduce considerablemente el esfuerzo adicional para obtener también el certificado ENS.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Cuál es más difícil de obtener, el ENS o la ISO 27001?</div>
         <div className="faq-article-a">Depende del punto de partida. El ENS tiene requisitos más prescriptivos (hay que implementar exactamente lo que dice el catálogo según la categoría), lo que reduce la ambigüedad pero exige rigor técnico. La ISO 27001 es más flexible en cómo se implementan los controles pero exige un sistema de gestión más maduro. Con una consultora especializada, ambos son perfectamente alcanzables en plazos similares.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿En qué orden conviene certificarse?</div>
         <div className="faq-article-a">Para empresas que quieren licitar al sector público, la secuencia recomendada es ENS primero (porque desbloquea contratos públicos de forma inmediata) e ISO 27001 después (aprovechando el 65% de trabajo ya realizado). Si el objetivo principal son clientes privados internacionales, puede tener sentido empezar por ISO 27001.</div>
       </div>
-      <div className="faq-article-item">
+      <div className="faq-article-item" onClick={(e) => (e.currentTarget as HTMLElement).classList.toggle('open')}>
         <div className="faq-article-q">¿Cuánto se ahorra certificándose en los dos a la vez con Avson?</div>
         <div className="faq-article-a">El ahorro exacto depende de cada caso, pero en proyectos ENS Media + ISO 27001, la combinación mediante nuestro enfoque de certificaciones en cascada supone típicamente un ahorro del 35-45% respecto a hacer los dos proyectos de forma completamente independiente con distintas consultoras o en momentos muy separados.</div>
       </div>
     </div>
 
     <div style={{marginTop:'64px',padding:'40px',background:'var(--pearl)',border:'1px solid var(--border)',textAlign:'center'}}>
-      <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿ENS, ISO 27001 o los dos?</h3>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Te ayudamos a diseñar la estrategia óptima según tu perfil y mercado objetivo.</p>
-      <Link to="/contacto" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar diagnóstico gratuito →</Link>
+      <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'28px',fontWeight:'400',color:'var(--navy)',margin:'0 0 16px'}}>¿ENS, ISO 27001 o los dos?</h3>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'15px',color:'var(--text-muted)',margin:'0 0 28px',maxWidth:'500px',marginLeft:'auto',marginRight:'auto'}}>Te ayudamos a diseñar la estrategia óptima según tu perfil y mercado objetivo.</p>
+      <Link to="/contacto" style={{fontFamily:"'Inter',sans-serif",fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',background:'var(--navy)',color:'var(--white)',padding:'16px 32px',textDecoration:'none',display:'inline-block'}}>Solicitar presupuesto sin compromiso →</Link>
     </div>
 
     <div style={{marginTop:'48px',paddingTop:'32px',borderTop:'1px solid var(--border)'}}>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
+      <p style={{fontFamily:"'Inter',sans-serif",fontSize:'13px',color:'var(--text-muted)'}}>Artículos relacionados:</p>
       <div style={{display:'flex',gap:'16px',flexWrap:'wrap',marginTop:'12px'}}>
-        <Link to="/que-es-el-ens" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
-        <Link to="/iso27001-pymes" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ISO 27001 para pymes →</Link>
-        <Link to="/certificado-ens-media-alta" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta →</Link>
+        <Link to="/blog/que-es-el-ens" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>Qué es el ENS →</Link>
+        <Link to="/blog/iso27001-pymes" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ISO 27001 para pymes →</Link>
+        <Link to="/blog/certificado-ens-media-alta" style={{fontFamily:"'Inter',sans-serif",fontSize:'14px',color:'var(--navy)',textDecoration:'none',border:'1px solid var(--border)',padding:'10px 18px'}}>ENS Media vs Alta →</Link>
       </div>
     </div>
 
   </div>
-</article></>
+</article>
+    </>
   )
 }
