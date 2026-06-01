@@ -213,6 +213,7 @@
       <a href="index.html" class="v3-nav__logo" id="navLogo">AVSON<span>·</span>GRC</a>
       <ul class="v3-nav__links" id="navLinks"></ul>
       <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--sm v3-nav__cta" id="navCta"></a>
+      <div class="lang-selector" id="langSelector"></div>
       <button class="v3-nav__burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -268,8 +269,7 @@
       try {
         const response = await fetch('assets/palabras.json');
         const data = await response.json();
-        // Se espera data = { "es": { "tisax": { ... } } }
-        const lang = "es";
+        const lang = localStorage.getItem('avsonLang') || "es";
         const pageData = data[lang]?.tisax;
         if (!pageData) throw new Error(`No se encontró el idioma "${lang}" o la clave "tisax"`);
         const t = pageData;
@@ -304,6 +304,21 @@
       <a href="otras.html">${t.nav.links.otras}</a>
     `;
         document.getElementById('navOverlayCta').innerHTML = t.nav.cta;
+
+        // Language selector
+        const langSelector = document.getElementById('langSelector');
+        if (langSelector) {
+          const langs = [{ code: 'es', label: 'Español', flag: '🇪🇸' }];
+          const current = langs.find(l => l.code === lang) || langs[0];
+          langSelector.innerHTML = `
+            <button class="lang-selector__btn" id="langBtn">
+              ${current.flag} ${current.code.toUpperCase()}
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2.5 4L5 6.5L7.5 4" stroke="currentColor" stroke-width="1.2"/></svg>
+            </button>
+            <div class="lang-selector__dropdown" id="langDropdown">
+              ${langs.map(l => `<button class="lang-selector__option${l.code === lang ? ' active' : ''}" data-lang="${l.code}">${l.flag} ${l.label}</button>`).join('')}
+            </div>`;
+        }
 
         // Hero
         const heroHTML = `
@@ -585,6 +600,17 @@
     }
 
     function initInteractions() {
+      // Language selector
+      const langBtn = document.getElementById('langBtn');
+      const langDropdown = document.getElementById('langDropdown');
+      if (langBtn && langDropdown) {
+        langBtn.addEventListener('click', e => { e.stopPropagation(); langDropdown.classList.toggle('open'); });
+        document.addEventListener('click', () => langDropdown.classList.remove('open'));
+        langDropdown.querySelectorAll('.lang-selector__option').forEach(opt => {
+          opt.addEventListener('click', () => { localStorage.setItem('avsonLang', opt.dataset.lang); location.reload(); });
+        });
+      }
+
       // Menú móvil
       const burger = document.getElementById('navBurger');
       const overlay = document.getElementById('navOverlay');
