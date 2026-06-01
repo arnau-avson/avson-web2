@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habla con un experto ENS | Avson GRC</title>
+  <meta name="description" content="Habla con un experto en certificación ENS. Gratuito, sin compromiso. Te llamamos hoy mismo.">
+  <link rel="canonical" href="https://avson.eu/contacto.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");</script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --navy:#1A2744; --gold:#C9A84C; --pearl:#F7F7F5; --white:#FFFFFF; --border:#E5E5E0; --muted:#7A8499; }
+    html { font-size:16px; -webkit-font-smoothing:antialiased; }
+    body { font-family:'Inter',system-ui,sans-serif; background:var(--pearl); color:var(--navy); }
+
+    /* NAV */
+    .cnav { position:sticky; top:0; z-index:200; background:rgba(255,255,255,0.97); border-bottom:1px solid var(--border); backdrop-filter:blur(8px); }
+    .cnav__inner { max-width:1320px; margin:0 auto; padding:0 28px; height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .cnav__logo { font-family:'Inter',sans-serif; font-size:18px; font-weight:600; color:var(--navy); text-decoration:none; letter-spacing:0.02em; }
+    .cnav__logo span { color:var(--gold); }
+    .cnav__links { display:flex; gap:24px; align-items:center; }
+    .cnav__links a { font-family:'Inter',sans-serif; font-size:14px; font-weight:500; color:var(--navy); text-decoration:none; transition:color .15s; }
+    .cnav__links a:hover { color:var(--gold); }
+    .cnav__links a.express { color:var(--gold); }
+    @media (max-width:760px){ .cnav__links { display:none; } }
+
+    /* MAIN (centra la tarjeta) */
+    .cmain { min-height:calc(100vh - 64px); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:48px 20px 64px; }
+
+    .logo { display:none; }
+    .fomo-bar { background:#FEF2F2; border:1px solid #FCA5A5; border-radius:8px; padding:10px 20px; font-size:12px; font-weight:600; color:#991B1B; text-align:center; margin-bottom:20px; max-width:420px; width:100%; }
+    .card { background:var(--white); border-radius:16px; border:1px solid var(--border); padding:40px 36px 32px; width:100%; max-width:420px; box-shadow:0 8px 40px rgba(26,39,68,0.10); }
+    .badge { display:inline-flex; align-items:center; gap:6px; background:#ECFDF5; color:#065F46; font-size:11px; font-weight:700; padding:5px 12px; border-radius:20px; margin-bottom:14px; }
+    .card-title { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:400; color:var(--navy); line-height:1.15; margin-bottom:4px; }
+    .card-sub { font-size:13px; color:var(--muted); margin-bottom:24px; line-height:1.5; }
+    .qual-label { font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+    .qual-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:20px; }
+    .qual-btn { font-family:'Inter',sans-serif; font-size:12px; font-weight:600; padding:9px 6px; border:1.5px solid var(--border); background:var(--pearl); color:var(--navy); border-radius:6px; cursor:pointer; transition:all 0.15s; text-align:center; }
+    .qual-btn:hover { border-color:var(--navy); }
+    .qual-btn--urgent { border-color:#FCA5A5; background:#FEF2F2; color:#991B1B; }
+    .qual-btn--active { background:var(--navy); border-color:var(--navy); color:var(--white); }
+    .form-group { margin-bottom:12px; }
+    .form-group input { width:100%; padding:13px 16px; border:1.5px solid var(--border); border-radius:8px; font-family:'Inter',sans-serif; font-size:15px; color:var(--navy); background:var(--white); outline:none; transition:border-color 0.15s; }
+    .form-group input:focus { border-color:var(--navy); }
+    .form-group input::placeholder { color:#B0B8C4; }
+    .rgpd { display:flex; align-items:flex-start; gap:10px; font-size:11px; color:var(--muted); line-height:1.5; margin:12px 0 18px; }
+    .rgpd input { width:15px; height:15px; flex-shrink:0; margin-top:1px; accent-color:var(--navy); cursor:pointer; }
+    .rgpd a { color:var(--navy); }
+    .btn-cta { width:100%; background:var(--gold); color:var(--navy); border:none; padding:17px; border-radius:10px; font-family:'Inter',sans-serif; font-size:16px; font-weight:700; cursor:pointer; transition:background 0.15s,transform 0.1s; animation:pulse-gold 2.5s infinite; }
+    .btn-cta:hover { background:#D9B84D; transform:translateY(-1px); }
+    @keyframes pulse-gold { 0%,100% { box-shadow:0 6px 20px rgba(201,168,76,0.45),0 0 0 0 rgba(201,168,76,0.25); } 50% { box-shadow:0 6px 20px rgba(201,168,76,0.45),0 0 0 8px rgba(201,168,76,0); } }
+    .lock-text { text-align:center; font-size:11px; color:var(--muted); margin-top:10px; }
+    .alt-phone { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:20px; padding-top:20px; border-top:1px solid var(--border); font-size:13px; color:var(--muted); }
+    .alt-phone a { font-weight:700; color:var(--navy); text-decoration:none; }
+    .alt-phone a:hover { color:var(--gold); }
+    .trust-strip { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:24px; font-size:12px; color:var(--muted); max-width:420px; width:100%; }
+    .trust-strip span::before { content:'✓ '; color:var(--gold); font-weight:700; }
+
+    /* FOOTER */
+    .cfooter { background:var(--navy); color:rgba(255,255,255,0.75); padding:48px 28px 28px; }
+    .cfooter__grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; }
+    @media (max-width:760px){ .cfooter__grid { grid-template-columns:1fr; gap:28px; } }
+    .cfooter__logo { font-family:'Inter',sans-serif; font-size:16px; font-weight:700; letter-spacing:0.04em; color:#fff; }
+    .cfooter__logo span { color:var(--gold); }
+    .cfooter p { font-size:13px; line-height:1.7; color:rgba(255,255,255,0.55); margin-top:12px; }
+    .cfooter h4 { font-family:'Inter',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#fff; margin-bottom:14px; }
+    .cfooter ul { list-style:none; }
+    .cfooter ul li { margin-bottom:9px; }
+    .cfooter ul a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:14px; }
+    .cfooter ul a:hover { color:var(--gold); }
+    .cfooter__bottom { max-width:1100px; margin:32px auto 0; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12px; color:rgba(255,255,255,0.4); }
+    .cfooter__bottom a { color:rgba(255,255,255,0.5); text-decoration:none; }
+
+    @media (max-width:480px) { .card { padding:28px 20px 24px; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="cnav">
+    <div class="cnav__inner">
+      <a href="index.html" class="cnav__logo">AVSON<span>·</span>GRC</a>
+      <div class="cnav__links">
+        <a href="ens.html">ENS</a>
+        <a href="ens-express.html" class="express">⚡ ENS Express</a>
+        <a href="iso22301.html">ISO 22301</a>
+        <a href="iso27001.html">ISO 27001</a>
+        <a href="otras.html">Otras certificaciones</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cmain">
+    <div class="fomo-bar">⚠ El 85% de empresas sin ENS pierde sus licitaciones</div>
+
+    <div class="card">
+      <span class="badge">🟢 Te llamamos hoy mismo</span>
+      <h1 class="card-title">Habla con un experto.</h1>
+      <p class="card-sub">Gratuito · Sin compromiso · En 30 min sabrás exactamente qué necesitas</p>
+
+      <p class="qual-label">¿Qué necesitas?</p>
+      <div class="qual-grid">
+        <button type="button" class="qual-btn qual-btn--urgent" onclick="pickQ(this,'ENS Express urgente')">⚡ ENS urgente</button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'ENS estándar')">ENS estándar</button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 27001')">ISO 27001</button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 22301')">ISO 22301</button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'DORA')">DORA</button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'No lo sé aún')">No lo sé aún</button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'Otras')">Otras</button>
+      </div>
+      <form id="contactForm" onsubmit="avsonSubmitLead(event,{source:'contacto',event:'contact_form_submit'})" novalidate>
+        <input type="hidden" id="cNecesidad" name="necesidad" value="">
+        <div class="form-group">
+          <input type="text"  id="cNombre" name="nombre" placeholder="Tu nombre *" autocomplete="given-name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="cEmail"  name="email"  placeholder="Tu email *" autocomplete="email" required>
+        </div>
+        <div class="rgpd">
+          <input type="checkbox" id="cRgpd" required>
+          <label for="cRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <a href="privacidad.html" target="_blank">Política de privacidad</a></label>
+        </div>
+        <button type="submit" class="btn-cta">Habla con un experto →</button>
+        <p class="lock-text">🔒 Gratuito · Sin compromiso · Confidencial</p>
+      </form>
+
+      <div class="alt-phone">
+        <span>¿Prefieres llamar?</span>
+        <a href="tel:+34648414863">+34 648 414 863</a>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <span>355+ empresas certificadas</span>
+      <span>100% de éxito</span>
+      <span>Garantía por escrito</span>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cfooter">
+    <div class="cfooter__grid">
+      <div>
+        <div class="cfooter__logo">AVSON<span> · </span>GRC</div>
+        <p>Consultora GRC especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. Tu socio estratégico en compliance.</p>
+        <p style="margin-top:10px">hola@avson.eu · +34 648 41 48 63<br>Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)</p>
+        <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:12px;color:var(--gold);text-decoration:none">LinkedIn · Avson GRC</a>
+      </div>
+      <div>
+        <h4>Certificaciones</h4>
+        <ul>
+          <li><a href="ens.html">ENS</a></li>
+          <li><a href="ens-express.html">⚡ ENS Express</a></li>
+          <li><a href="iso27001.html">ISO 27001</a></li>
+          <li><a href="iso22301.html">ISO 22301</a></li>
+          <li><a href="otras.html">Otras certificaciones</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="packs.html">Packs</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="unete.html">Únete al equipo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cfooter__bottom">
+      <span>© 2026 Avson Consultoría Estratégica SLU · CIF B10560795</span>
+      <span><a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></span>
+    </div>
+  </footer>
+
+  <script src="avson-leads.js"></script>
+  <script>
+    function pickQ(btn, val) {
+      document.getElementById('cNecesidad').value = val;
+      document.querySelectorAll('.qual-btn').forEach(b => b.classList.remove('qual-btn--active'));
+      btn.classList.add('qual-btn--active');
+    }
+  </script>
+</body>
+</html>

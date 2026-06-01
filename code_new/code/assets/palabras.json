@@ -1,0 +1,2195 @@
+{
+    "es": {
+        "webinars": {
+            "meta": {
+                "title": "Webinars Gratuitos ENS, ISO 27001 y DORA | Formación GRC | Avson GRC",
+                "description": "Webinars gratuitos sobre ENS, ISO 27001, ISO 22301, DORA y NIS2. Formación práctica con expertos GRC. Plazas limitadas. Regístrate gratis en Avson GRC.",
+                "keywords": "webinar ENS gratis, formación ISO 27001 online, webinar NIS2 gratuito, curso ENS online, webinar ciberseguridad España, formación GRC empresa, webinar DORA",
+                "ogTitle": "Webinars GRC gratuitos — ENS, ISO 27001, NIS2, DORA | Avson GRC",
+                "ogDescription": "Formación GRC gratuita. Sin marketing. Solo contenido útil sobre ENS, ISO 27001, NIS2 y DORA impartido por consultores expertos.",
+                "twitterTitle": "Webinars GRC gratuitos | Avson GRC",
+                "twitterDescription": "ENS, ISO 27001, NIS2, DORA. Formación gratuita sin ventas disfrazadas de formación."
+            },
+            "announceBar": {
+                "text": "Garantía de éxito al 100% por escrito · Pide presupuesto sin compromiso · Respuesta en 24h",
+                "cta": "Contactar →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "hero": {
+                "label": "Formación GRC · Acceso gratuito",
+                "title": "Webinars gratuitos sobre<br>ENS, ISO 27001 y cumplimiento GRC.",
+                "description": "Webinar gratuito mensual impartido por los consultores de Avson. Sin slides corporativas, sin ventas disfrazadas de formación. Solo contenido útil sobre ENS, ISO 27001, NIS2 y DORA para que tomes decisiones informadas sobre el cumplimiento normativo de tu empresa.",
+                "buttons": {
+                    "primary": "Ver próximos webinars →",
+                    "secondary": "Acceder a grabaciones →"
+                },
+                "stats": [
+                    {
+                        "value": "100%",
+                        "label": "gratuito siempre"
+                    },
+                    {
+                        "value": "6",
+                        "label": "sesiones próximas"
+                    },
+                    {
+                        "value": "3.500+",
+                        "label": "visualizaciones grabaciones"
+                    }
+                ]
+            },
+            "upcoming": {
+                "label": "Agenda 2026",
+                "title": "Próximas<br>sesiones.",
+                "badges": [
+                    {
+                        "number": "60",
+                        "text": "minutos por sesión"
+                    },
+                    {
+                        "number": "100%",
+                        "text": "gratuitos"
+                    },
+                    {
+                        "text": "Q&A",
+                        "subtext": "en vivo incluido"
+                    }
+                ],
+                "webinars": [
+                    {
+                        "date": {
+                            "day": "25",
+                            "month": "Jun 2026"
+                        },
+                        "tags": [
+                            "ENS",
+                            "60 min",
+                            "Nivel básico"
+                        ],
+                        "title": "ENS 2026: Todo lo que necesitas saber para licitar",
+                        "description": "Explicación completa del ENS: qué es, quién lo necesita, categorías (Básica, Media, Alta), proceso de certificación, plazos y cómo aprovecharlo para otras certificaciones. Ideal para empresas que se plantean certificarse por primera vez o que tienen un plazo de licitación próximo.",
+                        "instructor": "Laura Sánchez · Directora de Proyectos GRC · Avson",
+                        "cta": "Registrarme →"
+                    },
+                    {
+                        "date": {
+                            "day": "2",
+                            "month": "Jul 2026"
+                        },
+                        "tags": [
+                            "ISO 27001",
+                            "75 min",
+                            "Nivel intermedio"
+                        ],
+                        "title": "ISO 27001 en 2026: Cambios y oportunidades",
+                        "description": "Análisis detallado de los cambios de la versión 2022 respecto a la 2013: los nuevos controles (inteligencia de amenazas, seguridad cloud, gestión de identidades), la nueva estructura de 4 bloques, y qué significa esto para empresas que aún tienen la versión 2013 o que quieren certificarse por primera vez.",
+                        "instructor": "Miguel Torres · Consultor ISO 27001 · Avson",
+                        "cta": "Registrarme →"
+                    },
+                    {
+                        "date": {
+                            "day": "9",
+                            "month": "Jul 2026"
+                        },
+                        "tags": [
+                            "NIS2",
+                            "60 min",
+                            "Nivel básico"
+                        ],
+                        "title": "NIS2: ¿Afecta a tu empresa? Claves prácticas",
+                        "description": "Metodología práctica para determinar si tu empresa es entidad esencial o importante según la Directiva NIS2. Análisis de los 18 sectores cubiertos, umbrales de tamaño, y excepciones. Casos prácticos en directo con participantes voluntarios del sector de los asistentes.",
+                        "instructor": "Carlos Jiménez · Consultor Senior GRC · Avson",
+                        "cta": "Registrarme →"
+                    },
+                    {
+                        "date": {
+                            "day": "16",
+                            "month": "Jul 2026"
+                        },
+                        "tags": [
+                            "DORA",
+                            "90 min",
+                            "Nivel avanzado"
+                        ],
+                        "title": "DORA para entidades financieras: requisitos clave",
+                        "description": "Los 5 pilares de DORA en profundidad: gestión del riesgo TIC, notificación de incidentes en 4/24/72h, pruebas de resiliencia, riesgo de terceros y cláusulas contractuales, e intercambio de información. Plazos, sanciones y cómo prepararse si eres proveedor TIC crítico del sector financiero.",
+                        "instructor": "Carlos Jiménez · Consultor Senior GRC · Avson",
+                        "cta": "Registrarme →"
+                    },
+                    {
+                        "date": {
+                            "day": "23",
+                            "month": "Jul 2026"
+                        },
+                        "tags": [
+                            "Packs GRC",
+                            "60 min",
+                            "Nivel básico"
+                        ],
+                        "title": "Certificado ENS Media vs Alta: ¿cuál necesitas?",
+                        "description": "Caso práctico real: cómo una empresa TIC mediana consiguió ENS + ISO 27001 + ISO 22301 en diez meses aprovechando las sinergias entre marcos. Metodología, decisiones de alcance, solapamiento de controles y resultado final. Con números reales (anonimizados) de tiempo y coste.",
+                        "instructor": "Fundador · CEO y Fundador · Avson",
+                        "cta": "Registrarme →"
+                    },
+                    {
+                        "date": {
+                            "day": "30",
+                            "month": "Jul 2026"
+                        },
+                        "tags": [
+                            "ISO 27001",
+                            "90 min",
+                            "Nivel avanzado"
+                        ],
+                        "title": "Pack ENS + ISO 27001: cómo certificarse en 5 meses",
+                        "description": "Taller práctico en directo: cómo hacer un análisis de riesgos real para un SGSI ISO 27001. Identificación de activos de información, amenazas y vulnerabilidades, cálculo del nivel de riesgo, y selección de controles del Anexo A. Ejercicio en directo con una empresa ficticia representativa.",
+                        "instructor": "Ana Rodríguez · Auditora ENS · Avson",
+                        "cta": "Registrarme →"
+                    }
+                ],
+                "consultationBox": {
+                    "text": "¿Prefieres una consulta individual en lugar de un webinar? Sin compromiso, 30 minutos con un experto.",
+                    "cta": "Solicitar consulta individual →"
+                }
+            },
+            "recordings": {
+                "label": "Grabaciones disponibles",
+                "title": "Accede a las sesiones<br>anteriores.",
+                "description": "Todas las sesiones anteriores quedan grabadas y disponibles. Si no pudiste asistir en directo o quieres revisar algún contenido, accede a las grabaciones de forma gratuita.",
+                "table": {
+                    "headers": [
+                        "Sesión",
+                        "Duración",
+                        "Visualizaciones",
+                        "Acceso"
+                    ],
+                    "rows": [
+                        {
+                            "title": "ENS para principiantes: De cero a certificado",
+                            "subtitle": "Nivel básico · ENS",
+                            "duration": "58 min",
+                            "views": "847 visualizaciones",
+                            "cta": "Ver grabación →"
+                        },
+                        {
+                            "title": "Pack ENS + ISO 27001: Caso práctico real",
+                            "subtitle": "Nivel básico · Packs GRC",
+                            "duration": "61 min",
+                            "views": "704 visualizaciones",
+                            "cta": "Ver grabación →"
+                        },
+                        {
+                            "title": "ISO 27001: El análisis de riesgos desde cero",
+                            "subtitle": "Nivel intermedio · ISO 27001",
+                            "duration": "72 min",
+                            "views": "623 visualizaciones",
+                            "cta": "Ver grabación →"
+                        },
+                        {
+                            "title": "Auditoría ENS: Cómo prepararla y qué esperar",
+                            "subtitle": "Nivel intermedio · ENS",
+                            "duration": "55 min",
+                            "views": "445 visualizaciones",
+                            "cta": "Ver grabación →"
+                        },
+                        {
+                            "title": "NIS2 vs NIS1: Qué cambia y qué hacer ahora",
+                            "subtitle": "Nivel básico · NIS2",
+                            "duration": "65 min",
+                            "views": "512 visualizaciones",
+                            "cta": "Ver grabación →"
+                        },
+                        {
+                            "title": "DORA: Lo que necesitas saber si eres proveedor TIC",
+                            "subtitle": "Nivel avanzado · DORA",
+                            "duration": "88 min",
+                            "views": "389 visualizaciones",
+                            "cta": "Ver grabación →"
+                        }
+                    ]
+                }
+            },
+            "newsletter": {
+                "label": "Avisos de webinar",
+                "title": "No te pierdas el<br>próximo webinar.",
+                "description": "Avisamos con una semana de antelación. Sin spam. Solo cuando hay algo que merece tu tiempo. Puedes cancelar la suscripción en cualquier momento.",
+                "form": {
+                    "title": "Recibir avisos de próximas sesiones",
+                    "nameLabel": "Nombre",
+                    "namePlaceholder": "Tu nombre",
+                    "emailLabel": "Email",
+                    "emailPlaceholder": "tu@empresa.com",
+                    "interestsLabel": "Temas de interés",
+                    "interests": [
+                        "ENS",
+                        "ISO 27001",
+                        "NIS2",
+                        "DORA"
+                    ],
+                    "submitButton": "Suscribirme →",
+                    "footnote": "Sin spam. Sin ventas. Solo avisos de webinars."
+                }
+            },
+            "faq": {
+                "label": "Preguntas frecuentes",
+                "title": "Sobre los<br>webinars.",
+                "items": [
+                    {
+                        "question": "¿Son realmente gratuitos?",
+                        "answer": "Sí, completamente gratuitos. No hay costes de inscripción, no hay suscripciones de pago requeridas, ni \"freemium\" que te bloquee el acceso al contenido más relevante. Solo necesitas registrarte con tu email para recibir el enlace de acceso. Las grabaciones también son gratuitas."
+                    },
+                    {
+                        "question": "¿Hay que registrarse?",
+                        "answer": "Sí, el registro previo es necesario para gestionar el enlace de acceso a la sala virtual y para enviarte el aviso de recordatorio antes de la sesión. El registro solo requiere nombre y email. No compartimos los datos con terceros."
+                    },
+                    {
+                        "question": "¿Puedo ver las grabaciones después?",
+                        "answer": "Sí. Todas las sesiones se graban y quedan disponibles en nuestra biblioteca de grabaciones. Si no pudiste asistir en directo o quieres revisar un contenido específico, puedes solicitar acceso a la grabación a través del formulario de contacto o del enlace directo en cada ficha de sesión anterior. El acceso es gratuito."
+                    },
+                    {
+                        "question": "¿Los imparten consultores reales?",
+                        "answer": "Sí. Todos los webinars son impartidos por consultores del equipo de Avson que trabajan a diario en proyectos de certificación. No son comerciales ni community managers. El contenido de cada webinar está basado en la experiencia práctica real de implementar y auditar los marcos que se explican."
+                    },
+                    {
+                        "question": "¿Puedo hacer preguntas durante el webinar?",
+                        "answer": "Sí. Todas las sesiones tienen un bloque de Q&A al final donde los asistentes pueden hacer preguntas directamente al consultor. También hay un chat durante toda la sesión donde puedes dejar preguntas que el conductor irá respondiendo en el Q&A final. La interacción es uno de los puntos más valorados de las sesiones."
+                    },
+                    {
+                        "question": "¿Con qué frecuencia hay webinars?",
+                        "answer": "Durante los meses de junio y julio de 2025 hay una sesión semanal (los domingos, según la agenda publicada). El resto del año, la frecuencia es mensual, con sesiones los terceros jueves de cada mes. Suscribiéndote recibirás un aviso una semana antes de cada sesión para que puedas apuntarla en tu agenda."
+                    }
+                ]
+            },
+            "finalCta": {
+                "label": "Webinars Avson GRC",
+                "title": "¿Prefieres una consulta<br>personalizada?",
+                "description": "Los webinars son para entender la normativa. La consulta gratuita es para resolver tu situación específica. Son complementarios. Regístrate en el webinar y, si quieres, pide también la consulta individual gratuita.",
+                "cta": "Consulta individual gratuita →"
+            },
+            "footer": {
+                "logo": "AVSON · GRC",
+                "description": "Consultora GRC especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2.",
+                "contact": {
+                    "email": "pablo@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        "ENS",
+                        "⚡ ENS Express",
+                        "ISO 27001",
+                        "ISO 22301",
+                        "DORA",
+                        "NIS2",
+                        "TISAX"
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        "Equipo",
+                        "Únete al equipo",
+                        "Packs",
+                        "Webinars",
+                        "Contacto"
+                    ]
+                },
+                "ctaBox": {
+                    "title": "Empieza hoy",
+                    "description": "Pide presupuesto. Sin compromiso. Respuesta en 24h.",
+                    "button": "Habla con un experto →"
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU · Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)",
+                    "links": [
+                        "Privacidad",
+                        "Aviso Legal",
+                        "Cookies"
+                    ]
+                }
+            },
+            "floatingCta": "Habla con un experto →",
+            "exitModal": {
+                "title": "Espera",
+                "question": "¿Tienes dudas?",
+                "description": "Pide presupuesto en 24h. Un consultor sénior te responde personalmente.",
+                "cta": "Solicitar presupuesto sin compromiso →",
+                "dismiss": "No me interesa ahora"
+            },
+            "stickyBar": {
+                "text": "¿Necesitas certificarte?",
+                "cta": "Habla con un experto →"
+            },
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp"
+            }
+        },
+        "unete": {
+            "meta": {
+                "title": "Únete al equipo | Trabaja en Avson GRC | Consultoría ENS e ISO 27001",
+                "description": "Estamos creciendo. Únete al equipo de Avson GRC: consultoría especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. Certificaciones pagadas, proyectos reales y plan de carrera.",
+                "ogTitle": "Únete al equipo | Avson GRC",
+                "ogDescription": "Estamos creciendo. Buscamos a los mejores perfiles en GRC. Certificaciones pagadas, proyectos reales y plan de carrera."
+            },
+            "topBar": {
+                "text": "🚀 Estamos creciendo · Buscamos a los mejores perfiles en GRC ·",
+                "link": "Ver posiciones →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "hero": {
+                "label": "Trabaja con nosotros",
+                "title": "Estamos creciendo.<br><em>Crece con nosotros.</em>",
+                "description": "Buscamos consultores y consultoras de GRC que quieran hacer las cosas bien: especialización real, proyectos con impacto y un equipo del que aprender. Si te apasiona el cumplimiento de verdad — no el papeleo —, hablemos.",
+                "stats": [
+                    {
+                        "value": "15",
+                        "label": "personas en el equipo"
+                    },
+                    {
+                        "value": "355+",
+                        "label": "proyectos gestionados"
+                    },
+                    {
+                        "value": "5",
+                        "label": "posiciones abiertas"
+                    }
+                ],
+                "cta": "Ver posiciones abiertas →"
+            },
+            "why": {
+                "label": "Por qué Avson",
+                "title": "Un sitio donde se hace<br><em>GRC de verdad.</em>",
+                "cards": [
+                    {
+                        "icon": "✦",
+                        "title": "Especialización real",
+                        "text": "Aquí solo se hace GRC: ENS, ISO 27001, ISO 22301, DORA y NIS2. No aprenderás \"de paso\" mientras haces otra cosa. Te conviertes en experto de verdad."
+                    },
+                    {
+                        "icon": "✦",
+                        "title": "Tu proyecto, de principio a fin",
+                        "text": "Un consultor lleva la relación completa con el cliente: del diagnóstico a la auditoría. Nada de cadenas de subcontratas ni \"eso lo lleva otro\"."
+                    },
+                    {
+                        "icon": "✦",
+                        "title": "Impacto que se nota",
+                        "text": "Tu trabajo hace que una empresa gane el concurso público al que no podía presentarse. Resultados reales, no carpetas que nadie abre."
+                    },
+                    {
+                        "icon": "✦",
+                        "title": "Formación y certificaciones",
+                        "text": "Te pagamos las certificaciones oficiales (ISO 27001 Lead Auditor, CISM, CISA, CRISC…). Tu crecimiento es parte del plan, no un extra."
+                    },
+                    {
+                        "icon": "✦",
+                        "title": "Plan de carrera claro",
+                        "text": "De analista a consultor senior a responsable de área. Sabes hacia dónde puedes crecer y qué necesitas para llegar."
+                    },
+                    {
+                        "icon": "✦",
+                        "title": "Equipo senior",
+                        "text": "Trabajas codo con codo con gente que conoce a fondo MAGERIT, el CCN-STIC y cómo piensan los auditores. Se aprende todos los días."
+                    }
+                ]
+            },
+            "positions": {
+                "label": "Posiciones abiertas",
+                "title": "Estas son las plazas<br><em>que buscamos cubrir.</em>",
+                "jobs": [
+                    {
+                        "title": "Consultor/a GRC Senior",
+                        "meta": "<b>Madrid · Híbrido</b> &nbsp;·&nbsp; ENS · ISO 27001 · 3+ años de experiencia",
+                        "cta": "Aplicar →"
+                    },
+                    {
+                        "title": "Consultor/a ENS",
+                        "meta": "<b>Madrid · Remoto</b> &nbsp;·&nbsp; Esquema Nacional de Seguridad · sector público",
+                        "cta": "Aplicar →"
+                    },
+                    {
+                        "title": "Consultor/a de Continuidad (ISO 22301)",
+                        "meta": "<b>Remoto</b> &nbsp;·&nbsp; SGCN · BIA · planes de continuidad",
+                        "cta": "Aplicar →"
+                    },
+                    {
+                        "title": "Analista GRC Junior",
+                        "meta": "<b>Madrid · Híbrido</b> &nbsp;·&nbsp; Primer empleo · te formamos desde dentro",
+                        "cta": "Aplicar →"
+                    },
+                    {
+                        "title": "Business Development",
+                        "meta": "<b>Madrid · Remoto</b> &nbsp;·&nbsp; Desarrollo de negocio · sector público y privado",
+                        "cta": "Aplicar →"
+                    }
+                ],
+                "spontaneousText": "¿No ves tu perfil pero crees que encajas? Envíanos una",
+                "spontaneousLink": "candidatura espontánea →"
+            },
+            "perks": {
+                "label": "Lo que ofrecemos",
+                "title": "Más que un trabajo.<br><em>Un sitio para crecer.</em>",
+                "items": [
+                    "Certificaciones oficiales pagadas por la empresa",
+                    "Proyectos reales de principio a fin, no tareas sueltas",
+                    "Trabajo híbrido y opciones de remoto",
+                    "Plan de carrera definido y revisión periódica",
+                    "Salario competitivo según experiencia",
+                    "Equipo senior del que aprender cada día"
+                ]
+            },
+            "application": {
+                "label": "Tu candidatura",
+                "title": "Cuéntanos quién eres.",
+                "description": "Déjanos tus datos y un enlace a tu LinkedIn o CV. Revisamos cada candidatura y te respondemos.",
+                "form": {
+                    "namePlaceholder": "Tu nombre y apellidos *",
+                    "emailPlaceholder": "Tu email *",
+                    "positionLabel": "¿A qué posición aplicas? *",
+                    "positions": [
+                        "Consultor/a GRC Senior",
+                        "Consultor/a ENS",
+                        "Consultor/a de Continuidad (ISO 22301)",
+                        "Analista GRC Junior",
+                        "Business Development",
+                        "Candidatura espontánea"
+                    ],
+                    "linkPlaceholder": "Enlace a tu LinkedIn o CV (https://...)",
+                    "messagePlaceholder": "Cuéntanos brevemente por qué quieres unirte (opcional)",
+                    "rgpdText": "Acepto que Avson trate mis datos para gestionar mi candidatura.",
+                    "privacyLink": "Política de privacidad",
+                    "submitButton": "Enviar candidatura →",
+                    "lockText": "🔒 Confidencial · Solo lo usamos para tu proceso de selección"
+                },
+                "thanks": {
+                    "icon": "✦",
+                    "title": "¡Gracias! Hemos recibido tu candidatura.",
+                    "message": "La revisamos con calma y te escribimos pronto a tu email. Si quieres adjuntar el CV, puedes enviarlo a ",
+                    "email": "hola@avson.eu"
+                }
+            },
+            "footer": {
+                "logo": "AVSON · GRC",
+                "description": "Consultora GRC especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. Tu socio estratégico en compliance.",
+                "contact": {
+                    "email": "pablo@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        "ENS",
+                        "⚡ ENS Express",
+                        "ISO 27001",
+                        "ISO 22301",
+                        "DORA",
+                        "NIS2",
+                        "TISAX"
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        "Equipo",
+                        "Únete al equipo",
+                        "Packs",
+                        "Contacto"
+                    ]
+                },
+                "ctaBox": {
+                    "title": "¿Te interesa?",
+                    "description": "Echa un vistazo a las posiciones abiertas y mándanos tu candidatura.",
+                    "button": "Ver posiciones →"
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU · Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)",
+                    "links": [
+                        "Privacidad",
+                        "Aviso Legal",
+                        "Cookies"
+                    ]
+                }
+            },
+            "floatingCta": "Habla con un experto →",
+            "exitModal": {
+                "title": "Espera",
+                "question": "¿Tienes dudas sobre unirte a Avson?",
+                "description": "Pide información sin compromiso. Te contamos cómo es trabajar aquí y resolvemos tus dudas.",
+                "cta": "Hablar con recursos humanos →",
+                "dismiss": "No me interesa ahora"
+            },
+            "stickyBar": {
+                "text": "¿Quieres formar parte del equipo?",
+                "cta": "Ver posiciones →"
+            },
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp"
+            }
+        },
+        "tisax": {
+            "meta": {
+                "title": "Consultoría TISAX | Certificación Cadena de Suministro Automotive | Avson GRC",
+                "description": "Consultoría TISAX para empresas en cadenas de suministro con requisitos de confidencialidad. Assessment AL1, AL2 y AL3. Garantía de éxito por escrito. Pide presupuesto.",
+                "keywords": "TISAX certificación, TISAX assessment, ENX TISAX, proveedor automoción seguridad, TISAX AL2 AL3, cadena de suministro automoción, TISAX España",
+                "ogTitle": "TISAX: el estándar de seguridad del sector automoción | Avson GRC",
+                "ogDescription": "Assessment TISAX ENX para proveedores de automoción. AL2 y AL3. Pide presupuesto.",
+                "twitterTitle": "TISAX: el estándar de seguridad del sector automoción | Avson GRC",
+                "twitterDescription": "Assessment TISAX ENX. AL2 y AL3. Pide presupuesto."
+            },
+            "topBar": {
+                "text": "Garantía de éxito al 100% por escrito",
+                "cta": "Contactar →",
+                "extra": "Pide presupuesto sin compromiso · Respuesta en 24h"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "hero": {
+                "label": "TISAX · Seguridad del sector automoción",
+                "title": "Sin TISAX no trabajas<br><em>con la automoción.</em>",
+                "description": "El estándar que exigen los OEMs (BMW, Volkswagen, Mercedes…) y sus tier-1 a sus proveedores. <strong>Te llevamos al assessment con garantía.</strong>",
+                "stats": [
+                    {
+                        "value": "355+",
+                        "label": "empresas certificadas"
+                    },
+                    {
+                        "value": "100%",
+                        "label": "tasa de éxito"
+                    },
+                    {
+                        "value": "4.9★",
+                        "label": "valoración clientes"
+                    }
+                ],
+                "guaranteeBadge": {
+                    "icon": "✦",
+                    "text": "Garantía de éxito al 100% por escrito"
+                },
+                "testimonialPlaceholder": {
+                    "stars": "★★★★★",
+                    "quote": "\"Un OEM alemán nos exigió TISAX AL2 con tres meses de margen para seguir como proveedor. Avson lo sacó adelante a tiempo.\"",
+                    "author": "Director de Operaciones"
+                },
+                "form": {
+                    "title": "Pide tu presupuesto",
+                    "subtitle": "Gratuito · Sin compromiso · En 30 min sabes qué necesitas",
+                    "namePlaceholder": "Tu nombre *",
+                    "emailPlaceholder": "Tu email *",
+                    "privacyText": "Al enviar, acepto que Avson me contacte para responder mi consulta.",
+                    "privacyLink": "Política de privacidad",
+                    "submitButton": "Quiero mi TISAX →",
+                    "lockText": "🔒 Gratuito · Sin compromiso · Confidencial",
+                    "phoneAlternative": "¿Prefieres llamar?",
+                    "phoneNumber": "+34 648 414 863"
+                }
+            },
+            "testimonials": {
+                "label": "Opiniones de clientes",
+                "title": "Lo que dicen quienes<br><em>ya están certificados.</em>",
+                "items": [
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Llevábamos dos años perdiendo licitaciones por no tener el ENS. Avson nos lo resolvió en 9 semanas. Al siguiente concurso, ganamos el contrato.\"",
+                        "author": "Director de Sistemas · Integradora TIC, Madrid",
+                        "result": "ENS Media ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Otros consultores nos decían un año. Avson lo hizo en 14 semanas y superamos la auditoría a la primera, sin una sola no conformidad.\"",
+                        "author": "CISO · Proveedor cloud del sector público",
+                        "result": "ENS Alta + ISO 27001 ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Un cliente enterprise nos exigía la ISO 27001 para renovar el contrato. La certificamos en cuatro meses y medio sin parar el negocio.\"",
+                        "author": "CTO · Empresa de software de gestión",
+                        "result": "ISO 27001 ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Después del ransomware de 2023 la dirección quiso ISO 22301. Avson montó el plan de continuidad y certificamos sin sobresaltos.\"",
+                        "author": "Responsable de Riesgos · Servicios financieros",
+                        "result": "ISO 22301 ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Somos proveedores TIC de tres bancos. Cuando entró DORA nos pidieron evidencias y Avson demostró que el 60% ya estaba hecho con el ENS.\"",
+                        "author": "CISO · Proveedor financiero",
+                        "result": "DORA ✓"
+                    },
+                    {
+                        "stars": "★★★★★",
+                        "quote": "\"Lo que nos decidió fue la garantía por escrito. Cumplieron el plazo y el presupuesto que firmamos, sin una sola sorpresa.\"",
+                        "author": "CEO · Consultora tecnológica",
+                        "result": "ENS Básica ✓"
+                    }
+                ]
+            },
+            "whatIs": {
+                "label": "TISAX · Qué es",
+                "title": "El assessment de seguridad<br><em>que abre puertas en automoción.</em>",
+                "description": "<p>TISAX nació de una necesidad concreta: los fabricantes de automóviles europeos (OEMs) necesitaban un mecanismo común para evaluar la seguridad de la información de sus miles de proveedores sin que cada uno tuviera que someterse a auditorías independientes para cada cliente. La solución fue crear un estándar sectorial único, basado en el VDA ISA (cuestionario de seguridad de la asociación alemana de la industria automotriz VDA), gestionado por ENX Association.</p><p>El resultado del assessment TISAX se registra en la plataforma ENX y puede compartirse digitalmente con cualquier cliente OEM o tier-1 que lo solicite, sin necesidad de repetir el proceso para cada cliente. Un solo assessment, válido para toda la cadena de suministro del sector durante tres años.</p><p>El cuestionario VDA ISA en el que se basa TISAX está muy alineado con ISO 27001, con un solapamiento de controles cercano al 70%. Para empresas que ya tienen ISO 27001, el esfuerzo adicional para TISAX es principalmente la adaptación a los requisitos específicos del sector automovilístico: seguridad de datos de prototipos, vehículos conectados y datos personales de automoción.</p>",
+                "levels": [
+                    {
+                        "code": "AL1",
+                        "title": "Autoassessment",
+                        "description": "La empresa realiza el cuestionario de forma autónoma, sin auditoría externa. Aplica a información de baja sensibilidad. En la práctica, muy pocos OEMs lo aceptan sin auditoría."
+                    },
+                    {
+                        "code": "AL2",
+                        "title": "Assessment con auditoría remota",
+                        "description": "Para información sensible: datos de prototipos, información de precios y costes, datos personales de empleados de la cadena de suministro. Es el nivel más solicitado por OEMs para la mayoría de proveedores tecnológicos, de ingeniería y de software.",
+                        "highlight": "El más habitual"
+                    },
+                    {
+                        "code": "AL3",
+                        "title": "Assessment con auditoría presencial",
+                        "description": "Para información de muy alta sensibilidad: datos de crash tests, prototipos de vehículos altamente confidenciales, información estratégica de producto. El auditor de ENX realiza la auditoría in situ en las instalaciones del proveedor."
+                    }
+                ]
+            },
+            "whoNeeds": {
+                "label": "¿Te aplica TISAX?",
+                "title": "Si trabajas con OEMs europeos,<br><em>probablemente necesitas TISAX.</em>",
+                "description": "El ámbito de TISAX se ha ido ampliando con los años. Inicialmente afectaba solo a proveedores de componentes físicos, pero hoy alcanza a cualquier empresa que maneje información sensible del sector automovilístico, sea cual sea su tipo de servicio.",
+                "cards": [
+                    {
+                        "icon": "T1",
+                        "title": "Tier-1, Tier-2 y Tier-3",
+                        "text": "Proveedores directos e indirectos de componentes y sistemas para fabricantes de vehículos. Los OEMs exigen TISAX en toda la cadena de suministro, no solo al proveedor directo."
+                    },
+                    {
+                        "icon": "ENG",
+                        "title": "Consultoras de ingeniería",
+                        "text": "Empresas de ingeniería que participan en el diseño y desarrollo de vehículos o componentes. Manejan datos técnicos muy sensibles (planos, especificaciones, protocolos de prueba)."
+                    },
+                    {
+                        "icon": "SW",
+                        "title": "Proveedores de software",
+                        "text": "Empresas que desarrollan o mantienen software embebido, sistemas ADAS, plataformas de conectividad, aplicaciones de vehículos o sistemas de gestión de concesionarios."
+                    },
+                    {
+                        "icon": "LAB",
+                        "title": "Laboratorios de pruebas",
+                        "text": "Laboratorios de homologación, pruebas de crash, ensayos de componentes y verificación de normativas. Manejan datos de prototipos extremadamente confidenciales y suelen requerir AL3."
+                    },
+                    {
+                        "icon": "MKT",
+                        "title": "Agencias de marketing y diseño",
+                        "text": "Agencias que trabajan con imágenes o información de vehículos no comercializados. Los OEMs son extraordinariamente sensibles a cualquier filtración de información de nuevos modelos antes del lanzamiento."
+                    },
+                    {
+                        "icon": "LOG",
+                        "title": "Logística y transporte especializado",
+                        "text": "Empresas de logística que transportan prototipos o componentes confidenciales, o que gestionan sistemas de trazabilidad integrados con los sistemas de información del fabricante."
+                    }
+                ],
+                "consultationBox": {
+                    "quote": "\"TISAX no es una certificación que se publica. Pero sin ella, perderás contratos con OEMs. Te explicamos qué nivel necesitas.\"",
+                    "cta": "Consulta gratuita TISAX →"
+                }
+            },
+            "process": {
+                "label": "Nuestro proceso TISAX",
+                "title": "De cero al assessment<br><em>en 3–4 meses.</em>",
+                "description": "El proceso TISAX tiene sus propias particularidades respecto a otras certificaciones: no hay un \"certificado\" en el sentido tradicional, sino un resultado de assessment registrado en la plataforma ENX. Avson conoce los requisitos específicos del VDA ISA y acompaña al cliente en todo el proceso, desde el registro hasta la obtención del resultado satisfactorio.",
+                "phases": [
+                    {
+                        "week": "Semana 1",
+                        "phase": "Fase 01",
+                        "title": "Registro en el portal ENX",
+                        "description": "La empresa se registra en el portal de ENX Association, selecciona el nivel de assessment requerido (AL1, AL2 o AL3) y los objetivos del assessment (información normal, información confidencial de prototipos, o datos personales). Avson acompaña en el proceso de registro, que puede ser confuso para quienes acceden por primera vez, y asesora sobre la selección correcta de objetivos según lo que solicita el OEM o tier-1 cliente."
+                    },
+                    {
+                        "week": "Semanas 2–4",
+                        "phase": "Fase 02",
+                        "title": "Gap analysis frente al VDA ISA",
+                        "description": "Realizamos un gap analysis exhaustivo de los controles del VDA ISA (Information Security Assessment) frente al estado actual de la organización. El cuestionario VDA ISA tiene más de 200 preguntas organizadas en dominios de seguridad similares a los de ISO 27001. Identificamos los controles que ya cumplen, los que son parcialmente conformes y los que requieren implementación. Si la empresa tiene ISO 27001, el porcentaje de controles ya cubiertos es habitualmente superior al 70%."
+                    },
+                    {
+                        "week": "Semanas 5–12",
+                        "phase": "Fase 03",
+                        "title": "Implementación de controles VDA ISA",
+                        "description": "Implementamos los controles pendientes y completamos la documentación de los controles existentes en el formato que requiere el VDA ISA. Los controles específicos del sector automovilístico que suelen requerir mayor atención son: seguridad en el manejo de datos de prototipos (físicos y digitales), gestión de activos de información en la cadena de suministro, y los controles de seguridad para el desarrollo de software de vehículos conectados cuando aplica."
+                    },
+                    {
+                        "week": "Semanas 13–14",
+                        "phase": "Fase 04",
+                        "title": "Preparación para el assessment ENX",
+                        "description": "Realizamos un mock assessment completo utilizando el cuestionario VDA ISA para simular el proceso real. Revisamos todas las respuestas, verificamos la consistencia de la documentación de evidencias y preparamos al equipo para las entrevistas con el auditor ENX. Esta fase es especialmente importante: el assessment ENX evalúa tanto la implementación real de los controles como la capacidad del equipo de explicar y demostrar su funcionamiento."
+                    },
+                    {
+                        "week": "Semanas 15–16",
+                        "phase": "Fase 05",
+                        "title": "Assessment ENX",
+                        "description": "El assessment es realizado por un auditor acreditado por ENX Association, no por Avson (por razones de independencia). Para AL2, el assessment se realiza de forma remota mediante videoconferencia y revisión de documentación. Para AL3, el auditor se desplaza a las instalaciones del proveedor. Una vez completado con resultado satisfactorio, el informe de assessment queda registrado en la plataforma ENX y puede compartirse con los OEMs y tier-1 que lo soliciten durante tres años. Avson acompaña al equipo durante el assessment y gestiona cualquier punto de acción posterior."
+                    }
+                ]
+            },
+            "synergies": {
+                "label": "Sinergias TISAX · ISO 27001",
+                "title": "ISO 27001 como<br>base del TISAX.",
+                "description": "El VDA ISA en el que se basa TISAX fue diseñado tomando como referencia ISO 27001. El solapamiento de controles es superior al 70%. Para empresas con ISO 27001 certificado, el esfuerzo para superar el assessment TISAX se reduce muy significativamente.",
+                "sharedList": [
+                    "Análisis y tratamiento de riesgos de seguridad",
+                    "Políticas y procedimientos de seguridad",
+                    "Control de acceso físico y lógico",
+                    "Gestión de incidentes de seguridad",
+                    "Copias de seguridad y recuperación",
+                    "Formación y concienciación",
+                    "Gestión de proveedores y terceros"
+                ],
+                "specificList": [
+                    "Seguridad física y lógica de datos de prototipos",
+                    "Controles para fotografía y filmación de prototipos",
+                    "Gestión de datos de vehículos conectados",
+                    "Formato específico VDA ISA de documentación",
+                    "Registro en plataforma ENX",
+                    "Evaluación de madurez según escala VDA ISA"
+                ],
+                "cta": "Solicitar diagnóstico TISAX →"
+            },
+            "packs": {
+                "label": "Packs TISAX",
+                "title": "Elige tu<br><em>punto de partida.</em>",
+                "options": [
+                    {
+                        "badge": "Empiezo desde cero",
+                        "title": "TISAX AL2",
+                        "subtitle": "Preparación completa para assessment AL2",
+                        "features": [
+                            "Gap analysis frente a VDA ISA",
+                            "Implementación de controles pendientes",
+                            "Documentación completa VDA ISA",
+                            "Mock assessment simulado",
+                            "Acompañamiento assessment ENX remoto",
+                            "Garantía de éxito incluida"
+                        ],
+                        "timeline": "Plazo: 3–4 meses",
+                        "cta": "Habla con un experto →"
+                    },
+                    {
+                        "badge": "Más eficiente",
+                        "title": "ISO 27001 + TISAX",
+                        "subtitle": "Aprovecha el 70% de solapamiento",
+                        "features": [
+                            "ISO 27001 como base documentada",
+                            "Gap analysis de los controles específicos TISAX",
+                            "Solo el 30% de trabajo diferencial",
+                            "Adaptación formato VDA ISA",
+                            "Assessment ENX AL2 acompañado",
+                            "Ahorro estimado del 45% vs desde cero"
+                        ],
+                        "timeline": "Plazo: 6–8 semanas adicionales",
+                        "cta": "Habla con un experto →",
+                        "isHighlight": true
+                    },
+                    {
+                        "badge": "Alta sensibilidad",
+                        "title": "TISAX AL3",
+                        "subtitle": "Para prototipos y datos de muy alta sensibilidad",
+                        "features": [
+                            "Todo lo del pack AL2",
+                            "Controles adicionales para AL3",
+                            "Seguridad física reforzada para prototipos",
+                            "Preparación específica auditoría presencial",
+                            "Acompañamiento in situ durante el assessment",
+                            "Para laboratorios y proveedores tier-1 de alto nivel"
+                        ],
+                        "timeline": "Plazo: 4–5 meses",
+                        "cta": "Habla con un experto →"
+                    }
+                ]
+            },
+            "faq": {
+                "label": "Preguntas frecuentes",
+                "title": "Todo sobre<br><em>TISAX.</em>",
+                "items": [
+                    {
+                        "question": "¿Qué es ENX Association?",
+                        "answer": "ENX Association es la organización europea sin ánimo de lucro que gestiona el programa TISAX. Fue fundada por los principales fabricantes de automóviles europeos (Volkswagen Group, BMW Group, Mercedes-Benz, Stellantis, Renault Group) y sus asociaciones de proveedores (VDA en Alemania, SMMT en UK, FIEV en Francia, ANFAC en España) para establecer un estándar común de intercambio de assessments de seguridad de la información. La plataforma ENX es el repositorio centralizado donde se registran y comparten los resultados de los assessments TISAX."
+                    },
+                    {
+                        "question": "¿Qué nivel TISAX necesito?",
+                        "answer": "El nivel que necesitas lo determina el OEM o tier-1 que te lo exige, en función del tipo de información que intercambias con ellos. AL1 (autoassessment) es para información de baja sensibilidad y raramente lo aceptan los grandes OEMs como suficiente. AL2 (auditoría remota) es el más habitual para proveedores de tecnología, ingeniería, software y marketing. AL3 (auditoría presencial) se exige para el manejo de prototipos físicos o datos de muy alta confidencialidad. Si tienes dudas sobre qué nivel te piden, Avson puede ayudarte a interpretar los requisitos de tu cliente."
+                    },
+                    {
+                        "question": "¿TISAX es una certificación o un assessment?",
+                        "answer": "Técnicamente, TISAX es un assessment, no una certificación. La diferencia es que no se emite un certificado público: el resultado del assessment queda registrado en la plataforma ENX y se comparte directamente y de forma controlada con las empresas que el proveedor autoriza a verlo. Esto es una ventaja: un único assessment sirve para todos los OEMs y tier-1 con los que trabajas, sin necesidad de compartir documentación sensible con cada uno por separado. En el sector, sin embargo, es habitual hablar de \"certificación TISAX\" en sentido coloquial."
+                    },
+                    {
+                        "question": "¿Cuánto tiempo dura el resultado TISAX?",
+                        "answer": "El resultado del assessment TISAX tiene una validez de 3 años. Durante ese período, puede compartirse con todos los OEMs y tier-1 que lo soliciten a través de la plataforma ENX, sin necesidad de repetir el assessment. Al final del período de 3 años, debe renovarse con un nuevo assessment. Avson ofrece un bono de mantenimiento para gestionar la renovación y mantener los controles al día durante la vigencia del resultado."
+                    },
+                    {
+                        "question": "¿ISO 27001 me ayuda para TISAX?",
+                        "answer": "Sí, de forma muy significativa. El VDA ISA en el que se basa TISAX fue diseñado con ISO 27001 como referencia principal. El solapamiento de controles es superior al 70%. Para empresas con ISO 27001, el esfuerzo adicional para superar el assessment TISAX se concentra en los controles específicos del sector automovilístico (principalmente la seguridad de datos de prototipos) y en la adaptación de la documentación al formato VDA ISA. El time-to-assessment para empresas con ISO 27001 es de 6-8 semanas, frente a los 3-4 meses que requiere partir de cero."
+                    },
+                    {
+                        "question": "¿Quién hace el assessment? ¿Lo hace Avson?",
+                        "answer": "No. El assessment es realizado por auditores independientes acreditados por ENX Association. Avson prepara al cliente para el assessment y le acompaña durante el proceso, pero no puede realizar el assessment porque ENX requiere que sea realizado por una entidad independiente del consultor que ha preparado al cliente. Esta separación garantiza la objetividad del resultado. Los auditores ENX son expertos en VDA ISA y conocen bien los requisitos del sector automovilístico."
+                    },
+                    {
+                        "question": "¿Cuánto cuesta el TISAX?",
+                        "answer": "El coste total del TISAX incluye dos componentes: el coste de la consultoría de preparación (que gestiona Avson) y el coste del assessment propio de ENX (que se paga directamente a ENX o al auditor acreditado). El coste de la consultoría depende del punto de partida (si ya tienes ISO 27001 o partes de cero) y del nivel de assessment (AL2 o AL3). El coste del assessment ENX depende del tamaño de la organización y el nivel. Ofrecemos un presupuesto sin compromiso para darte una estimación completa antes de comprometerte con nada."
+                    },
+                    {
+                        "question": "¿Cómo se comparte el resultado con los OEMs?",
+                        "answer": "El resultado del assessment queda registrado en la plataforma ENX. Cuando un OEM o tier-1 solicita ver el resultado, el proveedor recibe una notificación y puede autorizar o rechazar el acceso. El proceso es completamente digital y no implica enviar documentación sensible por email ni por otros canales. Cuando la autorización es concedida, el cliente puede ver el resultado directamente en la plataforma ENX. Este mecanismo es una de las grandes ventajas del sistema: un solo assessment, compartido de forma segura con todos los clientes que lo necesiten."
+                    }
+                ]
+            },
+            "finalCta": {
+                "label": "TISAX · Pide presupuesto",
+                "title": "¿Tu cliente te pide<br><em>el TISAX?</em>",
+                "description": "Pide presupuesto. Te decimos qué nivel necesitas, cuánto tiempo llevará y cómo aprovechar lo que ya tienes para reducir el esfuerzo al mínimo.",
+                "cta": "Solicitar diagnóstico TISAX gratuito →"
+            },
+            "footer": {
+                "logo": "AVSON · GRC",
+                "description": "Consultora GRC especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2.",
+                "contact": {
+                    "email": "pablo@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        "ENS",
+                        "⚡ ENS Express",
+                        "ISO 27001",
+                        "ISO 22301",
+                        "DORA",
+                        "NIS2",
+                        "TISAX"
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        "Equipo",
+                        "Únete al equipo",
+                        "Packs",
+                        "Webinars",
+                        "Contacto"
+                    ]
+                },
+                "ctaBox": {
+                    "title": "Empieza hoy",
+                    "description": "Pide presupuesto. Sin compromiso. Respuesta en 24h.",
+                    "button": "Habla con un experto →"
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU · Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)",
+                    "links": [
+                        "Privacidad",
+                        "Aviso Legal",
+                        "Cookies"
+                    ]
+                }
+            },
+            "floatingCta": "Habla con un experto →",
+            "exitModal": {
+                "title": "Espera",
+                "question": "¿Tienes dudas sobre la certificación?",
+                "description": "Nuestros consultores resuelven cualquier pregunta sin compromiso. Pide presupuesto en 24h.",
+                "cta": "Contactar con un experto →",
+                "dismiss": "No me interesa por ahora"
+            },
+            "stickyBar": {
+                "text": "¿Necesitas certificarte?",
+                "cta": "Habla con un experto →"
+            },
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp",
+                "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
+            }
+        },
+        "privacidad": {
+            "meta": {
+                "title": "Política de Privacidad | Avson GRC",
+                "description": "Política de privacidad de Avson Consultoría Estratégica SLU. Información sobre el tratamiento de datos personales conforme al RGPD y la LOPDGDD.",
+                "ogTitle": "Política de Privacidad | Avson GRC",
+                "ogDescription": "Política de privacidad de Avson Consultoría Estratégica SLU. RGPD y LOPDGDD."
+            },
+            "topBar": {
+                "text": "Nueva normativa ENS en vigor",
+                "cta": "Solicitar ahora →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Pide presupuesto →"
+            },
+            "page": {
+                "label": "Legal",
+                "title": "Política de Privacidad",
+                "lastUpdate": "Última actualización: junio de 2025"
+            },
+            "sections": [
+                {
+                    "title": "1. Responsable del Tratamiento",
+                    "content": "<p>En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), le informamos que el responsable del tratamiento de sus datos personales es:</p>",
+                    "box": {
+                        "items": [
+                            {
+                                "label": "Denominación social:",
+                                "value": "Avson Consultoría Estratégica SLU"
+                            },
+                            {
+                                "label": "Nombre comercial:",
+                                "value": "Avson GRC"
+                            },
+                            {
+                                "label": "CIF:",
+                                "value": "B10560795"
+                            },
+                            {
+                                "label": "Domicilio social:",
+                                "value": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona), España"
+                            },
+                            {
+                                "label": "Email de contacto:",
+                                "value": "hola@avson.eu",
+                                "link": "mailto:hola@avson.eu"
+                            },
+                            {
+                                "label": "Teléfono:",
+                                "value": "+34 648 41 48 63",
+                                "link": "tel:+34648414863"
+                            },
+                            {
+                                "label": "Web:",
+                                "value": "https://avson.eu",
+                                "link": "https://avson.eu"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "2. Datos que Recopilamos",
+                    "content": "<p>Recopilamos datos personales en los siguientes contextos:</p>",
+                    "cards": [
+                        {
+                            "title": "Formulario de contacto y solicitud de diagnóstico",
+                            "text": "Nombre y apellidos, correo electrónico, teléfono (opcional), nombre de la empresa, sector y mensaje libre. Estos datos son facilitados voluntariamente por el usuario."
+                        },
+                        {
+                            "title": "Newsletter",
+                            "text": "Dirección de correo electrónico para el envío de nuestra newsletter mensual sobre ENS y cumplimiento normativo."
+                        },
+                        {
+                            "title": "Datos de navegación y cookies",
+                            "text": "Dirección IP, tipo de navegador, sistema operativo, páginas visitadas, tiempo de permanencia y comportamiento de navegación, a través de cookies analíticas (Google Analytics). Consulte nuestra <a href=\"cookies.html\" style=\"color:var(--navy)\">Política de Cookies</a> para más información."
+                        },
+                        {
+                            "title": "Registro en webinars",
+                            "text": "Nombre, correo electrónico y empresa para la gestión de inscripciones a nuestros webinars formativos gratuitos."
+                        }
+                    ]
+                },
+                {
+                    "title": "3. Finalidades del Tratamiento y Base Jurídica",
+                    "table": {
+                        "headers": [
+                            "Finalidad",
+                            "Base jurídica"
+                        ],
+                        "rows": [
+                            [
+                                "Responder a consultas y solicitudes de presupuesto sin compromiso",
+                                "Interés legítimo / Consentimiento (art. 6.1.a y 6.1.f RGPD)"
+                            ],
+                            [
+                                "Gestión de la relación comercial y prestación de servicios de consultoría",
+                                "Ejecución de contrato (art. 6.1.b RGPD)"
+                            ],
+                            [
+                                "Envío de newsletter con contenidos sobre ENS y cumplimiento normativo",
+                                "Consentimiento (art. 6.1.a RGPD)"
+                            ],
+                            [
+                                "Gestión de inscripciones a webinars",
+                                "Consentimiento / Ejecución de contrato (art. 6.1.a y 6.1.b RGPD)"
+                            ],
+                            [
+                                "Análisis estadístico del tráfico web y mejora de la experiencia de usuario",
+                                "Consentimiento (art. 6.1.a RGPD)"
+                            ],
+                            [
+                                "Cumplimiento de obligaciones legales (fiscales, contables, mercantiles)",
+                                "Obligación legal (art. 6.1.c RGPD)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "title": "4. Plazos de Conservación",
+                    "content": "<p>Los datos personales serán conservados durante los plazos que se indican a continuación:</p>",
+                    "list": [
+                        "<strong>Consultas y solicitudes de diagnóstico:</strong> 12 meses desde la última comunicación, salvo que se inicie una relación comercial.",
+                        "<strong>Clientes activos:</strong> Durante la vigencia de la relación contractual y, posteriormente, durante los plazos de prescripción legal aplicables (con carácter general, 5 años para obligaciones mercantiles y 4 años para obligaciones fiscales).",
+                        "<strong>Newsletter:</strong> Hasta que el interesado retire su consentimiento o solicite la baja.",
+                        "<strong>Webinars:</strong> 6 meses desde la celebración del evento, salvo que el participante se convierta en cliente o newsletter.",
+                        "<strong>Datos de navegación (cookies analíticas):</strong> Según los plazos configurados en Google Analytics (máximo 14 meses)."
+                    ],
+                    "footnote": "Transcurridos estos plazos, los datos serán suprimidos o anonimizados de forma irreversible."
+                },
+                {
+                    "title": "5. Destinatarios y Encargados del Tratamiento",
+                    "content": "<p>Sus datos no serán cedidos a terceros, salvo en los siguientes supuestos:</p>",
+                    "recipients": [
+                        {
+                            "name": "Google LLC",
+                            "sub": "Analytics / Fonts / Ads",
+                            "text": "Servicio de analítica web (Google Analytics) y tipografías (Google Fonts). Google LLC, con sede en EE.UU., actúa como encargado del tratamiento bajo el Marco de Privacidad de Datos UE-EE.UU. Consulte la <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--navy)\">política de privacidad de Google</a>."
+                        },
+                        {
+                            "name": "Proveedor de hosting",
+                            "sub": "Infraestructura web",
+                            "text": "El servidor web que aloja avson.eu puede procesar datos de conexión (IP, logs) en el marco de la prestación del servicio de hosting, actuando como encargado del tratamiento con las garantías contractuales adecuadas."
+                        },
+                        {
+                            "name": "Obligación legal",
+                            "sub": "Autoridades públicas",
+                            "text": "En caso de requerimiento legal por parte de las Fuerzas y Cuerpos de Seguridad del Estado, autoridades judiciales, tributarias o administrativas competentes."
+                        }
+                    ]
+                },
+                {
+                    "title": "6. Transferencias Internacionales de Datos",
+                    "content": "<p>Algunos de nuestros proveedores (en particular Google LLC) tienen su sede en los Estados Unidos de América. Estas transferencias internacionales se realizan al amparo del Marco de Privacidad de Datos UE-EE.UU. (<em>EU-U.S. Data Privacy Framework</em>), adoptado por la Comisión Europea mediante Decisión de Adecuación de 10 de julio de 2023, que garantiza un nivel de protección equivalente al del Espacio Económico Europeo.</p><p>No realizamos transferencias internacionales a países que no cuenten con una decisión de adecuación o garantías apropiadas conforme al art. 46 RGPD.</p>"
+                },
+                {
+                    "title": "7. Derechos del Interesado",
+                    "content": "<p>De conformidad con el RGPD y la LOPDGDD, usted tiene derecho a:</p>",
+                    "rightsGrid": [
+                        {
+                            "title": "Derecho de Acceso",
+                            "text": "Obtener confirmación sobre si tratamos sus datos y acceder a los mismos, así como a información sobre las finalidades, categorías de datos, destinatarios y plazos de conservación."
+                        },
+                        {
+                            "title": "Derecho de Rectificación",
+                            "text": "Solicitar la corrección de datos inexactos o incompletos que le conciernan."
+                        },
+                        {
+                            "title": "Derecho de Supresión (\"al olvido\")",
+                            "text": "Solicitar la eliminación de sus datos cuando, entre otras causas, ya no sean necesarios para los fines para los que fueron recogidos o retire el consentimiento."
+                        },
+                        {
+                            "title": "Derecho de Portabilidad",
+                            "text": "Recibir sus datos en un formato estructurado, de uso común y lectura mecánica, y a transmitirlos a otro responsable cuando el tratamiento se base en el consentimiento o en un contrato."
+                        },
+                        {
+                            "title": "Derecho de Limitación",
+                            "text": "Solicitar la suspensión del tratamiento de sus datos en determinados supuestos, como mientras se verifica la exactitud de los datos impugnados."
+                        },
+                        {
+                            "title": "Derecho de Oposición",
+                            "text": "Oponerse al tratamiento de sus datos por motivos relacionados con su situación particular, cuando el tratamiento se base en el interés legítimo del responsable."
+                        }
+                    ],
+                    "extraRight": {
+                        "title": "Derecho a retirar el consentimiento",
+                        "text": "Cuando el tratamiento se base en su consentimiento, puede retirarlo en cualquier momento sin que ello afecte a la licitud del tratamiento previo a su retirada."
+                    }
+                },
+                {
+                    "title": "8. Cómo Ejercer sus Derechos",
+                    "content": "<p>Puede ejercer cualquiera de los derechos anteriores enviando una solicitud por escrito a:</p>",
+                    "contactBox": {
+                        "email": "hola@avson.eu",
+                        "postal": "Avson Consultoría Estratégica SLU — Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)",
+                        "subject": "Ejercicio de derechos RGPD"
+                    },
+                    "additionalInfo": "Su solicitud debe incluir: nombre completo, copia de DNI/NIE o documento identificativo equivalente, descripción del derecho que desea ejercer y, en su caso, documentación de apoyo. Le responderemos en el plazo máximo de un mes desde la recepción de la solicitud completa, plazo que podrá prorrogarse otros dos meses en casos de especial complejidad."
+                },
+                {
+                    "title": "9. Reclamación ante la Autoridad de Control",
+                    "content": "<p>Si considera que el tratamiento de sus datos personales infringe la normativa aplicable, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD), autoridad de control competente en España:</p>",
+                    "authorityBox": {
+                        "name": "Agencia Española de Protección de Datos (AEPD)",
+                        "address": "C/ Jorge Juan, 6 — 28001 Madrid",
+                        "web": "www.aepd.es",
+                        "webLink": "https://www.aepd.es",
+                        "eoffice": "sedeagpd.gob.es",
+                        "eofficeLink": "https://sedeagpd.gob.es"
+                    },
+                    "recommendation": "Le recomendamos que, antes de presentar una reclamación ante la AEPD, se dirija a nosotros para intentar resolver la cuestión de forma amistosa."
+                },
+                {
+                    "title": "10. Cookies",
+                    "content": "<p>Este sitio web utiliza cookies propias y de terceros. Para información detallada sobre los tipos de cookies utilizadas, sus finalidades, duraciones y cómo gestionarlas, consulte nuestra <a href=\"cookies.html\" style=\"color:var(--navy);font-weight:500\">Política de Cookies</a>.</p>"
+                },
+                {
+                    "title": "11. Modificaciones de la Política de Privacidad",
+                    "content": "<p>Avson Consultoría Estratégica SLU se reserva el derecho de modificar la presente política de privacidad para adaptarla a cambios legislativos, jurisprudenciales o de práctica empresarial. Cualquier modificación relevante será notificada a los usuarios mediante aviso destacado en el sitio web o, en su caso, por correo electrónico. La fecha de última actualización aparece siempre en la cabecera de este documento.</p><p>Le recomendamos revisar periódicamente esta página para mantenerse informado sobre cómo protegemos su información.</p>"
+                }
+            ],
+            "footer": {
+                "logo": "AVSON · GRC",
+                "tagline": "Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. 355+ empresas certificadas con éxito garantizado.",
+                "contact": {
+                    "email": "hola@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        "ENS",
+                        "⚡ ENS Express",
+                        "ISO 27001",
+                        "ISO 22301",
+                        "DORA",
+                        "NIS2",
+                        "TISAX",
+                        "Otras ISOs"
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        "Packs GRC",
+                        "Equipo",
+                        "Webinars",
+                        "Contacto"
+                    ]
+                },
+                "newsletter": {
+                    "title": "Newsletter GRC",
+                    "text": "Análisis mensual sobre ENS, ISO 27001 y cumplimiento normativo. Sin spam.",
+                    "placeholder": "tu@empresa.com"
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.",
+                    "links": [
+                        {
+                            "text": "Política de privacidad",
+                            "url": "privacidad.html"
+                        },
+                        {
+                            "text": "Cookies",
+                            "url": "cookies.html"
+                        }
+                    ]
+                }
+            },
+            "cookieBanner": {
+                "text": "Usamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico.",
+                "cookiesLink": "Política de cookies",
+                "accept": "Aceptar",
+                "decline": "Rechazar"
+            },
+            "floatingCta": "Habla con un experto →",
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp",
+                "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
+            }
+        },
+        "precio": {
+            "meta": {
+                "title": "Precio Consultoría ENS e ISO 27001 en España | Transparencia de Costes | Avson GRC",
+                "description": "Descubre cuánto cuesta el certificado ENS, ISO 27001 o ISO 22301 en España. Rango de precios según tamaño y categoría. Sin sorpresas. Pide presupuesto con propuesta personalizada.",
+                "keywords": "precio consultoría ENS, cuánto cuesta el ENS, coste certificado ENS, precio ISO 27001 España, coste consultoría GRC, precio certificación seguridad, tarifa ENS, presupuesto ISO 27001",
+                "ogTitle": "Precio Consultoría ENS e ISO 27001 España | Avson GRC",
+                "ogDescription": "Rangos de precio reales para consultoría ENS, ISO 27001 e ISO 22301. Sin vaguedades: te damos cifras concretas según tu tamaño y punto de partida.",
+                "twitterTitle": "Precio Consultoría ENS e ISO 27001 España | Avson GRC",
+                "twitterDescription": "Rangos de precio reales para consultoría ENS, ISO 27001 e ISO 22301."
+            },
+            "topBar": {
+                "text": "Garantía de éxito al 100% por escrito",
+                "extra": "Pide presupuesto sin compromiso · Respuesta en 24h",
+                "cta": "Contactar →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "breadcrumb": {
+                "home": "Inicio",
+                "current": "Precio consultoría"
+            },
+            "hero": {
+                "eyebrow": "Transparencia de costes",
+                "title": "Cuánto cuesta el certificado ENS y la consultoría ISO 27001 en España.",
+                "description": "El precio de la consultoría GRC depende de tres factores: el tamaño de tu empresa, la categoría del certificado y tu punto de partida. Aquí te damos rangos reales, no vaguedades."
+            },
+            "factors": {
+                "title": "Factores que determinan el precio",
+                "subtitle": "Tres variables explican el 90% de la variación de precio entre proyectos similares.",
+                "cards": [
+                    {
+                        "iconSvg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1A2744\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg>",
+                        "title": "Tamaño de la organización",
+                        "text": "El número de empleados, sistemas en alcance y ubicaciones físicas determina el volumen de documentación, controles a implantar y tiempo de auditoría."
+                    },
+                    {
+                        "iconSvg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1A2744\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+                        "title": "Categoría del certificado",
+                        "text": "Para el ENS, la categoría Básica, Media o Alta implica niveles de exigencia muy distintos. A mayor categoría, mayor número de controles obligatorios y más documentación requerida."
+                    },
+                    {
+                        "iconSvg": "<svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#1A2744\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\"/><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\"/><line x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\"/></svg>",
+                        "title": "Punto de partida",
+                        "text": "Una organización que ya tiene controles implantados, documentación de seguridad vigente o una certificación previa (ENS, ISO 9001, etc.) requiere menos trabajo que una que parte de cero."
+                    }
+                ]
+            },
+            "priceTable": {
+                "title": "Rangos de precio orientativos",
+                "subtitle": "Precios en euros, IVA no incluido. Consultoría completa hasta obtener el certificado.",
+                "headers": [
+                    "Servicio",
+                    "Empresa pequeña<br>&lt;50 empleados",
+                    "Empresa mediana<br>50–200 empleados",
+                    "Empresa grande<br>&gt;200 empleados"
+                ],
+                "rows": [
+                    {
+                        "service": "Certificado ENS Básico",
+                        "small": "Desde <strong>4.000€</strong>",
+                        "medium": "Desde <strong>8.000€</strong>",
+                        "large": "consultar"
+                    },
+                    {
+                        "service": "Certificado ENS Medio",
+                        "small": "Desde <strong>8.000€</strong>",
+                        "medium": "Desde <strong>15.000€</strong>",
+                        "large": "consultar"
+                    },
+                    {
+                        "service": "Certificado ENS Alto",
+                        "small": "Desde <strong>14.000€</strong>",
+                        "medium": "Desde <strong>25.000€</strong>",
+                        "large": "consultar"
+                    },
+                    {
+                        "service": "ISO 27001",
+                        "small": "Desde <strong>6.000€</strong>",
+                        "medium": "Desde <strong>12.000€</strong>",
+                        "large": "consultar"
+                    },
+                    {
+                        "service": "ISO 22301",
+                        "small": "Desde <strong>5.000€</strong>",
+                        "medium": "Desde <strong>10.000€</strong>",
+                        "large": "consultar"
+                    },
+                    {
+                        "service": "Pack ENS + ISO 27001 <span class=\"tag-pack\">Ahorro</span>",
+                        "small": "Desde <strong>11.000€</strong>",
+                        "medium": "Desde <strong>20.000€</strong>",
+                        "large": "consultar",
+                        "highlight": true
+                    }
+                ],
+                "note": "Los precios mostrados son orientativos. El precio final se determina tras el presupuesto sin compromiso, en función del alcance, el punto de partida y la categoría específica del proyecto."
+            },
+            "arguments": {
+                "title": "¿Por qué el precio de Avson compensa?",
+                "subtitle": "No somos los más baratos del mercado. Somos los que mejor relación calidad-precio ofrecen.",
+                "items": [
+                    {
+                        "iconSvg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C9A84C\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 11l3 3L22 4\"/><path d=\"M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11\"/></svg>",
+                        "title": "Garantía de éxito por escrito",
+                        "text": "Si la certificadora detecta no conformidades mayores imputables a nuestra consultoría, asumimos los costes de la auditoría de seguimiento y el trabajo de subsanación sin cargo. Tasa de éxito en primera auditoría: 100%."
+                    },
+                    {
+                        "iconSvg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C9A84C\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>",
+                        "title": "Velocidad: 3–4 meses",
+                        "text": "El mercado estándar tarda entre 6 y 12 meses. Nuestra metodología acelerada lleva a empresas de tamaño medio a la auditoría en 90–120 días, reduciendo el tiempo en que no tienes el certificado y la incertidumbre en licitaciones."
+                    },
+                    {
+                        "iconSvg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C9A84C\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8\"/><path d=\"M12 17v4\"/></svg>",
+                        "title": "Certificaciones en cascada",
+                        "text": "El certificado ENS cubre el 65% de los controles de ISO 27001. Si certificas en ambos con Avson, ahorras hasta un 40% frente a contratar dos proyectos independientes. Un trabajo, dos certificados."
+                    },
+                    {
+                        "iconSvg": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C9A84C\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>",
+                        "title": "Relación vitalicia, no puntual",
+                        "text": "Incluimos revisiones anuales, actualización normativa y preparación de auditorías de seguimiento en el ciclo completo de 3 años. No desaparecemos tras la primera certificación."
+                    }
+                ]
+            },
+            "ctaBox": {
+                "eyebrow": "Sin compromiso",
+                "title": "Pide presupuesto — propuesta personalizada en 48h.",
+                "description": "Analizamos tu situación actual, te decimos qué certificaciones necesitas y te entregamos un presupuesto cerrado. Sin sorpresas. Sin letra pequeña.",
+                "button": "Solicitar presupuesto sin compromiso →"
+            },
+            "faq": {
+                "title": "Preguntas frecuentes sobre precios",
+                "items": [
+                    {
+                        "question": "¿El precio incluye la auditoría externa?",
+                        "answer": "No. El precio de la consultoría cubre todo el trabajo de implantación: análisis de brecha, documentación, formación, gestión de controles y acompañamiento en auditoría. Los honorarios de la entidad certificadora acreditada (ENAC para ENS, o cualquier certificadora ISO acreditada) se contratan directamente con ellos y varían entre 2.000€ y 6.000€ según el alcance. En el presupuesto sin compromiso te informamos del coste exacto de certificación para tu caso específico."
+                    },
+                    {
+                        "question": "¿Hay algún coste adicional que no esté incluido?",
+                        "answer": "El único coste no incluido en nuestra propuesta son los honorarios del organismo certificador externo y las posibles herramientas tecnológicas de terceros que decidas implantar. Nuestra propuesta es de precio cerrado: sin sorpresas ni presupuestos adicionales por cambios de alcance menores. Si el alcance cambia de forma sustancial durante el proyecto, lo acordamos contigo antes de ejecutar ningún trabajo adicional."
+                    },
+                    {
+                        "question": "¿La garantía de éxito tiene coste adicional?",
+                        "answer": "No. La garantía de éxito en primera auditoría está incluida en todos nuestros proyectos sin coste adicional. Si la certificadora detecta no conformidades mayores imputables a nuestra consultoría, asumimos los costes de la auditoría de seguimiento y el trabajo adicional de subsanación sin cargo al cliente. La garantía se formaliza por escrito en el contrato de servicio."
+                    },
+                    {
+                        "question": "¿Puedo financiar la consultoría?",
+                        "answer": "Sí. Ofrecemos planes de pago fraccionado en hasta 6 mensualidades sin intereses para proyectos superiores a 8.000€. También informamos sobre ayudas y subvenciones disponibles — Kit Digital, fondos Next Generation EU, convocatorias INCIBE — que pueden cubrir parte del coste de la consultoría en función del perfil de tu empresa. Pregúntanos en el presupuesto sin compromiso y te asesoramos sobre las opciones disponibles para tu caso."
+                    },
+                    {
+                        "question": "¿Cuánto ahorro si ya tengo el ENS y quiero el ISO 27001?",
+                        "answer": "El certificado ENS cubre aproximadamente el 65% de los controles de ISO 27001. Si ya estás certificado en ENS Medio o Alto, el proyecto de certificación ISO 27001 puede reducirse hasta un 50% respecto al precio estándar, ya que gran parte de la documentación, análisis de riesgos y controles ya están implantados y auditados. En el presupuesto sin compromiso te damos un presupuesto exacto de la ampliación basado en el estado actual de tu sistema de gestión."
+                    }
+                ]
+            },
+            "footer": {
+                "logo": "AVSON·GRC",
+                "tagline": "Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. 355+ empresas certificadas con éxito garantizado.",
+                "contact": {
+                    "email": "hola@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)"
+                },
+                "services": {
+                    "title": "Servicios",
+                    "items": [
+                        {
+                            "name": "ENS",
+                            "url": "ens.html"
+                        },
+                        {
+                            "name": "ISO 27001",
+                            "url": "iso27001.html"
+                        },
+                        {
+                            "name": "ISO 22301",
+                            "url": "iso22301.html"
+                        },
+                        {
+                            "name": "DORA",
+                            "url": "dora.html"
+                        },
+                        {
+                            "name": "NIS2",
+                            "url": "nis2.html"
+                        },
+                        {
+                            "name": "TISAX",
+                            "url": "tisax.html"
+                        },
+                        {
+                            "name": "Otras certificaciones",
+                            "url": "otras.html"
+                        }
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        {
+                            "name": "Equipo",
+                            "url": "equipo.html"
+                        },
+                        {
+                            "name": "Packs",
+                            "url": "packs.html"
+                        },
+                        {
+                            "name": "Webinars",
+                            "url": "webinars.html"
+                        },
+                        {
+                            "name": "Contacto",
+                            "url": "contacto.html"
+                        }
+                    ]
+                },
+                "legal": {
+                    "title": "Legal",
+                    "items": [
+                        {
+                            "name": "Política de privacidad",
+                            "url": "privacidad.html"
+                        },
+                        {
+                            "name": "Política de cookies",
+                            "url": "cookies.html"
+                        },
+                        {
+                            "name": "Aviso legal",
+                            "url": "aviso-legal.html"
+                        }
+                    ]
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson GRC S.L. Todos los derechos reservados.",
+                    "contact": "hola@avson.eu | +34 648 41 48 63"
+                }
+            },
+            "floatingCta": "Habla con un experto →",
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp",
+                "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
+            }
+        },
+        "praesys": {
+            "meta": {
+                "title": "Praesys — IA para Cumplimiento Normativo GRC | Avson",
+                "description": "Praesys es la plataforma de IA de Avson para gestión de cumplimiento normativo. Análisis de riesgos automatizado, generación de documentación y dashboards en tiempo real para ENS, ISO 27001, ISO 22301 y más.",
+                "keywords": "Praesys, software GRC, cumplimiento normativo IA, gestión riesgos automatizada, dashboard ENS ISO 27001, plataforma GRC España",
+                "ogTitle": "Praesys — IA para tu cumplimiento normativo GRC",
+                "ogDescription": "Análisis de riesgos automatizado, generación documental con IA y dashboards en tiempo real. La plataforma GRC de Avson.",
+                "twitterTitle": "Praesys — IA para cumplimiento GRC",
+                "twitterDescription": "Análisis de riesgos automatizado, generación documental con IA y dashboards en tiempo real."
+            },
+            "topBar": {
+                "text": "Garantía de éxito al 100% por escrito",
+                "extra": "Pide presupuesto sin compromiso · Respuesta en 24h",
+                "cta": "Contactar →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "hero": {
+                "label": "Software propio · Inteligencia artificial",
+                "title": "Praesys.",
+                "subtitle": "IA para tu cumplimiento normativo.",
+                "description": "Análisis de riesgos automatizado, dashboards de cumplimiento en tiempo real y generación de documentación con inteligencia artificial. Lo que antes llevaba semanas, ahora son horas.",
+                "buttons": {
+                    "primary": "Solicitar demo →",
+                    "secondary": "Ver funcionalidades →"
+                },
+                "stats": [
+                    "ENS · ISO 27001 · ISO 22301",
+                    "DORA · NIS2 · TISAX"
+                ],
+                "mockup": {
+                    "title": "Praesys — Dashboard de cumplimiento",
+                    "rows": [
+                        {
+                            "label": "Cumplimiento ENS",
+                            "value": "94%",
+                            "color": "gold"
+                        },
+                        {
+                            "label": "ISO 27001",
+                            "value": "87%",
+                            "color": "green"
+                        },
+                        {
+                            "label": "ISO 22301",
+                            "value": "76%",
+                            "color": "blue"
+                        },
+                        {
+                            "label": "DORA",
+                            "value": "61%",
+                            "color": "gray"
+                        }
+                    ],
+                    "alerts": [
+                        "Política de backups — requiere actualización anual",
+                        "Auditoría interna ISO 22301 — programar en próximos 30 días"
+                    ],
+                    "cards": [
+                        {
+                            "number": "248",
+                            "label": "Documentos"
+                        },
+                        {
+                            "number": "12",
+                            "label": "Riesgos activos"
+                        },
+                        {
+                            "number": "98%",
+                            "label": "Evidencias OK"
+                        }
+                    ]
+                }
+            },
+            "whatIs": {
+                "label": "Qué es Praesys",
+                "title": "La plataforma GRC<br>que acelera tu certificación.",
+                "description": "Praesys es la plataforma de inteligencia artificial desarrollada por Avson para gestionar el cumplimiento normativo de forma eficiente. Integra todos los marcos (ENS, ISO 27001, ISO 22301, DORA, NIS2) en una única vista.",
+                "extra": "Diseñada por consultores GRC para consultores GRC y sus clientes. No es un software genérico adaptado: es una herramienta construida desde cero sobre las realidades del proceso de certificación en España.",
+                "points": [
+                    {
+                        "number": "01",
+                        "title": "Semanas → Horas",
+                        "text": "La documentación que antes llevaba semanas de trabajo manual, Praesys la genera en horas con IA."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Multi-marco en una vista",
+                        "text": "Dashboard unificado para ENS, ISO 27001, ISO 22301, DORA y NIS2 sin cambiar de herramienta."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Auditable desde el minuto 1",
+                        "text": "Toda la trazabilidad control → evidencia → documento lista para presentar al auditor."
+                    }
+                ]
+            },
+            "features": {
+                "label": "Funcionalidades",
+                "title": "Seis capacidades que<br><em>transforman el cumplimiento.</em>",
+                "items": [
+                    {
+                        "number": "01",
+                        "title": "Análisis de riesgos automatizado",
+                        "desc": "Identificación y valoración automática de riesgos según metodología MAGERIT v3.1. Catálogo de amenazas actualizado. Plan de tratamiento generado automáticamente."
+                    },
+                    {
+                        "number": "02",
+                        "title": "Generación documental con IA",
+                        "desc": "Políticas, procedimientos, registros e instrucciones técnicas generados por IA y adaptados a tu organización. 248 plantillas base incluidas."
+                    },
+                    {
+                        "number": "03",
+                        "title": "Dashboard multi-marco",
+                        "desc": "Vista unificada del cumplimiento para todos los marcos normativos aplicables. Indicadores en tiempo real. Alertas y recordatorios automáticos."
+                    },
+                    {
+                        "number": "04",
+                        "title": "Gestión de evidencias",
+                        "desc": "Repositorio centralizado de evidencias vinculadas a controles y requisitos normativos. Trazabilidad completa para auditoría. Exportación lista para auditor."
+                    },
+                    {
+                        "number": "05",
+                        "title": "Mapeo cruzado entre normas",
+                        "desc": "Identificación automática de sinergias entre marcos. Un documento puede satisfacer requisitos de ENS, ISO 27001 y NIS2 simultáneamente. Sin duplicar trabajo."
+                    },
+                    {
+                        "number": "06",
+                        "title": "Reporting ejecutivo",
+                        "desc": "Informes de cumplimiento para el comité de dirección, auditorías internas y revisiones por la dirección. Exportación en PDF con marca de agua y fecha."
+                    }
+                ]
+            },
+            "frameworks": {
+                "label": "Cobertura normativa",
+                "title": "Seis marcos.<br><em>Una sola plataforma.</em>",
+                "items": [
+                    {
+                        "name": "ENS",
+                        "sub": "RD 311/2022",
+                        "text": "73 medidas cubiertas. Categorías Básica, Media y Alta. Integración con herramientas CCN-STIC."
+                    },
+                    {
+                        "name": "ISO 27001",
+                        "sub": "Ed. 2022",
+                        "text": "93 controles del Anexo A. SoA automatizada. Análisis de riesgos integrado. Revisión por dirección."
+                    },
+                    {
+                        "name": "ISO 22301",
+                        "sub": "Ed. 2019",
+                        "text": "BIA integrado. RTO/RPO tracking. Planes de continuidad versionados. Registro de pruebas."
+                    },
+                    {
+                        "name": "DORA",
+                        "sub": "EU 2022/2554",
+                        "text": "Gestión de riesgos TIC. Registro de incidentes. TLPT. Registro de terceros TIC críticos."
+                    },
+                    {
+                        "name": "NIS2",
+                        "sub": "Dir. EU 2022/2555",
+                        "text": "Clasificación de entidades esenciales e importantes. Medidas de gobernanza. Notificación de incidentes."
+                    },
+                    {
+                        "name": "TISAX",
+                        "sub": "VDA ISA 6.0",
+                        "text": "Assessment levels 1, 2 y 3. Cuestionario VDA ISA integrado. Gestión de evidencias específicas automoción."
+                    }
+                ]
+            },
+            "pricing": {
+                "label": "Acceso a Praesys",
+                "title": "Tres modalidades<br><em>de acceso.</em>",
+                "plans": [
+                    {
+                        "tier": "Incluido en proyectos",
+                        "name": "Praesys Project",
+                        "desc": "Acceso completo a Praesys durante todo el proyecto de certificación. Incluido sin coste adicional en todos los packs de Avson.",
+                        "priceNote": "Incluido en todos los packs",
+                        "cta": "Ver packs →",
+                        "ctaLink": "packs.html",
+                        "featured": false
+                    },
+                    {
+                        "tier": "Más popular",
+                        "name": "Praesys Continuous",
+                        "desc": "Para empresas ya certificadas que quieren mantener el cumplimiento de forma continua. Actualizaciones normativas automáticas, alertas y reporting para auditorías de seguimiento.",
+                        "priceNote": "Contrato anual · precio según frameworks",
+                        "cta": "Solicitar precio →",
+                        "ctaLink": "contacto.html",
+                        "featured": true
+                    },
+                    {
+                        "tier": "Para consultoras",
+                        "name": "Praesys Partner",
+                        "desc": "Acceso multi-cliente para consultoras GRC que quieren ofrecer Praesys a sus clientes. Panel de gestión centralizado. White-label disponible.",
+                        "priceNote": "Precio personalizado según volumen",
+                        "cta": "Hablar con ventas →",
+                        "ctaLink": "contacto.html",
+                        "featured": false
+                    }
+                ]
+            },
+            "demoCta": {
+                "label": "Ver Praesys en acción",
+                "title": "30 minutos.<br><em>Tu cumplimiento, en vivo.</em>",
+                "description": "Te mostramos Praesys con datos reales de un proyecto similar al tuyo. Sin presentaciones genéricas. Sin demos enlatadas.",
+                "cta": "Solicitar demo personalizada →"
+            },
+            "footer": {
+                "logo": "AVSON · GRC",
+                "tagline": "Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. 355+ empresas certificadas.",
+                "contact": {
+                    "email": "hola@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Madrid, España"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        "ENS",
+                        "⚡ ENS Express",
+                        "ISO 27001",
+                        "ISO 22301",
+                        "DORA",
+                        "NIS2",
+                        "TISAX"
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        "Packs GRC",
+                        "Equipo",
+                        "Webinars",
+                        "Contacto"
+                    ]
+                },
+                "newsletter": {
+                    "title": "Newsletter GRC",
+                    "text": "Análisis mensual sobre ENS y cumplimiento normativo.",
+                    "placeholder": "tu@empresa.com"
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.",
+                    "links": [
+                        {
+                            "text": "Política de privacidad",
+                            "url": "privacidad.html"
+                        },
+                        {
+                            "text": "Aviso legal",
+                            "url": "aviso-legal.html"
+                        },
+                        {
+                            "text": "Cookies",
+                            "url": "cookies.html"
+                        }
+                    ]
+                }
+            },
+            "floatingCta": "Consulta gratuita →",
+            "cookieBanner": {
+                "text": "Usamos cookies para mejorar tu experiencia.",
+                "linkText": "Política de cookies",
+                "linkUrl": "cookies.html",
+                "accept": "Aceptar",
+                "decline": "Rechazar"
+            },
+            "exitModal": {
+                "title": "Espera",
+                "question": "¿Quieres ver Praesys en acción?",
+                "description": "Solicita una demo personalizada de 30 minutos con datos reales de tu sector.",
+                "cta": "Solicitar demo →",
+                "dismiss": "No, gracias"
+            },
+            "stickyBar": {
+                "text": "¿Quieres conocer Praesys?",
+                "cta": "Solicitar demo →"
+            },
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp",
+                "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20Praesys%20y%20consultoría%20GRC"
+            }
+        },
+        "packs": {
+            "meta": {
+                "title": "Packs de Certificación GRC | ENS + ISO 27001 + ISO 22301 | Avson GRC",
+                "description": "Packs de certificación GRC con ahorro de hasta el 40%. ENS + ISO 27001, Pack Triple (ENS+ISO 27001+ISO 22301), DORA, NIS2 y más. Avson GRC.",
+                "keywords": "pack certificación ENS ISO 27001, bundle certificaciones GRC, ENS más ISO 27001 precio, pack triple certificación, bono consultoría GRC, coste marginal certificaciones ISO, certificado ENS, consultoría ENS Madrid",
+                "ogTitle": "Packs de Certificación GRC: certifícate en varios marcos a coste marginal | Avson GRC",
+                "ogDescription": "ENS + ISO 27001 + ISO 22301 + NIS2 + DORA. Más certificaciones, menos tiempo, menor coste total.",
+                "twitterTitle": "Packs GRC: certifícate en varios marcos a coste marginal | Avson GRC",
+                "twitterDescription": "ENS + ISO 27001 + ISO 22301 + DORA + NIS2. Más certificaciones por menos."
+            },
+            "topBar": {
+                "text": "Garantía de éxito al 100% por escrito",
+                "extra": "Pide presupuesto sin compromiso · Respuesta en 24h",
+                "cta": "Contactar →"
+            },
+            "nav": {
+                "logo": "AVSON·GRC",
+                "links": {
+                    "ens": "ENS",
+                    "ensExpress": "⚡ ENS Express",
+                    "iso22301": "ISO 22301",
+                    "iso27001": "ISO 27001",
+                    "otras": "Otras certificaciones"
+                },
+                "cta": "Habla con un experto →"
+            },
+            "scbRight": {
+                "text": "⭐ 355+ empresas certificadas · 100% éxito",
+                "cta": "Habla con un experto →"
+            },
+            "hero": {
+                "title": "Más certificados.<br><em>Un solo proyecto.</em>",
+                "subtitle": "Elige tu pack. Te llamamos hoy. Empezamos.",
+                "cta": "Habla con un experto →",
+                "guarantee": "✅ Garantía de éxito al 100% por escrito · ⚡ Arranque en 24h · 355+ empresas certificadas"
+            },
+            "quote": {
+                "label": "Presupuesto inmediato",
+                "title": "Sabe tu presupuesto<br><em>sin llamar a nadie.</em>",
+                "description": "Valida tu <strong style=\"color:#fff\">email de empresa</strong> y te calculamos una horquilla orientativa al instante. Sin compromiso y sin presión comercial.",
+                "bullets": [
+                    "Adaptado al tamaño y alcance de tu empresa",
+                    "Descuento real al combinar varias normas",
+                    "Lo revisa un consultor antes de la oferta formal"
+                ],
+                "form": {
+                    "namePlaceholder": "Tu nombre *",
+                    "emailPlaceholder": "Email de empresa *",
+                    "normasLabel": "¿Qué normas necesitas? *",
+                    "normas": [
+                        {
+                            "value": "ens",
+                            "label": "ENS"
+                        },
+                        {
+                            "value": "iso27001",
+                            "label": "ISO 27001"
+                        },
+                        {
+                            "value": "iso22301",
+                            "label": "ISO 22301"
+                        },
+                        {
+                            "value": "dora",
+                            "label": "DORA"
+                        },
+                        {
+                            "value": "iso9001",
+                            "label": "ISO 9001"
+                        },
+                        {
+                            "value": "iso14001",
+                            "label": "ISO 14001"
+                        },
+                        {
+                            "value": "iso42001",
+                            "label": "ISO 42001"
+                        },
+                        {
+                            "value": "iso50001",
+                            "label": "ISO 50001"
+                        }
+                    ],
+                    "ubicacionesPlaceholder": "Ubicaciones *",
+                    "ubicaciones1": "1 ubicación",
+                    "ubicaciones2": "2 ubicaciones",
+                    "ubicaciones3": "3 o más",
+                    "ensCategoriaMedia": "ENS Básica/Media",
+                    "ensCategoriaAlta": "ENS Alta",
+                    "infraCloud": "Infra en cloud",
+                    "infraOnprem": "Infra on-premise",
+                    "expressLabel": "Lo necesito en <60 días",
+                    "privacyText": "Al enviar, acepto que Avson me contacte para preparar mi presupuesto.",
+                    "privacyLink": "Política de privacidad",
+                    "submitButton": "Calcular mi presupuesto →",
+                    "lockText": "🔒 Solo emails de empresa · Confidencial"
+                }
+            },
+            "costTable": {
+                "title": "Coste orientativo — por separado vs. con pack",
+                "headers": [
+                    "Certificaciones",
+                    "Por separado",
+                    "Con Avson Pack",
+                    "Ahorro estimado"
+                ],
+                "rows": [
+                    {
+                        "certs": "ENS solo (Básico–Medio)",
+                        "separado": "Base",
+                        "pack": "ENS Starter",
+                        "ahorro": "—"
+                    },
+                    {
+                        "certs": "ENS + ISO 27001",
+                        "separado": "~2,3× el ENS",
+                        "pack": "~1,3× el ENS",
+                        "ahorro": "~1× el ENS"
+                    },
+                    {
+                        "certs": "ENS + ISO 22301",
+                        "separado": "~2,1× el ENS",
+                        "pack": "~1,35× el ENS",
+                        "ahorro": "~0,75× el ENS"
+                    },
+                    {
+                        "certs": "Pack Triple (ENS+27001+22301)",
+                        "separado": "~3,4× el ENS",
+                        "pack": "~1,8× el ENS",
+                        "ahorro": "~1,6× el ENS"
+                    }
+                ],
+                "note": "* Ratios orientativos sobre el coste del ENS solo. El precio exacto depende del tamaño, categoría y punto de partida. Pide presupuesto con propuesta en 48h."
+            },
+            "packsSection": {
+                "label": "El catálogo completo",
+                "title": "Elige el pack<br><em>que necesitas.</em>",
+                "consultationBox": {
+                    "text": "\"No sé qué pack necesito.\" — Cuéntanos tu situación en 5 minutos y te lo decimos gratis.",
+                    "cta": "Habla con un experto →"
+                },
+                "packs": [
+                    {
+                        "packNumber": "",
+                        "timeline": "30 días naturales",
+                        "urgentBadge": "⚡ URGENTE",
+                        "bgColor": "gradient",
+                        "title": "<a href=\"ens-express.html\" style=\"color:inherit;text-decoration:none\">ENS Express</a>",
+                        "subtitle": "Para empresas con contratos públicos urgentes",
+                        "description": "¿Tienes un pliego que cierra en menos de 8 semanas? ENS Express te garantiza el certificado ENS Básico o Medio en 30 días naturales. Equipo de 3 consultores dedicados, arranque en 24 horas, reuniones diarias, y la misma garantía de éxito por escrito que nuestro servicio estándar.",
+                        "features": [
+                            "3 consultores dedicados exclusivamente a tu proyecto",
+                            "Arranque garantizado en 24 horas",
+                            "Garantía de éxito por escrito · también en Express",
+                            "Solo 6 plazas Express disponibles por mes"
+                        ],
+                        "forText": "",
+                        "cta": "Ver ENS Express →",
+                        "ctaLink": "ens-express.html"
+                    },
+                    {
+                        "packNumber": "Pack 01",
+                        "timeline": "3–4 meses",
+                        "bgColor": "white",
+                        "title": "<a href=\"ens.html\" style=\"color:inherit;text-decoration:none\">ENS Starter</a>",
+                        "subtitle": "Esquema Nacional de Seguridad — Básica o Media",
+                        "description": "La base de todo. Para empresas que quieren licitar a la Administración Pública española por primera vez o que necesitan el ENS como requisito de un contrato público vigente. Incluye análisis de riesgos, implementación de controles ENS, documentación completa y acompañamiento en la auditoría de certificación con entidad acreditada por ENAC.",
+                        "forText": "Para: proveedores TIC del sector público",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    },
+                    {
+                        "packNumber": "Pack 02",
+                        "timeline": "5–6 meses",
+                        "mostRequestedBadge": "⭐ El más solicitado",
+                        "topBadge": "Más solicitado",
+                        "bgColor": "navy",
+                        "title": "<a href=\"ens.html\" style=\"color:inherit;text-decoration:none\">ENS</a> + <a href=\"iso27001.html\" style=\"color:inherit;text-decoration:none\">ISO 27001</a>",
+                        "subtitle": "El pack más completo para el mercado TIC español",
+                        "description": "La combinación perfecta para proveedores TIC que quieren cubrir tanto el mercado público (ENS obligatorio) como el mercado privado e internacional (ISO 27001 exigida en contratos enterprise). Dos certificaciones por el precio de 1.3 veces el ENS solo, gracias al 65% de solapamiento. El mismo equipo, la misma documentación, la misma visión del riesgo. Garantía de éxito en ambas auditorías.",
+                        "highlightBox": "Si lo contratas por separado, pagas el equivalente a ~1× el ENS de más — sin razón técnica que lo justifique.",
+                        "forText": "Para: empresas TIC que venden a AAPP y a privados",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    },
+                    {
+                        "packNumber": "Pack 03",
+                        "timeline": "5–6 meses",
+                        "bgColor": "white",
+                        "title": "<a href=\"ens.html\" style=\"color:inherit;text-decoration:none\">ENS</a> + <a href=\"iso22301.html\" style=\"color:inherit;text-decoration:none\">ISO 22301</a>",
+                        "subtitle": "Para servicios que no pueden permitirse interrupciones",
+                        "description": "El ENS en categoría Media o Alta ya exige planes de continuidad. Este pack los eleva al nivel de certificación ISO 22301, lo que añade valor comercial (clientes que exigen continuidad certificada) y regulatorio (NIS2, DORA). El solapamiento entre el ENS y la ISO 22301 es del 55%, lo que hace este pack especialmente eficiente en términos de esfuerzo adicional.",
+                        "forText": "Para: proveedores de servicios críticos, cloud, salud",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    },
+                    {
+                        "packNumber": "Pack 04",
+                        "timeline": "7–9 meses",
+                        "bgColor": "white",
+                        "title": "Pack Triple",
+                        "subtitle": "<a href=\"ens.html\">ENS</a> + <a href=\"iso27001.html\">ISO 27001</a> + <a href=\"iso22301.html\">ISO 22301</a>",
+                        "description": "La hoja de ruta GRC completa para empresas TIC con ambición de mercado. Tres certificaciones internacionales que cubren el 100% de los requisitos de seguridad y continuidad del mercado español y europeo. El ahorro estimado frente a proyectos separados es del 32-35%. Un solo Sistema de Gestión Integrado para los tres marcos.",
+                        "forText": "Para: la hoja de ruta GRC completa de una empresa TIC",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    },
+                    {
+                        "packNumber": "Pack 05",
+                        "timeline": "5–6 meses",
+                        "bgColor": "white",
+                        "title": "<a href=\"ens.html\" style=\"color:inherit;text-decoration:none\">ENS</a> + <a href=\"nis2.html\" style=\"color:inherit;text-decoration:none\">NIS2</a>",
+                        "subtitle": "Para entidades afectadas por la Directiva NIS2",
+                        "description": "NIS2 aplica a 18 sectores críticos en la UE. Si ya tienes el ENS, el 50% del camino de adecuación a NIS2 ya está hecho. Este pack cubre los requisitos específicos de NIS2 que van más allá del ENS: notificación formal de incidentes al regulador, responsabilidad directiva documentada, y la evaluación de la cadena de suministro según la directiva europea.",
+                        "forText": "Para: entidades esenciales e importantes en sectores NIS2",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    },
+                    {
+                        "packNumber": "Pack 06",
+                        "timeline": "5–6 meses",
+                        "bgColor": "white",
+                        "title": "<a href=\"ens.html\" style=\"color:inherit;text-decoration:none\">ENS</a> + <a href=\"dora.html\" style=\"color:inherit;text-decoration:none\">DORA</a>",
+                        "subtitle": "Para entidades financieras y sus proveedores TIC",
+                        "description": "DORA entró en vigor en enero 2025 y es de aplicación directa en toda la UE. Si ya tienes el ENS, el 60% de los requisitos de DORA ya están cubiertos. Este pack añade los cinco pilares específicos de DORA: marco de riesgo TIC, notificación de incidentes al regulador financiero, pruebas de resiliencia, gestión de proveedores TIC con cláusulas DORA, e intercambio de información.",
+                        "forText": "Para: entidades financieras y proveedores TIC del sector",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    },
+                    {
+                        "packNumber": "Pack 07",
+                        "timeline": "9–12 meses",
+                        "bgColor": "navy",
+                        "title": "Pack Elite",
+                        "subtitle": "<a href=\"ens.html\" style=\"color:inherit;text-decoration:none\">ENS</a> + <a href=\"iso27001.html\" style=\"color:inherit;text-decoration:none\">ISO 27001</a> + <a href=\"iso22301.html\" style=\"color:inherit;text-decoration:none\">ISO 22301</a> + <a href=\"nis2.html\" style=\"color:inherit;text-decoration:none\">NIS2</a>",
+                        "description": "Para organizaciones que quieren el máximo nivel de compliance posible. Cuatro marcos en un solo proyecto integrado, con el ahorro estimado del 40% frente a proyectos independientes. El resultado: una organización que puede demostrar ante cualquier cliente, regulador o auditor que su gestión de la seguridad está al más alto nivel internacional. Base sólida para DORA si en el futuro también aplica.",
+                        "forText": "Para: líderes de sector que quieren el máximo compliance",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    },
+                    {
+                        "packNumber": "Pack 08",
+                        "timeline": "5–6 meses",
+                        "bgColor": "white",
+                        "title": "<a href=\"iso27001.html\" style=\"color:inherit;text-decoration:none\">ISO 27001</a> + <a href=\"iso22301.html\" style=\"color:inherit;text-decoration:none\">ISO 22301</a>",
+                        "subtitle": "Para empresas que ya tienen <a href=\"ens.html\">ENS</a> o no lo necesitan",
+                        "description": "Si ya estás certificado en el ENS o si no necesitas el ENS (porque no vendes a AAPP), este pack combina los dos estándares internacionales más solicitados en contratos privados: seguridad de la información y continuidad de negocio. El solapamiento entre ISO 27001 e ISO 22301 es del 60%, lo que hace este pack muy eficiente para empresas internacionales o del sector privado.",
+                        "forText": "Para: empresas privadas, internacionales, ya con ENS",
+                        "cta": "Habla con un experto →",
+                        "ctaLink": "contacto.html"
+                    }
+                ]
+            },
+            "urgency": {
+                "calendar": {
+                    "label": "⏰ Calendario de certificación",
+                    "title": "Para tener tu certificado antes de enero 2027,<br>el proyecto debe iniciarse antes de <strong>agosto 2026.</strong>",
+                    "description": "Los pliegos más importantes de la Administración Pública española suelen publicarse en Q1. Si quieres presentarte, necesitas el ENS antes de diciembre.",
+                    "cta": "Habla con un experto →"
+                },
+                "capacity": {
+                    "icon": "🎯",
+                    "label": "Capacidad limitada",
+                    "title": "Solo admitimos 8 proyectos de pack nuevos por trimestre.",
+                    "description": "Para garantizar la calidad y la atención personalizada, limitamos el número de proyectos activos simultáneos. Si el trimestre está completo, te ponemos en lista de espera con prioridad para el siguiente."
+                }
+            },
+            "testimonials": {
+                "label": "Packs · Casos de éxito",
+                "title": "Lo que dicen nuestros<br><em>clientes.</em>",
+                "items": [
+                    {
+                        "bgColor": "navy",
+                        "quote": "“Empezamos con el ENS porque lo necesitábamos para un pliego. Avson nos convenció de añadir el ISO 27001 al mismo proyecto. La diferencia de coste fue marginal y ahora tenemos dos certificaciones que nos han abierto el mercado privado también. Fue la mejor decisión del año.”",
+                        "author": "Marina Torres",
+                        "position": "CEO · Empresa de software de gestión · Madrid"
+                    },
+                    {
+                        "bgColor": "white",
+                        "quote": "“Contratamos el Pack Triple porque queríamos cerrar el capítulo GRC de una vez. Un proyecto, un equipo, nueve meses de trabajo. Al final teníamos ENS, ISO 27001 e ISO 22301 certificadas, y el coste total fue un 35% menos de lo que nos habían presupuestado otros proveedores por los tres proyectos separados.”",
+                        "author": "Sergio Méndez",
+                        "position": "CTO · Proveedor de plataforma SaaS B2B · Barcelona"
+                    }
+                ],
+                "cta": "Pide presupuesto →"
+            },
+            "faq": {
+                "label": "Preguntas frecuentes",
+                "title": "Todo sobre<br><em>los packs.</em>",
+                "items": [
+                    {
+                        "question": "¿Cómo funcionan los packs de certificación?",
+                        "answer": "Los packs combinan múltiples certificaciones en un solo proyecto integrado. El equipo de Avson diseña el proyecto desde el principio para maximizar el solapamiento entre marcos: el análisis de riesgos se hace una sola vez para todos, las políticas se escriben de forma que cumplan con los requisitos de cada norma, y la auditoría interna cubre todos los marcos al mismo tiempo. El resultado es un ahorro estimado de entre el 25% y el 40% respecto a proyectos independientes, con un tiempo de dedicación del cliente también significativamente menor."
+                    },
+                    {
+                        "question": "¿Qué está incluido en el precio del pack?",
+                        "answer": "Todos los packs de Avson incluyen: gap analysis inicial, implementación completa de controles, documentación completa del sistema de gestión (políticas, procedimientos, registros), auditoría interna previa a la certificación, acompañamiento durante la auditoría de certificación con la entidad certificadora, y la garantía de éxito. Lo que no está incluido en el precio del pack es la tarifa de la entidad certificadora acreditada, que se paga directamente a la certificadora y depende del tamaño de la empresa y el alcance. Avson te ayuda a seleccionar la certificadora y a negociar las condiciones."
+                    },
+                    {
+                        "question": "¿Puedo añadir una certificación más tarde si empiezo con solo una?",
+                        "answer": "Sí. Si empiezas con el ENS y después decides añadir ISO 27001, el trabajo ya hecho para el ENS reduce significativamente el esfuerzo del proyecto ISO 27001. El ahorro no es tan grande como si hubieras empezado con el pack completo desde el principio (porque en el pack diseñamos la documentación para reutilizarla desde el inicio), pero sigue siendo mayor del 20% respecto a un proyecto ISO 27001 completamente nuevo. Muchos de nuestros clientes empiezan con una certificación y van añadiendo más a medida que crece su empresa."
+                    },
+                    {
+                        "question": "¿Qué pasa si ya tengo una certificación de otra consultora?",
+                        "answer": "Podemos tomar el relevo y añadir el siguiente marco al que ya tienes. Empezamos con una revisión del sistema de gestión existente para entender qué está implementado, qué funciona bien y qué tiene margen de mejora. A partir de ahí, diseñamos el proyecto de ampliación aprovechando el trabajo ya hecho. No es tan eficiente como haber empezado el pack desde cero con Avson, pero seguimos siendo capaces de extraer un solapamiento significativo del trabajo anterior."
+                    },
+                    {
+                        "question": "¿El plazo del pack es el tiempo total o los tiempos corren en paralelo?",
+                        "answer": "Los tiempos del pack son el plazo total del proyecto integrado, no la suma de los plazos individuales. En la mayoría de los packs, los marcos se implementan de forma secuencial o con solapamiento parcial, dependiendo de las dependencias entre ellos. El análisis de riesgos y la documentación base se hacen al principio y sirven para todos los marcos. Las fases específicas de cada norma se desarrollan una vez establecida esa base. El resultado es que el Pack Triple (ENS + ISO 27001 + ISO 22301) tarda 7-9 meses, frente a los 12-15 meses que tardarían los tres proyectos por separado."
+                    },
+                    {
+                        "question": "¿Hay formas de pago flexibles?",
+                        "answer": "Sí. Trabajamos con pagos fraccionados adaptados al ritmo del proyecto. Habitualmente: un porcentaje al inicio del proyecto, otro porcentaje a mitad del proyecto, y el resto a la obtención del certificado. Esta estructura de pagos alinea nuestros intereses con los del cliente: la mayor parte del pago se desbloquea cuando el objetivo está logrado. Para proyectos con bonos de mantenimiento anuales, el bono se paga al inicio de cada año de mantenimiento."
+                    },
+                    {
+                        "question": "¿Qué incluye exactamente la garantía de éxito?",
+                        "answer": "La garantía de éxito de Avson significa que si, siguiendo nuestra metodología y el plan de trabajo acordado, no superamos la auditoría de certificación en el primer intento, Avson cubre el coste de la segunda auditoría con la entidad certificadora sin cargo adicional para el cliente. Esta garantía aplica cuando el cliente ha seguido las recomendaciones del equipo de Avson y ha completado las fases del proyecto según lo planificado. La garantía está incluida en el contrato de todos los proyectos de certificación, no es un add-on opcional."
+                    },
+                    {
+                        "question": "¿Puedo empezar sin tener claro qué pack necesito?",
+                        "answer": "Sí. El presupuesto sin compromiso de Avson está diseñado precisamente para eso: analizar tu situación, tus clientes, tus requisitos regulatorios y tus objetivos de negocio, y recomendarte el pack más eficiente para tu caso concreto. Muchos clientes llegan sin saber exactamente qué necesitan — saben que necesitan \"algo de certificaciones\" pero no cuáles ni en qué orden. La primera reunión con el consultor resuelve esa duda en 45 minutos."
+                    },
+                    {
+                        "question": "¿Cuándo debo contratar para tener el certificado antes de una licitación específica?",
+                        "answer": "Para un proceso estándar de 3–4 meses (ENS Básico o Medio), necesitas contratar al menos 4 meses antes de la fecha en que necesitas presentar el certificado — y algo más si quieres margen de seguridad. Si tienes un pliego que cierra antes, existe el servicio <a href=\"ens-express.html\">ENS Express</a> (30 días naturales), pero las plazas son muy limitadas: solo 6 proyectos Express por mes. Consulta disponibilidad lo antes posible — cuantos más días tengamos, mejor resultado aseguramos y más cómoda es la implementación para tu equipo."
+                    }
+                ]
+            },
+            "finalCta": {
+                "label": "Packs GRC · Pide presupuesto",
+                "title": "Diseñamos el pack<br><em>a tu medida.</em>",
+                "description": "Pide presupuesto. Te decimos qué pack tiene más sentido para tu situación, qué marcos necesitas realmente, y cuánto costaría frente a hacer los proyectos por separado.",
+                "cta": "Habla con un experto →"
+            },
+            "footer": {
+                "logo": "AVSON · GRC",
+                "description": "Consultora GRC especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2.",
+                "contact": {
+                    "email": "pablo@avson.eu",
+                    "phone": "+34 648 41 48 63",
+                    "linkedin": "LinkedIn · Avson GRC",
+                    "address": "Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)"
+                },
+                "certifications": {
+                    "title": "Certificaciones",
+                    "items": [
+                        "ENS",
+                        "⚡ ENS Express",
+                        "ISO 27001",
+                        "ISO 22301",
+                        "DORA",
+                        "NIS2",
+                        "TISAX"
+                    ]
+                },
+                "company": {
+                    "title": "Empresa",
+                    "items": [
+                        "Equipo",
+                        "Packs",
+                        "Webinars",
+                        "Contacto"
+                    ]
+                },
+                "ctaBox": {
+                    "title": "Empieza hoy",
+                    "description": "Pide presupuesto. Sin compromiso. Respuesta en 24h.",
+                    "button": "Habla con un experto →"
+                },
+                "bottom": {
+                    "copyright": "© 2026 Avson Consultoría Estratégica SLU · Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)",
+                    "links": [
+                        {
+                            "text": "Privacidad",
+                            "url": "privacidad.html"
+                        },
+                        {
+                            "text": "Aviso Legal",
+                            "url": "aviso-legal.html"
+                        },
+                        {
+                            "text": "Cookies",
+                            "url": "cookies.html"
+                        }
+                    ]
+                }
+            },
+            "floatingCta": "Habla con un experto →",
+            "cookieBanner": {
+                "text": "Usamos cookies para mejorar tu experiencia.",
+                "linkText": "Política de cookies",
+                "linkUrl": "cookies.html",
+                "accept": "Aceptar",
+                "decline": "Rechazar"
+            },
+            "exitModal": {
+                "title": "Espera",
+                "question": "¿Tienes dudas sobre la certificación?",
+                "description": "Nuestros consultores resuelven cualquier pregunta sin compromiso. Pide presupuesto en 24h.",
+                "cta": "Habla con un experto →",
+                "dismiss": "No me interesa por ahora"
+            },
+            "stickyBar": {
+                "text": "¿Necesitas certificarte?",
+                "cta": "Habla con un experto →"
+            },
+            "whatsapp": {
+                "ariaLabel": "Contactar por WhatsApp",
+                "url": "https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20consultoría%20GRC%20y%20certificaciones%20ENS%2FISO"
+            }
+        },
+
+
+        
+    }
+}

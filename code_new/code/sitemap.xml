@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://avson.eu/</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avson.eu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avson.eu/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://avson.eu/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://avson.eu/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://avson.eu/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://avson.eu/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avson.eu/"/>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/ens.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avson.eu/ens.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avson.eu/en/ens.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avson.eu/ens.html"/>
+  </url>
+
+
+  <url>
+    <loc>https://avson.eu/iso22301.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/dora.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/nis2.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/tisax.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/otras.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/packs.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/equipo.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avson.eu/unete.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/webinars.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/contacto.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avson.eu/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avson.eu/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avson.eu/contacto.html"/>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/privacidad.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://avson.eu/cookies.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Páginas de conversión y utilidad -->
+  <url><loc>https://avson.eu/precio.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://avson.eu/diagnostico.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://avson.eu/blog/index.html</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://avson.eu/blog/que-es-el-ens.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/certificado-ens-obligatorio.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/certificado-ens-media-alta.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/ens-vs-iso27001.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/iso27001-pymes.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/renovacion-certificado-ens.html</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/cuanto-cuesta-certificado-ens.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://avson.eu/blog/iso27001-requisitos-certificacion.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/que-es-iso22301.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/plan-continuidad-negocio.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/que-es-dora-reglamento.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/dora-entidades-financieras.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/que-es-nis2-directiva.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/que-es-tisax.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- Categorías ENS -->
+  <url><loc>https://avson.eu/ens-basico.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://avson.eu/ens-medio.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://avson.eu/ens-alto.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- ENS Express -->
+  <url><loc>https://avson.eu/ens-express.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Cobertura nacional y ciudades -->
+  <url><loc>https://avson.eu/consultoria-ens-espana.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://avson.eu/ens-madrid.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/ens-barcelona.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/ens-valencia.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/ens-sevilla.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/ens-bilbao.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- Páginas de conversión adicionales -->
+  <url><loc>https://avson.eu/gracias.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+
+  <!-- Nuevos artículos de blog -->
+  <url><loc>https://avson.eu/blog/declaracion-conformidad-ens.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/auditoria-ens-proceso.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/gap-analysis-ens.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/ens-sector-salud.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://avson.eu/blog/ens-basico-guia-empresas.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+</urlset>

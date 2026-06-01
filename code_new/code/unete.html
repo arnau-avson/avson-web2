@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#1A2744">
+  <title>Cargando...</title>
+  <meta name="description" content="">
+  <link rel="canonical" href="https://avson.eu/unete.html">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Avson GRC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="avson-leads.js" defer></script>
+  <style>
+    .loader { text-align: center; padding: 100px 20px; font-family: 'Inter', sans-serif; color: #1A2744; }
+    .grow-kpis { display:flex; gap:40px; flex-wrap:wrap; margin-top:30px; }
+    .grow-kpi strong { font-family:'Cormorant Garamond',serif; font-size:46px; font-weight:300; color:var(--navy); line-height:1; display:block; }
+    .grow-kpi span { font-family:'Inter',sans-serif; font-size:11px; color:var(--text-muted); letter-spacing:.07em; text-transform:uppercase; }
+    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:44px; }
+    @media(max-width:860px){ .why-grid{ grid-template-columns:1fr; } }
+    .why-card { background:#fff; border:1px solid #E8E4DD; border-radius:14px; padding:30px 26px; }
+    .why-card h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:var(--navy); margin:0 0 10px; }
+    .why-card p { font-family:'Inter',sans-serif; font-size:14px; line-height:1.6; color:var(--text-body); margin:0; }
+    .why-card .ic { font-size:22px; color:#C9A84C; margin-bottom:10px; display:block; }
+    .jobs { display:flex; flex-direction:column; gap:14px; margin-top:40px; }
+    .job { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+      background:#fff; border:1px solid #E8E4DD; border-left:3px solid #C9A84C; border-radius:12px; padding:24px 28px;
+      transition:box-shadow .18s, transform .18s; }
+    .job:hover { box-shadow:0 16px 38px rgba(26,39,68,0.10); transform:translateY(-2px); }
+    .job__t { font-family:'Cormorant Garamond',serif; font-size:23px; font-weight:500; color:var(--navy); margin:0 0 4px; }
+    .job__meta { font-family:'Inter',sans-serif; font-size:12.5px; color:var(--text-muted); }
+    .job__meta b { color:#B68F2E; font-weight:600; }
+    .perks { display:grid; grid-template-columns:repeat(2,1fr); gap:14px 32px; margin-top:36px; max-width:760px; }
+    @media(max-width:700px){ .perks{ grid-template-columns:1fr; } }
+    .perk { display:flex; gap:12px; align-items:flex-start; font-family:'Inter',sans-serif; font-size:15px; color:var(--text-body); line-height:1.5; }
+    .perk span { color:#C9A84C; font-weight:700; flex-shrink:0; }
+    .apply-input { width:100%; padding:13px 16px; border:1.5px solid #E5E5E0; border-radius:8px; font-family:'Inter',sans-serif; font-size:15px; color:#1A2744; outline:none; background:#fff; }
+    .apply-input:focus { border-color:var(--navy); }
+  </style>
+</head>
+<body>
+
+<div style="background:#1A2744;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;font-size:12px;font-weight:400;letter-spacing:0.04em;text-align:center;padding:10px 40px;position:relative;z-index:200" id="topBar"></div>
+
+<!-- NAV -->
+<nav class="v3-nav" id="mainNav">
+  <div class="v3-nav__inner">
+    <a href="index.html" class="v3-nav__logo" id="navLogo">AVSON<span>·</span>GRC</a>
+    <ul class="v3-nav__links" id="navLinks"></ul>
+    <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--sm v3-nav__cta" id="navCta"></a>
+    <button class="v3-nav__burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="v3-nav__overlay" id="navOverlay">
+  <button class="v3-nav__overlay-close" id="navClose">✕</button>
+  <div id="navOverlayLinks"></div>
+  <a href="contacto.html" class="v3-btn v3-btn--gold" id="navOverlayCta"></a>
+</div>
+
+<main id="app"></main>
+<footer class="footer" id="footer"></footer>
+
+<a href="contacto.html" class="floating-cta" id="floatingCta"></a>
+
+<div id="exitModal" style="display:none;position:fixed;inset:0;background:rgba(26,39,68,0.72);z-index:9999;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;max-width:520px;width:100%;padding:48px 40px;position:relative">
+    <button onclick="this.parentElement.parentElement.style.display='none'" style="position:absolute;top:16px;right:20px;font-size:22px;color:#7A8499;cursor:pointer;background:none;border:none;font-family:inherit">×</button>
+    <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:16px" id="exitModalLabel"></span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:#1A2744;line-height:1.2;margin-bottom:16px" id="exitModalTitle"></h2>
+    <p style="font-family:'Inter',sans-serif;font-size:14px;color:#7A8499;line-height:1.65;margin-bottom:28px" id="exitModalDesc"></p>
+    <a href="contacto.html" id="exitModalCta" style="display:block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#1A2744;border:1px solid #C9A84C;padding:14px 28px;text-align:center;text-decoration:none"></a>
+    <p style="font-family:'Inter',sans-serif;font-size:12px;color:#7A8499;text-align:center;margin-top:12px;cursor:pointer;text-decoration:underline" onclick="document.getElementById('exitModal').style.display='none'" id="exitModalDismiss"></p>
+  </div>
+</div>
+
+<div id="stickyBar" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:500;background:#1A2744;border-top:1px solid rgba(255,255,255,0.08);padding:14px 20px;justify-content:space-between;gap:12px;align-items:center">
+  <span style="font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.7)" id="stickyBarText"></span>
+  <a href="contacto.html" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#fff;border:1px solid #fff;padding:10px 20px;text-decoration:none;white-space:nowrap" id="stickyBarCta"></a>
+</div>
+
+<a href="https://wa.me/34648414863?text=Hola%2C%20me%20interesa%20información%20sobre%20trabajar%20en%20Avson%20GRC" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script>
+async function loadContent() {
+  try {
+    const response = await fetch('assets/palabras.json');
+    const data = await response.json();
+    
+    // Buscar el objeto con clave "unete"
+    let pageData = null;
+    if (Array.isArray(data)) {
+      const found = data.find(item => item.unete);
+      if (found) pageData = found.unete;
+    } else if (data.unete) {
+      pageData = data.unete;
+    } else {
+      throw new Error('No se encontró la clave "unete" en el JSON');
+    }
+    
+    const lang = "es"; // Puedes cambiarlo dinámicamente
+    const t = pageData[lang];
+    if (!t) throw new Error(`No hay datos para el idioma "${lang}"`);
+
+    // Meta tags
+    document.title = t.meta.title;
+    document.querySelector('meta[name="description"]').setAttribute('content', t.meta.description);
+    document.querySelector('meta[property="og:title"]').setAttribute('content', t.meta.ogTitle);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', t.meta.ogDescription);
+
+    // Top bar
+    document.getElementById('topBar').innerHTML = `${t.topBar.text} <a href="#posiciones" style="color:#C9A84C;text-decoration:none;font-weight:500">${t.topBar.link}</a>`;
+
+    // Nav
+    const navLinks = document.getElementById('navLinks');
+    navLinks.innerHTML = `
+      <li><a href="ens.html">${t.nav.links.ens}</a></li>
+      <li><a href="ens-express.html" class="nav-express">${t.nav.links.ensExpress}</a></li>
+      <li><a href="iso22301.html">${t.nav.links.iso22301}</a></li>
+      <li><a href="iso27001.html">${t.nav.links.iso27001}</a></li>
+      <li><a href="otras.html">${t.nav.links.otras}</a></li>
+    `;
+    document.getElementById('navCta').innerHTML = t.nav.cta;
+    document.getElementById('navOverlayLinks').innerHTML = `
+      <a href="ens.html">${t.nav.links.ens}</a>
+      <a href="ens-express.html">${t.nav.links.ensExpress}</a>
+      <a href="iso22301.html">${t.nav.links.iso22301}</a>
+      <a href="iso27001.html">${t.nav.links.iso27001}</a>
+      <a href="otras.html">${t.nav.links.otras}</a>
+    `;
+    document.getElementById('navOverlayCta').innerHTML = t.nav.cta;
+
+    // Hero
+    const heroHTML = `
+      <section class="section section--pearl" style="padding-top:150px;padding-bottom:72px">
+        <div class="container">
+          <span class="label-tag">${t.hero.label}</span>
+          <div class="gold-line"></div>
+          <h1 class="display-title" style="max-width:760px">${t.hero.title}</h1>
+          <p class="body-large mt-24" style="max-width:580px;color:var(--text-body)">${t.hero.description}</p>
+          <div class="grow-kpis">
+            ${t.hero.stats.map(s => `<div class="grow-kpi"><strong>${s.value}</strong><span>${s.label}</span></div>`).join('')}
+          </div>
+          <div style="margin-top:34px">
+            <a href="#posiciones" class="v3-btn v3-btn--gold v3-btn--lg v3-btn--pulse">${t.hero.cta}</a>
+          </div>
+        </div>
+      </section>
+    `;
+
+    // Why cards
+    const whyCards = t.why.cards.map(card => `
+      <div class="why-card">
+        <span class="ic">${card.icon}</span>
+        <h3>${card.title}</h3>
+        <p>${card.text}</p>
+      </div>
+    `).join('');
+    const whyHTML = `
+      <section class="section section--white">
+        <div class="container">
+          <span class="label-tag">${t.why.label}</span>
+          <div class="gold-line"></div>
+          <h2 class="section-title" style="max-width:560px">${t.why.title}</h2>
+          <div class="why-grid">${whyCards}</div>
+        </div>
+      </section>
+    `;
+
+    // Positions
+    const jobsHTML = t.positions.jobs.map(job => `
+      <div class="job">
+        <div>
+          <p class="job__t">${job.title}</p>
+          <p class="job__meta">${job.meta}</p>
+        </div>
+        <a href="#candidatura" class="v3-btn v3-btn--gold v3-btn--sm">${job.cta}</a>
+      </div>
+    `).join('');
+    const positionsHTML = `
+      <section class="section section--pearl" id="posiciones">
+        <div class="container">
+          <span class="label-tag">${t.positions.label}</span>
+          <div class="gold-line"></div>
+          <h2 class="section-title" style="max-width:560px">${t.positions.title}</h2>
+          <div class="jobs">${jobsHTML}</div>
+          <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--text-muted);margin-top:28px">
+            ${t.positions.spontaneousText} <a href="#candidatura" style="color:var(--navy);font-weight:600">${t.positions.spontaneousLink}</a>
+          </p>
+        </div>
+      </section>
+    `;
+
+    // Perks
+    const perksHTML = t.perks.items.map(perk => `<div class="perk"><span>✓</span> ${perk}</div>`).join('');
+    const perksSection = `
+      <section class="section section--white">
+        <div class="container">
+          <span class="label-tag">${t.perks.label}</span>
+          <div class="gold-line"></div>
+          <h2 class="section-title" style="max-width:560px">${t.perks.title}</h2>
+          <div class="perks">${perksHTML}</div>
+        </div>
+      </section>
+    `;
+
+    // Application form
+    const positionsOptions = t.application.form.positions.map(pos => `<option>${pos}</option>`).join('');
+    const applicationHTML = `
+      <section class="section section--pearl" id="candidatura">
+        <div class="container" style="max-width:680px">
+          <span class="label-tag">${t.application.label}</span>
+          <div class="gold-line"></div>
+          <h2 class="section-title">${t.application.title}</h2>
+          <p class="body-large mt-16" style="color:var(--text-body)">${t.application.description}</p>
+          <div style="background:#fff;border:1px solid #E5E5E0;border-radius:14px;padding:30px;margin-top:28px;box-shadow:0 12px 36px rgba(26,39,68,0.08)">
+            <form id="careerForm" onsubmit="applyCareers(event)" style="display:flex;flex-direction:column;gap:13px">
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <input class="apply-input" style="flex:1;min-width:180px" type="text" name="nombre" placeholder="${t.application.form.namePlaceholder}" required>
+                <input class="apply-input" style="flex:1;min-width:180px" type="email" name="email" placeholder="${t.application.form.emailPlaceholder}" required>
+              </div>
+              <select class="apply-input" name="posicion" required>
+                <option value="" disabled selected>${t.application.form.positionLabel}</option>
+                ${positionsOptions}
+              </select>
+              <input class="apply-input" type="url" name="enlace" placeholder="${t.application.form.linkPlaceholder}">
+              <textarea class="apply-input" name="mensaje" rows="4" placeholder="${t.application.form.messagePlaceholder}"></textarea>
+              <div style="display:flex;gap:9px;align-items:flex-start">
+                <input type="checkbox" required style="width:15px;height:15px;flex-shrink:0;margin-top:3px;accent-color:#1A2744">
+                <label style="font-family:'Inter',sans-serif;font-size:12px;color:#7A8499;line-height:1.4">${t.application.form.rgpdText} <a href="privacidad.html" target="_blank" style="color:#1A2744">${t.application.form.privacyLink}</a></label>
+              </div>
+              <button type="submit" class="v3-btn v3-btn--gold v3-btn--full v3-btn--xl v3-btn--pulse">${t.application.form.submitButton}</button>
+              <p style="font-family:'Inter',sans-serif;font-size:11px;color:#B0B8C4;text-align:center;margin:0">${t.application.form.lockText}</p>
+            </form>
+            <div id="careerThanks" style="display:none;text-align:center;padding:18px 6px">
+              <div style="font-size:40px;color:#C9A84C">${t.application.thanks.icon}</div>
+              <p style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--navy);margin:8px 0 6px">${t.application.thanks.title}</p>
+              <p style="font-family:'Inter',sans-serif;font-size:14px;color:var(--text-muted);margin:0">${t.application.thanks.message}<a href="mailto:${t.application.thanks.email}" style="color:var(--navy);font-weight:600">${t.application.thanks.email}</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+
+    // Footer
+    const footerHTML = `
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col footer__col--wide">
+            <div class="nav__logo" style="margin-bottom:16px">${t.footer.logo}</div>
+            <p style="color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:14px;line-height:1.7;max-width:280px">${t.footer.description}</p>
+            <p style="color:rgba(255,255,255,0.4);font-family:var(--font-sans);font-size:13px;margin-top:16px">${t.footer.contact.email} · ${t.footer.contact.phone}</p>
+            <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--font-sans);font-size:12px;color:var(--gold);letter-spacing:0.04em">${t.footer.contact.linkedin}</a>
+          </div>
+          <div class="footer__col"><h4 class="footer__heading">${t.footer.certifications.title}</h4><ul class="footer__links">${t.footer.certifications.items.map(i => `<li><a href="${i === 'ENS' ? 'ens.html' : i === '⚡ ENS Express' ? 'ens-express.html' : i === 'ISO 27001' ? 'iso27001.html' : i === 'ISO 22301' ? 'iso22301.html' : i === 'DORA' ? 'dora.html' : i === 'NIS2' ? 'nis2.html' : i === 'TISAX' ? 'tisax.html' : '#'}">${i}</a></li>`).join('')}</ul></div>
+          <div class="footer__col"><h4 class="footer__heading">${t.footer.company.title}</h4><ul class="footer__links">${t.footer.company.items.map(i => `<li><a href="${i === 'Equipo' ? 'equipo.html' : i === 'Únete al equipo' ? 'unete.html' : i === 'Packs' ? 'packs.html' : i === 'Contacto' ? 'contacto.html' : '#'}">${i}</a></li>`).join('')}</ul></div>
+          <div class="footer__col"><h4 class="footer__heading">${t.footer.ctaBox.title}</h4><p style="color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:14px;margin-bottom:20px">${t.footer.ctaBox.description}</p><a href="#posiciones" class="btn-primary" style="color:#fff;border-color:var(--gold);font-size:12px">${t.footer.ctaBox.button}</a></div>
+        </div>
+        <div class="footer__bottom"><p>${t.footer.bottom.copyright}</p><div>${t.footer.bottom.links.map(l => `<a href="#">${l}</a>`).join(' · ')}</div></div>
+      </div>
+    `;
+
+    document.getElementById('app').innerHTML = heroHTML + whyHTML + positionsHTML + perksSection + applicationHTML;
+    document.getElementById('footer').innerHTML = footerHTML;
+
+    // Elementos sueltos
+    document.getElementById('floatingCta').innerHTML = t.floatingCta;
+    document.getElementById('exitModalLabel').innerHTML = t.exitModal.title;
+    document.getElementById('exitModalTitle').innerHTML = t.exitModal.question;
+    document.getElementById('exitModalDesc').innerHTML = t.exitModal.description;
+    document.getElementById('exitModalCta').innerHTML = t.exitModal.cta;
+    document.getElementById('exitModalDismiss').innerHTML = t.exitModal.dismiss;
+    document.getElementById('stickyBarText').innerHTML = t.stickyBar.text;
+    document.getElementById('stickyBarCta').innerHTML = t.stickyBar.cta;
+
+    initInteractions();
+  } catch (error) {
+    console.error('Error cargando el JSON:', error);
+    document.getElementById('app').innerHTML = '<div class="loader">Error al cargar el contenido. Por favor, recarga la página.</div>';
+  }
+}
+
+function initInteractions() {
+  // Menú móvil
+  const burger = document.getElementById('navBurger');
+  const overlay = document.getElementById('navOverlay');
+  const close = document.getElementById('navClose');
+  const toggleNav = (open) => {
+    overlay.classList.toggle('open', open);
+    document.body.classList.toggle('no-scroll', open);
+  };
+  burger?.addEventListener('click', () => toggleNav(!overlay.classList.contains('open')));
+  close?.addEventListener('click', () => toggleNav(false));
+  overlay?.addEventListener('click', (e) => { if (e.target === overlay) toggleNav(false); });
+
+  // Scroll effect en nav
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('v3-nav--scrolled', window.scrollY > 40);
+  });
+
+  // Exit intent modal
+  let exitShown = false;
+  document.addEventListener('mouseleave', (e) => {
+    if (e.clientY < 0 && !exitShown && !sessionStorage.getItem('_exitShown')) {
+      document.getElementById('exitModal').style.display = 'flex';
+      exitShown = true;
+      sessionStorage.setItem('_exitShown', '1');
+    }
+  });
+
+  // Sticky bar en móvil
+  if (window.innerWidth <= 768) {
+    document.getElementById('stickyBar').style.display = 'flex';
+  }
+}
+
+// Función applyCareers (sin cambios, usa avson-leads.js)
+window.applyCareers = function(e) {
+  e.preventDefault();
+  var f = e.target, fd = new FormData(f), email = fd.get('email') || '';
+  if (typeof avsonIsValidEmail === 'function' && !avsonIsValidEmail(email)) {
+    alert('Introduce un email válido.');
+    return false;
+  }
+  var data = {};
+  fd.forEach(function(v,k){ data[k] = v; });
+  data.source = 'careers';
+  data.page = location.pathname;
+  data.ts = new Date().toISOString();
+  if (typeof avsonTrack === 'function') avsonTrack('career_application', { posicion: data.posicion || '' });
+  var ep = window.AVSON_CONFIG && window.AVSON_CONFIG.LEAD_ENDPOINT;
+  if (ep) {
+    fetch(ep, {
+      method: window.AVSON_CONFIG.ENDPOINT_METHOD,
+      headers: window.AVSON_CONFIG.ENDPOINT_HEADERS,
+      body: JSON.stringify(data)
+    }).catch(function(err){ console.error('[Avson] Error candidatura:', err); });
+  } else {
+    console.info('[Avson] Candidatura (modo validación · sin endpoint):', data);
+  }
+  f.style.display = 'none';
+  document.getElementById('careerThanks').style.display = 'block';
+  return false;
+};
+
+loadContent();
+</script>
+</body>
+</html>
