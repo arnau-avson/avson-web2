@@ -9,10 +9,14 @@
       "Bash(node:*)",
       "Bash(LC_ALL=C sed:*)",
       "Bash(LC_ALL=C sort:*)",
-      "Bash(LC_ALL=C uniq:*)"
+      "Bash(LC_ALL=C uniq:*)",
+      "Read(//c/Users/arnau/Downloads/avson-web/avson-web/**)",
+      "Bash(comm:*)",
+      "Read(//c/Users/arnau/Downloads/avson-web/**)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\arnau\\Desktop\\avson\\code_new\\en"
+      "c:\\Users\\arnau\\Desktop\\avson\\code_new\\en",
+      "C:\\Users\\arnau\\Downloads\\avson-web\\avson-web"
     ]
   }
 }

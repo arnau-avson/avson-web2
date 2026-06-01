@@ -546,7 +546,7 @@ export default function EnsPage() {
           <span className="label-tag">¿Tienes más preguntas?</span>
           <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'26px',fontWeight:'500',color:'var(--white)',lineHeight:'1.3',margin:'16px 0'}}>Habla con un especialista ENS en Madrid</h3>
           <p style={{fontSize:'14px',color:'rgba(255,255,255,0.45)',lineHeight:'1.65',marginBottom:'28px'}}>Respuesta en menos de 24 horas. Sin presiones. Solo información útil para tu proyecto.</p>
-          <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto.html' }} style={{display:'flex',gap:'0',marginTop:'0',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.08)'}}>
+          <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto' }} style={{display:'flex',gap:'0',marginTop:'0',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.08)'}}>
             <input type="email" id="heroEmail" required placeholder="tu@empresa.com"
               style={{flex:'1',padding:'16px 20px',border:'none',fontFamily:'var(--font-sans)',fontSize:'0.95rem',color:'var(--navy)',background:'var(--white)',outline:'none',minWidth:'0'}} />
             <button type="submit"

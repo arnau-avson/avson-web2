@@ -120,22 +120,20 @@ export default function ContactoPage() {
 </form>
 
 <div style={{marginTop:'32px',paddingTop:'24px',borderTop:'1px solid var(--border)',textAlign:'center'}}>
-  <p style={{fontFamily:'var(--font-sans)',fontSize:'0.85rem',color:'var(--navy-60)',marginBottom:'12px'}}>¿Prefieres hablar directamente?</p>
-  <a href="tel:+34648414863" style={{fontFamily:'var(--font-serif)',fontSize:'1.4rem',color:'var(--navy)',textDecoration:'none',fontWeight:'400'}}>+34 648 41 48 63</a>
-  <p style={{fontFamily:'var(--font-sans)',fontSize:'0.78rem',color:'var(--navy-60)',marginTop:'6px'}}>Lun–Vie 9:00–18:00 · También por WhatsApp</p>
-  <a href="https://wa.me/34648414863?text=Hola,%20me%20interesa%20información%20sobre%20consultoría%20GRC" 
-     style={{display:'inline-flex',alignItems:'center',gap:'8px',marginTop:'12px',fontFamily:'var(--font-sans)',fontSize:'0.85rem',color:'#25D366',textDecoration:'none',fontWeight:'500'}}
-     target="_blank" rel="noopener">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Escribir por WhatsApp →
+  <p style={{fontFamily:'var(--font-sans)',fontSize:'0.85rem',color:'var(--navy-60)',marginBottom:'12px'}}>¿Prefieres escribirnos directamente?</p>
+  <a href="mailto:hello@avson.eu"
+     style={{display:'inline-flex',alignItems:'center',gap:'8px',fontFamily:'var(--font-sans)',fontSize:'0.95rem',color:'var(--gold)',textDecoration:'none',fontWeight:'500'}}>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    hello@avson.eu
   </a>
+  <p style={{fontFamily:'var(--font-sans)',fontSize:'0.78rem',color:'var(--navy-60)',marginTop:'6px'}}>Lun–Vie 9:00–18:00</p>
 </div>
 
           <div id="form-success" style={{display:'none',background:'linear-gradient(135deg,#F0F8F4,#E8F5EE)',border:'2px solid #27AE60',borderRadius:'8px',padding:'32px',marginTop:'24px',textAlign:'center'}}>
             <div style={{fontSize:'2.5rem',marginBottom:'16px'}}>&#10003;</div>
             <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'1.6rem',color:'var(--navy)',marginBottom:'12px'}}>¡Solicitud recibida!</h3>
             <p style={{color:'var(--navy-60)',fontSize:'0.95rem',lineHeight:'1.6'}}>Te contactaremos en menos de <strong>4 horas laborables</strong> para confirmar la cita del diagnóstico gratuito. Revisa también tu carpeta de spam por si acaso.</p>
-            <p style={{color:'var(--navy-60)',fontSize:'0.85rem',marginTop:'16px'}}>¿Prefieres que te llamemos ahora? <a href="tel:+34648414863" style={{color:'var(--gold)',fontWeight:'600'}}>+34 648 41 48 63</a></p>
+            <p style={{color:'var(--navy-60)',fontSize:'0.85rem',marginTop:'16px'}}>¿Necesitas algo más? <a href="mailto:hello@avson.eu" style={{color:'var(--gold)',fontWeight:'600'}}>hello@avson.eu</a></p>
           </div>
         </div>
 
@@ -177,8 +175,8 @@ export default function ContactoPage() {
                 <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'rgba(255,255,255,0.45)',lineHeight:'1.6'}}>Un consultor sénior lee tu mensaje y responde. No un bot, no un formulario de seguimiento.</p>
               </div>
               <div style={{borderTop:'1px solid rgba(255,255,255,0.08)',paddingTop:'24px',marginTop:'8px'}}>
-                <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'rgba(255,255,255,0.5)',marginBottom:'8px'}}>¿Prefieres que te llamemos?</p>
-                <a href="tel:+34648414863" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'16px',fontWeight:'500',color:'var(--gold)',textDecoration:'none'}}>+34 648 41 48 63</a>
+                <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'rgba(255,255,255,0.5)',marginBottom:'8px'}}>¿Prefieres escribirnos directamente?</p>
+                <a href="mailto:hello@avson.eu" style={{fontFamily:'\'Inter\',sans-serif',fontSize:'16px',fontWeight:'500',color:'var(--gold)',textDecoration:'none'}}>hello@avson.eu</a>
               </div>
             </div>
           </div>
@@ -192,13 +190,6 @@ export default function ContactoPage() {
                 <div>
                   <div style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.5)',marginBottom:'2px'}}>Email</div>
                   <a href="mailto:hello@avson.eu" style={{color:'var(--gold)',fontSize:'0.9rem',fontWeight:'600',textDecoration:'none'}}>hello@avson.eu</a>
-                </div>
-              </div>
-              <div style={{display:'flex',alignItems:'center',gap:'12px'}}>
-                <div style={{width:'36px',height:'36px',background:'rgba(201,168,76,0.2)',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1rem',flexShrink:'0'}}>&#128222;</div>
-                <div>
-                  <div style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.5)',marginBottom:'2px'}}>Teléfono</div>
-                  <a href="tel:+34648414863" style={{color:'var(--gold)',fontSize:'0.9rem',fontWeight:'600',textDecoration:'none'}}>+34 648 41 48 63</a>
                 </div>
               </div>
               <div style={{display:'flex',alignItems:'center',gap:'12px'}}>
@@ -281,10 +272,10 @@ export default function ContactoPage() {
       <div style={{background:'var(--white)',borderRadius:'8px',padding:'32px',marginTop:'40px',display:'flex',alignItems:'center',gap:'32px',flexWrap:'wrap'}}>
         <div style={{flex:'1',minWidth:'200px'}}>
           <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'1.3rem',fontWeight:'700',color:'var(--navy)',marginBottom:'8px'}}>¿Tienes un plazo urgente?</h3>
-          <p style={{fontSize:'0.9rem',color:'var(--navy-60)',lineHeight:'1.5'}}>Si tienes una licitación con fecha límite, una auditoría ya programada o un cliente que te exige la certificación para renovar contrato, llámanos directamente. Gestionamos casos urgentes con capacidad de arranque en 48 horas.</p>
+          <p style={{fontSize:'0.9rem',color:'var(--navy-60)',lineHeight:'1.5'}}>Si tienes una licitación con fecha límite, una auditoría ya programada o un cliente que te exige la certificación para renovar contrato, escríbenos directamente. Gestionamos casos urgentes con capacidad de arranque en 48 horas.</p>
         </div>
         <div style={{flexShrink:'0'}}>
-          <a href="tel:+34648414863" className="btn-primary" style={{display:'inline-block',whiteSpace:'nowrap'}}>Llamar ahora: +34 648 41 48 63</a>
+          <a href="mailto:hello@avson.eu" className="btn-primary" style={{display:'inline-block',whiteSpace:'nowrap'}}>Escribir: hello@avson.eu</a>
         </div>
       </div>
     </div>
@@ -317,7 +308,7 @@ export default function ContactoPage() {
             <span className="faq-item__icon">+</span>
           </button>
           <div className="faq-item__answer">
-            <p>Nuestro compromiso es responder en menos de 4 horas laborables. Si rellenas el formulario por la mañana, tendrás respuesta antes del mediodía. Si lo haces por la tarde, a primera hora del día siguiente. En casos urgentes —licitaciones con plazos inminentes, auditorías programadas— llámanos directamente al +34 648 41 48 63 e identificamos la situación como prioritaria.</p>
+            <p>Nuestro compromiso es responder en menos de 4 horas laborables. Si rellenas el formulario por la mañana, tendrás respuesta antes del mediodía. Si lo haces por la tarde, a primera hora del día siguiente. En casos urgentes —licitaciones con plazos inminentes, auditorías programadas— escríbenos directamente a hello@avson.eu e identificamos la situación como prioritaria.</p>
             <p style={{marginTop:'12px'}}>El email de confirmación incluirá el nombre del consultor asignado y un enlace Calendly para que puedas elegir el horario de la reunión de diagnóstico sin necesidad de intercambiar más correos.</p>
           </div>
         </div>
@@ -396,11 +387,11 @@ export default function ContactoPage() {
   <section style={{background:'var(--navy)',padding:'48px 0'}}>
     <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:'32px',flexWrap:'wrap'}}>
       <div>
-        <h2 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'1.8rem',fontWeight:'700',color:'var(--white)',marginBottom:'8px'}}>¿Prefieres que te llamemos?</h2>
-        <p style={{color:'rgba(255,255,255,0.7)',fontSize:'0.95rem'}}>Lunes a viernes, 9:00–18:00. Sin esperas, sin centralitas.</p>
+        <h2 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'1.8rem',fontWeight:'700',color:'var(--white)',marginBottom:'8px'}}>¿Prefieres escribirnos directamente?</h2>
+        <p style={{color:'rgba(255,255,255,0.7)',fontSize:'0.95rem'}}>Respondemos en menos de 4 horas laborables. Sin esperas.</p>
       </div>
-      <a href="tel:+34648414863" className="btn-primary" style={{fontSize:'1.1rem',padding:'18px 40px',whiteSpace:'nowrap'}}>
-        +34 648 41 48 63
+      <a href="mailto:hello@avson.eu" className="btn-primary" style={{fontSize:'1.1rem',padding:'18px 40px',whiteSpace:'nowrap'}}>
+        hello@avson.eu
       </a>
     </div>
   </section>

@@ -8,7 +8,7 @@ export default function EnsSevillaPage() {
       <ol className="breadcrumb">
         <li><Link to="/">Inicio</Link></li>
         <li className="sep">/</li>
-        <li><Link to="/ens.html">ENS</Link></li>
+        <li><Link to="/ens">ENS</Link></li>
         <li className="sep">/</li>
         <li className="current">ENS en Sevilla</li>
       </ol>
@@ -18,7 +18,7 @@ export default function EnsSevillaPage() {
       </div>
       <h1 className="hero__h1">Certificado ENS en Sevilla —<br /><em>Consultoría GRC en Andalucía y Sur de España</em></h1>
       <p className="hero__sub">Avson GRC trabaja de forma presencial en Sevilla y toda Andalucía, y en remoto con la misma metodología y los mismos resultados garantizados para cualquier empresa de España.</p>
-      <form className="hero__form" action="/contacto.html" method="get">
+      <form className="hero__form" action="/contacto" method="get">
         <input type="email" name="email" placeholder="tu@empresa.com" required />
         <button type="submit">Diagnóstico gratuito →</button>
       </form>
@@ -35,7 +35,7 @@ export default function EnsSevillaPage() {
         <p>Avson GRC es una consultoría nacional con presencia en toda España. Trabajamos de forma presencial en cualquier ciudad y en remoto con la misma metodología y los mismos resultados.</p>
       </div>
       <p className="section__body">Nuestro equipo se desplaza a Sevilla, Málaga, Granada, Córdoba, Almería, Cádiz, Huelva y Jaén para reuniones presenciales y preparación de auditorías. Las fases de implementación se gestionan principalmente en remoto con las mismas tasas de éxito que los proyectos presenciales.</p>
-      <p className="section__body">Si tu empresa está en cualquier otra ciudad andaluza o en el sur de España, Avson GRC puede atenderte con el mismo nivel de servicio. Consulta nuestra <Link to="/consultoria-ens-espana.html" style={{color:'var(--gold)',fontWeight:'500'}}>cobertura nacional completa</Link>.</p>
+      <p className="section__body">Si tu empresa está en cualquier otra ciudad andaluza o en el sur de España, Avson GRC puede atenderte con el mismo nivel de servicio. Consulta nuestra <Link to="/consultoria-ens-espana" style={{color:'var(--gold)',fontWeight:'500'}}>cobertura nacional completa</Link>.</p>
     </div>
   </section>
 
@@ -94,7 +94,7 @@ export default function EnsSevillaPage() {
           <li style={{display:'flex',gap:'12px',marginBottom:'10px'}}><span style={{color:'var(--gold)',fontWeight:'600'}}>→</span> ENS Medio: desde 9.000 €</li>
           <li style={{display:'flex',gap:'12px'}}><span style={{color:'var(--gold)',fontWeight:'600'}}>→</span> ENS Alto: desde 18.000 €</li>
         </ul>
-        <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'#999',marginTop:'16px'}}>Incluyen garantía de éxito por escrito. Ver <Link to="/precio.html" style={{color:'var(--gold)'}}>detalle de precios</Link>.</p>
+        <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'13px',color:'#999',marginTop:'16px'}}>Incluyen garantía de éxito por escrito. Ver <Link to="/precio" style={{color:'var(--gold)'}}>detalle de precios</Link>.</p>
       </div>
     </div>
   </section>
@@ -131,7 +131,7 @@ export default function EnsSevillaPage() {
             <span className="faq-item__icon">+</span>
           </button>
           <div className="faq-item__a">
-            <p>El coste es el mismo que en cualquier otra ciudad española: desde 4.000 € para ENS básico hasta más de 18.000 € para ENS alto. No aplicamos recargos por desplazamiento a Sevilla. El <Link to="/contacto.html" style={{color:'var(--gold)'}}>diagnóstico gratuito</Link> incluye propuesta personalizada sin compromiso.</p>
+            <p>El coste es el mismo que en cualquier otra ciudad española: desde 4.000 € para ENS básico hasta más de 18.000 € para ENS alto. No aplicamos recargos por desplazamiento a Sevilla. El <Link to="/contacto" style={{color:'var(--gold)'}}>diagnóstico gratuito</Link> incluye propuesta personalizada sin compromiso.</p>
           </div>
         </div>
       </div>
@@ -143,13 +143,13 @@ export default function EnsSevillaPage() {
       <div className="gold-line gold-line--center"></div>
       <h2 className="section__h2 section__h2--white">¿Tu empresa en Sevilla necesita el ENS?</h2>
       <p className="section__lead section__lead--white" style={{margin:'0 auto 36px'}}>Escríbenos tu email y te enviamos un diagnóstico gratuito en 48 horas. Reunión por videollamada o presencial en Sevilla.</p>
-      <form className="cta-form" action="/contacto.html" method="get">
+      <form className="cta-form" action="/contacto" method="get">
         <input type="email" name="email" placeholder="tu@empresa.com" required />
         <button type="submit">Solicitar diagnóstico →</button>
       </form>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'rgba(255,255,255,.35)',marginTop:'16px'}}>+34 648 41 48 63 · info@avson.eu · Toda España, presencial y remoto</p>
+      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'rgba(255,255,255,.35)',marginTop:'16px'}}>hello@avson.eu · Toda España, presencial y remoto</p>
       <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'rgba(255,255,255,.35)',marginTop:'8px'}}>
-        Ver también: <Link to="/consultoria-ens-espana.html" style={{color:'var(--gold)'}}>Consultoría ENS España</Link> · <Link to="/ens.html" style={{color:'var(--gold)'}}>Servicio ENS completo</Link> · <Link to="/ens-express.html" style={{color:'var(--gold)'}}>ENS Express</Link>
+        Ver también: <Link to="/consultoria-ens-espana" style={{color:'var(--gold)'}}>Consultoría ENS España</Link> · <Link to="/ens" style={{color:'var(--gold)'}}>Servicio ENS completo</Link> · <Link to="/ens-express" style={{color:'var(--gold)'}}>ENS Express</Link>
       </p>
     </div>
   </section>

@@ -8,14 +8,14 @@ export default function ConsultoriaEnsPage() {
       <ol className="breadcrumb">
         <li><Link to="/">Inicio</Link></li>
         <li className="sep">/</li>
-        <li><Link to="/ens.html">ENS</Link></li>
+        <li><Link to="/ens">ENS</Link></li>
         <li className="sep">/</li>
         <li className="current">Consultoría ENS España</li>
       </ol>
       <p className="hero__label">Esquema Nacional de Seguridad · Toda España</p>
       <h1 className="hero__h1">Consultoría ENS en España —<br /><em>Certificación para Toda la Nación</em></h1>
       <p className="hero__sub">Avson GRC es la consultora especializada en ENS con mayor tasa de éxito de España. Trabajamos con empresas de cualquier ciudad, de forma presencial o en remoto, con la misma metodología y los mismos resultados garantizados.</p>
-      <form className="hero__form" action="/contacto.html" method="get">
+      <form className="hero__form" action="/contacto" method="get">
         <input type="email" name="email" placeholder="tu@empresa.com" required />
         <button type="submit">Diagnóstico gratuito →</button>
       </form>
@@ -226,7 +226,7 @@ export default function ConsultoriaEnsPage() {
             <span className="faq-item__icon">+</span>
           </button>
           <div className="faq-item__a">
-            <p>El plazo habitual es de 3 a 4 meses para la mayoría de organizaciones de tamaño medio, dependiendo del nivel ENS (básico, medio o alto), la madurez previa en seguridad y el tamaño de la organización. Con <Link to="/ens-express.html" style={{color:'var(--gold)'}}>ENS Express</Link>, el plazo puede reducirse a 30 días para el nivel básico.</p>
+            <p>El plazo habitual es de 3 a 4 meses para la mayoría de organizaciones de tamaño medio, dependiendo del nivel ENS (básico, medio o alto), la madurez previa en seguridad y el tamaño de la organización. Con <Link to="/ens-express" style={{color:'var(--gold)'}}>ENS Express</Link>, el plazo puede reducirse a 30 días para el nivel básico.</p>
           </div>
         </div>
         <div className="faq-item anim-fade-up">
@@ -235,7 +235,7 @@ export default function ConsultoriaEnsPage() {
             <span className="faq-item__icon">+</span>
           </button>
           <div className="faq-item__a">
-            <p>El coste varía según el nivel ENS, el tamaño de la organización y el punto de partida. El rango orientativo va desde 4.000 € para ENS básico en organizaciones pequeñas hasta 25.000 € o más para ENS alto en organizaciones complejas. El <Link to="/contacto.html" style={{color:'var(--gold)'}}>diagnóstico gratuito</Link> incluye una propuesta económica personalizada sin compromiso.</p>
+            <p>El coste varía según el nivel ENS, el tamaño de la organización y el punto de partida. El rango orientativo va desde 4.000 € para ENS básico en organizaciones pequeñas hasta 25.000 € o más para ENS alto en organizaciones complejas. El <Link to="/contacto" style={{color:'var(--gold)'}}>diagnóstico gratuito</Link> incluye una propuesta económica personalizada sin compromiso.</p>
           </div>
         </div>
         <div className="faq-item anim-fade-up">
@@ -265,11 +265,11 @@ export default function ConsultoriaEnsPage() {
       <div className="gold-line gold-line--center"></div>
       <h2 className="section__h2 section__h2--white">Solicita tu diagnóstico gratuito</h2>
       <p className="section__lead section__lead--white" style={{margin:'0 auto 36px'}}>Dinos tu email y te enviamos un diagnóstico gratuito en 48 horas con la categoría ENS aplicable, el plan de certificación y el presupuesto orientativo. Sin compromiso.</p>
-      <form className="cta-form" action="/contacto.html" method="get">
+      <form className="cta-form" action="/contacto" method="get">
         <input type="email" name="email" placeholder="tu@empresa.com" required />
         <button type="submit">Solicitar diagnóstico →</button>
       </form>
-      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'rgba(255,255,255,.35)',marginTop:'16px'}}>+34 648 41 48 63 · info@avson.eu · Toda España, presencial y remoto</p>
+      <p style={{fontFamily:'\'Inter\',sans-serif',fontSize:'12px',color:'rgba(255,255,255,.35)',marginTop:'16px'}}>hello@avson.eu · Toda España, presencial y remoto</p>
     </div>
   </section>
 

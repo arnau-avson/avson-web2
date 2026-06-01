@@ -9,7 +9,7 @@ export default function HomePage() {
       <span className="label-tag">Consultoría GRC · Certificado ENS · Certificación Garantizada</span>
       <h1 className="display-title">El ENS es el pasaporte<br /><em>al sector público.</em></h1>
       <p className="body-large mt-32" style={{maxWidth:'480px'}}>Obligatorio desde 2022 para licitar con la Administración Pública. Te certificamos en 3–4 meses. Con garantía de éxito por escrito.</p>
-      <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto.html' }} style={{display:'flex',gap:'0',marginTop:'32px',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.12)'}}>
+      <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto' }} style={{display:'flex',gap:'0',marginTop:'32px',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.12)'}}>
         <input type="email" id="heroEmail" required placeholder="tu@empresa.com"
           style={{flex:'1',padding:'16px 20px',border:'none',fontFamily:'var(--font-sans)',fontSize:'0.95rem',color:'var(--navy)',background:'var(--white)',outline:'none',minWidth:'0'}} />
         <button type="submit"

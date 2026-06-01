@@ -126,7 +126,7 @@ export default function EnsExpressPage() {
     <div style={{maxWidth:'700px'}}>
       <h1>Certificado ENS en 30 días.<br /><em>Para empresas que no pueden esperar.</em></h1>
       <p className="subtitle">Tienes un contrato público que cierra pronto. Sin el ENS, no puedes presentarte. ENS Express te garantiza el certificado en 30 días naturales, con un equipo de tres consultores dedicados exclusivamente a tu proyecto.</p>
-      <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto.html' }} style={{display:'flex',gap:'0',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(0,0,0,0.25)'}}>
+      <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto' }} style={{display:'flex',gap:'0',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(0,0,0,0.25)'}}>
         <input type="email" id="heroEmail" required placeholder="tu@empresa.com"
           style={{flex:'1',padding:'16px 20px',border:'none',fontFamily:'var(--font-sans)',fontSize:'0.95rem',color:'var(--navy)',background:'var(--white)',outline:'none',minWidth:'0'}} />
         <button type="submit"

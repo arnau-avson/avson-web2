@@ -257,7 +257,7 @@ export default function CalculadoraRoiPage() {
       <div style={{background:'var(--navy)',padding:'40px 40px 44px',textAlign:'center'}}>
         <p style={{fontFamily:'var(--font-serif)',fontSize:'22px',fontStyle:'italic',color:'var(--white)',lineHeight:'1.45',marginBottom:'8px'}}>"La certificación ENS cuesta significativamente menos que un solo contrato perdido."</p>
         <p style={{fontFamily:'var(--font-sans)',fontSize:'13px',color:'rgba(255,255,255,0.45)',marginBottom:'32px'}}>Avson GRC · Garantía de éxito al 100% por escrito · 3–4 meses</p>
-        <Link to="/contacto.html" style={{display:'inline-block',fontFamily:'var(--font-sans)',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--navy)',background:'var(--gold)',border:'1px solid var(--gold)',padding:'16px 40px',textDecoration:'none',transition:'opacity 0.2s'}}>Recuperar esos contratos →</Link>
+        <Link to="/contacto" style={{display:'inline-block',fontFamily:'var(--font-sans)',fontSize:'12px',fontWeight:'500',letterSpacing:'0.1em',textTransform:'uppercase',color:'var(--navy)',background:'var(--gold)',border:'1px solid var(--gold)',padding:'16px 40px',textDecoration:'none',transition:'opacity 0.2s'}}>Recuperar esos contratos →</Link>
       </div>
 
       <p style={{fontFamily:'var(--font-sans)',fontSize:'12px',color:'var(--text-muted)',marginTop:'16px',lineHeight:'1.65',fontStyle:'italic'}}>*Estimación basada en datos del Ministerio de Hacienda sobre contratación TIC pública en España (presupuesto anual ~8.000 M€). El ENS es requisito en aproximadamente el 35% de los contratos TIC. Tasa media de adjudicación estimada: 18%. No constituye garantía de resultados concretos.</p>

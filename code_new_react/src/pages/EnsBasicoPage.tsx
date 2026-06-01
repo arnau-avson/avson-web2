@@ -21,7 +21,7 @@ export default function EnsBasicoPage() {
         <span className="guarantee-seal__text">Garantía de éxito<br />al 100% por escrito</span>
       </div>
       <p className="body-large mt-32" style={{maxWidth:'620px'}}>La categoría Básica del ENS es la puerta de entrada al mercado de contratación pública. En Avson GRC te acompañamos en todo el proceso, desde el diagnóstico hasta la emisión del certificado, en toda España, en 3-4 meses.</p>
-      <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto.html' }} style={{display:'flex',gap:'0',marginTop:'32px',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.12)'}}>
+      <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto' }} style={{display:'flex',gap:'0',marginTop:'32px',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.12)'}}>
         <input type="email" id="heroEmail" required placeholder="tu@empresa.com"
           style={{flex:'1',padding:'16px 20px',border:'none',fontFamily:'var(--font-sans)',fontSize:'0.95rem',color:'var(--navy)',background:'var(--white)',outline:'none',minWidth:'0'}} />
         <button type="submit"
@@ -339,7 +339,7 @@ export default function EnsBasicoPage() {
           <span className="label-tag">Diagnóstico gratuito</span>
           <h3 style={{fontFamily:'\'Cormorant Garamond\',serif',fontSize:'26px',fontWeight:'500',color:'var(--white)',lineHeight:'1.3',margin:'16px 0'}}>Propuesta personalizada<br />en 48 horas</h3>
           <p style={{fontSize:'14px',color:'rgba(255,255,255,0.45)',lineHeight:'1.65',marginBottom:'28px'}}>Sin compromiso. Solo información útil sobre tu proyecto ENS Básico. Servicio en toda España, presencial o remoto.</p>
-          <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto.html' }} style={{display:'flex',gap:'0',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.08)'}}>
+          <form onSubmit={(e) => { e.preventDefault(); window.location.href = '/contacto' }} style={{display:'flex',gap:'0',marginBottom:'16px',maxWidth:'480px',boxShadow:'0 4px 24px rgba(26,39,68,0.08)'}}>
             <input type="email" id="heroEmail2" required placeholder="tu@empresa.com"
               style={{flex:'1',padding:'16px 20px',border:'none',fontFamily:'var(--font-sans)',fontSize:'0.95rem',color:'var(--navy)',background:'var(--white)',outline:'none',minWidth:'0'}} />
             <button type="submit"
@@ -348,7 +348,7 @@ export default function EnsBasicoPage() {
               Solicitar →
             </button>
           </form>
-          <p style={{fontFamily:'var(--font-sans)',fontSize:'0.78rem',color:'rgba(255,255,255,0.5)'}}>+34 648 41 48 63 · info@avson.eu</p>
+          <p style={{fontFamily:'var(--font-sans)',fontSize:'0.78rem',color:'rgba(255,255,255,0.5)'}}>hello@avson.eu</p>
         </div>
       </div>
     </div>

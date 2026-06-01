@@ -22,7 +22,6 @@ export default function PrivacidadPage() {
           <p style={{margin:'0'}}><strong>CIF:</strong> B10560795</p>
           <p style={{margin:'0'}}><strong>Domicilio social:</strong> Calle Martínez Izquierdo 90, 28028 Madrid, España</p>
           <p style={{margin:'0'}}><strong>Email de contacto:</strong> <a href="mailto:hello@avson.eu" style={{color:'var(--navy)'}}>hello@avson.eu</a></p>
-          <p style={{margin:'0'}}><strong>Teléfono:</strong> <a href="tel:+34648414863" style={{color:'var(--navy)'}}>+34 648 41 48 63</a></p>
           <p style={{margin:'0'}}><strong>Web:</strong> <a href="https://avson.eu" style={{color:'var(--navy)'}}>https://avson.eu</a></p>
         </div>
       </div>
