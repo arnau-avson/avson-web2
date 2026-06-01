@@ -20,7 +20,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className={`v3-nav${scrolled ? ' scrolled' : ''}`} id="mainNav">
+      <nav className={`v3-nav${scrolled ? ' v3-nav--scrolled' : ''}`} id="mainNav">
         <div className="v3-nav__inner">
           <Link to="/" className="v3-nav__logo">AVSON<span>·</span>GRC</Link>
           <ul className="v3-nav__links">

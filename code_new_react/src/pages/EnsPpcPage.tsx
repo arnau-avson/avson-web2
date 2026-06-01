@@ -26,7 +26,8 @@ export default function EnsPpcPage() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
           --navy:#1A2744; --gold:#C9A84C; --gold-h:#D9B84D;
@@ -208,18 +209,19 @@ export default function EnsPpcPage() {
         }
       `}} />
 
-      <div className="top-bar">&#9888; <strong>El 85% de empresas sin ENS pierde sus licitaciones.</strong> Avson GRC — Certificado ENS con garantía de éxito por escrito.</div>
+      <div className="top-bar">
+        ⚠ <strong>El 85% de empresas sin ENS pierde sus licitaciones.</strong> Avson GRC — Certificado ENS con garantía de éxito por escrito.
+      </div>
 
       <header className="ppc-header">
-        <Link to="/" className="ppc-logo">AVSON<span> &middot; </span>GRC</Link>
+        <Link to="/" className="ppc-logo">AVSON<span> · </span>GRC</Link>
         <a href="mailto:hello@avson.eu" className="ppc-contact">hello@avson.eu</a>
       </header>
 
       <div className="ppc-hero">
-
         {/* Left: copy */}
         <div>
-          <div className="fomo">&#9888; Sin ENS tu oferta no se abre. Sin excepciones.</div>
+          <div className="fomo">⚠ Sin ENS tu oferta no se abre. Sin excepciones.</div>
           <h1>Certificado ENS.<br /><em>Con garantía de éxito<br />por escrito.</em></h1>
           <p className="hero-sub">
             Si no obtienes el certificado ENS, <strong>te devolvemos el dinero</strong>. Lo firmamos en el contrato. Los únicos del mercado que lo garantizan.
@@ -238,9 +240,9 @@ export default function EnsPpcPage() {
 
         {/* Right: form */}
         <div className="form-card">
-          <span className="live-badge">&#x1F7E2; Te llamamos hoy mismo</span>
+          <span className="live-badge">🟢 Te llamamos hoy mismo</span>
           <p className="form-title">Habla con un experto</p>
-          <p className="form-sub">Gratuito &middot; Sin compromiso &middot; 30 minutos</p>
+          <p className="form-sub">Gratuito · Sin compromiso · 30 minutos</p>
 
           <p className="qual-label">¿Qué necesitas?</p>
           <div className="qual-grid">
@@ -248,22 +250,30 @@ export default function EnsPpcPage() {
               type="button"
               className={`qual-btn qual-btn--urgent${activeBtn === 'ENS Express urgente' ? ' qual-btn--active' : ''}`}
               onClick={() => pickQ('ENS Express urgente')}
-            >&#9889; ENS urgente</button>
+            >
+              ⚡ ENS urgente
+            </button>
             <button
               type="button"
               className={`qual-btn${activeBtn === 'ENS estándar' ? ' qual-btn--active' : ''}`}
               onClick={() => pickQ('ENS estándar')}
-            >ENS estándar</button>
+            >
+              ENS estándar
+            </button>
             <button
               type="button"
               className={`qual-btn${activeBtn === 'ISO 27001' ? ' qual-btn--active' : ''}`}
               onClick={() => pickQ('ISO 27001')}
-            >ISO 27001</button>
+            >
+              ISO 27001
+            </button>
             <button
               type="button"
               className={`qual-btn${activeBtn === 'No lo sé aún' ? ' qual-btn--active' : ''}`}
               onClick={() => pickQ('No lo sé aún')}
-            >No lo sé aún</button>
+            >
+              No lo sé aún
+            </button>
           </div>
           <input type="hidden" value={necesidad} />
 
@@ -276,10 +286,12 @@ export default function EnsPpcPage() {
             </div>
             <div className="rgpd">
               <input type="checkbox" ref={rgpdRef} id="pRgpd" required />
-              <label htmlFor="pRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <Link to="/privacidad" target="_blank">Política de privacidad</Link></label>
+              <label htmlFor="pRgpd">
+                Al enviar, acepto que Avson me contacte para responder mi consulta. <Link to="/privacidad" target="_blank">Política de privacidad</Link>
+              </label>
             </div>
-            <button type="submit" className="btn-cta">Habla con un experto &rarr;</button>
-            <p className="lock-text">&#128274; Gratuito &middot; Sin compromiso &middot; Confidencial</p>
+            <button type="submit" className="btn-cta">Habla con un experto →</button>
+            <p className="lock-text">🔒 Gratuito · Sin compromiso · Confidencial</p>
           </form>
 
           <div className="alt-contact">
@@ -287,34 +299,39 @@ export default function EnsPpcPage() {
             <a href="mailto:hello@avson.eu">hello@avson.eu</a>
           </div>
         </div>
-
       </div>
 
       {/* Testimonials */}
       <div className="testi-strip">
         <div className="testi">
-          <div className="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p className="testi-quote">"Llevábamos dos años perdiendo licitaciones. Avson nos lo resolvió en <strong>9 semanas</strong>. Al siguiente concurso, ganamos el contrato."</p>
-          <p className="testi-author">Javier M. — Director de Sistemas &middot; Integradora TIC, Madrid</p>
-          <p className="testi-result">ENS Media certificado &#10003;</p>
+          <div className="testi-stars">★★★★★</div>
+          <p className="testi-quote">
+            "Llevábamos dos años perdiendo licitaciones. Avson nos lo resolvió en <strong>9 semanas</strong>. Al siguiente concurso, ganamos el contrato."
+          </p>
+          <p className="testi-author">Javier M. — Director de Sistemas · Integradora TIC, Madrid</p>
+          <p className="testi-result">ENS Media certificado ✓</p>
         </div>
         <div className="testi">
-          <div className="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p className="testi-quote">"Otros consultores decían un año. Avson lo hizo en <strong>14 semanas</strong> y superamos la auditoría ENAC a la primera."</p>
-          <p className="testi-author">Silvia R. — CISO &middot; Proveedor cloud sector público</p>
-          <p className="testi-result">ENS Alta + ISO 27001 &#10003;</p>
+          <div className="testi-stars">★★★★★</div>
+          <p className="testi-quote">
+            "Otros consultores decían un año. Avson lo hizo en <strong>14 semanas</strong> y superamos la auditoría ENAC a la primera."
+          </p>
+          <p className="testi-author">Silvia R. — CISO · Proveedor cloud sector público</p>
+          <p className="testi-result">ENS Alta + ISO 27001 ✓</p>
         </div>
         <div className="testi">
-          <div className="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p className="testi-quote">"La garantía por escrito fue lo que nos decidió. El proceso duró <strong>7 semanas</strong> sin una sola incidencia."</p>
-          <p className="testi-author">Andrés D. — CEO &middot; Consultora tecnológica</p>
-          <p className="testi-result">ENS Básica certificado &#10003;</p>
+          <div className="testi-stars">★★★★★</div>
+          <p className="testi-quote">
+            "La garantía por escrito fue lo que nos decidió. El proceso duró <strong>7 semanas</strong> sin una sola incidencia."
+          </p>
+          <p className="testi-author">Andrés D. — CEO · Consultora tecnológica</p>
+          <p className="testi-result">ENS Básica certificado ✓</p>
         </div>
       </div>
 
       <footer className="ppc-footer">
-        &copy; 2026 Avson Consultoría Estratégica SLU &middot; CIF B10560795 &middot;
-        <Link to="/privacidad">Privacidad</Link> &middot;
+        © 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·
+        <Link to="/privacidad">Privacidad</Link> ·
         <Link to="/cookies">Cookies</Link>
       </footer>
     </>

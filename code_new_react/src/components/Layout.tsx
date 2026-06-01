@@ -1,11 +1,11 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import StickyBar from './AnnounceBar'
 import NavBar from './NavBar'
 import Footer from './Footer'
 import CookieBanner from './CookieBanner'
 import ExitModal from './ExitModal'
-import ChatWidget from './ChatWidget'
+import FloatingCta from './FloatingCta'
+import WhatsAppFloat from './WhatsAppFloat'
 
 export default function Layout() {
   const { pathname } = useLocation()
@@ -14,7 +14,6 @@ export default function Layout() {
     window.scrollTo(0, 0)
   }, [pathname])
 
-  // Intersection Observer for fade-in animations (replaces inline script from static HTML)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,8 +26,6 @@ export default function Layout() {
       },
       { threshold: 0.1 }
     )
-
-    // Small delay to ensure lazy-loaded page content is in the DOM
     const timer = setTimeout(() => {
       document.querySelectorAll('.anim-fade-up, .anim-fade').forEach((el) => {
         if (!el.classList.contains('visible')) {
@@ -36,7 +33,6 @@ export default function Layout() {
         }
       })
     }, 50)
-
     return () => {
       clearTimeout(timer)
       observer.disconnect()
@@ -48,10 +44,10 @@ export default function Layout() {
       <NavBar />
       <Outlet />
       <Footer />
-      <StickyBar />
+      <FloatingCta />
+      <WhatsAppFloat />
       <CookieBanner />
       <ExitModal />
-      <ChatWidget />
     </>
   )
 }

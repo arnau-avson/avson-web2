@@ -66,7 +66,7 @@ export default function EnsExpressPage() {
 
             {/* Prueba social */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap', marginBottom: '18px' }}>
-              <span style={{ color: 'var(--gold)', letterSpacing: '1px', fontSize: '14px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span style={{ color: 'var(--gold)', letterSpacing: '1px', fontSize: '14px' }}>★★★★★</span>
               <span style={{ fontFamily: 'var(--font-sans)', fontSize: '13px', color: 'rgba(255,255,255,0.8)', fontWeight: 600 }}>355+ empresas certificadas</span>
               <span style={{ fontFamily: 'var(--font-sans)', fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>&middot;&nbsp; 100% tasa de éxito &nbsp;&middot;&nbsp; 4.9/5 valoración</span>
             </div>
@@ -76,7 +76,7 @@ export default function EnsExpressPage() {
             </p>
 
             <div className="express-badge-guarantee">
-              <span style={{ fontSize: '16px' }}>&#10022;</span>
+              <span style={{ fontSize: '16px' }}>✦</span>
               Garantía de éxito al 100% por escrito &nbsp;&middot;&nbsp; También en el Express
             </div>
           </div>
@@ -116,50 +116,18 @@ export default function EnsExpressPage() {
                 <tr>
                   <th style={{ width: '36%' }}></th>
                   <th style={{ width: '32%' }}>ENS Estándar</th>
-                  <th className="col-express" style={{ width: '32%' }}>ENS Express &#9889;</th>
+                  <th className="col-express" style={{ width: '32%' }}>ENS Express ⚡</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Duración del proyecto</td>
-                  <td>3&ndash;4 meses</td>
-                  <td className="col-express">30 días naturales</td>
-                </tr>
-                <tr>
-                  <td>Equipo asignado</td>
-                  <td>1 consultor principal</td>
-                  <td className="col-express">3 consultores dedicados</td>
-                </tr>
-                <tr>
-                  <td>Frecuencia de reuniones</td>
-                  <td>Semanales</td>
-                  <td className="col-express">Diarias (30 min)</td>
-                </tr>
-                <tr>
-                  <td>Arranque del proyecto</td>
-                  <td>5&ndash;7 días laborables</td>
-                  <td className="col-express">48 horas</td>
-                </tr>
-                <tr>
-                  <td>Trabajo en fines de semana</td>
-                  <td>No</td>
-                  <td className="col-express">Sí, si es necesario</td>
-                </tr>
-                <tr>
-                  <td>Prioridad en slot de auditoría</td>
-                  <td>Estándar</td>
-                  <td className="col-express">Prioritaria</td>
-                </tr>
-                <tr>
-                  <td>Garantía de éxito</td>
-                  <td className="check-gold">&#10003; Incluida</td>
-                  <td className="col-express check-gold">&#10003; Incluida</td>
-                </tr>
-                <tr>
-                  <td>Precio</td>
-                  <td>Base</td>
-                  <td className="col-express">Base + 60%</td>
-                </tr>
+                <tr><td>Duración del proyecto</td><td>3–4 meses</td><td className="col-express">30 días naturales</td></tr>
+                <tr><td>Equipo asignado</td><td>1 consultor principal</td><td className="col-express">3 consultores dedicados</td></tr>
+                <tr><td>Frecuencia de reuniones</td><td>Semanales</td><td className="col-express">Diarias (30 min)</td></tr>
+                <tr><td>Arranque del proyecto</td><td>5–7 días laborables</td><td className="col-express">48 horas</td></tr>
+                <tr><td>Trabajo en fines de semana</td><td>No</td><td className="col-express">Sí, si es necesario</td></tr>
+                <tr><td>Prioridad en slot de auditoría</td><td>Estándar</td><td className="col-express">Prioritaria</td></tr>
+                <tr><td>Garantía de éxito</td><td className="check-gold">✓ Incluida</td><td className="col-express check-gold">✓ Incluida</td></tr>
+                <tr><td>Precio</td><td>Base</td><td className="col-express">Base + 60%</td></tr>
               </tbody>
             </table>
           </div>
@@ -177,44 +145,20 @@ export default function EnsExpressPage() {
           </div>
           <div className="fit-grid anim-fade-up">
             <div className="fit-col fit-col--yes">
-              <div className="fit-col__title">&#10003; &nbsp;Sí es para ti si...</div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--yes">&#10003;</div>
-                <span>Tienes un pliego o concurso que cierra en menos de 8 semanas</span>
-              </div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--yes">&#10003;</div>
-                <span>Has perdido contratos anteriores por no tener el ENS</span>
-              </div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--yes">&#10003;</div>
-                <span>Tu competencia ya está certificada y tú no</span>
-              </div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--yes">&#10003;</div>
-                <span>Necesitas renovar un contrato y el cliente exige ENS</span>
-              </div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--yes">&#10003;</div>
-                <span>Tu empresa acaba de ganar una licitación y el pliego pide ENS como condición de inicio</span>
-              </div>
+              <div className="fit-col__title">✓ &nbsp;Sí es para ti si...</div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--yes">✓</div><span>Tienes un pliego o concurso que cierra en menos de 8 semanas</span></div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--yes">✓</div><span>Has perdido contratos anteriores por no tener el ENS</span></div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--yes">✓</div><span>Tu competencia ya está certificada y tú no</span></div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--yes">✓</div><span>Necesitas renovar un contrato y el cliente exige ENS</span></div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--yes">✓</div><span>Tu empresa acaba de ganar una licitación y el pliego pide ENS como condición de inicio</span></div>
             </div>
             <div className="fit-col fit-col--no">
-              <div className="fit-col__title" style={{ color: '#c0392b' }}>&#10005; &nbsp;No es para ti si...</div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--no">&#10005;</div>
-                <span>Tu próxima licitación es dentro de más de 4 meses (el servicio estándar es más económico)</span>
-              </div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--no">&#10005;</div>
-                <span>Tu empresa tiene más de 500 empleados o sistemas muy complejos (requiere análisis previo)</span>
-              </div>
-              <div className="fit-item">
-                <div className="fit-item__icon fit-item__icon--no">&#10005;</div>
-                <span>Buscas solo ISO 27001 sin ENS</span>
-              </div>
+              <div className="fit-col__title" style={{ color: '#c0392b' }}>✗ &nbsp;No es para ti si...</div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--no">✗</div><span>Tu próxima licitación es dentro de más de 4 meses (el servicio estándar es más económico)</span></div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--no">✗</div><span>Tu empresa tiene más de 500 empleados o sistemas muy complejos (requiere análisis previo)</span></div>
+              <div className="fit-item"><div className="fit-item__icon fit-item__icon--no">✗</div><span>Buscas solo ISO 27001 sin ENS</span></div>
               <div style={{ marginTop: '24px', padding: '20px', background: 'rgba(26,39,68,0.04)', border: '1px solid rgba(26,39,68,0.08)' }}>
-                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '13px', color: 'var(--navy)', lineHeight: 1.6, margin: 0 }}>¿No estás seguro? Cuéntanos tu situación y te decimos en 24 horas qué servicio encaja mejor con tu caso — sin compromiso. <Link to="/contacto" style={{ color: 'var(--navy)', fontWeight: 600 }}>Consultar gratis &rarr;</Link></p>
+                <p style={{ fontFamily: 'var(--font-sans)', fontSize: '13px', color: 'var(--navy)', lineHeight: 1.6, margin: 0 }}>¿No estás seguro? Cuéntanos tu situación y te decimos en 24 horas qué servicio encaja mejor con tu caso — sin compromiso. <Link to="/contacto" style={{ color: 'var(--navy)', fontWeight: 600 }}>Consultar gratis →</Link></p>
               </div>
             </div>
           </div>
@@ -232,57 +176,13 @@ export default function EnsExpressPage() {
           </div>
           <div className="anim-fade-up">
             <ul className="timeline">
-              <li className="timeline-item">
-                <div className="timeline-dot">Días<br />1–2</div>
-                <div className="timeline-content">
-                  <h3>Análisis de alcance exprés y firma de contrato</h3>
-                  <p>Inventariamos los sistemas en alcance, determinamos la categoría ENS aplicable y firmamos el contrato con la garantía de éxito. El equipo de tres consultores queda asignado al proyecto.</p>
-                </div>
-              </li>
-              <li className="timeline-item">
-                <div className="timeline-dot">Días<br />3–5</div>
-                <div className="timeline-content">
-                  <h3>Gap analysis y plan de acción</h3>
-                  <p>Evaluamos el nivel de cumplimiento actual frente a los controles ENS requeridos. Producimos un plan de acción priorizado que guiará las siguientes tres semanas.</p>
-                </div>
-              </li>
-              <li className="timeline-item">
-                <div className="timeline-dot">Días<br />6–15</div>
-                <div className="timeline-content">
-                  <h3>Implementación de controles prioritarios</h3>
-                  <p>Implementamos los controles técnicos y organizativos con mayor impacto en el resultado de la auditoría. Utilizamos herramientas especializadas de IA para acelerar la generación de documentación y la parametrización de herramientas.</p>
-                </div>
-              </li>
-              <li className="timeline-item">
-                <div className="timeline-dot">Días<br />16–22</div>
-                <div className="timeline-content">
-                  <h3>Documentación completa y auditoría interna</h3>
-                  <p>Completamos la documentación del SGSI conforme al ENS: política de seguridad, análisis de riesgos, plan de continuidad, inventario de activos y evidencias de los controles implementados.</p>
-                </div>
-              </li>
-              <li className="timeline-item">
-                <div className="timeline-dot">Días<br />23–26</div>
-                <div className="timeline-content">
-                  <h3>Pre-auditoría y corrección de hallazgos</h3>
-                  <p>Realizamos una auditoría interna simulando las condiciones de la auditoría de certificación. Corregimos los hallazgos identificados antes de que el auditor externo entre en escena.</p>
-                </div>
-              </li>
-              <li className="timeline-item">
-                <div className="timeline-dot">Días<br />27–28</div>
-                <div className="timeline-content">
-                  <h3>Auditoría de certificación</h3>
-                  <p>La entidad acreditada por ENAC realiza la auditoría de certificación. Nuestro equipo acompaña y da soporte técnico durante todo el proceso.</p>
-                </div>
-              </li>
-              <li className="timeline-item" style={{ marginBottom: 0 }}>
-                <div className="timeline-dot" style={{ background: 'var(--gold)', borderColor: 'var(--gold)' }}>
-                  <span style={{ color: 'var(--navy)', fontSize: '14px', fontWeight: 700 }}>D30</span>
-                </div>
-                <div className="timeline-content">
-                  <h3 style={{ color: 'var(--gold)' }}>Certificado ENS emitido.</h3>
-                  <p>Tu empresa dispone del certificado ENS Básico o Medio emitido por entidad acreditada por ENAC. Puedes presentarte a la licitación.</p>
-                </div>
-              </li>
+              <li className="timeline-item"><div className="timeline-dot">Días<br />1–2</div><div className="timeline-content"><h3>Análisis de alcance exprés y firma de contrato</h3><p>Inventariamos los sistemas en alcance, determinamos la categoría ENS aplicable y firmamos el contrato con la garantía de éxito. El equipo de tres consultores queda asignado al proyecto.</p></div></li>
+              <li className="timeline-item"><div className="timeline-dot">Días<br />3–5</div><div className="timeline-content"><h3>Gap analysis y plan de acción</h3><p>Evaluamos el nivel de cumplimiento actual frente a los controles ENS requeridos. Producimos un plan de acción priorizado que guiará las siguientes tres semanas.</p></div></li>
+              <li className="timeline-item"><div className="timeline-dot">Días<br />6–15</div><div className="timeline-content"><h3>Implementación de controles prioritarios</h3><p>Implementamos los controles técnicos y organizativos con mayor impacto en el resultado de la auditoría. Utilizamos herramientas especializadas de IA para acelerar la generación de documentación y la parametrización de herramientas.</p></div></li>
+              <li className="timeline-item"><div className="timeline-dot">Días<br />16–22</div><div className="timeline-content"><h3>Documentación completa y auditoría interna</h3><p>Completamos la documentación del SGSI conforme al ENS: política de seguridad, análisis de riesgos, plan de continuidad, inventario de activos y evidencias de los controles implementados.</p></div></li>
+              <li className="timeline-item"><div className="timeline-dot">Días<br />23–26</div><div className="timeline-content"><h3>Pre-auditoría y corrección de hallazgos</h3><p>Realizamos una auditoría interna simulando las condiciones de la auditoría de certificación. Corregimos los hallazgos identificados antes de que el auditor externo entre en escena.</p></div></li>
+              <li className="timeline-item"><div className="timeline-dot">Días<br />27–28</div><div className="timeline-content"><h3>Auditoría de certificación</h3><p>La entidad acreditada por ENAC realiza la auditoría de certificación. Nuestro equipo acompaña y da soporte técnico durante todo el proceso.</p></div></li>
+              <li className="timeline-item" style={{ marginBottom: 0 }}><div className="timeline-dot" style={{ background: 'var(--gold)', borderColor: 'var(--gold)' }}><span style={{ color: 'var(--navy)', fontSize: '14px', fontWeight: 700 }}>D30</span></div><div className="timeline-content"><h3 style={{ color: 'var(--gold)' }}>Certificado ENS emitido.</h3><p>Tu empresa dispone del certificado ENS Básico o Medio emitido por entidad acreditada por ENAC. Puedes presentarte a la licitación.</p></div></li>
             </ul>
           </div>
         </div>
@@ -298,31 +198,13 @@ export default function EnsExpressPage() {
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: 'var(--text-muted)', lineHeight: 1.7, marginTop: '16px' }}>No tener el certificado ENS no es solo un problema de cumplimiento. Es un problema de negocio medible, en euros perdidos.</p>
           </div>
           <div className="loss-cards anim-fade-up">
-            <div className="loss-card">
-              <div className="loss-card__number">1<span>/3</span></div>
-              <div className="loss-card__text">de los pliegos TIC en España exige ENS como <strong>requisito eliminatorio</strong>. Tu oferta no se abre siquiera.</div>
-              <div className="loss-card__source">Fuente: Observatorio de Contratación Pública</div>
-            </div>
-            <div className="loss-card">
-              <div className="loss-card__number"><span>65</span>%</div>
-              <div className="loss-card__text">de las empresas sin ENS pierden al menos <strong>1 contrato público al año</strong> directamente por no tener la certificación.</div>
-              <div className="loss-card__source">Análisis interno Avson GRC &middot; 2024</div>
-            </div>
-            <div className="loss-card">
-              <div className="loss-card__number" style={{ fontSize: '38px' }}>180K&#8364;</div>
-              <div className="loss-card__text">es el valor medio de un contrato TIC público en España. <strong>¿Cuántos contratos te puedes permitir perder</strong> este año?</div>
-              <div className="loss-card__source">Fuente: Plataforma de Contratación del Sector Público</div>
-            </div>
+            <div className="loss-card"><div className="loss-card__number">1<span>/3</span></div><div className="loss-card__text">de los pliegos TIC en España exige ENS como <strong>requisito eliminatorio</strong>. Tu oferta no se abre siquiera.</div><div className="loss-card__source">Fuente: Observatorio de Contratación Pública</div></div>
+            <div className="loss-card"><div className="loss-card__number"><span>65</span>%</div><div className="loss-card__text">de las empresas sin ENS pierden al menos <strong>1 contrato público al año</strong> directamente por no tener la certificación.</div><div className="loss-card__source">Análisis interno Avson GRC · 2024</div></div>
+            <div className="loss-card"><div className="loss-card__number" style={{ fontSize: '38px' }}>180K€</div><div className="loss-card__text">es el valor medio de un contrato TIC público en España. <strong>¿Cuántos contratos te puedes permitir perder</strong> este año?</div><div className="loss-card__source">Fuente: Plataforma de Contratación del Sector Público</div></div>
           </div>
           <div className="anim-fade-up" style={{ marginTop: '40px', background: 'var(--navy)', padding: '36px 40px', display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap' }}>
-            <div style={{ flex: 1, minWidth: '280px' }}>
-              <p style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: '22px', fontStyle: 'italic', color: 'var(--white)', lineHeight: 1.4, margin: 0 }}>
-                "Si tienes un pliego que cierra en menos de 8 semanas, ENS Express es tu única opción viable."
-              </p>
-            </div>
-            <div style={{ flexShrink: 0 }}>
-              <Link to="/contacto" className="btn-primary btn-primary--white">Consultar ahora &rarr;</Link>
-            </div>
+            <div style={{ flex: 1, minWidth: '280px' }}><p style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: '22px', fontStyle: 'italic', color: 'var(--white)', lineHeight: 1.4, margin: 0 }}>"Si tienes un pliego que cierra en menos de 8 semanas, ENS Express es tu única opción viable."</p></div>
+            <div style={{ flexShrink: 0 }}><Link to="/contacto" className="btn-primary btn-primary--white">Consultar ahora →</Link></div>
           </div>
         </div>
       </section>
@@ -337,30 +219,12 @@ export default function EnsExpressPage() {
             <p style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: 'var(--text-muted)', lineHeight: 1.7, marginTop: '16px' }}>Estas son situaciones reales de empresas que llegaron al límite y salieron con el certificado en la mano.</p>
           </div>
           <div className="testimonials-grid anim-fade-up">
-            <div className="testimonial-express">
-              <div className="testimonial-express__quote">
-                &#x201C;Nos llamaron el 15 de octubre. Teníamos un pliego de la Comunidad de Madrid que cerraba el 20 de noviembre. En 33 días teníamos el certificado ENS Medio. Presentamos la oferta. Ganamos el contrato. El retorno fue de 12x la inversión en la consultoría.&#x201D;
-              </div>
-              <div style={{ marginBottom: '8px' }}>
-                <div className="roi-highlight">12x ROI</div>
-              </div>
-              <div className="testimonial-express__author">Director de Operaciones &middot; Empresa de software de gestión &middot; Madrid</div>
-            </div>
-            <div className="testimonial-express">
-              <div className="testimonial-express__quote">
-                &#x201C;Sabíamos que necesitábamos el ENS pero lo fuimos posponiendo. Cuando salió una licitación de Renfe que nos interesaba, teníamos 6 semanas. Avson Express fue la única opción viable. Lo conseguimos con 4 días de margen.&#x201D;
-              </div>
-              <div style={{ marginBottom: '8px' }}>
-                <div className="roi-highlight">4 días de margen</div>
-              </div>
-              <div className="testimonial-express__author">CEO &middot; Consultora de ciberseguridad &middot; Barcelona</div>
-            </div>
+            <div className="testimonial-express"><div className="testimonial-express__quote">“Nos llamaron el 15 de octubre. Teníamos un pliego de la Comunidad de Madrid que cerraba el 20 de noviembre. En 33 días teníamos el certificado ENS Medio. Presentamos la oferta. Ganamos el contrato. El retorno fue de 12x la inversión en la consultoría.”</div><div style={{ marginBottom: '8px' }}><div className="roi-highlight">12x ROI</div></div><div className="testimonial-express__author">Director de Operaciones · Empresa de software de gestión · Madrid</div></div>
+            <div className="testimonial-express"><div className="testimonial-express__quote">“Sabíamos que necesitábamos el ENS pero lo fuimos posponiendo. Cuando salió una licitación de Renfe que nos interesaba, teníamos 6 semanas. Avson Express fue la única opción viable. Lo conseguimos con 4 días de margen.”</div><div style={{ marginBottom: '8px' }}><div className="roi-highlight">4 días de margen</div></div><div className="testimonial-express__author">CEO · Consultora de ciberseguridad · Barcelona</div></div>
           </div>
           <div className="anim-fade-up" style={{ marginTop: '32px', padding: '24px 28px', background: 'var(--white)', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '24px', flexWrap: 'wrap' }}>
-            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '14px', color: 'var(--navy)', lineHeight: 1.6, margin: 0, maxWidth: '480px' }}>
-              <strong>355+ empresas certificadas con Avson.</strong> En lo que va de 2025, 14 de ellas optaron por el servicio Express para cumplir con plazos de licitación críticos.
-            </p>
-            <Link to="/contacto" className="btn-primary">Ver si hay plazas disponibles &rarr;</Link>
+            <p style={{ fontFamily: 'var(--font-sans)', fontSize: '14px', color: 'var(--navy)', lineHeight: 1.6, margin: 0, maxWidth: '480px' }}><strong>355+ empresas certificadas con Avson.</strong> En lo que va de 2025, 14 de ellas optaron por el servicio Express para cumplir con plazos de licitación críticos.</p>
+            <Link to="/contacto" className="btn-primary">Ver si hay plazas disponibles →</Link>
           </div>
         </div>
       </section>
@@ -370,14 +234,10 @@ export default function EnsExpressPage() {
         <div className="scarcity-box anim-fade-up">
           <span className="label-tag">Disponibilidad limitada</span>
           <h2>Solo 6 proyectos Express al mes.<br />En este momento hay plazas disponibles.</h2>
-          <div className="available-slots">
-            <span style={{ display: 'inline-block', width: '8px', height: '8px', background: '#4caf50', borderRadius: '50%', animation: 'blink 1.5s infinite' }}></span>
-            <span className="slot-count">2</span>
-            <span>plazas disponibles para el mes en curso</span>
-          </div>
-          <p>ENS Express acepta un máximo de 6 proyectos por mes para garantizar la calidad y la atención de un equipo dedicado. Cuando las 6 plazas están ocupadas, el siguiente proyecto comienza el mes siguiente&nbsp;&mdash; sin excepciones.</p>
-          <Link to="/contacto" className="btn-primary btn-primary--white" style={{ fontSize: '15px', padding: '16px 36px' }}>Consultar disponibilidad ahora &rarr;</Link>
-          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginTop: '20px', marginBottom: 0 }}>Sin compromiso &middot; Pide presupuesto &middot; Propuesta en 24 horas</p>
+          <div className="available-slots"><span style={{ display: 'inline-block', width: '8px', height: '8px', background: '#4caf50', borderRadius: '50%', animation: 'blink 1.5s infinite' }}></span><span className="slot-count">2</span><span>plazas disponibles para el mes en curso</span></div>
+          <p>ENS Express acepta un máximo de 6 proyectos por mes para garantizar la calidad y la atención de un equipo dedicado. Cuando las 6 plazas están ocupadas, el siguiente proyecto comienza el mes siguiente&nbsp;— sin excepciones.</p>
+          <Link to="/contacto" className="btn-primary btn-primary--white" style={{ fontSize: '15px', padding: '16px 36px' }}>Consultar disponibilidad ahora →</Link>
+          <p style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginTop: '20px', marginBottom: 0 }}>Sin compromiso · Pide presupuesto · Propuesta en 24 horas</p>
         </div>
       </section>
 
@@ -399,12 +259,10 @@ export default function EnsExpressPage() {
       <section className="section" style={{ background: 'var(--navy)', padding: '80px 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="label-tag">Actúa ahora</span>
-          <h2 className="anim-fade-up" style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(2rem,4vw,3.2rem)', fontWeight: 500, color: 'var(--white)', margin: '20px 0 16px', lineHeight: 1.15 }}>
-            ¿Cuándo cierra tu pliego?<br /><em style={{ color: 'var(--gold)' }}>El reloj ya está corriendo.</em>
-          </h2>
+          <h2 className="anim-fade-up" style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(2rem,4vw,3.2rem)', fontWeight: 500, color: 'var(--white)', margin: '20px 0 16px', lineHeight: 1.15 }}>¿Cuándo cierra tu pliego?<br /><em style={{ color: 'var(--gold)' }}>El reloj ya está corriendo.</em></h2>
           <p className="anim-fade-up" style={{ fontFamily: 'var(--font-sans)', fontSize: '16px', color: 'rgba(255,255,255,0.65)', maxWidth: '500px', margin: '0 auto 40px', lineHeight: 1.7 }}>Cuéntanos tu situación hoy. En 24 horas te decimos si podemos garantizarte el ENS a tiempo y te damos una propuesta de precio sin compromiso.</p>
           <div className="anim-fade-up" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/contacto" className="btn-primary btn-primary--white" style={{ fontSize: '15px', padding: '16px 36px' }}>Consultar disponibilidad Express &rarr;</Link>
+            <Link to="/contacto" className="btn-primary btn-primary--white" style={{ fontSize: '15px', padding: '16px 36px' }}>Consultar disponibilidad Express →</Link>
             <Link to="/ens" className="btn-text" style={{ color: 'rgba(255,255,255,0.55)', fontSize: '14px', alignSelf: 'center' }}>Ver servicio estándar ENS</Link>
           </div>
           <div className="available-slots anim-fade-up" style={{ marginTop: '40px', display: 'inline-flex' }}>
@@ -414,6 +272,162 @@ export default function EnsExpressPage() {
           </div>
         </div>
       </section>
+
+      {/* ESTILOS ADICIONALES PARA CORREGIR CONTRASTES Y DISEÑO */}
+      <style>{`
+        /* Asegurar que los textos en fondos claros sean oscuros */
+        .section--white .compare-table td,
+        .section--white .compare-table th,
+        .section--white .loss-card,
+        .section--white .loss-card__text,
+        .section--white .loss-card__source,
+        .section--white .testimonial-express,
+        .section--white .testimonial-express__quote,
+        .section--white .testimonial-express__author,
+        .section--white .roi-highlight {
+          color: #1A2744 !important;
+        }
+        .compare-table td.col-express {
+          color: #1A2744;
+          font-weight: 600;
+        }
+        .loss-card {
+          background: #fff;
+          border: 1px solid #E5E5E0;
+          border-radius: 12px;
+          padding: 28px;
+          text-align: center;
+        }
+        .loss-card__number {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 52px;
+          font-weight: 700;
+          color: #1A2744;
+          line-height: 1;
+          margin-bottom: 12px;
+        }
+        .loss-card__number span {
+          color: #C9A84C;
+        }
+        .loss-card__text {
+          font-size: 14px;
+          color: #3D4A5C;
+          line-height: 1.6;
+          margin-bottom: 8px;
+        }
+        .loss-card__source {
+          font-size: 11px;
+          color: #7A8499;
+          font-style: italic;
+        }
+        .testimonial-express {
+          background: #fff;
+          border: 1px solid #E5E5E0;
+          border-left: 3px solid #C9A84C;
+          padding: 28px;
+          border-radius: 12px;
+        }
+        .testimonial-express__quote {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 18px;
+          font-style: italic;
+          color: #1A2744;
+          line-height: 1.5;
+          margin-bottom: 16px;
+        }
+        .roi-highlight {
+          display: inline-block;
+          background: #C9A84C;
+          color: #1A2744;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 22px;
+          font-weight: 700;
+          padding: 4px 12px;
+          margin: 8px 0;
+        }
+        .fit-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+        }
+        .fit-col {
+          padding: 36px;
+          border-radius: 16px;
+        }
+        .fit-col--yes {
+          background: #f0f8f0;
+          border: 1.5px solid #4caf50;
+        }
+        .fit-col--no {
+          background: #fff8f6;
+          border: 1.5px solid #e0e0e0;
+        }
+        .fit-col__title {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+        .fit-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 14px;
+          font-size: 14px;
+          color: #1A2744;
+        }
+        .fit-item__icon {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-weight: 700;
+        }
+        .fit-item__icon--yes { background: #4caf50; color: white; }
+        .fit-item__icon--no { background: #e0e0e0; color: #777; }
+        .timeline {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+        .timeline-item {
+          display: flex;
+          gap: 24px;
+        }
+        .timeline-dot {
+          min-width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background: #1A2744;
+          border: 2px solid #C9A84C;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-weight: 600;
+          color: #C9A84C;
+          text-align: center;
+          line-height: 1.2;
+        }
+        .timeline-content h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: #1A2744;
+          margin-bottom: 8px;
+        }
+        .timeline-content p {
+          font-size: 14px;
+          color: #5a6478;
+          line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+          .fit-grid { grid-template-columns: 1fr; }
+          .timeline-item { flex-direction: column; }
+          .timeline-dot { margin-bottom: 16px; }
+        }
+      `}</style>
     </>
   )
 }
