@@ -1,14 +1,68 @@
 // AVSON GRC - Shared JavaScript
 
-// Mobile Menu
-function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('mobile-open');
+// ── Language Switcher ──
+function toggleLang() {
+  var ls = document.getElementById('langSwitcher');
+  if (ls) ls.classList.toggle('open');
 }
 
-// FAQ Accordion
+// Close lang-switcher on outside click
+document.addEventListener('click', function(e) {
+  var ls = document.getElementById('langSwitcher');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+});
+
+// Inject lang-switcher into v3-nav if not already present
 document.addEventListener('DOMContentLoaded', function() {
-  // FAQ
+  var navInner = document.querySelector('.v3-nav__inner');
+  if (!navInner || navInner.querySelector('.lang-switcher')) return;
+
+  var cta = navInner.querySelector('.v3-nav__cta');
+  if (!cta) return;
+
+  var langDiv = document.createElement('div');
+  langDiv.className = 'lang-switcher';
+  langDiv.id = 'langSwitcher';
+  langDiv.innerHTML =
+    '<button class="lang-switcher__btn" onclick="toggleLang()" aria-label="Cambiar idioma">' +
+      '<span class="lang-switcher__flag">\uD83C\uDF10</span>' +
+      '<span id="langCurrent">ES</span>' +
+      '<span class="lang-switcher__chevron">\u25BC</span>' +
+    '</button>' +
+    '<div class="lang-switcher__dropdown">' +
+      '<a href="#" class="lang-switcher__item lang-switcher__item--active">' +
+        '<span class="lang-switcher__item-flag">\uD83C\uDDEA\uD83C\uDDF8</span>' +
+        '<span class="lang-switcher__item-label">Espa\u00F1ol</span>' +
+        '<span class="lang-switcher__item-tag">ES</span>' +
+      '</a>' +
+    '</div>';
+
+  navInner.insertBefore(langDiv, cta);
+
+  // Also inject into mobile overlay if present
+  var overlayLinks = document.getElementById('navOverlayLinks');
+  var overlayCta = document.getElementById('navOverlayCta');
+  if (overlayLinks && overlayCta) {
+    var mobileLang = document.createElement('div');
+    mobileLang.className = 'lang-switcher lang-switcher--mobile';
+    mobileLang.innerHTML =
+      '<a href="#" class="lang-switcher__item lang-switcher__item--active" style="justify-content:center;border:1px solid rgba(255,255,255,0.15);color:white;padding:12px 20px;">' +
+        '<span class="lang-switcher__item-flag">\uD83C\uDDEA\uD83C\uDDF8</span>' +
+        '<span class="lang-switcher__item-label" style="color:white;">Espa\u00F1ol</span>' +
+        '<span class="lang-switcher__item-tag" style="color:rgba(255,255,255,0.5);">ES</span>' +
+      '</a>';
+    overlayCta.parentNode.insertBefore(mobileLang, overlayCta);
+  }
+});
+
+// ── Mobile Menu (legacy) ──
+function toggleMenu() {
+  var navLinks = document.querySelector('.nav-links');
+  if (navLinks) navLinks.classList.toggle('mobile-open');
+}
+
+// ── FAQ Accordion ──
+document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.faq-question').forEach(function(q) {
     q.addEventListener('click', function() {
       var item = this.parentElement;
@@ -52,19 +106,16 @@ function rejectCookies() {
 function handleFormSubmit(e) {
   e.preventDefault();
   var btn = e.target.querySelector('button[type="submit"]');
-  var orig = btn.textContent;
-  btn.textContent = '✓ Enviado — Te contactamos en menos de 24h';
+  btn.textContent = '\u2713 Enviado \u2014 Te contactamos en menos de 24h';
   btn.style.background = '#10b981';
   btn.disabled = true;
 }
 
-// Popup after 3 seconds (exit-intent concept)
+// Popup after 15 seconds (exit-intent concept)
 setTimeout(function() {
   var modal = document.getElementById('exitModal');
   if (modal && !sessionStorage.getItem('avson-modal-shown') && !localStorage.getItem('avson-cookies')) {
-    // Only show if user hasn't interacted with a form
     if (!document.querySelector('form:focus-within')) {
-      // Don't show on contacto page
       if (!window.location.pathname.includes('contacto')) {
         modal.classList.add('active');
         sessionStorage.setItem('avson-modal-shown', '1');

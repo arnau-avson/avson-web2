@@ -1,18 +1,11 @@
-FROM node:22-alpine
+FROM nginx:alpine
 
-WORKDIR /app
+# Copiar los ficheros estáticos del sitio web (HTML, CSS, JS, JSON, assets)
+COPY code_new/code/ /usr/share/nginx/html/
 
-# Copiar el proyecto React
-COPY code_new/ ./
+# Configuración personalizada de nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Instalar dependencias y construir
-RUN npm install && npm run build
-
-# Instalar PM2 globalmente
-RUN npm install -g pm2
-
-# Exponer el puerto que usará pm2 serve
 EXPOSE 3000
 
-# Servir el directorio dist con pm2 en primer plano (--no-daemon)
-CMD ["pm2", "serve", "./dist", "3000", "--spa", "--name", "avson-web", "--no-daemon"]
+CMD ["nginx", "-g", "daemon off;"]

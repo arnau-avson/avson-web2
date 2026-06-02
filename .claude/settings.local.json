@@ -14,7 +14,12 @@
       "Bash(comm:*)",
       "Read(//c/Users/arnau/Downloads/avson-web/**)",
       "Read(//c/Users/arnau/Desktop/avson/**)",
-      "Read(//c/Users/arnau/Desktop/avson/code_new/code/**)"
+      "Read(//c/Users/arnau/Desktop/avson/code_new/code/**)",
+      "Bash(do if ! grep -q 'main\\\\.js' \"$f\")",
+      "Bash(then sed -i 's|<script src=\"\"avson-leads.js\"\" defer></script>|<script src=\"\"avson-leads.js\"\" defer></script>\\\\n  <script src=\"\"main.js\"\" defer></script>|' \"$f\")",
+      "Bash(echo:*)",
+      "Bash(else echo \"Already has main.js: $f\")",
+      "Bash(fi)"
     ],
     "additionalDirectories": [
       "c:\\Users\\arnau\\Desktop\\avson\\code_new\\en",

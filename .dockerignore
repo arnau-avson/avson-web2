@@ -1,6 +1,5 @@
-code_old/node_modules
-code_old/server/node_modules
-code_old/dist
-code_old/.vite
+code_old/
 .git
 node_modules
+*.md
+.fuse_hidden*
