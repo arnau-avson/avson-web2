@@ -1,5 +1,62 @@
 // AVSON GRC - Shared JavaScript
 
+// ── Preview Password Gate ──
+(function() {
+  var PASS = 'Avson1234';
+  var KEY  = 'avson-preview-auth';
+
+  if (sessionStorage.getItem(KEY) === '1') return;
+
+  // Inject styles
+  var style = document.createElement('style');
+  style.textContent = [
+    '#avson-gate{position:fixed;inset:0;z-index:99999;background:#1A2744;display:flex;align-items:center;justify-content:center;font-family:"Inter",sans-serif;}',
+    '#avson-gate__box{background:#fff;border-radius:16px;padding:48px 40px;width:100%;max-width:400px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,0.4);}',
+    '#avson-gate__logo{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:600;color:#1A2744;letter-spacing:0.05em;margin-bottom:8px;}',
+    '#avson-gate__sub{font-size:0.85rem;color:#6B7280;margin-bottom:32px;}',
+    '#avson-gate__label{display:block;text-align:left;font-size:0.8rem;font-weight:600;color:#374151;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;}',
+    '#avson-gate__input{width:100%;padding:12px 16px;border:2px solid #E5E7EB;border-radius:8px;font-size:1rem;outline:none;transition:border-color .2s;margin-bottom:16px;}',
+    '#avson-gate__input:focus{border-color:#1A2744;}',
+    '#avson-gate__btn{width:100%;padding:14px;background:#C6A96A;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;letter-spacing:0.03em;transition:background .2s;}',
+    '#avson-gate__btn:hover{background:#b5963a;}',
+    '#avson-gate__err{color:#EF4444;font-size:0.85rem;margin-top:12px;min-height:20px;}'
+  ].join('');
+  document.head.appendChild(style);
+
+  // Inject HTML
+  var gate = document.createElement('div');
+  gate.id = 'avson-gate';
+  gate.innerHTML =
+    '<div id="avson-gate__box">' +
+      '<div id="avson-gate__logo">AVSON</div>' +
+      '<p id="avson-gate__sub">Vista previa privada &mdash; Acceso restringido</p>' +
+      '<label id="avson-gate__label" for="avson-gate__pw">Contraseña</label>' +
+      '<input id="avson-gate__input" type="password" placeholder="Introduce la contraseña" autocomplete="current-password" />' +
+      '<button id="avson-gate__btn">Entrar</button>' +
+      '<p id="avson-gate__err"></p>' +
+    '</div>';
+
+  document.documentElement.appendChild(gate);
+
+  function tryUnlock() {
+    var val = document.getElementById('avson-gate__input').value;
+    if (val === PASS) {
+      sessionStorage.setItem(KEY, '1');
+      document.getElementById('avson-gate').remove();
+    } else {
+      var err = document.getElementById('avson-gate__err');
+      err.textContent = 'Contraseña incorrecta. Inténtalo de nuevo.';
+      document.getElementById('avson-gate__input').value = '';
+      document.getElementById('avson-gate__input').focus();
+    }
+  }
+
+  document.getElementById('avson-gate__btn').addEventListener('click', tryUnlock);
+  document.getElementById('avson-gate__input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') tryUnlock();
+  });
+})();
+
 // ── Language Switcher ──
 function toggleLang() {
   var ls = document.getElementById('langSwitcher');
