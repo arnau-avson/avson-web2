@@ -36,7 +36,7 @@
       '<p id="avson-gate__err"></p>' +
     '</div>';
 
-  document.documentElement.appendChild(gate);
+  (document.body || document.documentElement).appendChild(gate);
 
   function tryUnlock() {
     var val = document.getElementById('avson-gate__input').value;
