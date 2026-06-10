@@ -9,7 +9,7 @@
   var PAGE = lastPart.replace(/\.html$/, '');
 
   // Ruta al JSON (relativa a la raíz)
-  var jsonPath = LANG === 'es' ? '/assets/palabras.json' : '/' + LANG + '/assets/palabras.json';
+  var jsonPath = LANG === 'es' ? './assets/palabras.json' : '/' + LANG + '/assets/palabras.json';
 
   fetch(jsonPath)
     .then(function (res) {
@@ -24,6 +24,7 @@
       }
       var t = langData[PAGE];
       applyTranslations(t);
+      document.dispatchEvent(new Event('i18n:ready'));
     })
     .catch(function (err) {
       console.error('[i18n] Error cargando traducciones:', err);

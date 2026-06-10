@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ENS Express: Certificado en 30 Días | Avson</title>
-  <meta name="description" content="ENS Express: certificado ENS en 30 días. Tu licitación no puede esperar. Equipo dedicado, arranque en 48h y garantía de devolución por escrito.">
+  <title></title>
+  <meta name="description" content="">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <script src="i18n.js"></script>
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");</script>
   <script src="avson-leads.js" defer></script>
   <!-- ═══ GOOGLE ADS REMARKETING TAG — descomentar al crear la campaña ═══ -->
@@ -176,7 +177,7 @@
 </head>
 <body>
 
-<div class="urgency-bar">ENS Express — Para pliegos que cierran pronto. Arranque en 48 horas.</div>
+<div class="urgency-bar" data-i18n="urgencyBar.text"></div>
 
 <header class="header">
   <span class="logo">AVSON<span> · </span>GRC</span>
@@ -187,104 +188,89 @@
 
   <!-- Left -->
   <div>
-    <div class="express-badge">ENS Express — Plazos urgentes</div>
-    <h1>Certificado ENS<br>en <em>30 días.</em></h1>
-    <p class="hero-sub">
-      Tu licitación no puede esperar. Nosotros tampoco. <strong>Equipo dedicado</strong> y garantía de devolución por escrito.
-    </p>
+    <div class="express-badge" data-i18n="hero.badge"></div>
+    <h1 data-i18n="hero.title"></h1>
+    <p class="hero-sub" data-i18n="hero.subtitle"></p>
 
     <div class="how">
       <div class="how-step">
-        <div class="how-step__num">48h</div>
-        <p class="how-step__text">Arranque del proyecto</p>
+        <div class="how-step__num" data-i18n="hero.step1.num"></div>
+        <p class="how-step__text" data-i18n="hero.step1.text"></p>
       </div>
       <div class="how-step">
-        <div class="how-step__num">1</div>
-        <p class="how-step__text">Equipo dedicado exclusivo</p>
+        <div class="how-step__num" data-i18n="hero.step2.num"></div>
+        <p class="how-step__text" data-i18n="hero.step2.text"></p>
       </div>
       <div class="how-step">
-        <div class="how-step__num">✓</div>
-        <p class="how-step__text">Misma garantía de devolución</p>
+        <div class="how-step__num" data-i18n="hero.step3.num"></div>
+        <p class="how-step__text" data-i18n="hero.step3.text"></p>
       </div>
     </div>
 
-    <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.5)">
-      Disponible para: ENS Básica · Media · Alta según categoría del pliego
-    </p>
+    <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.5)" data-i18n="hero.availability"></p>
   </div>
 
   <!-- Right: form -->
   <div class="form-card">
-    <span class="live-badge">Verificamos disponibilidad hoy</span>
-    <p class="form-title">Consultar disponibilidad</p>
-    <p class="form-sub">Gratuito · Sin compromiso</p>
-    <p class="form-urgency">Cuéntanos cuándo cierra tu pliego y te decimos si llegamos</p>
+    <span class="live-badge" data-i18n="form.liveBadge"></span>
+    <p class="form-title" data-i18n="form.title"></p>
+    <p class="form-sub" data-i18n="form.subtitle"></p>
+    <p class="form-urgency" data-i18n="form.urgency"></p>
 
     <form id="expressForm" onsubmit="avsonSubmitLead(event,{source:'ppc_express',event:'ppc_express_lead'})" novalidate>
       <div class="form-group">
-        <input type="text"  id="eNombre" name="nombre" placeholder="Tu nombre *" autocomplete="given-name" required>
+        <input type="text"  id="eNombre" name="nombre" placeholder="" autocomplete="given-name" required data-i18n-placeholder="form.placeholderName">
       </div>
       <div class="form-group">
-        <input type="email" id="eEmail"  name="email"  placeholder="Tu email *" autocomplete="email" required>
+        <input type="email" id="eEmail"  name="email"  placeholder="" autocomplete="email" required data-i18n-placeholder="form.placeholderEmail">
       </div>
       <div class="form-group">
-        <input type="text" id="ePliego" name="pliego" placeholder="¿Cuándo cierra el pliego? (ej: 15 julio)" autocomplete="off">
+        <input type="text" id="ePliego" name="pliego" placeholder="" autocomplete="off" data-i18n-placeholder="form.placeholderPliego">
       </div>
       <div class="rgpd">
         <input type="checkbox" id="eRgpd" required>
-        <label for="eRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <a href="privacidad.html" target="_blank">Política de privacidad</a></label>
+        <label for="eRgpd" data-i18n="form.rgpd"></label>
       </div>
-      <button type="submit" class="btn-cta">Verificar disponibilidad →</button>
-      <p class="lock-text">Sin presión · Gratuito · Te respondemos hoy</p>
-      <p class="lock-text" style="margin-top:6px;font-weight:600;color:var(--navy)">355+ empresas certificadas · Garantía por escrito · 100% de las certificaciones superadas</p>
+      <button type="submit" class="btn-cta" data-i18n="form.submit"></button>
+      <p class="lock-text" data-i18n="form.lockText1"></p>
+      <p class="lock-text" style="margin-top:6px;font-weight:600;color:var(--navy)" data-i18n="form.lockText2"></p>
     </form>
 
     <div class="alt-phone">
-      <span>Urgente — llámanos ahora:</span>
+      <span data-i18n="form.altPhoneLabel"></span>
       <a href="tel:+34648414863">+34 648 414 863</a>
     </div>
   </div>
 
 </div>
 
-<div class="trust-strip">
-  <div class="trust-item"><strong>355+</strong><span>empresas certificadas</span></div>
-  <div class="trust-item"><strong>100%</strong><span>de las empresas que certificamos superaron la auditoría</span></div>
-  <div class="trust-item"><strong>48h</strong><span>arranque del proyecto</span></div>
-  <div class="trust-item"><strong>30 días</strong><span>certificación Express</span></div>
+<div class="trust-strip" data-i18n-list="trust.items" data-i18n-template="tpl-trust">
+  <template id="tpl-trust">
+    <div class="trust-item"><strong>{{value}}</strong><span>{{label}}</span></div>
+  </template>
 </div>
 
 <!-- ═══ TESTIMONIOS (PROVISIONALES · sustituir por reseñas reales de clientes) ═══ -->
 <div style="max-width:1080px;margin:0 auto;padding:8px 24px 56px">
-  <p style="font-family:'Syne',serif;font-size:28px;font-weight:300;color:#fff;text-align:center;margin:0 0 28px">Pliegos salvados a contrarreloj.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
-    <div style="background:#fff;border-radius:12px;padding:24px">
-      <div style="color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px">★★★★★</div>
-      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);line-height:1.6;margin:0 0 14px">"El pliego cerraba en 5 semanas y no teníamos ENS. Pensábamos que era imposible. Avson arrancó en 48h y lo certificamos a tiempo. Presentamos la oferta y la ganamos."</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin:0">— Director de Sistemas, integradora TIC (Madrid)</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:var(--gold);margin:4px 0 0">ENS Express ✓</p>
-    </div>
-    <div style="background:#fff;border-radius:12px;padding:24px">
-      <div style="color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px">★★★★★</div>
-      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);line-height:1.6;margin:0 0 14px">"Nos enteramos tarde de que la renovación exigía ENS. Express fue nuestra única opción. Tres consultores dedicados, 30 días, certificado en mano."</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin:0">— CISO, proveedor cloud sector público (Barcelona)</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:var(--gold);margin:4px 0 0">ENS Express ✓</p>
-    </div>
-    <div style="background:#fff;border-radius:12px;padding:24px">
-      <div style="color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px">★★★★★</div>
-      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);line-height:1.6;margin:0 0 14px">"Lo que nos decidió fue la garantía por escrito incluso en el formato urgente. Cumplieron el plazo sin una sola incidencia en la auditoría."</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin:0">— CEO, consultora tecnológica (Valencia)</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:var(--gold);margin:4px 0 0">ENS Express ✓</p>
-    </div>
+  <p style="font-family:'Syne',serif;font-size:28px;font-weight:300;color:#fff;text-align:center;margin:0 0 28px" data-i18n="testimonials.heading"></p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px" data-i18n-list="testimonials.items" data-i18n-template="tpl-testimonial">
+    <template id="tpl-testimonial">
+      <div style="background:#fff;border-radius:12px;padding:24px">
+        <div style="color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:10px">★★★★★</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);line-height:1.6;margin:0 0 14px">{{quote}}</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:600;margin:0">{{author}}</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:var(--gold);margin:4px 0 0">{{badge}}</p>
+      </div>
+    </template>
   </div>
 </div>
 
 <footer class="ppc-footer">
-  © 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·
-  <a href="privacidad.html" target="_blank" rel="noopener">Privacidad</a>
+  <span data-i18n="footer.text"></span>
+  <a href="privacidad.html" target="_blank" rel="noopener" data-i18n="footer.privacy"></a>
 </footer>
 
-<button type="button" class="sticky-cta" onclick="document.getElementById('expressForm').scrollIntoView({behavior:'smooth',block:'center'})">Dejar mis datos →</button>
+<button type="button" class="sticky-cta" onclick="document.getElementById('expressForm').scrollIntoView({behavior:'smooth',block:'center'})" data-i18n="stickyCta.text"></button>
 
 <script>
 function submitExpress(e) {

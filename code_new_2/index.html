@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="theme-color" content="#1f2023">
-  <title>Consultoría ENS España | Certificado ENS Garantizado | Avson GRC</title>
-  <meta name="description" content="Consigue tu certificado ENS con garantía de éxito por escrito. Si no lo obtienes, te devolvemos el dinero. 355+ empresas certificadas. Habla con un experto hoy.">
+  <title></title>
+  <meta name="description" content="">
   <link rel="canonical" href="https://avson.eu">
-  <meta property="og:title" content="Certificado ENS Garantizado | Avson GRC">
-  <meta property="og:description" content="El 85% de empresas sin ENS pierde sus licitaciones. Consíguelo con garantía de devolución por escrito.">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://avson.eu">
   <meta property="og:locale" content="es_ES">
@@ -55,6 +55,7 @@
       .v3-grid-3, .v3-norm-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <script src="i18n.js"></script>
   <script src="avson-leads.js" defer></script>
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");</script>
 
@@ -83,27 +84,27 @@
 
 <!-- STICKY BAR -->
 <div class="v3-sticky-bar" id="stickyBar">
-  <span class="v3-sticky-bar__text">Avson GRC — <strong>Si no te certificamos, te devolvemos el dinero</strong></span>
-  <a href="tel:+34648414863" class="v3-btn v3-btn--gold v3-btn--sm">Llama ahora: 648 414 863</a>
+  <span class="v3-sticky-bar__text" data-i18n="stickyBar.text"></span>
+  <a href="tel:+34648414863" class="v3-btn v3-btn--gold v3-btn--sm" data-i18n="stickyBar.cta"></a>
 </div>
 
 <!-- NAV -->
 <nav class="v3-nav" id="mainNav">
   <div class="v3-nav__inner">
-    <a href="index.html" class="v3-nav__logo">avs<span class="logo-o">o</span>n</a>
+    <a href="index.html" class="v3-nav__logo" data-i18n="nav.logo"></a>
     <ul class="v3-nav__links">
-      <li><a href="ens.html">ENS</a></li>
-      <li><a href="ens-express.html">ENS Express</a></li>
-      <li><a href="iso27001.html">ISO 27001</a></li>
-      <li><a href="iso22301.html">ISO 22301</a></li>
-      <li><a href="dora.html">DORA</a></li>
-      <li><a href="nis2.html">NIS2</a></li>
-      <li><a href="packs.html">Packs</a></li>
-      <li><a href="equipo.html">Equipo</a></li>
+      <li><a href="ens.html" data-i18n="nav.links.ens"></a></li>
+      <li><a href="ens-express.html" data-i18n="nav.links.ensExpress"></a></li>
+      <li><a href="iso27001.html" data-i18n="nav.links.iso27001"></a></li>
+      <li><a href="iso22301.html" data-i18n="nav.links.iso22301"></a></li>
+      <li><a href="dora.html" data-i18n="nav.links.dora"></a></li>
+      <li><a href="nis2.html" data-i18n="nav.links.nis2"></a></li>
+      <li><a href="packs.html" data-i18n="nav.links.packs"></a></li>
+      <li><a href="equipo.html" data-i18n="nav.links.equipo"></a></li>
     </ul>
-    <a href="tel:+34648414863" class="nav__phone">648 414 863</a>
+    <a href="tel:+34648414863" class="nav__phone" data-i18n="nav.phone"></a>
     <div class="lang-switch">
-      <button type="button" aria-haspopup="true" aria-label="Cambiar idioma">ES ▾</button>
+      <button type="button" aria-haspopup="true" aria-label="Cambiar idioma" data-i18n="nav.langLabel"></button>
       <div class="lang-switch__menu">
         <a href="en/index.html" hreflang="en">English</a>
         <a href="de/index.html" hreflang="de">Deutsch</a>
@@ -111,7 +112,7 @@
         <a href="it/index.html" hreflang="it">Italiano</a>
       </div>
     </div>
-    <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--sm v3-nav__cta">Habla con un experto →</a>
+    <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--sm v3-nav__cta" data-i18n="nav.cta"></a>
     <button class="v3-nav__burger" id="navBurger" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
@@ -119,23 +120,23 @@
 </nav>
 
 <div class="v3-nav__overlay" id="navOverlay">
-  <button class="v3-nav__overlay-close" id="navClose">✕</button>
-  <a href="ens.html">ENS</a>
-  <a href="ens-express.html">ENS Express</a>
-  <a href="iso27001.html">ISO 27001</a>
-  <a href="iso22301.html">ISO 22301</a>
-  <a href="dora.html">DORA</a>
-  <a href="nis2.html">NIS2</a>
-  <a href="packs.html">Packs</a>
-  <a href="equipo.html">Equipo</a>
-  <a href="tel:+34648414863" style="font-size:18px">648 414 863</a>
+  <button class="v3-nav__overlay-close" id="navClose">&#10005;</button>
+  <a href="ens.html" data-i18n="nav.links.ens"></a>
+  <a href="ens-express.html" data-i18n="nav.links.ensExpress"></a>
+  <a href="iso27001.html" data-i18n="nav.links.iso27001"></a>
+  <a href="iso22301.html" data-i18n="nav.links.iso22301"></a>
+  <a href="dora.html" data-i18n="nav.links.dora"></a>
+  <a href="nis2.html" data-i18n="nav.links.nis2"></a>
+  <a href="packs.html" data-i18n="nav.links.packs"></a>
+  <a href="equipo.html" data-i18n="nav.links.equipo"></a>
+  <a href="tel:+34648414863" style="font-size:18px" data-i18n="nav.overlay.phone"></a>
   <div style="display:flex;gap:20px">
     <a href="en/index.html" style="font-size:15px">EN</a>
     <a href="de/index.html" style="font-size:15px">DE</a>
     <a href="fr/index.html" style="font-size:15px">FR</a>
     <a href="it/index.html" style="font-size:15px">IT</a>
   </div>
-  <a href="contacto.html" class="v3-btn v3-btn--gold">Habla con un experto →</a>
+  <a href="contacto.html" class="v3-btn v3-btn--gold" data-i18n="nav.overlay.cta"></a>
 </div>
 
 <!-- ══════════════════════════════════
@@ -145,17 +146,12 @@
   <div class="v3-hero__inner">
 
     <div class="v3-hero__left">
-      <div class="v3-fomo-chip">El 85% de empresas sin ENS pierde sus licitaciones públicas</div>
-      <h1 class="v3-hero__h1">
-        Tu certificado ENS,<br>
-        <em>con garantía de devolución.</em>
-      </h1>
-      <p class="v3-hero__sub">
-        <strong>Los únicos del mercado que lo garantizan por escrito.</strong> Si no obtienes el certificado ENS, te devolvemos el dinero. Firmado en el contrato.
-      </p>
+      <div class="v3-fomo-chip" data-i18n="hero.chip"></div>
+      <h1 class="v3-hero__h1" data-i18n="hero.title"></h1>
+      <p class="v3-hero__sub" data-i18n="hero.subtitle"></p>
       <div class="v3-hero__btns">
-        <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--xl">Habla con un experto →</a>
-        <a href="packs.html" class="v3-btn v3-btn--outline-navy v3-btn--xl">Comprueba tu presupuesto</a>
+        <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--xl" data-i18n="hero.cta1"></a>
+        <a href="packs.html" class="v3-btn v3-btn--outline-navy v3-btn--xl" data-i18n="hero.cta2"></a>
       </div>
     </div>
 
@@ -168,19 +164,19 @@
 <!-- Tira única de confianza (stats + valoración fusionados) -->
 <div class="v3-stats">
   <div class="v3-stats__item">
-    <strong class="v3-counter" data-target="355" data-suffix="+">355+</strong><span>empresas certificadas</span>
+    <strong class="v3-counter" data-target="355" data-suffix="+" data-i18n="stats.stat1.value"></strong><span data-i18n="stats.stat1.label"></span>
   </div>
   <div class="v3-stats__sep"></div>
   <div class="v3-stats__item">
-    <strong>100%</strong><span>tasa de certificación</span>
+    <strong data-i18n="stats.stat2.value"></strong><span data-i18n="stats.stat2.label"></span>
   </div>
   <div class="v3-stats__sep"></div>
   <div class="v3-stats__item">
-    <strong>4.9★</strong><span>valoración de clientes</span>
+    <strong data-i18n="stats.stat3.value"></strong><span data-i18n="stats.stat3.label"></span>
   </div>
   <div class="v3-stats__sep"></div>
   <div class="v3-stats__item">
-    <strong>Madrid · Barcelona</strong><span>oficinas propias</span>
+    <strong data-i18n="stats.stat4.value"></strong><span data-i18n="stats.stat4.label"></span>
   </div>
 </div>
 
@@ -192,39 +188,39 @@
 <section style="background:var(--navy);padding:28px 40px">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
     <div>
-      <p style="font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">¿Tu licitación cierra pronto?</p>
-      <p style="font-family:var(--font-serif);font-size:26px;font-weight:400;color:#fff;line-height:1.2;margin:0">ENS Express — Certificado en 30 días.</p>
-      <p style="font-family:var(--font-sans);font-size:13px;color:rgba(255,255,255,0.7);margin-top:6px">Solo 6 plazas al mes · Equipo dedicado · Misma garantía de éxito</p>
+      <p style="font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px" data-i18n="expressBanner.label"></p>
+      <p style="font-family:var(--font-serif);font-size:26px;font-weight:400;color:#fff;line-height:1.2;margin:0" data-i18n="expressBanner.title"></p>
+      <p style="font-family:var(--font-sans);font-size:13px;color:rgba(255,255,255,0.7);margin-top:6px" data-i18n="expressBanner.subtitle"></p>
     </div>
-    <a href="ens-express.html" class="v3-btn v3-btn--gold" style="white-space:nowrap">Ver ENS Express →</a>
+    <a href="ens-express.html" class="v3-btn v3-btn--gold" style="white-space:nowrap" data-i18n="expressBanner.cta"></a>
   </div>
 </section>
 
 <section class="v3-section v3-section--white" id="servicios">
   <div class="v3-container">
-    <span class="v3-label">Servicios</span>
-    <h2 class="v3-h2">Cumplimiento, seguridad<br><em>y la IA que lo acelera.</em></h2>
+    <span class="v3-label" data-i18n="services.label"></span>
+    <h2 class="v3-h2" data-i18n="services.title"></h2>
     <div class="v3-grid-3">
 
       <article class="v3-pack-card">
-        <span class="v3-pack-badge">Garantía por escrito</span>
-        <h3>GRC y Certificaciones</h3>
-        <p>ENS, ISO 27001, ISO 22301, DORA y NIS2. Si no te certificamos, te devolvemos el dinero.</p>
-        <a href="packs.html" class="v3-btn v3-btn--outline-sm" style="margin-top:18px;align-self:flex-start">Saber más →</a>
+        <span class="v3-pack-badge" data-i18n="services.card1.badge"></span>
+        <h3 data-i18n="services.card1.title"></h3>
+        <p data-i18n="services.card1.text"></p>
+        <a href="packs.html" class="v3-btn v3-btn--outline-sm" style="margin-top:18px;align-self:flex-start" data-i18n="services.card1.cta"></a>
       </article>
 
       <article class="v3-pack-card">
-        <span class="v3-pack-badge">Protección continua</span>
-        <h3>Ciberseguridad</h3>
-        <p>Auditoría técnica, gestión de vulnerabilidades y respuesta a incidentes para tu organización.</p>
-        <a href="contacto.html" class="v3-btn v3-btn--outline-sm" style="margin-top:18px;align-self:flex-start">Saber más →</a>
+        <span class="v3-pack-badge" data-i18n="services.card2.badge"></span>
+        <h3 data-i18n="services.card2.title"></h3>
+        <p data-i18n="services.card2.text"></p>
+        <a href="contacto.html" class="v3-btn v3-btn--outline-sm" style="margin-top:18px;align-self:flex-start" data-i18n="services.card2.cta"></a>
       </article>
 
       <article class="v3-pack-card">
-        <span class="v3-pack-badge">Plataforma Praesys</span>
-        <h3>IA para cumplimiento</h3>
-        <p>Automatiza la documentación y el mantenimiento de tus normativas con nuestra plataforma GRC.</p>
-        <a href="praesys.html" class="v3-btn v3-btn--outline-sm" style="margin-top:18px;align-self:flex-start">Saber más →</a>
+        <span class="v3-pack-badge" data-i18n="services.card3.badge"></span>
+        <h3 data-i18n="services.card3.title"></h3>
+        <p data-i18n="services.card3.text"></p>
+        <a href="praesys.html" class="v3-btn v3-btn--outline-sm" style="margin-top:18px;align-self:flex-start" data-i18n="services.card3.cta"></a>
       </article>
 
     </div>
@@ -236,26 +232,26 @@
 ══════════════════════════════════ -->
 <section class="v3-section v3-section--pearl" id="metodo">
   <div class="v3-container">
-    <span class="v3-label">Cómo trabajamos</span>
-    <h2 class="v3-h2">Tres pasos.<br><em>Cero sorpresas.</em></h2>
+    <span class="v3-label" data-i18n="method.label"></span>
+    <h2 class="v3-h2" data-i18n="method.title"></h2>
     <div class="v3-grid-3">
 
       <article class="v3-pack-card">
         <div class="v3-step-num">01</div>
-        <h3>Análisis de brecha</h3>
-        <p>Auditamos tu situación frente a la norma y te entregamos un plan con plazos y presupuesto cerrado.</p>
+        <h3 data-i18n="method.step1.title"></h3>
+        <p data-i18n="method.step1.text"></p>
       </article>
 
       <article class="v3-pack-card">
         <div class="v3-step-num">02</div>
-        <h3>Implementación asistida por IA</h3>
-        <p>Praesys genera la documentación base y nuestros consultores la adaptan a tu negocio.</p>
+        <h3 data-i18n="method.step2.title"></h3>
+        <p data-i18n="method.step2.text"></p>
       </article>
 
       <article class="v3-pack-card">
         <div class="v3-step-num">03</div>
-        <h3>Acompañamiento a auditoría</h3>
-        <p>Preparamos la auditoría contigo y respondemos ante el auditor hasta que tienes el certificado.</p>
+        <h3 data-i18n="method.step3.title"></h3>
+        <p data-i18n="method.step3.text"></p>
       </article>
 
     </div>
@@ -267,8 +263,8 @@
 ══════════════════════════════════ -->
 <section class="v3-section v3-section--navy v3-statement">
   <div class="v3-container">
-    <h2 class="v3-h2 v3-h2--white">No somos un proveedor de software. Somos el socio estratégico que aplica IA a tu cumplimiento normativo desde el primer día.</h2>
-    <a href="equipo.html" class="v3-btn v3-btn--outline-white">Conoce al equipo →</a>
+    <h2 class="v3-h2 v3-h2--white" data-i18n="statement.title"></h2>
+    <a href="equipo.html" class="v3-btn v3-btn--outline-white" data-i18n="statement.cta"></a>
   </div>
 </section>
 
@@ -279,27 +275,27 @@
   <div class="v3-container">
     <div class="v3-ens-explain">
       <div class="v3-ens-explain__text">
-        <span class="v3-label">Producto estrella</span>
-        <h2 class="v3-h2">Praesys.<br><em>La plataforma GRC con IA.</em></h2>
-        <p><strong>Todo tu cumplimiento en un solo lugar.</strong> Praesys genera, mantiene y audita tu documentación normativa con IA, supervisada por nuestros consultores.</p>
-        <a href="praesys.html" class="v3-btn v3-btn--gold">Descubre Praesys →</a>
+        <span class="v3-label" data-i18n="praesys.label"></span>
+        <h2 class="v3-h2" data-i18n="praesys.title"></h2>
+        <p data-i18n="praesys.text"></p>
+        <a href="praesys.html" class="v3-btn v3-btn--gold" data-i18n="praesys.cta"></a>
       </div>
       <div class="v3-praesys-points">
         <article class="v3-pack-card">
-          <h3>MAGERIT nativo</h3>
-          <p>La única plataforma GRC nacida en España con análisis de riesgos MAGERIT de serie.</p>
+          <h3 data-i18n="praesys.point1.title"></h3>
+          <p data-i18n="praesys.point1.text"></p>
         </article>
         <article class="v3-pack-card">
-          <h3>Licencia base completa</h3>
-          <p>Todas las normativas incluidas desde el primer día. Sin módulos extra ni sorpresas.</p>
+          <h3 data-i18n="praesys.point2.title"></h3>
+          <p data-i18n="praesys.point2.text"></p>
         </article>
         <article class="v3-pack-card">
-          <h3>Implementación en 8 semanas</h3>
-          <p>Operativa en dos meses, con acompañamiento de consultor en cada fase.</p>
+          <h3 data-i18n="praesys.point3.title"></h3>
+          <p data-i18n="praesys.point3.text"></p>
         </article>
         <article class="v3-pack-card">
-          <h3>60–80% más económica</h3>
-          <p>Frente a las plataformas equivalentes que despliegan las Big 4.</p>
+          <h3 data-i18n="praesys.point4.title"></h3>
+          <p data-i18n="praesys.point4.text"></p>
         </article>
       </div>
     </div>
@@ -311,42 +307,42 @@
 ══════════════════════════════════ -->
 <section class="v3-section v3-section--pearl" id="normativas">
   <div class="v3-container">
-    <span class="v3-label">Normativas principales</span>
-    <h2 class="v3-h2">¿Cuál te aplica?<br><em>Empieza por aquí.</em></h2>
+    <span class="v3-label" data-i18n="norms.label"></span>
+    <h2 class="v3-h2" data-i18n="norms.title"></h2>
     <div class="v3-norm-grid">
 
       <a href="ens.html" class="v3-pack-card">
-        <h3>ENS</h3>
-        <p>Esquema Nacional de Seguridad: obligatorio para las AAPP y sus proveedores. Sin él, tu oferta no se abre.</p>
+        <h3 data-i18n="norms.ens.title"></h3>
+        <p data-i18n="norms.ens.text"></p>
       </a>
 
       <a href="nis2.html" class="v3-pack-card">
-        <h3>NIS2</h3>
-        <p>Sectores críticos de la UE. ENS Alto equivale en la práctica a NIS2.</p>
+        <h3 data-i18n="norms.nis2.title"></h3>
+        <p data-i18n="norms.nis2.text"></p>
       </a>
 
       <a href="iso27001.html" class="v3-pack-card">
-        <h3>ISO 27001</h3>
-        <p>El estándar global de seguridad de la información para el mercado privado.</p>
+        <h3 data-i18n="norms.iso27001.title"></h3>
+        <p data-i18n="norms.iso27001.text"></p>
       </a>
 
       <a href="iso22301.html" class="v3-pack-card">
-        <h3>ISO 22301</h3>
-        <p>Continuidad de negocio certificada para servicios críticos.</p>
+        <h3 data-i18n="norms.iso22301.title"></h3>
+        <p data-i18n="norms.iso22301.text"></p>
       </a>
 
       <a href="dora.html" class="v3-pack-card">
-        <h3>DORA</h3>
-        <p>Entidades financieras. Multas de hasta el 1% del volumen diario de negocio.</p>
+        <h3 data-i18n="norms.dora.title"></h3>
+        <p data-i18n="norms.dora.text"></p>
       </a>
 
       <a href="otras.html" class="v3-pack-card">
-        <h3>RGPD / LOPDGDD</h3>
-        <p>Protección de datos personales para cualquier empresa que opere en la UE.</p>
+        <h3 data-i18n="norms.rgpd.title"></h3>
+        <p data-i18n="norms.rgpd.text"></p>
       </a>
 
     </div>
-    <p class="v3-packs-note">¿No lo tienes claro? <a href="diagnostico.html">Haz el autodiagnóstico en 5 preguntas →</a></p>
+    <p class="v3-packs-note" data-i18n="norms.note"></p>
   </div>
 </section>
 
@@ -355,46 +351,22 @@
 ══════════════════════════════════ -->
 <section class="v3-section v3-section--white" id="testimonios">
   <div class="v3-container">
-    <span class="v3-label">Lo que dicen nuestros clientes</span>
-    <h2 class="v3-h2">Resultados reales.<br><em>Cero fracasos.</em></h2>
-    <div class="v3-testimonials">
-
-      <article class="v3-testi">
-        <div class="v3-testi__stars">★★★★★</div>
-        <blockquote>"Llevábamos dos años perdiendo licitaciones por no tener ENS. Certificamos en <strong>9 semanas</strong> y ganamos el siguiente concurso."</blockquote>
-        <footer>
-          <div>
-            <strong>Director de Sistemas</strong>
-            <span>Integradora TIC (Madrid)</span>
-          </div>
-          <div class="v3-testi__result">ENS Media</div>
-        </footer>
-      </article>
-
-      <article class="v3-testi">
-        <div class="v3-testi__stars">★★★★★</div>
-        <blockquote>"Otros consultores nos daban un año. Superamos la auditoría a la primera en <strong>14 semanas</strong>."</blockquote>
-        <footer>
-          <div>
-            <strong>Responsable de Seguridad</strong>
-            <span>Proveedor cloud (Barcelona)</span>
-          </div>
-          <div class="v3-testi__result">ENS Alto + ISO 27001</div>
-        </footer>
-      </article>
-
-      <article class="v3-testi">
-        <div class="v3-testi__stars">★★★★★</div>
-        <blockquote>"Eran los únicos que ponían la garantía por escrito. <strong>Cero incidencias</strong> en la auditoría."</blockquote>
-        <footer>
-          <div>
-            <strong>CEO</strong>
-            <span>Consultora tecnológica (Valencia)</span>
-          </div>
-          <div class="v3-testi__result">ENS Básico</div>
-        </footer>
-      </article>
-
+    <span class="v3-label" data-i18n="testimonials.label"></span>
+    <h2 class="v3-h2" data-i18n="testimonials.title"></h2>
+    <div class="v3-testimonials" data-i18n-list="testimonials.items" data-i18n-template="tpl-testimonial">
+      <template id="tpl-testimonial">
+        <article class="v3-testi">
+          <div class="v3-testi__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>{{quote}}</blockquote>
+          <footer>
+            <div>
+              <strong>{{role}}</strong>
+              <span>{{company}}</span>
+            </div>
+            <div class="v3-testi__result">{{result}}</div>
+          </footer>
+        </article>
+      </template>
     </div>
   </div>
 </section>
@@ -408,16 +380,16 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;background:var(--white);border:1px solid var(--border);border-radius:16px;padding:48px" class="magnet-grid">
       <div>
-        <span class="label-tag">Recurso gratuito</span>
-        <h2 style="font-family:var(--font-serif);font-size:30px;font-weight:700;color:var(--navy);line-height:1.15;margin:10px 0 12px">¿Aún no estás listo para hablar?<br><span style="color:var(--gold)">Llévate el checklist del pliego.</span></h2>
-        <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);line-height:1.6;margin:0">Los 12 puntos que un pliego del sector público te va a exigir sobre el ENS: qué acreditar, qué comprueban y el error que más licitaciones cuesta. Una página, directo al grano.</p>
+        <span class="label-tag" data-i18n="checklist.label"></span>
+        <h2 style="font-family:var(--font-serif);font-size:30px;font-weight:700;color:var(--navy);line-height:1.15;margin:10px 0 12px" data-i18n="checklist.title"></h2>
+        <p style="font-family:var(--font-sans);font-size:15px;color:var(--text-body);line-height:1.6;margin:0" data-i18n="checklist.text"></p>
       </div>
       <form onsubmit="return avsonSubmitLead(event, { source: 'checklist_pliego', event: 'lead_magnet' })" style="display:flex;flex-direction:column;gap:12px">
-        <input type="text" name="nombre" placeholder="Tu nombre *" required style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px">
-        <input type="email" name="email" placeholder="Tu email de empresa *" required style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px">
-        <label style="display:flex;gap:8px;align-items:flex-start;font-family:var(--font-sans);font-size:11.5px;color:var(--text-muted);line-height:1.4"><input type="checkbox" required style="margin-top:2px">Acepto que Avson me envíe el recurso y me contacte. <a href="privacidad.html" target="_blank" rel="noopener" style="color:var(--text-muted)">Política de privacidad</a></label>
-        <button type="submit" class="v3-btn v3-btn--gold" style="width:100%">Descargar el checklist →</button>
-        <p style="font-family:var(--font-sans);font-size:12px;color:var(--text-muted);text-align:center;margin:0">Descarga inmediata · Sin spam</p>
+        <input type="text" name="nombre" placeholder="" required style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px" data-i18n-placeholder="checklist.placeholderName">
+        <input type="email" name="email" placeholder="" required style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px" data-i18n-placeholder="checklist.placeholderEmail">
+        <label style="display:flex;gap:8px;align-items:flex-start;font-family:var(--font-sans);font-size:11.5px;color:var(--text-muted);line-height:1.4"><input type="checkbox" required style="margin-top:2px"><span data-i18n="checklist.checkbox"></span></label>
+        <button type="submit" class="v3-btn v3-btn--gold" style="width:100%" data-i18n="checklist.submit"></button>
+        <p style="font-family:var(--font-sans);font-size:12px;color:var(--text-muted);text-align:center;margin:0" data-i18n="checklist.note"></p>
       </form>
     </div>
   </div>
@@ -428,31 +400,29 @@
     <div class="v3-lead-final">
 
       <div class="v3-lead-final__text">
-        <span class="v3-label">Hablemos</span>
-        <h2 class="v3-h2">Un experto te llama<br><em>en menos de 30 minutos.</em></h2>
-        <p>En 30 minutos sabrás qué normativa necesitas, en qué plazo y con qué presupuesto. Gratis y sin compromiso.</p>
-        <p><strong>Madrid</strong> — Calle Pedro Muñoz Seca 2<br><strong>Barcelona</strong> — Plaza Francesc Macià 7</p>
-        <p><a href="tel:+34648414863">+34 648 414 863</a> · <a href="mailto:hola@avson.eu">hola@avson.eu</a></p>
+        <span class="v3-label" data-i18n="contact.label"></span>
+        <h2 class="v3-h2" data-i18n="contact.title"></h2>
+        <p data-i18n="contact.text1"></p>
+        <p data-i18n="contact.text2"></p>
+        <p data-i18n="contact.text3"></p>
       </div>
 
       <div class="v3-lead-card">
         <div class="v3-lead-card__header">
-          <span class="v3-live-badge">Te llamamos en <30 min (horario de oficina)</span>
-          <p class="v3-lead-card__title">Habla con un experto</p>
+          <span class="v3-live-badge" data-i18n="contact.formBadge"></span>
+          <p class="v3-lead-card__title" data-i18n="contact.formTitle"></p>
         </div>
         <form class="v3-form" id="heroForm" onsubmit="avsonSubmitLead(event,{source:'hero',event:'hero_lead'})">
-          <input type="text"  id="fNombre" name="nombre" placeholder="Tu nombre *" autocomplete="given-name" required class="v3-form__input">
-          <input type="email" id="fEmail"  name="email"  placeholder="Tu email *"  autocomplete="email"      required class="v3-form__input">
+          <input type="text"  id="fNombre" name="nombre" placeholder="" autocomplete="given-name" required class="v3-form__input" data-i18n-placeholder="contact.placeholderName">
+          <input type="email" id="fEmail"  name="email"  placeholder="" autocomplete="email"      required class="v3-form__input" data-i18n-placeholder="contact.placeholderEmail">
           <div class="v3-form__rgpd">
             <input type="checkbox" id="fRgpd" required>
-            <label for="fRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <a href="privacidad.html" target="_blank">Política de privacidad</a></label>
+            <label for="fRgpd" data-i18n="contact.rgpdLabel"></label>
           </div>
-          <button type="submit" class="v3-btn v3-btn--gold v3-btn--full v3-btn--xl v3-btn--pulse">Habla con un experto →</button>
-          <p class="v3-form__lock">Gratuito · Sin compromiso · Confidencial</p>
+          <button type="submit" class="v3-btn v3-btn--gold v3-btn--full v3-btn--xl v3-btn--pulse" data-i18n="contact.formSubmit"></button>
+          <p class="v3-form__lock" data-i18n="contact.formLock"></p>
         </form>
-        <div class="v3-lead-card__phone">
-          ¿Prefieres llamar? <a href="tel:+34648414863">+34 648 414 863</a>
-        </div>
+        <div class="v3-lead-card__phone" data-i18n="contact.formPhone"></div>
       </div>
 
     </div>
@@ -465,59 +435,59 @@
     <div class="v3-footer__grid">
 
       <div class="v3-footer__brand">
-        <span class="v3-footer__logo" style="font-size:36px">avs<span class="logo-o">o</span>n</span>
-        <p class="v3-footer__tagline">avenir &amp; raison</p>
-        <p>Consultoría GRC con IA. 355+ empresas certificadas en España.</p>
+        <span class="v3-footer__logo" style="font-size:36px" data-i18n="nav.logo"></span>
+        <p class="v3-footer__tagline" data-i18n="footer.tagline"></p>
+        <p data-i18n="footer.desc"></p>
         <div class="v3-footer__contact">
           <a href="mailto:hola@avson.eu">hola@avson.eu</a>
           <a href="tel:+34648414863">+34 648 41 48 63</a>
-          <span>Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)</span>
-          <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener">LinkedIn · Avson GRC</a>
+          <span data-i18n="footer.address"></span>
+          <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" data-i18n="footer.linkedin"></a>
         </div>
       </div>
 
       <div class="v3-footer__col">
-        <strong>Normativas</strong>
+        <strong data-i18n="footer.colNorms"></strong>
         <ul>
-          <li><a href="ens.html">ENS</a></li>
-          <li><a href="ens-express.html">ENS Express</a></li>
-          <li><a href="iso27001.html">ISO 27001</a></li>
-          <li><a href="iso22301.html">ISO 22301</a></li>
-          <li><a href="dora.html">DORA</a></li>
-          <li><a href="nis2.html">NIS2</a></li>
+          <li><a href="ens.html" data-i18n="nav.links.ens"></a></li>
+          <li><a href="ens-express.html" data-i18n="nav.links.ensExpress"></a></li>
+          <li><a href="iso27001.html" data-i18n="nav.links.iso27001"></a></li>
+          <li><a href="iso22301.html" data-i18n="nav.links.iso22301"></a></li>
+          <li><a href="dora.html" data-i18n="nav.links.dora"></a></li>
+          <li><a href="nis2.html" data-i18n="nav.links.nis2"></a></li>
         </ul>
       </div>
 
       <div class="v3-footer__col">
-        <strong>Empresa</strong>
+        <strong data-i18n="footer.colCompany"></strong>
         <ul>
-          <li><a href="packs.html">Packs GRC</a></li>
-          <li><a href="praesys.html">Praesys</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="unete.html">Únete al equipo</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="packs.html" data-i18n="footer.packsGrc"></a></li>
+          <li><a href="praesys.html" data-i18n="footer.praesys"></a></li>
+          <li><a href="equipo.html" data-i18n="footer.equipo"></a></li>
+          <li><a href="unete.html" data-i18n="footer.unete"></a></li>
+          <li><a href="contacto.html" data-i18n="footer.contacto"></a></li>
         </ul>
       </div>
 
       <div class="v3-footer__col">
-        <strong>Recursos</strong>
+        <strong data-i18n="footer.colResources"></strong>
         <ul>
-          <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="webinars.html">Webinars</a></li>
-          <li><a href="diagnostico.html">Autodiagnóstico</a></li>
-          <li><a href="precio.html">Precios orientativos</a></li>
+          <li><a href="blog/index.html" data-i18n="footer.blog"></a></li>
+          <li><a href="webinars.html" data-i18n="footer.webinars"></a></li>
+          <li><a href="diagnostico.html" data-i18n="footer.autodiag"></a></li>
+          <li><a href="precio.html" data-i18n="footer.precios"></a></li>
         </ul>
-        <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--sm" style="margin-top:28px;display:inline-flex">Habla con un experto →</a>
+        <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--sm" style="margin-top:28px;display:inline-flex" data-i18n="footer.cta"></a>
       </div>
 
     </div>
 
     <div class="v3-footer__bottom">
-      <span>© 2026 Avson Consultoría Estratégica SLU · CIF B10560795</span>
+      <span data-i18n="footer.copy"></span>
       <ul>
-        <li><a href="privacidad.html">Privacidad</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="privacidad.html">Aviso legal</a></li>
+        <li><a href="privacidad.html" data-i18n="footer.privacy"></a></li>
+        <li><a href="cookies.html" data-i18n="footer.cookies"></a></li>
+        <li><a href="privacidad.html" data-i18n="footer.legal"></a></li>
       </ul>
     </div>
   </div>
@@ -525,20 +495,20 @@
 
 <div class="human-float" id="humanFloat">
   <div class="human-float__card">
-    <p class="human-float__title">Aquí no responde una IA.</p>
-    <p class="human-float__txt">Tu consulta la lee un especialista de nuestro equipo. Te llamamos en menos de 30 minutos en horario de oficina (L–V, 9–18h); fuera de horario, a primera hora del día siguiente.</p>
-    <a href="contacto.html" class="human-float__cta" onclick="var f=document.querySelector('form');if(f){f.scrollIntoView({behavior:'smooth'});var i=f.querySelector('input');if(i)setTimeout(function(){i.focus()},600);return false;}">Dejar mis datos →</a>
+    <p class="human-float__title" data-i18n="humanFloat.title"></p>
+    <p class="human-float__txt" data-i18n="humanFloat.text"></p>
+    <a href="contacto.html" class="human-float__cta" data-i18n="humanFloat.cta" onclick="var f=document.querySelector('form');if(f){f.scrollIntoView({behavior:'smooth'});var i=f.querySelector('input');if(i)setTimeout(function(){i.focus()},600);return false;}"></a>
   </div>
-  <button class="human-float__btn" onclick="document.getElementById('humanFloat').classList.toggle('open')" aria-expanded="false" aria-label="Te atiende una persona, no una IA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Personas, no IA</span></button>
+  <button class="human-float__btn" onclick="document.getElementById('humanFloat').classList.toggle('open')" aria-expanded="false" aria-label="Te atiende una persona, no una IA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-i18n="humanFloat.btn"></span></button>
 </div>
 
 
 <!-- COOKIE BANNER -->
 <div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-banner__text">Usamos cookies para analizar el tráfico. <a href="cookies.html">Más info</a>.</p>
+  <p class="cookie-banner__text" data-i18n="cookieBanner.text"></p>
   <div class="cookie-banner__actions">
-    <button class="cookie-decline" onclick="setCookies('decline')">Rechazar</button>
-    <button class="cookie-accept" onclick="setCookies('accept')">Aceptar</button>
+    <button class="cookie-decline" onclick="setCookies('decline')" data-i18n="cookieBanner.decline"></button>
+    <button class="cookie-accept" onclick="setCookies('accept')" data-i18n="cookieBanner.accept"></button>
   </div>
 </div>
 
@@ -570,9 +540,11 @@ close?.addEventListener('click', () => toggleNav(false));
 // Close on backdrop click
 overlay.addEventListener('click', (e) => { if (e.target === overlay) toggleNav(false); });
 
-document.querySelectorAll('.v3-pack-card, .v3-testi').forEach(el => {
-  el.classList.add('v3-fade');
-  new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('v3-fade--in'); }, { threshold: 0.1 }).observe(el);
+document.addEventListener('i18n:ready', function() {
+  document.querySelectorAll('.v3-pack-card, .v3-testi').forEach(el => {
+    el.classList.add('v3-fade');
+    new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('v3-fade--in'); }, { threshold: 0.1 }).observe(el);
+  });
 });
 
 window.addEventListener('load', () => {
@@ -674,7 +646,7 @@ window.addEventListener('beforeunload', () => {
   let shown = false;
   const popup = document.getElementById('exitPopup');
   if (!popup) return;
-  
+
   document.addEventListener('mouseleave', (e) => {
     if (e.clientY > 20 || shown || e.relatedTarget !== null) return;
     shown = true;
@@ -721,11 +693,11 @@ window.addEventListener('beforeunload', () => {
 <!-- ═══ EXIT INTENT POPUP ═══ -->
 <div class="v3-exit-popup" id="exitPopup" role="dialog" aria-label="Antes de irte">
   <div class="v3-exit-popup__box">
-    <button class="v3-exit-popup__close" id="exitPopupClose" aria-label="Cerrar">✕</button>
-    <h3 class="v3-exit-popup__title">¿Tu competencia ya tiene el ENS?</h3>
-    <p class="v3-exit-popup__sub">El 85% de empresas sin ENS pierde licitaciones. Una llamada de 15 minutos te dice si estás en riesgo.</p>
-    <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--full" id="exitPopupCTA" style="font-size:15px;padding:15px">Habla con un experto gratis →</a>
-    <p class="v3-exit-popup__dismiss" id="exitPopupClose2" onclick="document.getElementById('exitPopup').classList.remove('visible')">No me interesa por ahora</p>
+    <button class="v3-exit-popup__close" id="exitPopupClose" aria-label="Cerrar">&#10005;</button>
+    <h3 class="v3-exit-popup__title" data-i18n="exitPopup.title"></h3>
+    <p class="v3-exit-popup__sub" data-i18n="exitPopup.sub"></p>
+    <a href="contacto.html" class="v3-btn v3-btn--gold v3-btn--full" id="exitPopupCTA" style="font-size:15px;padding:15px" data-i18n="exitPopup.cta"></a>
+    <p class="v3-exit-popup__dismiss" id="exitPopupClose2" onclick="document.getElementById('exitPopup').classList.remove('visible')" data-i18n="exitPopup.dismiss"></p>
   </div>
 </div>
 
@@ -733,8 +705,8 @@ window.addEventListener('beforeunload', () => {
 
 <!-- CTA MÓVIL PERMANENTE -->
 <div class="v3-mobile-cta"><div class="v3-mobile-cta__row">
-  <a href="tel:+34648414863" class="v3-mobile-cta__call" aria-label="Llamar">Llamar</a>
-  <a href="contacto.html" class="v3-mobile-cta__main">Habla con un experto →</a>
+  <a href="tel:+34648414863" class="v3-mobile-cta__call" aria-label="Llamar" data-i18n="mobileCta.call"></a>
+  <a href="contacto.html" class="v3-mobile-cta__main" data-i18n="mobileCta.main"></a>
 </div></div>
 </body>
 </html>

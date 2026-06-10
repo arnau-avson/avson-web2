@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificado ENS con Garantía por Escrito | Avson</title>
-  <meta name="description" content="Consigue tu certificado ENS con garantía de devolución por escrito. Si no lo obtienes, te devolvemos el dinero. 355+ empresas certificadas.">
+  <title></title>
+  <meta name="description" content="">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <script src="i18n.js"></script>
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");</script>
   <script src="avson-leads.js" defer></script>
   <!-- ═══ GOOGLE ADS REMARKETING TAG — descomentar al crear la campaña ═══ -->
@@ -220,7 +221,7 @@
 </head>
 <body>
 
-<div class="top-bar"><strong>Si el pliego exige ENS, sin certificado tu oferta queda fuera.</strong> Avson GRC — Certificado ENS con garantía de devolución por escrito.</div>
+<div class="top-bar" data-i18n="topbar.text"></div>
 
 <header class="ppc-header">
   <span class="ppc-logo">AVSON<span> · </span>GRC</span>
@@ -231,56 +232,54 @@
 
   <!-- Left: copy -->
   <div>
-    <div class="fomo">Si el pliego exige ENS, sin certificado tu oferta queda excluida.</div>
-    <h1>Certificado ENS<br><em>con garantía<br>por escrito.</em></h1>
-    <p class="hero-sub">
-      Si no obtienes el certificado ENS, <strong>te devolvemos el dinero</strong>. Garantía de devolución por escrito: la firmamos en el contrato.
-    </p>
+    <div class="fomo" data-i18n="hero.fomo"></div>
+    <h1 data-i18n="hero.title"></h1>
+    <p class="hero-sub" data-i18n="hero.subtitle"></p>
     <div class="trust-row">
-      <span>355+ empresas certificadas</span>
-      <span>100% de las certificaciones superadas</span>
-      <span>15 consultores especializados</span>
+      <span data-i18n="hero.trust1"></span>
+      <span data-i18n="hero.trust2"></span>
+      <span data-i18n="hero.trust3"></span>
     </div>
     <div class="ppc-stats">
-      <div class="ppc-stat"><strong>355+</strong><span>certificaciones</span></div>
-      <div class="ppc-stat"><strong>100%</strong><span>de las empresas que certificamos superaron la auditoría</span></div>
-      <div class="ppc-stat"><strong>30 días</strong><span>con Express</span></div>
+      <div class="ppc-stat"><strong data-i18n="stats.stat1.value"></strong><span data-i18n="stats.stat1.label"></span></div>
+      <div class="ppc-stat"><strong data-i18n="stats.stat2.value"></strong><span data-i18n="stats.stat2.label"></span></div>
+      <div class="ppc-stat"><strong data-i18n="stats.stat3.value"></strong><span data-i18n="stats.stat3.label"></span></div>
     </div>
   </div>
 
   <!-- Right: form -->
   <div class="form-card">
-    <span class="live-badge">Te llamamos en <30 min (horario de oficina)</span>
-    <p class="form-title">Habla con un experto</p>
-    <p class="form-sub">Gratuito · Sin compromiso · 30 minutos</p>
+    <span class="live-badge" data-i18n="form.liveBadge"></span>
+    <p class="form-title" data-i18n="form.title"></p>
+    <p class="form-sub" data-i18n="form.subtitle"></p>
 
-    <p class="qual-label">¿Qué necesitas?</p>
+    <p class="qual-label" data-i18n="form.qualLabel"></p>
     <div class="qual-grid">
-      <button type="button" class="qual-btn qual-btn--urgent" onclick="pickQ(this,'ENS Express urgente')">ENS urgente</button>
-      <button type="button" class="qual-btn" onclick="pickQ(this,'ENS estándar')">ENS estándar</button>
-      <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 27001')">ISO 27001</button>
-      <button type="button" class="qual-btn" onclick="pickQ(this,'No lo sé aún')">No lo sé aún</button>
+      <button type="button" class="qual-btn qual-btn--urgent" onclick="pickQ(this,'ENS Express urgente')" data-i18n="form.qualBtn1"></button>
+      <button type="button" class="qual-btn" onclick="pickQ(this,'ENS estándar')" data-i18n="form.qualBtn2"></button>
+      <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 27001')" data-i18n="form.qualBtn3"></button>
+      <button type="button" class="qual-btn" onclick="pickQ(this,'No lo sé aún')" data-i18n="form.qualBtn4"></button>
     </div>
     <input type="hidden" id="pNecesidad" value="">
 
     <form id="ppcForm" onsubmit="avsonSubmitLead(event,{source:'ppc_ens',event:'ppc_lead'})" novalidate>
       <div class="form-group">
-        <input type="text"  id="pNombre" name="nombre" placeholder="Tu nombre *" autocomplete="given-name" required>
+        <input type="text"  id="pNombre" name="nombre" placeholder="" autocomplete="given-name" required data-i18n-placeholder="form.placeholderName">
       </div>
       <div class="form-group">
-        <input type="email" id="pEmail"  name="email"  placeholder="Tu email *" autocomplete="email" required>
+        <input type="email" id="pEmail"  name="email"  placeholder="" autocomplete="email" required data-i18n-placeholder="form.placeholderEmail">
       </div>
       <div class="rgpd">
         <input type="checkbox" id="pRgpd" required>
-        <label for="pRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <a href="privacidad.html" target="_blank">Política de privacidad</a></label>
+        <label for="pRgpd" data-i18n="form.rgpd"></label>
       </div>
-      <button type="submit" class="btn-cta">Habla con un experto →</button>
-      <p class="lock-text">Gratuito · Sin compromiso · Confidencial</p>
-      <p class="lock-text" style="margin-top:6px;font-weight:600;color:var(--navy)">355+ empresas certificadas · Garantía por escrito · 100% de las certificaciones superadas</p>
+      <button type="submit" class="btn-cta" data-i18n="form.submit"></button>
+      <p class="lock-text" data-i18n="form.lockText1"></p>
+      <p class="lock-text" style="margin-top:6px;font-weight:600;color:var(--navy)" data-i18n="form.lockText2"></p>
     </form>
 
     <div class="alt-phone">
-      <span>¿Prefieres llamar?</span>
+      <span data-i18n="form.altPhoneLabel"></span>
       <a href="tel:+34648414863">+34 648 414 863</a>
     </div>
   </div>
@@ -288,33 +287,23 @@
 </div>
 
 <!-- Testimonials -->
-<div class="testi-strip">
-  <div class="testi">
-    <div class="testi-stars">★★★★★</div>
-    <p class="testi-quote">"Llevábamos dos años perdiendo licitaciones. Avson nos lo resolvió en <strong>9 semanas</strong>. Al siguiente concurso, ganamos el contrato."</p>
-    <p class="testi-author">— Director de Sistemas, integradora TIC (Madrid)</p>
-    <p class="testi-result">ENS Media certificado ✓</p>
-  </div>
-  <div class="testi">
-    <div class="testi-stars">★★★★★</div>
-    <p class="testi-quote">"Otros consultores decían un año. Avson lo hizo en <strong>14 semanas</strong> y superamos la auditoría ENAC a la primera."</p>
-    <p class="testi-author">— CISO, proveedor cloud sector público (Barcelona)</p>
-    <p class="testi-result">ENS Alta + ISO 27001 ✓</p>
-  </div>
-  <div class="testi">
-    <div class="testi-stars">★★★★★</div>
-    <p class="testi-quote">"La garantía por escrito fue lo que nos decidió. El proceso duró <strong>7 semanas</strong> sin una sola incidencia."</p>
-    <p class="testi-author">— CEO, consultora tecnológica (Valencia)</p>
-    <p class="testi-result">ENS Básica certificado ✓</p>
-  </div>
+<div class="testi-strip" data-i18n-list="testimonials.items" data-i18n-template="tpl-testimonial">
+  <template id="tpl-testimonial">
+    <div class="testi">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">{{quote}}</p>
+      <p class="testi-author">{{author}}</p>
+      <p class="testi-result">{{result}}</p>
+    </div>
+  </template>
 </div>
 
 <footer class="ppc-footer">
-  © 2026 Avson Consultoría Estratégica SLU · CIF B10560795 ·
-  <a href="privacidad.html" target="_blank" rel="noopener">Privacidad</a>
+  <span data-i18n="footer.text"></span>
+  <a href="privacidad.html" target="_blank" rel="noopener" data-i18n="footer.privacy"></a>
 </footer>
 
-<button type="button" class="sticky-cta" onclick="document.getElementById('ppcForm').scrollIntoView({behavior:'smooth',block:'center'})">Dejar mis datos →</button>
+<button type="button" class="sticky-cta" onclick="document.getElementById('ppcForm').scrollIntoView({behavior:'smooth',block:'center'})" data-i18n="stickyCta.text"></button>
 
 <script>
 function pickQ(btn, val) {
