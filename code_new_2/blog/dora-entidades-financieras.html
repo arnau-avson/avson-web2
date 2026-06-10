@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DORA para Entidades Financieras: Requisitos | Avson</title>
+  <meta name="description" content="Guía práctica de DORA para bancos, aseguradoras, fintech y gestoras. Requisitos concretos, plazos, pruebas de resiliencia y sanciones. Cumplimiento garantizado con Avson GRC.">
+  <link rel="canonical" href="https://avson.eu/blog/dora-entidades-financieras.html">
+  <meta property="og:title" content="DORA para Entidades Financieras: Requisitos, Plazos y Cómo Cumplir | Avson GRC">
+  <meta property="og:description" content="Guía práctica de DORA para bancos, aseguradoras, fintech y gestoras. Requisitos concretos, plazos, pruebas de resiliencia y sanciones. Cumplimiento garantizado con Avson GRC.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://avson.eu/blog/dora-entidades-financieras.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Avson GRC">
+  <meta property="og:image" content="https://avson.eu/assets/og-avson.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "DORA para entidades financieras: todo lo que necesitas saber para cumplir",
+    "description": "Guía práctica de DORA para bancos, aseguradoras, fintech y gestoras. Requisitos concretos, plazos, pruebas de resiliencia y sanciones.",
+    "author": {"@type": "Person", "name": "David Martín", "jobTitle": "Consultor DORA y NIS2", "url": "https://avson.eu/equipo.html", "worksFor": {"@type": "Organization", "name": "Avson GRC", "url": "https://avson.eu"}},
+    "publisher": {"@type": "Organization","name": "Avson GRC","url": "https://avson.eu"},
+    "datePublished": "2026-05-27",
+    "dateModified": "2026-05-27",
+    "url": "https://avson.eu/blog/dora-entidades-financieras.html",
+    "mainEntityOfPage": "https://avson.eu/blog/dora-entidades-financieras.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem","position": 1,"name": "Inicio","item": "https://avson.eu"},
+      {"@type": "ListItem","position": 2,"name": "Blog","item": "https://avson.eu/blog/"},
+      {"@type": "ListItem","position": 3,"name": "DORA para Entidades Financieras","item": "https://avson.eu/blog/dora-entidades-financieras.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué entidades financieras están obligadas por DORA en España?",
+        "acceptedAnswer": {"@type": "Answer","text": "En España, están sujetas a DORA todas las entidades reguladas por el Banco de España (bancos, entidades de crédito, entidades de pago, de dinero electrónico), la CNMV (empresas de inversión, gestoras, plataformas de negociación, proveedores de criptoactivos MiCA) y la DGSFP (aseguradoras, reaseguradoras, mutualidades, fondos de pensiones). También aplica a los proveedores TIC que les prestan servicios TIC que soportan funciones críticas o importantes."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué son las pruebas TLPT en DORA?",
+        "acceptedAnswer": {"@type": "Answer","text": "Las TLPT (Threat-Led Penetration Testing) son pruebas avanzadas de resiliencia basadas en inteligencia de amenazas reales, realizadas por equipos externos especializados (Red Team). Se ejecutan sobre los sistemas en producción de la entidad, con autorización del supervisor, simulando el comportamiento de un atacante sofisticado real. Son obligatorias para las entidades financieras más significativas cada 3 años, y sus resultados y planes de remediación deben comunicarse al supervisor competente."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Los proveedores tecnológicos de bancos tienen que cumplir DORA?",
+        "acceptedAnswer": {"@type": "Answer","text": "Sí, pero de forma indirecta o directa según su relevancia. Los proveedores TIC que prestan servicios que soportan funciones críticas o importantes de entidades financieras deben cumplir con los requisitos contractuales que DORA impone a dichos contratos. Adicionalmente, los proveedores TIC designados como 'críticos' por las ESAs quedan sujetos a supervisión directa de las Autoridades Supervisoras Europeas."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo afecta DORA a los contratos con proveedores cloud?",
+        "acceptedAnswer": {"@type": "Answer","text": "DORA exige que los contratos con proveedores TIC que soporten funciones críticas incluyan cláusulas mínimas: niveles de servicio y disponibilidad con objetivos cuantificados, derechos de auditoría e inspección para la entidad y sus supervisores, requisitos de seguridad de la información, procedimientos de notificación de incidentes al cliente, planes de salida con asistencia a la migración y obligaciones de continuidad de servicio. Los contratos vigentes que no incluyan estas cláusulas deben actualizarse."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuándo deben hacer las entidades financieras las primeras pruebas DORA?",
+        "acceptedAnswer": {"@type": "Answer","text": "Todas las entidades sujetas a DORA debían tener un programa de pruebas básicas (análisis de vulnerabilidades, pruebas de penetración estándar) implementado desde el 17 de enero de 2025. Las pruebas TLPT para entidades significativas deben realizarse al menos cada 3 años; las primeras rondas están en curso en 2025-2026 para las entidades que no realizaron TIBER-EU previamente."}
+      }
+    ]
+  }
+  </script>
+  <style>
+    .article-body { max-width:800px; margin:0 auto; padding:0 24px; }
+    .article-body h2 { font-family:'Syne',serif; font-size:32px; font-weight:400; color:#1f2023; margin:56px 0 20px; line-height:1.2; }
+    .article-body h3 { font-family:'Syne',serif; font-size:22px; font-weight:500; color:#1f2023; margin:36px 0 14px; }
+    .article-body p { font-family:'DM Sans',sans-serif; font-size:16px; color:#3A4560; line-height:1.8; margin-bottom:20px; }
+    .article-body ul, .article-body ol { font-family:'DM Sans',sans-serif; font-size:16px; color:#3A4560; line-height:1.8; margin:0 0 20px 24px; }
+    .article-body li { margin-bottom:8px; }
+    .article-body strong { color:#1f2023; font-weight:600; }
+    .article-body a { color:#1f2023; border-bottom:1px solid #e85838; text-decoration:none; }
+    .article-body a:hover { color:#e85838; }
+    .cta-inline-box { background:#F7F7F5; border:1px solid #E5E5E0; border-left:3px solid #e85838; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; margin:40px 0; }
+    .faq-article { border-top:1px solid #E5E5E0; }
+    .faq-article-item { border-bottom:1px solid #E5E5E0; }
+    .faq-article-q { font-family:'DM Sans',sans-serif; font-size:16px; font-weight:500; color:#1f2023; padding:20px 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
+    .faq-article-q::after { content:'＋'; font-size:20px; color:#e85838; flex-shrink:0; }
+    .faq-article-item.open .faq-article-q::after { content:'－'; }
+    .faq-article-a { font-family:'DM Sans',sans-serif; font-size:15px; color:#3A4560; line-height:1.75; padding:0 0 20px; display:none; }
+    .faq-article-item.open .faq-article-a { display:block; }
+    .toc { background:#F7F7F5; border:1px solid #E5E5E0; padding:28px 32px; margin:0 0 48px; }
+    .toc-title { font-family:'DM Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#e85838; margin-bottom:16px; }
+    .toc ol { margin:0 0 0 20px; padding:0; }
+    .toc li { font-family:'DM Sans',sans-serif; font-size:14px; color:#3A4560; margin-bottom:8px; }
+    .toc a { color:#1f2023; text-decoration:none; border-bottom:none; }
+    .toc a:hover { color:#e85838; }
+  </style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID_HERE");
+  </script>
+  <script src="../avson-leads.js" defer></script>
+</head>
+<body>
+
+<!-- ANNOUNCE BAR -->
+<div class="announce-bar">
+  <strong>Nueva normativa ENS en vigor</strong> — <a href="../ens.html">Descubre si tu empresa está obligada →</a>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo">avs<span class="logo-o">o</span>n</a>
+    <ul class="nav__links">
+      <li><a href="../ens.html">ENS</a></li>
+      <li><a href="../ens-express.html" class="nav-express">ENS Express</a></li>
+      <li><a href="../iso22301.html">ISO 22301</a></li>
+      <li><a href="../iso27001.html">ISO 27001</a></li>
+      <li><a href="../otras.html">Otras certificaciones</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button type="button" aria-label="Cambiar idioma">ES &#9662;</button>
+      <div class="lang-switch__menu">
+        <a href="../en/index.html">EN</a>
+        <a href="../fr/index.html">FR</a>
+        <a href="../de/index.html">DE</a>
+        <a href="../it/index.html">IT</a>
+      </div>
+    </div>
+    <a href="tel:+34648414863" class="nav__phone">648 414 863</a>
+    <a href="../contacto.html" class="nav__cta">Pide presupuesto →</a>
+    <div class="nav__hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay">
+  <a href="../ens.html" onclick="toggleNav()">ENS</a>
+  <a href="../ens-express.html" onclick="toggleNav()">ENS Express</a>
+  <a href="../iso22301.html" onclick="toggleNav()">ISO 22301</a>
+  <a href="../iso27001.html" onclick="toggleNav()">ISO 27001</a>
+  <a href="../otras.html" onclick="toggleNav()">Otras certificaciones</a>
+  <a href="../contacto.html" onclick="toggleNav()">Habla con un experto →</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div style="background:var(--white);border-bottom:1px solid var(--border);padding:12px 0;margin-top:72px">
+  <div class="container">
+    <nav style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted);letter-spacing:0.04em">
+      <a href="../index.html" style="color:var(--text-muted);text-decoration:none">Inicio</a>
+      <span style="margin:0 8px">›</span>
+      <a href="index.html" style="color:var(--text-muted);text-decoration:none">Blog</a>
+      <span style="margin:0 8px">›</span>
+      <span style="color:var(--navy);font-weight:500">DORA para Entidades Financieras</span>
+    </nav>
+  </div>
+</div>
+
+<!-- ARTICLE HERO -->
+<section style="background:var(--pearl);padding:72px 0 56px;border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div style="max-width:800px">
+      <span class="label-tag">DORA · Entidades Financieras · Guía práctica 2026</span>
+      <div class="gold-line"></div>
+      <h1 style="font-family:'Syne',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--navy);line-height:1.1;margin:0 0 24px">
+        DORA para entidades financieras: todo lo que necesitas saber para cumplir.
+      </h1>
+      <p style="font-family:'DM Sans',sans-serif;font-size:17px;color:var(--text-muted);line-height:1.65;max-width:640px;margin:0">
+        Bancos, aseguradoras, fintech y gestoras tienen obligaciones concretas bajo DORA desde enero de 2025. Esta guía explica qué exige la norma a cada tipo de entidad, qué son las pruebas TLPT y cómo estructurar el cumplimiento.
+      </p>
+      <div style="display:flex;gap:24px;margin-top:28px;flex-wrap:wrap">
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">⏱ Lectura: 10 minutos</span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">Actualizado: mayo 2026</span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">Por el equipo de Avson GRC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<article style="padding:72px 0 80px;background:var(--white)">
+  <div class="article-body">
+
+    <div class="toc">
+      <div class="toc-title">Contenido de este artículo</div>
+      <ol>
+        <li><a href="#alcance">DORA y las entidades financieras: alcance real</a></li>
+        <li><a href="#tipos">Tipos de entidades afectadas por DORA</a></li>
+        <li><a href="#bancos">Requisitos concretos para bancos y aseguradoras</a></li>
+        <li><a href="#fintech">Requisitos para fintech y proveedores TIC críticos</a></li>
+        <li><a href="#tlpt">Las pruebas TLPT</a></li>
+        <li><a href="#terceros">Gestión de riesgos de terceros en DORA</a></li>
+        <li><a href="#incidentes">Notificación de incidentes ICT bajo DORA</a></li>
+        <li><a href="#hoja-de-ruta">Hoja de ruta de cumplimiento para una entidad financiera</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+      </ol>
+    </div>
+
+    <h2 id="alcance">DORA y las entidades financieras: alcance real</h2>
+
+    <p>El <a href="que-es-dora-reglamento.html">Reglamento DORA</a> (UE 2022/2554) establece desde el 17 de enero de 2025 un conjunto de obligaciones de resiliencia operacional digital que afectan a la práctica totalidad del ecosistema financiero europeo. Sin embargo, no todas las entidades tienen las mismas obligaciones: DORA aplica el principio de <strong>proporcionalidad</strong> para adaptar la intensidad de los requisitos al tamaño, perfil de riesgo y relevancia sistémica de cada entidad.</p>
+
+    <p>La norma distingue, en términos generales, entre entidades de mayor significación sistémica —que deben cumplir el conjunto completo de requisitos, incluyendo las exigentes pruebas TLPT— y entidades más pequeñas o de menor impacto sistémico, que pueden acogerse a un <strong>marco simplificado de gestión de riesgos TIC</strong> definido en el artículo 16 de DORA. Este marco simplificado aplica a microempresas (menos de 10 empleados y menos de 2 millones de euros de volumen de negocio) y a determinadas categorías de entidades menores.</p>
+
+    <p>En la práctica, la mayoría de las entidades financieras con actividad real en el mercado español quedan fuera del marco simplificado y están sujetas al conjunto completo de requisitos. Esto incluye a bancos de cualquier tamaño, empresas de seguros, gestoras de fondos, entidades de pago digitales y la gran mayoría de fintech con licencia regulatoria. El dato relevante no es el tamaño absoluto de la entidad, sino si está regulada y si sus riesgos TIC pueden tener impacto en sus clientes o en la estabilidad del sistema financiero.</p>
+
+    <p>Para los <strong>proveedores TIC</strong> que sirven a estas entidades, DORA tiene también un impacto directo aunque diferente. En primer lugar, los proveedores deben adaptarse a los requisitos contractuales que DORA impone a las entidades financieras para sus contratos con proveedores TIC que soporten funciones críticas. En segundo lugar, los proveedores TIC de mayor relevancia sistémica pueden ser designados "críticos" por las Autoridades Supervisoras Europeas y quedar sujetos a supervisión directa.</p>
+
+    <div class="cta-inline-box anim-fade-up">
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Tu entidad necesita cumplir con DORA?</strong><p style="margin-top:8px;color:var(--navy-60)">Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Pide presupuesto →</a>
+    </div>
+
+    <h2 id="tipos">Tipos de entidades financieras afectadas por DORA</h2>
+
+    <p>El artículo 2 de DORA enumera 21 tipos de entidades sujetas al Reglamento. Para el mercado español, los tipos más relevantes son:</p>
+
+    <p><strong>Entidades supervisadas por el Banco de España:</strong> entidades de crédito (bancos, cajas de ahorros, cooperativas de crédito, establecimientos financieros de crédito), entidades de pago (incluyendo las que operan bajo PSD2), entidades de dinero electrónico y sucursales en España de entidades financieras de terceros países.</p>
+
+    <p><strong>Entidades supervisadas por la CNMV:</strong> empresas de servicios de inversión (ESI), gestoras de instituciones de inversión colectiva (SGIIC), gestoras de fondos de pensiones en su función inversora, plataformas de negociación (mercados regulados, sistemas multilaterales de negociación), entidades de contrapartida central, depositarios centrales de valores, proveedores de servicios de criptoactivos bajo MiCA y plataformas de financiación participativa (crowdfunding) reguladas.</p>
+
+    <p><strong>Entidades supervisadas por la DGSFP:</strong> empresas de seguros de vida y no vida, reaseguradoras, mutualidades de previsión social de tamaño relevante, y fondos de pensiones de empleo.</p>
+
+    <p><strong>Proveedores TIC críticos:</strong> aunque no son entidades financieras en sentido estricto, los proveedores de servicios de tecnología que prestan servicios TIC que soportan funciones críticas o importantes de las entidades anteriores quedan sujetos al régimen contractual de DORA. Los que sean designados "críticos" por EBA, ESMA o EIOPA quedan sujetos adicionalmente al marco de supervisión directa de las ESAs.</p>
+
+    <h2 id="bancos">Requisitos concretos para bancos y aseguradoras</h2>
+
+    <p>Las entidades de crédito y las empresas de seguros son las entidades con mayor madurez regulatoria previa en materia TIC, pero DORA supone aun así un salto significativo en la formalización y el rigor de los requisitos. Los puntos donde la brecha suele ser mayor incluyen:</p>
+
+    <p><strong>Gobernanza TIC reforzada:</strong> DORA exige que el órgano de dirección —el consejo de administración— sea directamente responsable de la gestión del riesgo TIC, no solo de supervisarlo. Los consejeros deben mantener conocimientos actualizados en riesgos TIC y participar activamente en la revisión del marco. En muchos bancos medianos y aseguradoras, la responsabilidad TIC ha residido históricamente en niveles directivos intermedios sin suficiente supervisión del consejo.</p>
+
+    <p><strong>Marco de gestión de riesgos TIC integrado:</strong> los bancos deben disponer de un marco completo que incluya: estrategia de resiliencia digital aprobada por el consejo, política de seguridad de la información, gestión de activos TIC con inventario actualizado, metodología de análisis y evaluación de riesgos TIC, controles de protección y prevención, capacidades de detección y respuesta, y funciones de recuperación y comunicación. La mayoría de los bancos españoles cuentan con elementos de este marco bajo la supervisión del Banco Central Europeo (BCE) y el Banco de España, pero DORA requiere una formalización más explícita y documentada.</p>
+
+    <p><strong>Continuidad TIC formalizada:</strong> los planes de continuidad de negocio TIC deben definir RTOs y RPOs para todos los sistemas que soportan funciones críticas, y deben probarse al menos anualmente. Los resultados de las pruebas y los planes de remediación deben documentarse y comunicarse al órgano de dirección.</p>
+
+    <p><strong>Registro de todos los acuerdos con proveedores TIC:</strong> DORA exige mantener un registro completo y actualizado de todos los acuerdos contractuales con proveedores TIC, clasificados por criticidad. Este registro debe estar disponible para el supervisor en cualquier momento.</p>
+
+    <h2 id="fintech">Requisitos para fintech y proveedores TIC críticos</h2>
+
+    <p>Las fintech y los neobancos presentan un perfil diferente al de la banca tradicional: suelen ser organizaciones más ágiles, con mayor proporción de servicios en la nube, menor infraestructura propia y mayor dependencia de proveedores TIC externos. Esto las hace vulnerables a riesgos específicos que DORA aborda directamente.</p>
+
+    <p>Para las fintech con licencia de entidad de pago o entidad de dinero electrónico, DORA se añade a las obligaciones de ciberseguridad de PSD2 (directamente aplicables) y a las guías de EBA sobre gestión de riesgos TIC y de seguridad. La diferencia es que DORA tiene carácter de Reglamento directamente aplicable, con requisitos más específicos y sanciones más claras.</p>
+
+    <p>El punto más crítico para las fintech en materia DORA es la <strong>gestión de riesgos de terceros TIC</strong>. Una fintech típica opera sobre una pila tecnológica que incluye proveedores de cloud (AWS, Azure, GCP), plataformas de pagos (Stripe, Adyen), proveedores de KYC, gestores de claves criptográficas y docenas de APIs de terceros. DORA exige que cada uno de estos proveedores sea identificado, clasificado por criticidad, y que los contratos con los críticos incluyan las cláusulas obligatorias del Reglamento. Para una fintech que gestiona estos contratos informalmente (a través de condiciones generales de servicio del proveedor), la adaptación puede ser un proceso significativo.</p>
+
+    <p>Los <strong>proveedores TIC que sirven a entidades financieras</strong> —empresas de software financiero, integradores de sistemas, proveedores de BPO tecnológico— deben entender que DORA les impacta de forma directa: sus clientes financieros exigirán actualizar los contratos para incluir las cláusulas obligatorias de DORA, y deberán estar preparados para auditorías y para proporcionar información sobre sus controles de seguridad y continuidad. Los proveedores que no se adapten a estas exigencias corren el riesgo de perder contratos con clientes financieros.</p>
+
+    <h2 id="tlpt">Las pruebas TLPT (Threat-Led Penetration Testing)</h2>
+
+    <p>Las <strong>TLPT (Threat-Led Penetration Testing)</strong> son el elemento más exigente y novedoso del programa de pruebas de DORA. Se trata de ejercicios avanzados de ataque realista realizados por equipos externos especializados (Red Team) sobre los sistemas en producción de la entidad, con autorización del supervisor competente y basados en inteligencia de amenazas relevante para el sector.</p>
+
+    <p>Las TLPT se distinguen de las pruebas de penetración convencionales en varios aspectos fundamentales. En primer lugar, se ejecutan sobre los <strong>sistemas en producción real</strong>, no sobre entornos de test o sandbox. En segundo lugar, el equipo atacante (Red Team externo) recibe información de inteligencia sobre las amenazas más relevantes para la entidad (procedente de fuentes abiertas, del supervisor y de información de inteligencia comercial), de forma que sus ataques simulan el comportamiento de adversarios reales y sofisticados. En tercer lugar, el equipo defensor (Blue Team interno) opera sin conocimiento previo de que el ejercicio está ocurriendo, para simular las condiciones reales de un ataque.</p>
+
+    <p>Las TLPT están basadas en el marco <strong>TIBER-EU</strong> (Threat Intelligence-Based Ethical Red-Teaming), desarrollado por el Banco Central Europeo y adoptado por varios bancos centrales europeos, incluyendo el Banco de España. Las entidades que ya han realizado ejercicios TIBER-EU previos tienen una ventaja significativa, ya que la metodología es compatible con los requisitos TLPT de DORA.</p>
+
+    <p>En cuanto a la obligatoriedad, las TLPT son exigidas a las <strong>entidades financieras más significativas</strong> —en términos de tamaño, perfil de riesgo e impacto sistémico—, determinadas por los supervisores nacionales en coordinación con las ESAs. Para estas entidades, la frecuencia mínima es cada <strong>3 años</strong>. Las entidades no sujetas a TLPT deben igualmente realizar pruebas de penetración estándar al menos anualmente, como parte del programa básico de pruebas que DORA exige a todas las entidades.</p>
+
+    <p>El proceso de una TLPT bajo DORA incluye tres fases: preparación (definición del alcance, selección del proveedor Red Team, notificación al supervisor y obtención de autorización), ejecución (la prueba propiamente dicha, que puede durar varias semanas) y cierre (elaboración del informe de resultados, plan de remediación y comunicación al supervisor). Los resultados y el plan de remediación deben enviarse al supervisor competente dentro del plazo establecido.</p>
+
+    <div class="cta-inline-box anim-fade-up">
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Necesitas preparar tu entidad para DORA?</strong><p style="margin-top:8px;color:var(--navy-60)">Diseñamos e implementamos el programa de cumplimiento DORA adaptado a tu entidad.</p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Solicitar información →</a>
+    </div>
+
+    <h2 id="terceros">Gestión de riesgos de terceros en DORA</h2>
+
+    <p>La gestión de riesgos de terceros TIC es, junto con las TLPT, el área donde las entidades financieras encuentran mayor dificultad de implementación. DORA introduce un régimen muy detallado que va mucho más allá de lo que exigían las guías previas de EBA y BCE.</p>
+
+    <p>El punto de partida es el <strong>registro de acuerdos contractuales con proveedores TIC</strong>. Todas las entidades deben mantener un registro completo y actualizado de todos sus contratos con proveedores TIC, incluyendo: identificación del proveedor, descripción del servicio, clasificación de la función soportada (crítica/importante o no), tipo de datos accedidos y país de localización del servicio. Este registro debe estar disponible para el supervisor.</p>
+
+    <p>Para los contratos que soportan <strong>funciones críticas o importantes</strong>, DORA establece un conjunto de cláusulas mínimas obligatorias que deben incluirse en los contratos (artículo 30 de DORA). Estas cláusulas incluyen: descripción precisa de los servicios y niveles de servicio (SLAs) con objetivos cuantificados de disponibilidad; derechos de auditoría e inspección del cliente, sus auditores y el supervisor sobre el proveedor; obligaciones de seguridad de la información alineadas con los estándares del cliente; procedimientos de notificación al cliente de incidentes TIC que puedan afectar a los servicios; obligaciones de continuidad del servicio en caso de interrupción; y cláusulas de salida con asistencia a la migración para garantizar la terminación ordenada del contrato sin comprometer la continuidad.</p>
+
+    <p>Muchos contratos vigentes entre entidades financieras y sus proveedores TIC no incluyen todas estas cláusulas, especialmente los contratos con grandes proveedores de cloud y SaaS que operan bajo condiciones generales estandarizadas. Negociar la actualización de estos contratos —con proveedores tan poderosos como Microsoft Azure, AWS o Salesforce— es uno de los retos prácticos más complejos del cumplimiento DORA. Las entidades deben documentar sus esfuerzos de negociación y, en los casos en que el proveedor no acepta las cláusulas mínimas, escalar al supervisor con la documentación del intento.</p>
+
+    <p>DORA también regula la <strong>concentración de riesgo en proveedores TIC</strong>. Las entidades deben evaluar y gestionar el riesgo que supone depender de un número reducido de proveedores críticos (por ejemplo, concentración excesiva en un solo proveedor de cloud), y deben tener estrategias de salida y alternativas documentadas.</p>
+
+    <h2 id="incidentes">Notificación de incidentes ICT bajo DORA</h2>
+
+    <p>DORA establece un régimen de clasificación y notificación de incidentes TIC que supone la mayor exigencia operacional en el día a día de las entidades. El régimen es prescriptivo en cuanto a plazos, formatos y canales de notificación, y su incumplimiento puede generar sanciones directas.</p>
+
+    <p>El proceso comienza con la <strong>clasificación del incidente</strong> según los criterios armonizados definidos en los RTS de EBA. Los criterios de clasificación incluyen: número de clientes afectados, duración de la interrupción, impacto geográfico, impacto financiero, criticidad de los servicios afectados y tipo de datos comprometidos. Los incidentes clasificados como "graves" activan el proceso de notificación obligatoria al supervisor.</p>
+
+    <p>El calendario de notificación para incidentes graves es estricto: <strong>notificación inicial</strong> al supervisor dentro de las <strong>4 horas</strong> desde la clasificación del incidente como grave (y en cualquier caso dentro de las 24 horas desde la detección), con la información disponible en ese momento aunque sea incompleta; <strong>informe intermedio</strong> dentro de las <strong>72 horas</strong> desde la notificación inicial, con una evaluación más completa del impacto y las medidas adoptadas; e <strong>informe final</strong> dentro de <strong>un mes</strong> desde la notificación inicial, con el análisis completo de causas raíz, impacto definitivo y medidas de remediación implementadas.</p>
+
+    <p>Para que este proceso funcione bajo presión, las entidades deben tener preparados con antelación: procedimientos internos de escalado y clasificación de incidentes, plantillas de notificación en los formatos requeridos por el supervisor, roles y responsabilidades claramente definidos (quién decide la clasificación, quién notifica, quién autoriza), y canales de comunicación con el supervisor verificados y probados. Las entidades que no han preparado estos mecanismos antes de sufrir un incidente real lo aprenden de la peor manera posible.</p>
+
+    <h2 id="hoja-de-ruta">Hoja de ruta de cumplimiento DORA para una entidad financiera</h2>
+
+    <p>El diseño de una hoja de ruta de cumplimiento DORA debe partir de un diagnóstico honesto del estado actual de la entidad y priorizar las acciones en función del riesgo regulatorio y el esfuerzo de implementación. Una estructura de fases típica para una entidad financiera mediana sería:</p>
+
+    <p><strong>Fase 0 — Diagnóstico de madurez (4-6 semanas):</strong> evaluación del estado actual de los cinco pilares de DORA: gestión de riesgos TIC, gestión de incidentes, pruebas de resiliencia, gestión de terceros e intercambio de información. Priorización de brechas por impacto regulatorio. Revisión del inventario de contratos con proveedores TIC y clasificación preliminar de criticidad. Este diagnóstico es la base para el diseño del programa de cumplimiento.</p>
+
+    <p><strong>Fase 1 — Gobernanza y marco de riesgos TIC (2-3 meses):</strong> aprobación por el consejo de la estrategia de resiliencia digital y la política de gestión de riesgos TIC. Definición del modelo de gobernanza (roles, comités, reporting). Actualización o creación del marco de gestión de riesgos TIC con los componentes exigidos por DORA. Actualización del inventario de activos TIC y su clasificación.</p>
+
+    <p><strong>Fase 2 — Incidentes y pruebas (2-3 meses):</strong> diseño e implementación del proceso de clasificación y notificación de incidentes TIC según los RTS de DORA. Preparación de plantillas y procedimientos de notificación. Diseño del programa anual de pruebas básicas de resiliencia. Realización de las primeras pruebas y documentación de resultados.</p>
+
+    <p><strong>Fase 3 — Gestión de terceros TIC (3-4 meses):</strong> completar el inventario de proveedores TIC y clasificar por criticidad. Revisar todos los contratos con proveedores de funciones críticas e identificar las brechas respecto a las cláusulas obligatorias de DORA. Iniciar negociaciones de actualización contractual. Diseñar el proceso de due diligence y monitorización continua de proveedores críticos.</p>
+
+    <p><strong>Fase 4 — TLPT y madurez avanzada (si aplica, 3-6 meses adicionales):</strong> para las entidades sujetas a TLPT, planificación y ejecución del primer ejercicio DORA-TLPT. Para todas las entidades, implementación de indicadores de seguimiento del programa DORA, reporting al consejo y preparación para la supervisión de las autoridades competentes.</p>
+
+    <div class="cta-inline-box anim-fade-up">
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Necesitas tu hoja de ruta DORA?</strong><p style="margin-top:8px;color:var(--navy-60)">Pide presupuesto en 24 horas. Sin compromiso.</p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Solicitar presupuesto sin compromiso →</a>
+    </div>
+
+    <h2 id="faq">Preguntas frecuentes sobre DORA para entidades financieras</h2>
+
+    <div class="faq-article">
+      <div class="faq-article-item">
+        <div class="faq-article-q">¿Qué entidades financieras están obligadas por DORA en España?</div>
+        <div class="faq-article-a">En España, están sujetas a DORA todas las entidades reguladas por el Banco de España (bancos, entidades de crédito, entidades de pago, de dinero electrónico), la CNMV (empresas de inversión, gestoras, plataformas de negociación, proveedores de criptoactivos MiCA) y la DGSFP (aseguradoras, reaseguradoras, mutualidades, fondos de pensiones). También aplica a los proveedores TIC que les prestan servicios que soportan funciones críticas o importantes, que deben adaptar sus contratos a los requisitos del Reglamento.</div>
+      </div>
+      <div class="faq-article-item">
+        <div class="faq-article-q">¿Qué son las pruebas TLPT en DORA?</div>
+        <div class="faq-article-a">Las TLPT (Threat-Led Penetration Testing) son pruebas avanzadas de resiliencia basadas en inteligencia de amenazas reales, realizadas por equipos Red Team externos sobre los sistemas en producción de la entidad, con autorización del supervisor. Simulan el comportamiento de adversarios sofisticados reales. Son obligatorias para las entidades financieras más significativas cada 3 años, y los resultados y planes de remediación deben comunicarse al supervisor competente. Se basan en la metodología TIBER-EU del Banco Central Europeo.</div>
+      </div>
+      <div class="faq-article-item">
+        <div class="faq-article-q">¿Los proveedores tecnológicos de bancos tienen que cumplir DORA?</div>
+        <div class="faq-article-a">Sí, pero de formas distintas según su relevancia. Los proveedores TIC que prestan servicios que soportan funciones críticas o importantes de entidades financieras deben aceptar en sus contratos las cláusulas obligatorias que DORA impone (derechos de auditoría, SLAs, notificación de incidentes, planes de salida). Los proveedores designados "críticos" por las ESAs quedan sujetos adicionalmente a supervisión directa. Todos los proveedores que sirven al sector financiero deben revisar sus contratos y prepararse para las exigencias de sus clientes regulados.</div>
+      </div>
+      <div class="faq-article-item">
+        <div class="faq-article-q">¿Cómo afecta DORA a los contratos con proveedores cloud?</div>
+        <div class="faq-article-a">DORA exige que los contratos con proveedores TIC de funciones críticas incluyan cláusulas mínimas: niveles de servicio cuantificados, derechos de auditoría e inspección para la entidad y sus supervisores, requisitos de seguridad de la información, procedimientos de notificación de incidentes al cliente, planes de salida con asistencia a la migración y obligaciones de continuidad de servicio. Los contratos vigentes que no incluyan estas cláusulas deben actualizarse. Negociar con grandes proveedores cloud (AWS, Azure, GCP) es uno de los retos más complejos del cumplimiento DORA.</div>
+      </div>
+      <div class="faq-article-item">
+        <div class="faq-article-q">¿Cuándo deben hacer las entidades financieras las primeras pruebas DORA?</div>
+        <div class="faq-article-a">Todas las entidades sujetas a DORA debían tener un programa de pruebas básicas (análisis de vulnerabilidades, pruebas de penetración estándar) implementado desde el 17 de enero de 2025. Las pruebas TLPT para entidades significativas deben realizarse al menos cada 3 años; las primeras rondas están en curso durante 2025-2026 para las entidades que no realizaron ejercicios TIBER-EU previamente. Los resultados de todas las pruebas deben documentarse y comunicarse al órgano de dirección.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:64px;padding:40px;background:var(--pearl);border:1px solid var(--border);text-align:center">
+      <h3 style="font-family:'Syne',serif;font-size:28px;font-weight:400;color:var(--navy);margin:0 0 16px">¿Tu entidad financiera necesita cumplir con DORA?</h3>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-muted);margin:0 0 28px;max-width:500px;margin-left:auto;margin-right:auto">Pide presupuesto · Sin compromiso · Respuesta en 24 horas</p>
+      <a href="../contacto.html" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:16px 32px;text-decoration:none;display:inline-block">Solicitar presupuesto sin compromiso →</a>
+    </div>
+
+    <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border)">
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-muted)">Artículos relacionados:</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">
+        <a href="que-es-dora-reglamento.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Qué es DORA: guía completa →</a>
+        <a href="../dora.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Cumplimiento DORA con Avson →</a>
+        <a href="../contacto.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Pide presupuesto →</a>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__logo">AVSON<span> · </span>GRC</span>
+        <p class="footer__tagline">Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. Certificaciones garantizadas en 3-4 meses.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@avson.eu">info@avson.eu</a><br>
+          <a href="tel:+34648414863">+34 648 41 48 63</a><br>
+          Madrid, España
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Certificaciones</div>
+        <ul class="footer__links">
+          <li><a href="../ens.html">ENS</a></li>
+          <li><a href="../iso27001.html">ISO 27001</a></li>
+          <li><a href="../iso22301.html">ISO 22301</a></li>
+          <li><a href="../dora.html">DORA</a></li>
+          <li><a href="../nis2.html">NIS2</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Empresa</div>
+        <ul class="footer__links">
+          <li><a href="../packs.html">Packs GRC</a></li>
+          <li><a href="../equipo.html">Equipo</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Newsletter GRC</div>
+        <p class="footer__newsletter-text">Análisis mensual sobre ENS, ISO 27001, DORA y cumplimiento normativo. Sin spam.</p>
+        <div class="footer__newsletter-form">
+          <input type="email" class="footer__newsletter-input" placeholder="tu@empresa.com">
+          <button class="footer__newsletter-btn">→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.</span>
+      <ul class="footer__legal">
+        <li><a href="../privacidad.html">Política de privacidad</a></li>
+        <li><a href="../cookies.html">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+function toggleNav() {
+  document.getElementById('navOverlay').classList.toggle('open');
+  document.body.classList.toggle('no-overflow');
+}
+function toggleLang() {
+  document.getElementById('langSwitcher').classList.toggle('open');
+}
+document.addEventListener('click', (e) => {
+  const ls = document.getElementById('langSwitcher');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
+});
+document.querySelectorAll('.faq-article-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-article-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-article-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+document.querySelectorAll('.anim-fade-up').forEach(el => {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+  }, {threshold:0.1});
+  el.style.opacity='0'; el.style.transform='translateY(24px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+  obs.observe(el);
+});
+
+// BLOG POPUP
+(function() {
+  if (sessionStorage.getItem('_blogPopupShown')) return;
+  var shown = false;
+  function showBlogPopup() {
+    if (shown) return;
+    shown = true;
+    sessionStorage.setItem('_blogPopupShown', '1');
+    document.getElementById('blogPopup').style.display = 'flex';
+  }
+  // Show after 45 seconds
+  setTimeout(showBlogPopup, 45000);
+  // OR show when scrolled 65%
+  window.addEventListener('scroll', function() {
+    var scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (scrollPct > 0.65) showBlogPopup();
+  }, { passive: true });
+})();
+
+function closeBlogPopup() {
+  document.getElementById('blogPopup').style.display = 'none';
+  sessionStorage.setItem('_blogPopupShown', '1');
+}
+
+function submitBlogPopup(e) {
+  e.preventDefault();
+  var email = document.getElementById('popupEmail').value.trim();
+  var empresa = document.getElementById('popupEmpresa').value.trim();
+  if (!email || !empresa) return;
+  if (window.dataLayer) dataLayer.push({event: 'lead_generated', form_type: 'blog_popup', email: email});
+  document.getElementById('blogPopup').style.display = 'none';
+  window.location.href = '../contacto.html';
+}
+</script>
+<!-- WHATSAPP FLOAT -->
+<div class="human-float" id="humanFloat">
+  <div class="human-float__card">
+    <p class="human-float__title">Aquí no responde una IA.</p>
+    <p class="human-float__txt">Tu consulta la lee un especialista de nuestro equipo. Te llamamos en menos de 30 minutos en horario de oficina (L–V, 9–18h); fuera de horario, a primera hora del día siguiente.</p>
+    <a href="../contacto.html" class="human-float__cta" onclick="var f=document.querySelector('form');if(f){f.scrollIntoView({behavior:'smooth'});var i=f.querySelector('input');if(i)setTimeout(function(){i.focus()},600);return false;}">Dejar mis datos →</a>
+  </div>
+  <button class="human-float__btn" onclick="document.getElementById('humanFloat').classList.toggle('open')" aria-expanded="false" aria-label="Te atiende una persona, no una IA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Personas, no IA</span></button>
+</div>
+<!-- BLOG LEAD CAPTURE POPUP -->
+<div id="blogPopup" style="display:none;position:fixed;inset:0;background:rgba(26,39,68,0.78);z-index:8888;align-items:center;justify-content:center;padding:20px">
+  <div style="background:var(--white);max-width:440px;width:100%;padding:40px 36px;position:relative">
+    <button onclick="closeBlogPopup()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;color:var(--navy-60);cursor:pointer;line-height:1">×</button>
+    <span style="font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px">Recurso gratuito</span>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(22px,2.5vw,28px);font-weight:400;color:var(--navy);margin-bottom:12px;line-height:1.2">¿Tu empresa necesita certificarse?</h2>
+    <p style="font-family:var(--font-sans);font-size:0.88rem;color:var(--navy-60);line-height:1.65;margin-bottom:28px">Habla gratis con un experto. En 15 minutos te decimos exactamente qué certificación necesitas, en qué plazo y a qué coste.</p>
+    <form onsubmit="submitBlogPopup(event)" style="display:flex;flex-direction:column;gap:12px">
+      <input type="email" id="popupEmail" placeholder="tu@empresa.com" required
+        style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.9rem;color:var(--navy);outline:none;box-sizing:border-box"
+        onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'">
+      <input type="text" id="popupEmpresa" placeholder="Nombre de tu empresa" required
+        style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.9rem;color:var(--navy);outline:none;box-sizing:border-box"
+        onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'">
+      <button type="submit" style="background:var(--navy);color:var(--white);border:none;padding:16px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;letter-spacing:0.04em;cursor:pointer;width:100%">
+        Pide presupuesto gratis →
+      </button>
+    </form>
+    <p style="font-family:var(--font-sans);font-size:0.72rem;color:var(--navy-60);text-align:center;margin-top:12px;margin-bottom:0">Sin compromiso · Te llamamos en <30 min (L–V 9–18h)</p>
+    <button onclick="closeBlogPopup()" style="display:block;width:100%;background:none;border:none;font-family:var(--font-sans);font-size:0.78rem;color:var(--navy-60);cursor:pointer;padding:8px;margin-top:4px">
+      No gracias, seguir leyendo
+    </button>
+  </div>
+</div>
+
+<!-- CTA MÓVIL PERMANENTE -->
+<div class="v3-mobile-cta"><div class="v3-mobile-cta__row">
+  <a href="tel:+34648414863" class="v3-mobile-cta__call" aria-label="Llamar">Llamar</a>
+  <a href="../contacto.html" class="v3-mobile-cta__main">Habla con un experto →</a>
+</div></div>
+</body>
+</html>

@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://avson.eu/sitemap.xml
-
-# Disallow admin and system files
-Disallow: /main.js
-Disallow: /praesys.html
-Disallow: /old/
