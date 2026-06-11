@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qué es NIS2: Directiva Europea de Ciberseguridad | Avson</title>
-  <meta name="description" content="NIS2 amplía la ciberseguridad obligatoria a miles de empresas en España. Descubre si te afecta, qué debes implementar y cuáles son las sanciones por incumplimiento.">
+  <title></title>
+  <meta name="description" content="">
   <link rel="canonical" href="https://avson.eu/blog/que-es-nis2-directiva.html">
-  <meta property="og:title" content="Qué es NIS2: Directiva Europea de Ciberseguridad | Avson GRC">
-  <meta property="og:description" content="NIS2 amplía la ciberseguridad obligatoria a miles de empresas en España. Descubre si te afecta, qué debes implementar y cuáles son las sanciones.">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://avson.eu/blog/que-es-nis2-directiva.html">
   <meta property="og:locale" content="es_ES">
@@ -52,23 +52,26 @@
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID_HERE");
   </script>
+  <script src="../i18n.js"></script>
   <script src="../avson-leads.js" defer></script>
 </head>
 <body>
 
+<!-- ANNOUNCE BAR -->
 <div class="announce-bar">
-  <strong>NIS2 en vigor</strong> &nbsp;·&nbsp; ¿Sabes si tu empresa está afectada? Pide presupuesto &nbsp;·&nbsp; <a href="../contacto.html">Solicitar ahora →</a>
+  <span data-i18n="announce.text"></span>
 </div>
 
+<!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav__inner">
     <a href="../index.html" class="nav__logo">avs<span class="logo-o">o</span>n</a>
     <ul class="nav__links">
-      <li><a href="../ens.html">ENS</a></li>
-      <li><a href="../ens-express.html" class="nav-express">ENS Express</a></li>
-      <li><a href="../iso22301.html">ISO 22301</a></li>
-      <li><a href="../iso27001.html">ISO 27001</a></li>
-      <li><a href="../otras.html">Otras certificaciones</a></li>
+      <li><a href="../ens.html" data-i18n="nav.ens"></a></li>
+      <li><a href="../ens-express.html" class="nav-express" data-i18n="nav.ensExpress"></a></li>
+      <li><a href="../iso22301.html" data-i18n="nav.iso22301"></a></li>
+      <li><a href="../iso27001.html" data-i18n="nav.iso27001"></a></li>
+      <li><a href="../otras.html" data-i18n="nav.otras"></a></li>
     </ul>
     <div class="lang-switch">
       <button type="button" aria-label="Cambiar idioma">ES &#9662;</button>
@@ -80,249 +83,251 @@
       </div>
     </div>
     <a href="tel:+34648414863" class="nav__phone">648 414 863</a>
-    <a href="../contacto.html" class="nav__cta">Pide presupuesto →</a>
+    <a href="../contacto.html" class="nav__cta" data-i18n="nav.cta"></a>
     <div class="nav__hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="nav-overlay" id="navOverlay">
-  <a href="../ens.html" onclick="toggleNav()">ENS</a>
-  <a href="../ens-express.html" onclick="toggleNav()">ENS Express</a>
-  <a href="../iso22301.html" onclick="toggleNav()">ISO 22301</a>
-  <a href="../iso27001.html" onclick="toggleNav()">ISO 27001</a>
-  <a href="../otras.html" onclick="toggleNav()">Otras certificaciones</a>
-  <a href="../contacto.html" onclick="toggleNav()">Habla con un experto →</a>
+  <a href="../ens.html" onclick="toggleNav()" data-i18n="nav.overlay.ens"></a>
+  <a href="../ens-express.html" onclick="toggleNav()" data-i18n="nav.overlay.ensExpress"></a>
+  <a href="../iso22301.html" onclick="toggleNav()" data-i18n="nav.overlay.iso22301"></a>
+  <a href="../iso27001.html" onclick="toggleNav()" data-i18n="nav.overlay.iso27001"></a>
+  <a href="../otras.html" onclick="toggleNav()" data-i18n="nav.overlay.otras"></a>
+  <a href="../contacto.html" onclick="toggleNav()" data-i18n="nav.overlay.contacto"></a>
 </div>
 
+<!-- BREADCRUMB -->
 <div style="background:var(--white);border-bottom:1px solid var(--border);padding:12px 0;margin-top:72px">
   <div class="container">
     <nav style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted);letter-spacing:0.04em">
-      <a href="../index.html" style="color:var(--text-muted);text-decoration:none">Inicio</a>
+      <a href="../index.html" style="color:var(--text-muted);text-decoration:none" data-i18n="breadcrumb.home"></a>
       <span style="margin:0 8px">›</span>
-      <a href="index.html" style="color:var(--text-muted);text-decoration:none">Blog</a>
+      <a href="index.html" style="color:var(--text-muted);text-decoration:none" data-i18n="breadcrumb.blog"></a>
       <span style="margin:0 8px">›</span>
-      <span style="color:var(--navy);font-weight:500">Qué es NIS2</span>
+      <span style="color:var(--navy);font-weight:500" data-i18n="breadcrumb.current"></span>
     </nav>
   </div>
 </div>
 
+<!-- ARTICLE HERO -->
 <section style="background:var(--pearl);padding:72px 0 56px;border-bottom:1px solid var(--border)">
   <div class="container">
     <div style="max-width:800px">
-      <span class="label-tag">NIS2 · Directiva Europea · Ciberseguridad · Mayo 2026</span>
+      <span class="label-tag" data-i18n="hero.label"></span>
       <div class="gold-line"></div>
-      <h1 style="font-family:'Syne',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--navy);line-height:1.1;margin:0 0 24px">
-        NIS2: qué es la directiva europea de ciberseguridad y qué exige a tu empresa.
+      <h1 style="font-family:'Syne',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--navy);line-height:1.1;margin:0 0 24px" data-i18n="hero.title">
       </h1>
-      <p style="font-family:'DM Sans',sans-serif;font-size:17px;color:var(--text-muted);line-height:1.65;max-width:640px;margin:0">
-        Miles de empresas españolas quedan por primera vez sujetas a obligaciones de ciberseguridad. Descubre si tu organización está afectada, qué medidas debes implementar y cuánto tiempo tienes.
+      <p style="font-family:'DM Sans',sans-serif;font-size:17px;color:var(--text-muted);line-height:1.65;max-width:640px;margin:0" data-i18n="hero.subtitle">
       </p>
       <div style="display:flex;gap:24px;margin-top:28px;flex-wrap:wrap">
-        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">⏱ Lectura: 12 minutos</span>
-        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">Actualizado: mayo 2026</span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)" data-i18n="hero.readTime"></span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)" data-i18n="hero.updated"></span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ARTICLE BODY -->
 <article style="padding:72px 0 80px;background:var(--white)">
   <div class="article-body">
 
-    <h2>Qué es la Directiva NIS2 (Directiva UE 2022/2555)</h2>
+    <h2 data-i18n="article.h2.queEs"></h2>
 
-    <p>La <strong>Directiva NIS2</strong> (Network and Information Security 2), publicada como Directiva UE 2022/2555 del Parlamento Europeo y del Consejo, es el marco regulatorio de ciberseguridad más ambicioso aprobado por la Unión Europea hasta la fecha. Entró en vigor el 16 de enero de 2023, con obligación de transposición por los Estados miembros antes del 17 de octubre de 2024.</p>
+    <p data-i18n="article.queEs.p1"></p>
 
-    <p>Su objetivo es elevar el nivel general de ciberseguridad en toda la UE, garantizando que los sectores críticos y los prestadores de servicios digitales dispongan de medidas técnicas, operativas y organizativas suficientes para prevenir, detectar y responder a ciberincidentes. NIS2 no es una norma voluntaria: es legislación vinculante que los Estados deben incorporar a su ordenamiento jurídico y que las empresas afectadas deben cumplir bajo pena de sanción.</p>
+    <p data-i18n="article.queEs.p2"></p>
 
-    <p>En España, la transposición se realiza mediante la actualización de la Ley 9/2018 de Seguridad de las Redes y Sistemas de Información (Ley NIS). El proceso legislativo está en curso, pero las obligaciones de la directiva son aplicables desde que concluya la transposición nacional. Las empresas que no comiencen a prepararse ahora corren el riesgo de enfrentarse a plazos muy ajustados una vez publicada la ley española.</p>
+    <p data-i18n="article.queEs.p3"></p>
 
-    <h2>Diferencia entre NIS1 y NIS2: qué cambia</h2>
+    <h2 data-i18n="article.h2.diferenciaNis1"></h2>
 
-    <p>La primera Directiva NIS (2016) supuso un punto de partida importante pero con un alcance muy limitado: afectaba principalmente a operadores de servicios esenciales (OSE) y proveedores de servicios digitales (PSD) en sectores muy concretos, y su implementación fue desigual entre los Estados miembros.</p>
+    <p data-i18n="article.diferenciaNis1.p1"></p>
 
-    <p>NIS2 supone un salto cualitativo en cuatro dimensiones clave:</p>
+    <p data-i18n="article.diferenciaNis1.p2"></p>
 
     <ul>
-      <li><strong>Amplitud del ámbito:</strong> NIS2 incorpora 10 sectores de alta criticidad y 7 sectores importantes adicionales, multiplicando el número de entidades afectadas. Se estima que en España pasarán de varios cientos a varios miles las empresas obligadas.</li>
-      <li><strong>Eliminación del criterio discrecional:</strong> Bajo NIS1, los Estados decidían qué entidades eran operadores de servicios esenciales. NIS2 establece criterios objetivos de tamaño (empresa mediana o grande) y sector que determinan automáticamente la inclusión.</li>
-      <li><strong>Responsabilidad directiva:</strong> NIS2 introduce responsabilidad personal para los órganos de dirección de las entidades afectadas. Los consejos de administración deben aprobar las medidas de gestión de riesgos y pueden ser declarados responsables de incumplimientos graves.</li>
-      <li><strong>Obligaciones reforzadas:</strong> Gestión de riesgos más estructurada, requisitos de notificación de incidentes más estrictos (alerta inicial en 24 horas, notificación completa en 72 horas), mayor énfasis en la seguridad de la cadena de suministro y mecanismos de supervisión más robustos por parte de las autoridades competentes.</li>
+      <li data-i18n="article.diferenciaNis1.li1"></li>
+      <li data-i18n="article.diferenciaNis1.li2"></li>
+      <li data-i18n="article.diferenciaNis1.li3"></li>
+      <li data-i18n="article.diferenciaNis1.li4"></li>
     </ul>
 
     <div class="cta-inline-box anim-fade-up">
-      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Tu empresa necesita cumplir NIS2?</strong><p style="margin-top:8px;color:var(--navy-60)">Pide presupuesto en 24 horas. Sin compromiso.</p></div>
-      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Pide presupuesto →</a>
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem" data-i18n="article.cta1.title"></strong><p style="margin-top:8px;color:var(--navy-60)" data-i18n="article.cta1.subtitle"></p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap" data-i18n="article.cta1.btn"></a>
     </div>
 
-    <h2>¿A qué empresas afecta NIS2 en España? Entidades esenciales vs importantes</h2>
+    <h2 data-i18n="article.h2.afecta"></h2>
 
-    <p>NIS2 establece dos categorías de entidades afectadas con obligaciones y régimen sancionador diferenciados:</p>
+    <p data-i18n="article.afecta.p1"></p>
 
-    <p><strong>Entidades esenciales</strong> son las organizaciones de gran tamaño (más de 250 empleados o más de 50 millones de euros de facturación) que operan en los sectores de alta criticidad definidos por la directiva: energía, transporte, banca, infraestructuras de los mercados financieros, sector sanitario, agua potable, aguas residuales, infraestructura digital, gestión de servicios TIC (B2B) y sector espacial. También quedan incluidas automáticamente las administraciones públicas centrales y regionales, con independencia de su tamaño.</p>
+    <p data-i18n="article.afecta.p2"></p>
 
-    <p><strong>Entidades importantes</strong> son las empresas medianas (más de 50 empleados o más de 10 millones de euros de facturación) que operan en los sectores de alta criticidad antes mencionados, y también las empresas medianas y grandes de los sectores adicionales: servicios postales y de mensajería, gestión de residuos, fabricación/producción y distribución de productos químicos, producción/transformación y distribución de alimentos, fabricación (dispositivos médicos, equipos electrónicos, maquinaria, vehículos de motor), proveedores digitales (plataformas de redes sociales, motores de búsqueda, marketplaces) e investigación.</p>
+    <p data-i18n="article.afecta.p3"></p>
 
-    <p>La distinción es relevante porque las entidades esenciales están sometidas a supervisión ex-ante (las autoridades pueden inspeccionarlas en cualquier momento sin incidente previo), mientras que las entidades importantes están sujetas a supervisión ex-post (las autoridades actúan principalmente en respuesta a indicios de incumplimiento o tras un incidente).</p>
+    <p data-i18n="article.afecta.p4"></p>
 
-    <h2>Sectores incluidos en NIS2</h2>
+    <h2 data-i18n="article.h2.sectores"></h2>
 
     <table class="comp-table">
       <thead>
         <tr>
-          <th>Sectores de alta criticidad (Anexo I)</th>
-          <th>Sectores adicionales (Anexo II)</th>
+          <th data-i18n="article.sectores.thAlta"></th>
+          <th data-i18n="article.sectores.thAdicional"></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Energía (electricidad, petróleo, gas, hidrógeno)</td>
-          <td>Servicios postales y de mensajería</td>
+          <td data-i18n="article.sectores.alta1"></td>
+          <td data-i18n="article.sectores.adicional1"></td>
         </tr>
         <tr>
-          <td>Transporte (aéreo, ferroviario, marítimo, por carretera)</td>
-          <td>Gestión de residuos</td>
+          <td data-i18n="article.sectores.alta2"></td>
+          <td data-i18n="article.sectores.adicional2"></td>
         </tr>
         <tr>
-          <td>Banca e infraestructuras mercados financieros</td>
-          <td>Fabricación/distribución de productos químicos</td>
+          <td data-i18n="article.sectores.alta3"></td>
+          <td data-i18n="article.sectores.adicional3"></td>
         </tr>
         <tr>
-          <td>Sector sanitario (hospitales, laboratorios, I+D farmacéutica)</td>
-          <td>Producción/distribución de alimentos</td>
+          <td data-i18n="article.sectores.alta4"></td>
+          <td data-i18n="article.sectores.adicional4"></td>
         </tr>
         <tr>
-          <td>Agua potable y aguas residuales</td>
-          <td>Fabricación (dispositivos médicos, equipos electrónicos, vehículos)</td>
+          <td data-i18n="article.sectores.alta5"></td>
+          <td data-i18n="article.sectores.adicional5"></td>
         </tr>
         <tr>
-          <td>Infraestructura digital (IXPs, DNS, TLD, proveedores cloud, CDN, datacenter)</td>
-          <td>Proveedores digitales (marketplaces, buscadores, redes sociales)</td>
+          <td data-i18n="article.sectores.alta6"></td>
+          <td data-i18n="article.sectores.adicional6"></td>
         </tr>
         <tr>
-          <td>Gestión de servicios TIC (B2B: MSPs, MSSPs)</td>
-          <td>Investigación (universidades, centros de I+D)</td>
+          <td data-i18n="article.sectores.alta7"></td>
+          <td data-i18n="article.sectores.adicional7"></td>
         </tr>
         <tr>
-          <td>Administraciones públicas (central y regional)</td>
+          <td data-i18n="article.sectores.alta8"></td>
           <td></td>
         </tr>
         <tr>
-          <td>Sector espacial (operadores de infraestructura terrestre)</td>
+          <td data-i18n="article.sectores.alta9"></td>
           <td></td>
         </tr>
       </tbody>
     </table>
 
-    <h2>Obligaciones concretas de NIS2</h2>
+    <h2 data-i18n="article.h2.obligaciones"></h2>
 
-    <p>El artículo 21 de la Directiva NIS2 establece las medidas de gestión de riesgos de ciberseguridad que deben implementar las entidades afectadas. No se trata de una lista de verificación cerrada, sino de un marco de requisitos basado en riesgos que la organización debe adaptar a su contexto. Las medidas mínimas obligatorias incluyen:</p>
+    <p data-i18n="article.obligaciones.p1"></p>
 
     <ul>
-      <li><strong>Políticas de seguridad y análisis de riesgos:</strong> Política de seguridad de la información aprobada por la dirección y proceso documentado de análisis y gestión de riesgos, revisado periódicamente.</li>
-      <li><strong>Gestión de incidentes:</strong> Procedimientos para detectar, clasificar, notificar y gestionar incidentes de seguridad. La notificación a la autoridad competente debe hacerse en plazos muy estrictos: alerta temprana en 24 horas, notificación formal en 72 horas e informe final en un mes.</li>
-      <li><strong>Continuidad del negocio:</strong> Planes de continuidad operativa y de recuperación ante desastres que incluyan gestión de crisis y capacidad de restauración de sistemas y datos.</li>
-      <li><strong>Seguridad de la cadena de suministro:</strong> Evaluación de la seguridad de proveedores y subcontratistas, incluyendo cláusulas contractuales de seguridad y procedimientos de verificación.</li>
-      <li><strong>Seguridad en el desarrollo y mantenimiento de sistemas:</strong> Prácticas de desarrollo seguro, gestión de vulnerabilidades y política de divulgación coordinada.</li>
-      <li><strong>Evaluación de la eficacia:</strong> Procedimientos para evaluar regularmente la efectividad de las medidas implementadas (auditorías, pruebas de penetración, ejercicios de simulación).</li>
-      <li><strong>Prácticas básicas de ciberhigiene y formación:</strong> Formación del personal en ciberseguridad y políticas de uso de herramientas digitales.</li>
-      <li><strong>Criptografía y cifrado:</strong> Uso de cifrado para proteger datos sensibles en reposo y en tránsito.</li>
-      <li><strong>Control de acceso y autenticación:</strong> Gestión de identidades, autenticación multifactor y acceso con privilegios mínimos.</li>
+      <li data-i18n="article.obligaciones.li1"></li>
+      <li data-i18n="article.obligaciones.li2"></li>
+      <li data-i18n="article.obligaciones.li3"></li>
+      <li data-i18n="article.obligaciones.li4"></li>
+      <li data-i18n="article.obligaciones.li5"></li>
+      <li data-i18n="article.obligaciones.li6"></li>
+      <li data-i18n="article.obligaciones.li7"></li>
+      <li data-i18n="article.obligaciones.li8"></li>
+      <li data-i18n="article.obligaciones.li9"></li>
     </ul>
 
     <div class="cta-inline-box anim-fade-up">
-      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Tu empresa necesita cumplir NIS2?</strong><p style="margin-top:8px;color:var(--navy-60)">Pide presupuesto en 24 horas. Sin compromiso.</p></div>
-      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Pide presupuesto →</a>
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem" data-i18n="article.cta2.title"></strong><p style="margin-top:8px;color:var(--navy-60)" data-i18n="article.cta2.subtitle"></p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap" data-i18n="article.cta2.btn"></a>
     </div>
 
-    <h2>Sanciones por incumplimiento de NIS2 en España</h2>
+    <h2 data-i18n="article.h2.sanciones"></h2>
 
-    <p>NIS2 establece un régimen sancionador significativamente más severo que su predecesora. Las sanciones máximas varían según la categoría de entidad:</p>
+    <p data-i18n="article.sanciones.p1"></p>
 
-    <p>Para las <strong>entidades esenciales</strong>, las infracciones graves pueden acarrear multas de hasta <strong>10 millones de euros o el 2% del volumen de negocio anual mundial total</strong> del ejercicio anterior (se aplica el importe más elevado). Para las <strong>entidades importantes</strong>, el límite es de <strong>7 millones de euros o el 1,4% del volumen de negocio anual</strong>.</p>
+    <p data-i18n="article.sanciones.p2"></p>
 
-    <p>Pero las sanciones económicas no son lo único relevante. NIS2 introduce, por primera vez en el ámbito de la ciberseguridad europea, la posibilidad de que las autoridades competentes impongan medidas no pecuniarias a las entidades esenciales, entre ellas: suspensión temporal de la certificación o autorización de los servicios prestados, prohibición temporal al directivo responsable de ejercer funciones directivas en la organización, y publicación de la resolución sancionadora (con el consiguiente impacto reputacional).</p>
+    <p data-i18n="article.sanciones.p3"></p>
 
-    <p>En España, la autoridad supervisora para la mayoría de sectores será el INCIBE (para entidades privadas) y el CCN (para administraciones públicas y sus proveedores), con coordinación del DSN en materia de gestión de crisis.</p>
+    <p data-i18n="article.sanciones.p4"></p>
 
-    <h2>NIS2 y ENS: la sinergia del 50%</h2>
+    <h2 data-i18n="article.h2.sinergiaEns"></h2>
 
-    <p>Para las empresas españolas que ya disponen de certificación ENS, la adecuación a NIS2 es significativamente más llevadera. El ENS y NIS2 comparten aproximadamente el <strong>50% de sus requisitos y controles</strong>, ya que ambos marcos están orientados a la protección de sistemas de información críticos y beben de las mismas fuentes en términos de buenas prácticas de ciberseguridad.</p>
+    <p data-i18n="article.sinergiaEns.p1"></p>
 
-    <p>Los controles ENS directamente reutilizables para NIS2 incluyen, entre otros: la política de seguridad aprobada por la dirección, el análisis y gestión de riesgos (metodología MAGERIT compatible con NIS2), los controles de acceso y autenticación, la gestión de incidentes y el proceso de notificación, la seguridad en las comunicaciones y el cifrado, la gestión de continuidad del negocio, y la formación y concienciación del personal.</p>
+    <p data-i18n="article.sinergiaEns.p2"></p>
 
-    <p>La brecha entre ENS y NIS2 se concentra principalmente en: la gestión de la cadena de suministro (NIS2 es más exigente en este punto), la notificación de incidentes a la autoridad competente en plazos específicos (el protocolo ENS es diferente), y los requisitos de responsabilidad directiva. Una empresa con ENS Media o Alta puede completar su adecuación a NIS2 en pocas semanas adicionales de trabajo.</p>
+    <p data-i18n="article.sinergiaEns.p3"></p>
 
-    <h2>Cómo cumplir NIS2: hoja de ruta</h2>
+    <h2 data-i18n="article.h2.hojaRuta"></h2>
 
-    <p>El camino hacia el cumplimiento de NIS2 sigue una secuencia lógica que Avson ha desarrollado y validado en decenas de proyectos:</p>
+    <p data-i18n="article.hojaRuta.p1"></p>
 
     <ol>
-      <li><strong>Verificación del ámbito (semanas 1-2):</strong> Confirmar si la organización queda dentro del ámbito de NIS2 en función de su sector, tamaño y actividad. Este paso es crítico para evitar tanto la infrapreparación como el sobrecoste de prepararse para obligaciones que no aplican.</li>
-      <li><strong>Análisis de brechas (semanas 2-4):</strong> Comparar el estado actual de seguridad de la organización con los requisitos del artículo 21 de NIS2. Si existe ENS o ISO 27001, se parte de una base sólida.</li>
-      <li><strong>Plan de tratamiento de brechas (semanas 4-6):</strong> Priorizar las medidas a implementar en función del riesgo, el impacto y los recursos disponibles. Incluye timeline, responsables y presupuesto.</li>
-      <li><strong>Implementación de medidas (semanas 6-16):</strong> Despliegue de controles técnicos y organizativos: revisión de políticas, implantación de MFA, mejora de la gestión de vulnerabilidades, actualización de contratos con proveedores, elaboración o actualización de planes de continuidad.</li>
-      <li><strong>Formación y concienciación (continuo):</strong> Formación específica NIS2 para el consejo de administración y para el personal técnico y de negocio.</li>
-      <li><strong>Auditoría y mejora continua:</strong> Establecimiento de un ciclo de revisión periódica de la efectividad de las medidas y un proceso de mejora continua documentado.</li>
+      <li data-i18n="article.hojaRuta.li1"></li>
+      <li data-i18n="article.hojaRuta.li2"></li>
+      <li data-i18n="article.hojaRuta.li3"></li>
+      <li data-i18n="article.hojaRuta.li4"></li>
+      <li data-i18n="article.hojaRuta.li5"></li>
+      <li data-i18n="article.hojaRuta.li6"></li>
     </ol>
 
     <div class="cta-inline-box anim-fade-up">
-      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Tu empresa necesita cumplir NIS2?</strong><p style="margin-top:8px;color:var(--navy-60)">Pide presupuesto en 24 horas. Sin compromiso.</p></div>
-      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Pide presupuesto →</a>
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem" data-i18n="article.cta3.title"></strong><p style="margin-top:8px;color:var(--navy-60)" data-i18n="article.cta3.subtitle"></p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap" data-i18n="article.cta3.btn"></a>
     </div>
 
     <div style="margin-top:64px;padding-top:32px;border-top:1px solid var(--border)">
-      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-muted)">Artículos relacionados:</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-muted)" data-i18n="article.related.label"></p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">
-        <a href="que-es-el-ens.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Qué es el ENS →</a>
-        <a href="que-es-dora-reglamento.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Qué es DORA →</a>
-        <a href="../nis2.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Servicio NIS2 →</a>
-        <a href="../ens.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Servicio ENS →</a>
+        <a href="que-es-el-ens.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px" data-i18n="article.related.link1"></a>
+        <a href="que-es-dora-reglamento.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px" data-i18n="article.related.link2"></a>
+        <a href="../nis2.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px" data-i18n="article.related.link3"></a>
+        <a href="../ens.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px" data-i18n="article.related.link4"></a>
       </div>
     </div>
 
-    <h2>Preguntas frecuentes sobre NIS2</h2>
+    <h2 data-i18n="article.h2.faq"></h2>
 
     <div class="faq-article">
       <div class="faq-article-item">
-        <div class="faq-article-q">¿NIS2 ya es obligatoria en España?</div>
-        <div class="faq-article-a">La Directiva NIS2 (UE 2022/2555) entró en vigor el 16 de enero de 2023 y los Estados miembros debían transponerla antes del 17 de octubre de 2024. España está en proceso de transposición legislativa mediante la actualización de la Ley de Seguridad de las Redes y Sistemas de Información. Aunque la ley española definitiva aún está en trámite parlamentario, las empresas afectadas deben prepararse ahora para cumplir desde la entrada en vigor de la norma nacional.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q1"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a1"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿Qué diferencia hay entre NIS2 y ENS?</div>
-        <div class="faq-article-a">El ENS (Esquema Nacional de Seguridad) es el marco español obligatorio para organismos públicos y sus proveedores TIC. NIS2 es una directiva europea que amplía las obligaciones de ciberseguridad a operadores de sectores críticos (energía, transporte, banca, salud, etc.) tanto públicos como privados. Comparten aproximadamente el 50% de sus controles, por lo que tener ENS cubre la mitad del camino hacia NIS2.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q2"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a2"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿Qué pasa si no cumplo NIS2?</div>
-        <div class="faq-article-a">Las sanciones por incumplimiento de NIS2 son significativas: hasta 10 millones de euros o el 2% del volumen de negocio anual mundial para entidades esenciales, y hasta 7 millones de euros o el 1,4% del volumen de negocio para entidades importantes. Además, los directivos pueden incurrir en responsabilidad personal y la empresa puede quedar excluida de licitaciones y contratos con el sector público.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q3"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a3"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿NIS2 afecta a pymes?</div>
-        <div class="faq-article-a">NIS2 afecta principalmente a empresas medianas (más de 50 empleados o más de 10 millones de euros de facturación) y grandes empresas de los sectores regulados. Sin embargo, pequeñas empresas que operen en sectores críticos o que sean proveedoras clave de infraestructuras esenciales también pueden estar incluidas. Es fundamental hacer una verificación caso a caso.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q4"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a4"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿Cuánto tiempo lleva cumplir con NIS2?</div>
-        <div class="faq-article-a">Con una consultoría especializada como Avson, el proceso de adecuación a NIS2 lleva entre 3 y 5 meses dependiendo del punto de partida de la organización. Si la empresa ya dispone de certificación ENS o ISO 27001, el proceso se reduce significativamente gracias al solapamiento de controles. Sin base previa, el proceso incluye análisis de brechas, implementación de controles, formación y documentación.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q5"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a5"></div>
       </div>
     </div>
 
     <div style="margin-top:64px;padding:40px;background:var(--pearl);border:1px solid var(--border);text-align:center">
-      <h3 style="font-family:'Syne',serif;font-size:28px;font-weight:400;color:var(--navy);margin:0 0 16px">¿Tu empresa está en el ámbito de NIS2?</h3>
-      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-muted);margin:0 0 28px;max-width:500px;margin-left:auto;margin-right:auto">Te hacemos el análisis de ámbito y el diagnóstico de brechas en 24 horas. Sin coste.</p>
-      <a href="../contacto.html" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:16px 32px;text-decoration:none;display:inline-block">Solicitar presupuesto sin compromiso →</a>
+      <h3 style="font-family:'Syne',serif;font-size:28px;font-weight:400;color:var(--navy);margin:0 0 16px" data-i18n="article.finalCta.title"></h3>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-muted);margin:0 0 28px;max-width:500px;margin-left:auto;margin-right:auto" data-i18n="article.finalCta.subtitle"></p>
+      <a href="../contacto.html" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:16px 32px;text-decoration:none;display:inline-block" data-i18n="article.finalCta.btn"></a>
     </div>
 
   </div>
 </article>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
       <div>
         <span class="footer__logo">AVSON<span> · </span>GRC</span>
-        <p class="footer__tagline">Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. 87+ empresas certificadas con éxito garantizado.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline"></p>
         <div class="footer__contact"><a href="mailto:hola@avson.eu">hola@avson.eu</a><br>Calle Pedro Muñoz Seca 2 · Madrid</div>
       </div>
       <div>
-        <div class="footer__col-title">Certificaciones</div>
+        <div class="footer__col-title" data-i18n="footer.colCertificaciones"></div>
         <ul class="footer__links">
           <li><a href="../ens.html">ENS</a></li>
           <li><a href="../iso27001.html">ISO 27001</a></li>
@@ -332,62 +337,78 @@
         </ul>
       </div>
       <div>
-        <div class="footer__col-title">Empresa</div>
+        <div class="footer__col-title" data-i18n="footer.colEmpresa"></div>
         <ul class="footer__links">
-          <li><a href="../packs.html">Packs GRC</a></li>
-          <li><a href="../equipo.html">Equipo</a></li>
-          <li><a href="index.html">Blog</a></li>
-          <li><a href="../contacto.html">Contacto</a></li>
+          <li><a href="../packs.html" data-i18n="footer.links.packs"></a></li>
+          <li><a href="../equipo.html" data-i18n="footer.links.equipo"></a></li>
+          <li><a href="index.html" data-i18n="footer.links.blog"></a></li>
+          <li><a href="../contacto.html" data-i18n="footer.links.contacto"></a></li>
         </ul>
       </div>
       <div>
-        <div class="footer__col-title">Newsletter GRC</div>
-        <p class="footer__newsletter-text">Análisis mensual sobre ENS, ISO 27001 y cumplimiento normativo. Sin spam.</p>
+        <div class="footer__col-title" data-i18n="footer.newsletter.title"></div>
+        <p class="footer__newsletter-text" data-i18n="footer.newsletter.text"></p>
         <div class="footer__newsletter-form">
-          <input type="email" class="footer__newsletter-input" placeholder="tu@empresa.com">
+          <input type="email" class="footer__newsletter-input" placeholder="" data-i18n-placeholder="footer.newsletter.placeholder">
           <button class="footer__newsletter-btn">→</button>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <span class="footer__copy">© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.</span>
-      <ul class="footer__legal"><li><a href="../privacidad.html">Política de privacidad</a></li><li><a href="../cookies.html">Cookies</a></li></ul>
+      <span class="footer__copy" data-i18n="footer.copy"></span>
+      <ul class="footer__legal">
+        <li><a href="../privacidad.html" data-i18n="footer.privacy"></a></li>
+        <li><a href="../cookies.html" data-i18n="footer.cookies"></a></li>
+      </ul>
     </div>
   </div>
 </footer>
 
 <script>
-window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40); });
-function toggleNav() { document.getElementById('navOverlay').classList.toggle('open'); document.body.classList.toggle('no-overflow'); }
-function toggleLang() { document.getElementById('langSwitcher').classList.toggle('open'); }
-document.addEventListener('click', (e) => { const ls = document.getElementById('langSwitcher'); if (ls && !ls.contains(e.target)) ls.classList.remove('open'); });
-document.querySelectorAll('.faq-article-q').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.closest('.faq-article-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-article-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  });
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+function toggleNav() {
+  document.getElementById('navOverlay').classList.toggle('open');
+  document.body.classList.toggle('no-overflow');
+}
+function toggleLang() {
+  document.getElementById('langSwitcher').classList.toggle('open');
+}
+document.addEventListener('click', (e) => {
+  const ls = document.getElementById('langSwitcher');
+  if (ls && !ls.contains(e.target)) ls.classList.remove('open');
 });
 
-// BLOG POPUP
-(function() {
-  if (sessionStorage.getItem('_blogPopupShown')) return;
-  var shown = false;
-  function showBlogPopup() {
-    if (shown) return;
-    shown = true;
-    sessionStorage.setItem('_blogPopupShown', '1');
-    document.getElementById('blogPopup').style.display = 'flex';
-  }
-  // Show after 45 seconds
-  setTimeout(showBlogPopup, 45000);
-  // OR show when scrolled 65%
-  window.addEventListener('scroll', function() {
-    var scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if (scrollPct > 0.65) showBlogPopup();
-  }, { passive: true });
-})();
+document.addEventListener('i18n:ready', function() {
+  document.querySelectorAll('.faq-article-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-article-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-article-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // BLOG POPUP
+  (function() {
+    if (sessionStorage.getItem('_blogPopupShown')) return;
+    var shown = false;
+    function showBlogPopup() {
+      if (shown) return;
+      shown = true;
+      sessionStorage.setItem('_blogPopupShown', '1');
+      document.getElementById('blogPopup').style.display = 'flex';
+    }
+    // Show after 45 seconds
+    setTimeout(showBlogPopup, 45000);
+    // OR show when scrolled 65%
+    window.addEventListener('scroll', function() {
+      var scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (scrollPct > 0.65) showBlogPopup();
+    }, { passive: true });
+  })();
+});
 
 function closeBlogPopup() {
   document.getElementById('blogPopup').style.display = 'none';
@@ -407,41 +428,41 @@ function submitBlogPopup(e) {
 <!-- WHATSAPP FLOAT -->
 <div class="human-float" id="humanFloat">
   <div class="human-float__card">
-    <p class="human-float__title">Aquí no responde una IA.</p>
-    <p class="human-float__txt">Tu consulta la lee un especialista de nuestro equipo. Te llamamos en menos de 30 minutos en horario de oficina (L–V, 9–18h); fuera de horario, a primera hora del día siguiente.</p>
-    <a href="../contacto.html" class="human-float__cta" onclick="var f=document.querySelector('form');if(f){f.scrollIntoView({behavior:'smooth'});var i=f.querySelector('input');if(i)setTimeout(function(){i.focus()},600);return false;}">Dejar mis datos →</a>
+    <p class="human-float__title" data-i18n="float.title"></p>
+    <p class="human-float__txt" data-i18n="float.text"></p>
+    <a href="../contacto.html" class="human-float__cta" onclick="var f=document.querySelector('form');if(f){f.scrollIntoView({behavior:'smooth'});var i=f.querySelector('input');if(i)setTimeout(function(){i.focus()},600);return false;}" data-i18n="float.cta"></a>
   </div>
-  <button class="human-float__btn" onclick="document.getElementById('humanFloat').classList.toggle('open')" aria-expanded="false" aria-label="Te atiende una persona, no una IA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Personas, no IA</span></button>
+  <button class="human-float__btn" onclick="document.getElementById('humanFloat').classList.toggle('open')" aria-expanded="false" aria-label="Te atiende una persona, no una IA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-i18n="float.btn"></span></button>
 </div>
 <!-- BLOG LEAD CAPTURE POPUP -->
 <div id="blogPopup" style="display:none;position:fixed;inset:0;background:rgba(26,39,68,0.78);z-index:8888;align-items:center;justify-content:center;padding:20px">
   <div style="background:var(--white);max-width:440px;width:100%;padding:40px 36px;position:relative">
     <button onclick="closeBlogPopup()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;color:var(--navy-60);cursor:pointer;line-height:1">×</button>
-    <span style="font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px">Recurso gratuito</span>
-    <h2 style="font-family:var(--font-serif);font-size:clamp(22px,2.5vw,28px);font-weight:400;color:var(--navy);margin-bottom:12px;line-height:1.2">¿Tu empresa necesita certificarse?</h2>
-    <p style="font-family:var(--font-sans);font-size:0.88rem;color:var(--navy-60);line-height:1.65;margin-bottom:28px">Habla gratis con un experto. En 15 minutos te decimos exactamente qué certificación necesitas, en qué plazo y a qué coste.</p>
+    <span style="font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px" data-i18n="popup.label"></span>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(22px,2.5vw,28px);font-weight:400;color:var(--navy);margin-bottom:12px;line-height:1.2" data-i18n="popup.title"></h2>
+    <p style="font-family:var(--font-sans);font-size:0.88rem;color:var(--navy-60);line-height:1.65;margin-bottom:28px" data-i18n="popup.text"></p>
     <form onsubmit="submitBlogPopup(event)" style="display:flex;flex-direction:column;gap:12px">
-      <input type="email" id="popupEmail" placeholder="tu@empresa.com" required
+      <input type="email" id="popupEmail" placeholder="" required
         style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.9rem;color:var(--navy);outline:none;box-sizing:border-box"
-        onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'">
-      <input type="text" id="popupEmpresa" placeholder="Nombre de tu empresa" required
+        onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'"
+        data-i18n-placeholder="popup.emailPlaceholder">
+      <input type="text" id="popupEmpresa" placeholder="" required
         style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.9rem;color:var(--navy);outline:none;box-sizing:border-box"
-        onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'">
-      <button type="submit" style="background:var(--navy);color:var(--white);border:none;padding:16px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;letter-spacing:0.04em;cursor:pointer;width:100%">
-        Pide presupuesto gratis →
+        onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'"
+        data-i18n-placeholder="popup.empresaPlaceholder">
+      <button type="submit" style="background:var(--navy);color:var(--white);border:none;padding:16px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;letter-spacing:0.04em;cursor:pointer;width:100%" data-i18n="popup.submit">
       </button>
     </form>
-    <p style="font-family:var(--font-sans);font-size:0.72rem;color:var(--navy-60);text-align:center;margin-top:12px;margin-bottom:0">Sin compromiso · Te llamamos en <30 min (L–V 9–18h)</p>
-    <button onclick="closeBlogPopup()" style="display:block;width:100%;background:none;border:none;font-family:var(--font-sans);font-size:0.78rem;color:var(--navy-60);cursor:pointer;padding:8px;margin-top:4px">
-      No gracias, seguir leyendo
+    <p style="font-family:var(--font-sans);font-size:0.72rem;color:var(--navy-60);text-align:center;margin-top:12px;margin-bottom:0" data-i18n="popup.disclaimer"></p>
+    <button onclick="closeBlogPopup()" style="display:block;width:100%;background:none;border:none;font-family:var(--font-sans);font-size:0.78rem;color:var(--navy-60);cursor:pointer;padding:8px;margin-top:4px" data-i18n="popup.dismiss">
     </button>
   </div>
 </div>
 
 <!-- CTA MÓVIL PERMANENTE -->
 <div class="v3-mobile-cta"><div class="v3-mobile-cta__row">
-  <a href="tel:+34648414863" class="v3-mobile-cta__call" aria-label="Llamar">Llamar</a>
-  <a href="../contacto.html" class="v3-mobile-cta__main">Habla con un experto →</a>
+  <a href="tel:+34648414863" class="v3-mobile-cta__call" aria-label="Llamar" data-i18n="mobileCta.call"></a>
+  <a href="../contacto.html" class="v3-mobile-cta__main" data-i18n="mobileCta.main"></a>
 </div></div>
 </body>
 </html>
