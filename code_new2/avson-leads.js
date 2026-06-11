@@ -77,7 +77,18 @@ async function avsonSubmitLead(event, opts) {
   data.page = window.location.pathname;
   data.ts = new Date().toISOString();
 
-  // 2) Validación mínima.
+  // 2) Validación: campos required (incluido checkbox RGPD).
+  const missingRequired = form.querySelectorAll('input[required], select[required], textarea[required]');
+  for (const field of missingRequired) {
+    if (field.type === 'checkbox' && !field.checked) {
+      avsonShowFieldError(form, "Debes aceptar la política de privacidad.");
+      return false;
+    }
+    if (field.type !== 'checkbox' && !field.value.trim()) {
+      avsonShowFieldError(form, "Completa todos los campos obligatorios.");
+      return false;
+    }
+  }
   if (!data.email || !avsonIsValidEmail(data.email)) {
     avsonShowFieldError(form, "Introduce un email válido.");
     return false;
