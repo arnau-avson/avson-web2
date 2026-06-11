@@ -1,9 +1,10 @@
 // AVSON i18n — carga textos desde palabras.json
 (function () {
   // 1. Detectar idioma: localStorage > navigator.language > default 'es'
+  var SUPPORTED = ['es', 'en', 'fr'];
   var saved = localStorage.getItem('avson-lang');
   var browserLang = (navigator.language || '').split('-')[0];
-  var LANG = saved || (browserLang === 'en' ? 'en' : 'es');
+  var LANG = saved || (SUPPORTED.indexOf(browserLang) !== -1 ? browserLang : 'es');
 
   // 2. Detectar página desde la URL: /blog/que-es-el-ens.html → "blog/que-es-el-ens"
   var pathParts = window.location.pathname.split('/').filter(Boolean);
@@ -115,25 +116,28 @@
     });
   }
 
-  // Lang switch: reescribir menú con solo ES/EN y guardar preferencia
+  // Lang switch: reescribir menú con ES/EN/FR y guardar preferencia
   function setupLangSwitch() {
-    var otherLang = LANG === 'es' ? 'en' : 'es';
-    var otherLabel = LANG === 'es' ? 'EN' : 'ES';
+    var others = SUPPORTED.filter(function (l) { return l !== LANG; });
 
-    function switchLang(e) {
-      e.preventDefault();
-      localStorage.setItem('avson-lang', otherLang);
-      location.reload();
+    function makeSwitcher(lang) {
+      return function (e) {
+        e.preventDefault();
+        localStorage.setItem('avson-lang', lang);
+        location.reload();
+      };
     }
 
     // Desktop: reemplazar contenido del menú dropdown
     document.querySelectorAll('.lang-switch__menu').forEach(function (menu) {
       menu.innerHTML = '';
-      var a = document.createElement('a');
-      a.href = '#';
-      a.textContent = otherLabel;
-      a.addEventListener('click', switchLang);
-      menu.appendChild(a);
+      others.forEach(function (lang) {
+        var a = document.createElement('a');
+        a.href = '#';
+        a.textContent = lang.toUpperCase();
+        a.addEventListener('click', makeSwitcher(lang));
+        menu.appendChild(a);
+      });
     });
 
     // Mobile overlay: reemplazar los links de idioma
@@ -147,16 +151,27 @@
           langLinks.push(a);
         }
       });
-      if (langLinks.length > 0) {
-        var first = langLinks[0];
-        first.href = '#';
-        first.textContent = otherLabel;
-        first.style.fontSize = '15px';
-        first.removeAttribute('hreflang');
-        first.addEventListener('click', switchLang);
-        for (var i = 1; i < langLinks.length; i++) {
-          langLinks[i].remove();
+      // Reemplazar el primero y los siguientes con los idiomas disponibles
+      others.forEach(function (lang, idx) {
+        var a;
+        if (idx < langLinks.length) {
+          a = langLinks[idx];
+        } else {
+          a = document.createElement('a');
+          a.style.fontSize = '15px';
+          if (langLinks.length > 0) {
+            langLinks[0].parentNode.appendChild(a);
+          }
         }
+        a.href = '#';
+        a.textContent = lang.toUpperCase();
+        a.style.fontSize = '15px';
+        a.removeAttribute('hreflang');
+        a.addEventListener('click', makeSwitcher(lang));
+      });
+      // Eliminar links sobrantes
+      for (var i = others.length; i < langLinks.length; i++) {
+        langLinks[i].remove();
       }
     });
   }
