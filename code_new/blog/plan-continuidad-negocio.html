@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plan de Continuidad de Negocio: Guía Completa | Avson</title>
-  <meta name="description" content="Qué es un plan de continuidad de negocio (BCP), para qué sirve, cómo hacerlo paso a paso y cómo se relaciona con ISO 22301. Guía práctica 2026 para empresas españolas.">
+  <title></title>
+  <meta name="description" content="">
   <link rel="canonical" href="https://avson.eu/blog/plan-continuidad-negocio.html">
-  <meta property="og:title" content="Plan de Continuidad de Negocio: Qué es, Cómo Hacerlo y Diferencia con ISO 22301 | Avson GRC">
-  <meta property="og:description" content="Qué es un plan de continuidad de negocio (BCP), para qué sirve, cómo hacerlo paso a paso y cómo se relaciona con ISO 22301. Guía práctica 2026 para empresas españolas.">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://avson.eu/blog/plan-continuidad-negocio.html">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Avson GRC">
   <meta property="og:image" content="https://avson.eu/assets/og-avson.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://avson.eu/assets/og-avson.jpg">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
@@ -104,28 +108,27 @@
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID_HERE");
   </script>
+  <script src="../i18n.js"></script>
   <script src="../avson-leads.js" defer></script>
 </head>
 <body>
 
 <!-- ANNOUNCE BAR -->
-<div class="announce-bar">
-  <strong>Nueva normativa ENS en vigor</strong> — <a href="../ens.html">Descubre si tu empresa está obligada →</a>
-</div>
+<div class="announce-bar" data-i18n="announce.text"></div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav__inner">
-    <a href="../index.html" class="nav__logo">avs<span class="logo-o">o</span>n</a>
+    <a href="../index.html" class="nav__logo" data-i18n="nav.logo"></a>
     <ul class="nav__links">
-      <li><a href="../ens.html">ENS</a></li>
-      <li><a href="../ens-express.html" class="nav-express">ENS Express</a></li>
-      <li><a href="../iso22301.html">ISO 22301</a></li>
-      <li><a href="../iso27001.html">ISO 27001</a></li>
-      <li><a href="../otras.html">Otras certificaciones</a></li>
+      <li><a href="../ens.html" data-i18n="nav.links.ens"></a></li>
+      <li><a href="../ens-express.html" class="nav-express" data-i18n="nav.links.ensExpress"></a></li>
+      <li><a href="../iso22301.html" data-i18n="nav.links.iso22301"></a></li>
+      <li><a href="../iso27001.html" data-i18n="nav.links.iso27001"></a></li>
+      <li><a href="../otras.html" data-i18n="nav.links.otras"></a></li>
     </ul>
     <div class="lang-switch">
-      <button type="button" aria-label="Cambiar idioma">ES &#9662;</button>
+      <button type="button" aria-label="Cambiar idioma" data-i18n="nav.langLabel"></button>
       <div class="lang-switch__menu">
         <a href="../en/index.html">EN</a>
         <a href="../fr/index.html">FR</a>
@@ -134,28 +137,28 @@
       </div>
     </div>
     <a href="tel:+34648414863" class="nav__phone">648 414 863</a>
-    <a href="../contacto.html" class="nav__cta">Pide presupuesto →</a>
+    <a href="../contacto.html" class="nav__cta" data-i18n="nav.cta"></a>
     <div class="nav__hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="nav-overlay" id="navOverlay">
-  <a href="../ens.html" onclick="toggleNav()">ENS</a>
-  <a href="../ens-express.html" onclick="toggleNav()">ENS Express</a>
-  <a href="../iso22301.html" onclick="toggleNav()">ISO 22301</a>
-  <a href="../iso27001.html" onclick="toggleNav()">ISO 27001</a>
-  <a href="../otras.html" onclick="toggleNav()">Otras certificaciones</a>
-  <a href="../contacto.html" onclick="toggleNav()">Habla con un experto →</a>
+  <a href="../ens.html" onclick="toggleNav()" data-i18n="nav.overlay.ens"></a>
+  <a href="../ens-express.html" onclick="toggleNav()" data-i18n="nav.overlay.ensExpress"></a>
+  <a href="../iso22301.html" onclick="toggleNav()" data-i18n="nav.overlay.iso22301"></a>
+  <a href="../iso27001.html" onclick="toggleNav()" data-i18n="nav.overlay.iso27001"></a>
+  <a href="../otras.html" onclick="toggleNav()" data-i18n="nav.overlay.otras"></a>
+  <a href="../contacto.html" onclick="toggleNav()" data-i18n="nav.overlay.contacto"></a>
 </div>
 
 <!-- BREADCRUMB -->
 <div style="background:var(--white);border-bottom:1px solid var(--border);padding:12px 0;margin-top:72px">
   <div class="container">
     <nav style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted);letter-spacing:0.04em">
-      <a href="../index.html" style="color:var(--text-muted);text-decoration:none">Inicio</a>
+      <a href="../index.html" style="color:var(--text-muted);text-decoration:none" data-i18n="breadcrumb.home"></a>
       <span style="margin:0 8px">›</span>
-      <a href="index.html" style="color:var(--text-muted);text-decoration:none">Blog</a>
+      <a href="index.html" style="color:var(--text-muted);text-decoration:none" data-i18n="breadcrumb.blog"></a>
       <span style="margin:0 8px">›</span>
-      <span style="color:var(--navy);font-weight:500">Plan de Continuidad de Negocio</span>
+      <span style="color:var(--navy);font-weight:500" data-i18n="breadcrumb.current"></span>
     </nav>
   </div>
 </div>
@@ -164,18 +167,14 @@
 <section style="background:var(--pearl);padding:72px 0 56px;border-bottom:1px solid var(--border)">
   <div class="container">
     <div style="max-width:800px">
-      <span class="label-tag">Continuidad de Negocio · BCP · Guía práctica 2026</span>
+      <span class="label-tag" data-i18n="hero.label"></span>
       <div class="gold-line"></div>
-      <h1 style="font-family:'Syne',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--navy);line-height:1.1;margin:0 0 24px">
-        Plan de continuidad de negocio: qué es y cómo implementarlo en tu empresa.
-      </h1>
-      <p style="font-family:'DM Sans',sans-serif;font-size:17px;color:var(--text-muted);line-height:1.65;max-width:640px;margin:0">
-        Un Plan de Continuidad de Negocio (BCP) define cómo sobrevive tu empresa a una interrupción grave. Esta guía explica qué es, cómo hacerlo paso a paso y cómo se conecta con la certificación ISO 22301.
-      </p>
+      <h1 style="font-family:'Syne',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--navy);line-height:1.1;margin:0 0 24px" data-i18n="hero.title"></h1>
+      <p style="font-family:'DM Sans',sans-serif;font-size:17px;color:var(--text-muted);line-height:1.65;max-width:640px;margin:0" data-i18n="hero.subtitle"></p>
       <div style="display:flex;gap:24px;margin-top:28px;flex-wrap:wrap">
-        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">⏱ Lectura: 9 minutos</span>
-        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">Actualizado: mayo 2026</span>
-        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)">Por el equipo de Avson GRC</span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)" data-i18n="hero.readTime"></span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)" data-i18n="hero.updated"></span>
+        <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-muted)" data-i18n="hero.author"></span>
       </div>
     </div>
   </div>
@@ -186,150 +185,143 @@
   <div class="article-body">
 
     <div class="toc">
-      <div class="toc-title">Contenido de este artículo</div>
+      <div class="toc-title" data-i18n="article.toc.title"></div>
       <ol>
-        <li><a href="#que-es">Qué es un Plan de Continuidad de Negocio (BCP)</a></li>
-        <li><a href="#por-que">Por qué tu empresa necesita un BCP</a></li>
-        <li><a href="#diferencias">Diferencia entre BCP, DRP y SGCN</a></li>
-        <li><a href="#como-hacer">Cómo hacer un BCP: 6 pasos</a></li>
-        <li><a href="#bia">Qué es el BIA y cómo hacerlo</a></li>
-        <li><a href="#iso22301">Plan de continuidad e ISO 22301</a></li>
-        <li><a href="#errores">Errores comunes al implementar un BCP</a></li>
-        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#que-es" data-i18n="article.toc.item1"></a></li>
+        <li><a href="#por-que" data-i18n="article.toc.item2"></a></li>
+        <li><a href="#diferencias" data-i18n="article.toc.item3"></a></li>
+        <li><a href="#como-hacer" data-i18n="article.toc.item4"></a></li>
+        <li><a href="#bia" data-i18n="article.toc.item5"></a></li>
+        <li><a href="#iso22301" data-i18n="article.toc.item6"></a></li>
+        <li><a href="#errores" data-i18n="article.toc.item7"></a></li>
+        <li><a href="#faq" data-i18n="article.toc.item8"></a></li>
       </ol>
     </div>
 
-    <h2 id="que-es">Qué es un Plan de Continuidad de Negocio (BCP)</h2>
+    <h2 id="que-es" data-i18n="article.queEs.title"></h2>
 
-    <p>Un <strong>Plan de Continuidad de Negocio</strong> (BCP, del inglés Business Continuity Plan) es el documento que describe cómo una organización continuará operando durante y después de una interrupción grave. No es un manual teórico: es un guión operativo con instrucciones concretas, responsables identificados, recursos disponibles y criterios de activación claros.</p>
+    <p data-i18n="article.queEs.p1"></p>
 
-    <p>El BCP define, para cada proceso crítico de la organización, qué alternativas de operación existen cuando los medios habituales no están disponibles. Si los servidores están caídos, ¿cómo se atienden los pedidos? Si la oficina central es inaccesible, ¿desde dónde trabajan los empleados clave? Si el proveedor principal de un insumo esencial falla, ¿quién es el proveedor alternativo y cómo se activa el contrato? El BCP responde a estas preguntas antes de que sucedan, no durante la crisis.</p>
+    <p data-i18n="article.queEs.p2"></p>
 
-    <p>El término BCP se usa a veces de forma laxa para referirse a todo el conjunto de planificación de continuidad de una organización, pero en sentido estricto el BCP es uno de los varios planes que forman parte de un <strong>Sistema de Gestión de la Continuidad de Negocio (SGCN)</strong>. Los otros planes principales son el DRP (Disaster Recovery Plan, centrado en la recuperación de TI) y el Plan de Gestión de Crisis (centrado en la comunicación y la toma de decisiones durante el incidente). Los tres deben ser coherentes entre sí y activarse de forma coordinada.</p>
+    <p data-i18n="article.queEs.p3"></p>
 
-    <p>Un buen BCP no es un documento que se elabora una vez y se guarda en un cajón. Es un documento vivo que debe revisarse, actualizarse y probarse periódicamente para garantizar que sigue siendo relevante y que el personal que debe activarlo lo conoce y lo sabe ejecutar bajo presión.</p>
-
-    <div class="cta-inline-box anim-fade-up">
-      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Necesitas un Plan de Continuidad de Negocio?</strong><p style="margin-top:8px;color:var(--navy-60)">Pide presupuesto en 24 horas. Sin compromiso.</p></div>
-      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Pide presupuesto →</a>
-    </div>
-
-    <h2 id="por-que">Por qué tu empresa necesita un BCP</h2>
-
-    <p>La pregunta no es si tu empresa sufrirá alguna vez una interrupción grave. La pregunta es cuándo, con qué intensidad y si estará preparada para responder. Los datos del sector son inequívocos: según el Business Continuity Institute, el 74% de las organizaciones sufrió al menos una interrupción de negocio significativa en los últimos 12 meses, y el 43% de las empresas que experimentan una interrupción grave sin plan de recuperación cierran en los 3 años siguientes.</p>
-
-    <p>Las causas de interrupción son más diversas de lo que solemos imaginar. Más allá de los desastres naturales espectaculares —inundaciones, terremotos, incendios— la mayoría de las interrupciones reales tienen causas más mundanas pero igualmente devastadoras: fallos en proveedores críticos de TI (un datacenter, una plataforma SaaS esencial), ciberataques de ransomware que cifran todos los sistemas, errores humanos que corrompen bases de datos críticas, pérdida repentina de personal clave o cortes en el suministro eléctrico prolongados. Ninguna de estas situaciones es extraordinaria; todas son escenarios que cualquier empresa mediana puede enfrentar en cualquier momento.</p>
-
-    <p>Más allá de la resiliencia operacional, el BCP tiene una dimensión legal y contractual creciente. El reglamento <a href="../dora.html">DORA</a> exige a las entidades financieras planes de continuidad detallados. La Ley de Protección de Infraestructuras Críticas establece obligaciones similares para operadores críticos. Muchos contratos empresariales y pliegos de licitación pública incluyen ahora cláusulas que exigen acreditar que existe un BCP vigente y probado. En todos estos contextos, carecer de un BCP no es solo un riesgo operacional: es un riesgo legal y comercial.</p>
-
-    <h2 id="diferencias">Diferencia entre BCP, DRP y SGCN</h2>
-
-    <p>Estos tres términos se confunden con frecuencia, incluso entre profesionales del sector. Entender sus diferencias es fundamental para diseñar correctamente la arquitectura de continuidad de una organización:</p>
-
-    <p><strong>BCP (Business Continuity Plan):</strong> es el plan que cubre la continuidad de los procesos de negocio en su conjunto. Incluye personas, comunicaciones, instalaciones alternativas, procesos manuales de respaldo, gestión de proveedores y clientes durante la crisis, y coordinación entre departamentos. Su alcance es el negocio como un todo, no solo la tecnología.</p>
-
-    <p><strong>DRP (Disaster Recovery Plan):</strong> es el plan que cubre específicamente la recuperación de los sistemas de TI y la infraestructura tecnológica. Detalla los procedimientos para restaurar servidores, bases de datos, aplicaciones y redes dentro de los tiempos de recuperación definidos (RTO) y con la mínima pérdida de datos posible (RPO). El DRP es un componente técnico del BCP, no un sustituto.</p>
-
-    <p><strong>SGCN (Sistema de Gestión de la Continuidad de Negocio):</strong> es el marco de gestión completo que engloba todos los planes, políticas, procesos, roles, auditorías y mecanismos de mejora continua de la continuidad. El SGCN es lo que certifica la norma <a href="que-es-iso22301.html">ISO 22301</a>. El BCP y el DRP son componentes del SGCN, junto con el BIA, el análisis de riesgos, los ejercicios de prueba y la revisión por la dirección.</p>
-
-    <p>Una analogía útil: si el SGCN es el sistema de gestión de la seguridad vial de una empresa de transporte, el BCP es el protocolo de actuación ante un accidente, el DRP es el plan de reparación y sustitución de los vehículos, y el BIA es el análisis de qué rutas son críticas y qué impacto tendría su interrupción.</p>
-
-    <h2 id="como-hacer">Cómo hacer un plan de continuidad de negocio: 6 pasos</h2>
-
-    <p>Elaborar un BCP eficaz sigue una metodología clara. Estos son los seis pasos fundamentales:</p>
-
-    <p><strong>Paso 1 — Obtener el mandato de la dirección:</strong> el BCP no puede ser un proyecto técnico liderado solo por IT o por el área de seguridad. Requiere el compromiso explícito de la alta dirección, que debe aprobar el proyecto, asignar recursos, designar un responsable de continuidad y participar en las decisiones sobre tolerancia al riesgo. Sin este mandato, el proyecto se paralizará en cuanto requiera recursos o decisiones difíciles.</p>
-
-    <p><strong>Paso 2 — Definir alcance y política:</strong> se determina qué partes de la organización, qué procesos y qué ubicaciones estarán cubiertos por el BCP. Se elabora la política de continuidad de negocio, que establece el compromiso de la organización, los objetivos de continuidad y el marco de gobernanza del SGCN. Esta política debe ser aprobada formalmente por la dirección.</p>
-
-    <p><strong>Paso 3 — Realizar el BIA (Business Impact Analysis):</strong> es la fase más crítica. Se identifican los procesos de negocio, se determina el impacto que su interrupción causaría en el tiempo y se establecen los RTOs y RPOs. El BIA es la base de todas las decisiones de estrategia de continuidad. Un BIA bien hecho revela qué procesos son realmente críticos (a menudo con sorpresas respecto a las asunciones iniciales) y cuánto tiempo puede tolerarse su interrupción.</p>
-
-    <p><strong>Paso 4 — Analizar riesgos y definir estrategias:</strong> se identifican las amenazas que podrían interrumpir los procesos críticos y se evalúa su probabilidad e impacto. Para cada combinación proceso-amenaza relevante, se diseñan estrategias de continuidad: recursos alternativos, sitios de trabajo alternativos, proveedores de respaldo, acuerdos de reciprocidad, capacidades de operación manual. Las estrategias deben ser realistas y financieramente viables.</p>
-
-    <p><strong>Paso 5 — Documentar los planes:</strong> se redactan el BCP, el DRP y el Plan de Gestión de Crisis. El nivel de detalle es clave: un plan demasiado genérico no sirve bajo presión; un plan demasiado detallado no se actualiza ni se usa. El equilibrio óptimo son guiones de actuación con responsables nominales, pasos ordenados, recursos específicos (no genéricos) y criterios de activación y desactivación claros.</p>
-
-    <p><strong>Paso 6 — Probar, revisar y mantener:</strong> los planes deben probarse antes de necesitarlos. Los ejercicios pueden ser de escritorio (walk-through de escenarios), simulacros funcionales parciales o pruebas técnicas reales (failover de sistemas, activación del sitio alternativo). Cada ejercicio debe generar un informe con hallazgos y acciones de mejora. Los planes deben revisarse al menos anualmente y actualizarse tras cualquier cambio significativo en la organización.</p>
+    <p data-i18n="article.queEs.p4"></p>
 
     <div class="cta-inline-box anim-fade-up">
-      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Quieres un BCP listo para auditoría?</strong><p style="margin-top:8px;color:var(--navy-60)">Elaboramos y certificamos tu plan de continuidad en 3-4 meses con garantía de éxito.</p></div>
-      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Solicitar información →</a>
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem" data-i18n="article.cta1.title"></strong><p style="margin-top:8px;color:var(--navy-60)" data-i18n="article.cta1.subtitle"></p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap" data-i18n="article.cta1.link"></a>
     </div>
 
-    <h2 id="bia">Qué es el BIA (Business Impact Analysis) y cómo hacerlo</h2>
+    <h2 id="por-que" data-i18n="article.porQue.title"></h2>
 
-    <p>El <strong>Business Impact Analysis (BIA)</strong> es el análisis que determina qué procesos de negocio son críticos, qué impacto causaría su interrupción en función del tiempo transcurrido y cuáles son los parámetros de recuperación aceptables. Es la pieza de información más importante para diseñar un BCP eficaz.</p>
+    <p data-i18n="article.porQue.p1"></p>
 
-    <p>La metodología estándar de un BIA tiene cuatro fases. En la <strong>fase de inventario</strong>, se identifican todos los procesos de negocio de la organización y se asignan a un responsable. En la <strong>fase de análisis de impacto</strong>, se entrevista a los responsables de cada proceso para determinar el impacto que su interrupción causaría a lo largo del tiempo, habitualmente en intervalos de 1 hora, 4 horas, 24 horas, 48 horas, 1 semana y 1 mes. El impacto se cuantifica en dimensiones financiera, operativa, legal/regulatoria y reputacional.</p>
+    <p data-i18n="article.porQue.p2"></p>
 
-    <p>En la <strong>fase de determinación de parámetros</strong>, se establecen para cada proceso crítico el <strong>RTO</strong> (Recovery Time Objective) —el tiempo máximo tolerable de interrupción antes de que el impacto sea inaceptable— y el <strong>RPO</strong> (Recovery Point Objective) —la cantidad máxima de datos que se puede perder, medida en tiempo desde el último punto de recuperación—. Estos parámetros son los que orientan el diseño de las estrategias y soluciones técnicas: un RTO de 2 horas exige soluciones de alta disponibilidad muy diferentes a un RTO de 24 horas.</p>
+    <p data-i18n="article.porQue.p3"></p>
 
-    <p>En la <strong>fase de priorización</strong>, los procesos se ordenan por criticidad, combinando el impacto de su interrupción y la urgencia de su recuperación. Esta priorización determina el orden en que deben recuperarse los procesos durante un incidente real y concentra los recursos de continuidad donde el impacto es mayor.</p>
+    <h2 id="diferencias" data-i18n="article.diferencias.title"></h2>
 
-    <p>Un BIA bien documentado también identifica las <strong>dependencias entre procesos</strong> —qué sistemas, datos, personas o proveedores externos son necesarios para cada proceso crítico— y el <strong>Minimum Business Continuity Objective (MBCO)</strong>, es decir, el nivel mínimo de servicio que debe mantenerse en modo de continuidad para que la organización pueda seguir siendo viable.</p>
+    <p data-i18n="article.diferencias.intro"></p>
 
-    <h2 id="iso22301">Plan de continuidad de negocio e ISO 22301</h2>
+    <p data-i18n="article.diferencias.bcp"></p>
 
-    <p>La norma <a href="que-es-iso22301.html">ISO 22301</a> es el estándar internacional que certifica que el Sistema de Gestión de la Continuidad de Negocio de una organización cumple con los requisitos internacionales de gestión sistémica, auditabilidad y mejora continua. El BCP es uno de los productos documentales que el SGCN debe generar, pero la norma va mucho más allá del documento en sí.</p>
+    <p data-i18n="article.diferencias.drp"></p>
 
-    <p>ISO 22301 exige que el BCP no sea solo un documento elaborado en un momento dado, sino el resultado de un proceso de gestión continuo: análisis de contexto, evaluación de riesgos, BIA formal, estrategias documentadas, planes probados periódicamente, auditorías internas, revisión por la dirección y mejora continua verificable. La diferencia entre tener un BCP y estar certificado en ISO 22301 es la diferencia entre tener un plan y tener un sistema de gestión que garantiza que ese plan es siempre relevante, probado y mejorado.</p>
+    <p data-i18n="article.diferencias.sgcn"></p>
 
-    <p>Para las organizaciones que necesitan demostrar a clientes, reguladores o auditores que su gestión de continuidad es robusta, la certificación ISO 22301 es la forma más eficiente de hacerlo. El certificado emitido por una entidad acreditada tiene un peso objetivo que ningún documento interno puede igualar. Si tu organización ya tiene un BCP, el camino hasta ISO 22301 es más corto de lo que parece: el trabajo adicional se centra en formalizar el proceso de gestión, documentar el BIA y los análisis de riesgo, y evidenciar los ejercicios y pruebas.</p>
+    <p data-i18n="article.diferencias.analogia"></p>
 
-    <h2 id="errores">Errores comunes al implementar un BCP</h2>
+    <h2 id="como-hacer" data-i18n="article.comoHacer.title"></h2>
 
-    <p>La experiencia en proyectos de continuidad de negocio revela que los mismos errores se repiten con frecuencia. Conocerlos permite evitarlos:</p>
+    <p data-i18n="article.comoHacer.intro"></p>
 
-    <ul>
-      <li><strong>BIA superficial o sesgado:</strong> el error más frecuente es construir el BIA desde el despacho, sin entrevistar realmente a los responsables de los procesos. El resultado es un análisis que no refleja la realidad operativa, con RTOs demasiado optimistas o procesos críticos no identificados. El BIA requiere trabajo de campo.</li>
-      <li><strong>Planes demasiado genéricos:</strong> un BCP que dice "contactar al equipo de TI" sin nombrar a personas, sin incluir números de teléfono alternativos y sin detallar qué deben hacer exactamente es inútil bajo presión. Los planes deben ser ejecutables por personas que están bajo estrés y que pueden no haber participado en su elaboración.</li>
-      <li><strong>Falta de pruebas:</strong> muchas organizaciones elaboran un BCP, lo aprueban y nunca lo prueban. Cuando ocurre un incidente real, descubren que el plan no funciona: los sistemas de respaldo no están actualizados, el sitio alternativo no tiene capacidad suficiente, o los empleados no saben qué deben hacer. Las pruebas periódicas son imprescindibles.</li>
-      <li><strong>Planes desactualizados:</strong> las organizaciones cambian: nuevos sistemas, nuevos proveedores, reorganizaciones, nuevas regulaciones. Un BCP elaborado hace tres años sin revisión puede ser peor que no tener ninguno, porque genera una falsa sensación de seguridad. La actualización periódica es obligatoria.</li>
-      <li><strong>Ausencia de comunicación de crisis:</strong> muchos BCP se centran en la recuperación técnica y olvidan que durante una crisis hay que comunicar: a empleados, clientes, proveedores, medios de comunicación y reguladores. El plan de comunicación de crisis debe ser un componente explícito del BCP.</li>
-      <li><strong>Dependencia de una sola persona:</strong> si el plan solo lo conoce y lo puede activar una persona —el CISO, el CTO o el responsable de continuidad—, la organización está expuesta a un punto único de fallo humano. El BCP debe ser conocido y practicado por múltiples personas en cada área crítica.</li>
-    </ul>
+    <p data-i18n="article.comoHacer.paso1"></p>
+
+    <p data-i18n="article.comoHacer.paso2"></p>
+
+    <p data-i18n="article.comoHacer.paso3"></p>
+
+    <p data-i18n="article.comoHacer.paso4"></p>
+
+    <p data-i18n="article.comoHacer.paso5"></p>
+
+    <p data-i18n="article.comoHacer.paso6"></p>
 
     <div class="cta-inline-box anim-fade-up">
-      <div><strong style="font-family:var(--font-serif);font-size:1.1rem">¿Necesitas revisar o crear tu plan de continuidad?</strong><p style="margin-top:8px;color:var(--navy-60)">Pide presupuesto en 24 horas. Sin compromiso.</p></div>
-      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap">Pide presupuesto →</a>
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem" data-i18n="article.cta2.title"></strong><p style="margin-top:8px;color:var(--navy-60)" data-i18n="article.cta2.subtitle"></p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap" data-i18n="article.cta2.link"></a>
     </div>
 
-    <h2 id="faq">Preguntas frecuentes sobre el plan de continuidad de negocio</h2>
+    <h2 id="bia" data-i18n="article.bia.title"></h2>
+
+    <p data-i18n="article.bia.p1"></p>
+
+    <p data-i18n="article.bia.p2"></p>
+
+    <p data-i18n="article.bia.p3"></p>
+
+    <p data-i18n="article.bia.p4"></p>
+
+    <p data-i18n="article.bia.p5"></p>
+
+    <h2 id="iso22301" data-i18n="article.iso22301.title"></h2>
+
+    <p data-i18n="article.iso22301.p1"></p>
+
+    <p data-i18n="article.iso22301.p2"></p>
+
+    <p data-i18n="article.iso22301.p3"></p>
+
+    <h2 id="errores" data-i18n="article.errores.title"></h2>
+
+    <p data-i18n="article.errores.intro"></p>
+
+    <ul data-i18n="article.errores.list"></ul>
+
+    <div class="cta-inline-box anim-fade-up">
+      <div><strong style="font-family:var(--font-serif);font-size:1.1rem" data-i18n="article.cta3.title"></strong><p style="margin-top:8px;color:var(--navy-60)" data-i18n="article.cta3.subtitle"></p></div>
+      <a href="../contacto.html" class="btn-primary" style="white-space:nowrap" data-i18n="article.cta3.link"></a>
+    </div>
+
+    <h2 id="faq" data-i18n="article.faq.title"></h2>
 
     <div class="faq-article">
       <div class="faq-article-item">
-        <div class="faq-article-q">¿Qué diferencia hay entre un BCP y un DRP?</div>
-        <div class="faq-article-a">El BCP (Business Continuity Plan) cubre la continuidad de los procesos de negocio en su conjunto: personas, comunicaciones, instalaciones, procesos manuales alternativos y relación con clientes y proveedores durante la crisis. El DRP (Disaster Recovery Plan) se centra específicamente en la recuperación de los sistemas de TI y la infraestructura tecnológica. El DRP es un componente técnico del BCP, no un sustituto. Una empresa puede tener un DRP excelente y carecer de BCP, lo que significa que sabe cómo recuperar sus sistemas pero no cómo operar mientras tanto.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q1"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a1"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿Cuánto tiempo lleva elaborar un BCP?</div>
-        <div class="faq-article-a">Un BCP básico para una organización mediana puede elaborarse en 4-8 semanas con el acompañamiento de una consultora especializada. El tiempo depende principalmente del número de procesos críticos a analizar, la disponibilidad del equipo interno para participar en el BIA y la madurez previa de la organización en gestión de riesgos. Un BCP completo con evidencias de prueba y orientado a la certificación ISO 22301 requiere entre 3 y 4 meses.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q2"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a2"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿Es obligatorio tener un plan de continuidad de negocio en España?</div>
-        <div class="faq-article-a">No existe una obligación legal general de tener un BCP en España. Sin embargo, sectores específicos sí tienen obligaciones: el financiero (DORA exige planes de continuidad desde enero 2025), operadores de infraestructuras críticas (Ley PIC), sector sanitario y administración pública. Adicionalmente, muchos contratos corporativos y pliegos de licitación pública incluyen la acreditación de un BCP vigente como requisito de contratación.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q3"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a3"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿El BCP necesita actualizarse?</div>
-        <div class="faq-article-a">Sí, con periodicidad mínima anual y siempre que se produzcan cambios significativos en la organización: nuevos sistemas críticos, cambio de proveedores estratégicos, reorganizaciones, nuevas ubicaciones o cambios regulatorios relevantes. Un BCP desactualizado puede ser peor que no tener ninguno, porque genera una falsa sensación de seguridad y puede llevar a tomar decisiones erróneas durante una crisis real.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q4"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a4"></div>
       </div>
       <div class="faq-article-item">
-        <div class="faq-article-q">¿Qué es el RTO y el RPO en un plan de continuidad?</div>
-        <div class="faq-article-a">El RTO (Recovery Time Objective) es el tiempo máximo tolerable que un proceso puede estar interrumpido antes de que el impacto sea inaceptable para la organización. Por ejemplo, un RTO de 4 horas para el sistema de facturación significa que ese sistema debe estar operativo en menos de 4 horas desde la interrupción. El RPO (Recovery Point Objective) es la cantidad máxima de datos que se puede perder, medida en tiempo: un RPO de 1 hora significa que los datos no pueden tener más de 1 hora de antigüedad en el momento de la recuperación. Ambos parámetros se definen en el BIA y determinan las soluciones técnicas necesarias.</div>
+        <div class="faq-article-q" data-i18n="article.faq.q5"></div>
+        <div class="faq-article-a" data-i18n="article.faq.a5"></div>
       </div>
     </div>
 
     <div style="margin-top:64px;padding:40px;background:var(--pearl);border:1px solid var(--border);text-align:center">
-      <h3 style="font-family:'Syne',serif;font-size:28px;font-weight:400;color:var(--navy);margin:0 0 16px">¿Listo para proteger la continuidad de tu negocio?</h3>
-      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-muted);margin:0 0 28px;max-width:500px;margin-left:auto;margin-right:auto">Pide presupuesto · Sin compromiso · Respuesta en 24 horas</p>
-      <a href="../contacto.html" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:16px 32px;text-decoration:none;display:inline-block">Solicitar presupuesto sin compromiso →</a>
+      <h3 style="font-family:'Syne',serif;font-size:28px;font-weight:400;color:var(--navy);margin:0 0 16px" data-i18n="article.bottomCta.title"></h3>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text-muted);margin:0 0 28px;max-width:500px;margin-left:auto;margin-right:auto" data-i18n="article.bottomCta.subtitle"></p>
+      <a href="../contacto.html" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:var(--white);padding:16px 32px;text-decoration:none;display:inline-block" data-i18n="article.bottomCta.link"></a>
     </div>
 
     <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border)">
-      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-muted)">Artículos relacionados:</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-muted)" data-i18n="article.related.title"></p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">
-        <a href="que-es-iso22301.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Qué es ISO 22301 →</a>
-        <a href="que-es-el-ens.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Qué es el ENS →</a>
-        <a href="../iso22301.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px">Certificación ISO 22301 con Avson →</a>
+        <a href="que-es-iso22301.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px" data-i18n="article.related.link1"></a>
+        <a href="que-es-el-ens.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px" data-i18n="article.related.link2"></a>
+        <a href="../iso22301.html" style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--navy);text-decoration:none;border:1px solid var(--border);padding:10px 18px" data-i18n="article.related.link3"></a>
       </div>
     </div>
 
@@ -342,46 +334,46 @@
     <div class="footer__grid">
       <div>
         <span class="footer__logo">AVSON<span> · </span>GRC</span>
-        <p class="footer__tagline">Consultora especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. Certificaciones garantizadas en 3-4 meses.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline"></p>
         <div class="footer__contact">
-          <a href="mailto:info@avson.eu">info@avson.eu</a><br>
+          <a href="mailto:info@avson.eu" data-i18n="footer.email"></a><br>
           <a href="tel:+34648414863">+34 648 41 48 63</a><br>
-          Madrid, España
+          <span data-i18n="footer.address"></span>
         </div>
       </div>
       <div>
-        <div class="footer__col-title">Certificaciones</div>
+        <div class="footer__col-title" data-i18n="footer.col1Title"></div>
         <ul class="footer__links">
-          <li><a href="../ens.html">ENS</a></li>
-          <li><a href="../iso27001.html">ISO 27001</a></li>
-          <li><a href="../iso22301.html">ISO 22301</a></li>
-          <li><a href="../dora.html">DORA</a></li>
-          <li><a href="../nis2.html">NIS2</a></li>
+          <li><a href="../ens.html" data-i18n="footer.col1.ens"></a></li>
+          <li><a href="../iso27001.html" data-i18n="footer.col1.iso27001"></a></li>
+          <li><a href="../iso22301.html" data-i18n="footer.col1.iso22301"></a></li>
+          <li><a href="../dora.html" data-i18n="footer.col1.dora"></a></li>
+          <li><a href="../nis2.html" data-i18n="footer.col1.nis2"></a></li>
         </ul>
       </div>
       <div>
-        <div class="footer__col-title">Empresa</div>
+        <div class="footer__col-title" data-i18n="footer.col2Title"></div>
         <ul class="footer__links">
-          <li><a href="../packs.html">Packs GRC</a></li>
-          <li><a href="../equipo.html">Equipo</a></li>
-          <li><a href="index.html">Blog</a></li>
-          <li><a href="../contacto.html">Contacto</a></li>
+          <li><a href="../packs.html" data-i18n="footer.col2.packs"></a></li>
+          <li><a href="../equipo.html" data-i18n="footer.col2.equipo"></a></li>
+          <li><a href="index.html" data-i18n="footer.col2.blog"></a></li>
+          <li><a href="../contacto.html" data-i18n="footer.col2.contacto"></a></li>
         </ul>
       </div>
       <div>
-        <div class="footer__col-title">Newsletter GRC</div>
-        <p class="footer__newsletter-text">Análisis mensual sobre ENS, ISO 27001, ISO 22301, DORA y cumplimiento normativo. Sin spam.</p>
+        <div class="footer__col-title" data-i18n="footer.col3Title"></div>
+        <p class="footer__newsletter-text" data-i18n="footer.newsletterText"></p>
         <div class="footer__newsletter-form">
-          <input type="email" class="footer__newsletter-input" placeholder="tu@empresa.com">
+          <input type="email" class="footer__newsletter-input" placeholder="" data-i18n-placeholder="footer.newsletterPlaceholder">
           <button class="footer__newsletter-btn">→</button>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <span class="footer__copy">© 2026 Avson Consultoría Estratégica SLU — Todos los derechos reservados.</span>
+      <span class="footer__copy" data-i18n="footer.copy"></span>
       <ul class="footer__legal">
-        <li><a href="../privacidad.html">Política de privacidad</a></li>
-        <li><a href="../cookies.html">Cookies</a></li>
+        <li><a href="../privacidad.html" data-i18n="footer.privacy"></a></li>
+        <li><a href="../cookies.html" data-i18n="footer.cookies"></a></li>
       </ul>
     </div>
   </div>
@@ -402,46 +394,42 @@ document.addEventListener('click', (e) => {
   const ls = document.getElementById('langSwitcher');
   if (ls && !ls.contains(e.target)) ls.classList.remove('open');
 });
-document.querySelectorAll('.faq-article-q').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.closest('.faq-article-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-article-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+document.addEventListener('i18n:ready', function() {
+  document.querySelectorAll('.faq-article-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-article-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-article-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
   });
+  document.querySelectorAll('.anim-fade-up').forEach(el => {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.1});
+    el.style.opacity='0'; el.style.transform='translateY(24px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+    obs.observe(el);
+  });
+  (function() {
+    if (sessionStorage.getItem('_blogPopupShown')) return;
+    var shown = false;
+    function showBlogPopup() {
+      if (shown) return;
+      shown = true;
+      sessionStorage.setItem('_blogPopupShown', '1');
+      document.getElementById('blogPopup').style.display = 'flex';
+    }
+    setTimeout(showBlogPopup, 45000);
+    window.addEventListener('scroll', function() {
+      var scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+      if (scrollPct > 0.65) showBlogPopup();
+    }, { passive: true });
+  })();
 });
-document.querySelectorAll('.anim-fade-up').forEach(el => {
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
-  }, {threshold:0.1});
-  el.style.opacity='0'; el.style.transform='translateY(24px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease';
-  obs.observe(el);
-});
-
-// BLOG POPUP
-(function() {
-  if (sessionStorage.getItem('_blogPopupShown')) return;
-  var shown = false;
-  function showBlogPopup() {
-    if (shown) return;
-    shown = true;
-    sessionStorage.setItem('_blogPopupShown', '1');
-    document.getElementById('blogPopup').style.display = 'flex';
-  }
-  // Show after 45 seconds
-  setTimeout(showBlogPopup, 45000);
-  // OR show when scrolled 65%
-  window.addEventListener('scroll', function() {
-    var scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
-    if (scrollPct > 0.65) showBlogPopup();
-  }, { passive: true });
-})();
-
 function closeBlogPopup() {
   document.getElementById('blogPopup').style.display = 'none';
   sessionStorage.setItem('_blogPopupShown', '1');
 }
-
 function submitBlogPopup(e) {
   e.preventDefault();
   var email = document.getElementById('popupEmail').value.trim();
@@ -455,41 +443,37 @@ function submitBlogPopup(e) {
 <!-- WHATSAPP FLOAT -->
 <div class="human-float" id="humanFloat">
   <div class="human-float__card">
-    <p class="human-float__title">Aquí no responde una IA.</p>
-    <p class="human-float__txt">Tu consulta la lee un especialista de nuestro equipo. Te llamamos en menos de 30 minutos en horario de oficina (L–V, 9–18h); fuera de horario, a primera hora del día siguiente.</p>
-    <a href="../contacto.html" class="human-float__cta" onclick="var f=document.querySelector('form');if(f){f.scrollIntoView({behavior:'smooth'});var i=f.querySelector('input');if(i)setTimeout(function(){i.focus()},600);return false;}">Dejar mis datos →</a>
+    <p class="human-float__title" data-i18n="float.title"></p>
+    <p class="human-float__txt" data-i18n="float.text"></p>
+    <a href="../contacto.html" class="human-float__cta" onclick="var f=document.querySelector('form');if(f){f.scrollIntoView({behavior:'smooth'});var i=f.querySelector('input');if(i)setTimeout(function(){i.focus()},600);return false;}" data-i18n="float.cta"></a>
   </div>
-  <button class="human-float__btn" onclick="document.getElementById('humanFloat').classList.toggle('open')" aria-expanded="false" aria-label="Te atiende una persona, no una IA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Personas, no IA</span></button>
+  <button class="human-float__btn" onclick="document.getElementById('humanFloat').classList.toggle('open')" aria-expanded="false" aria-label="Te atiende una persona, no una IA"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-i18n="float.btn"></span></button>
 </div>
 <!-- BLOG LEAD CAPTURE POPUP -->
 <div id="blogPopup" style="display:none;position:fixed;inset:0;background:rgba(26,39,68,0.78);z-index:8888;align-items:center;justify-content:center;padding:20px">
   <div style="background:var(--white);max-width:440px;width:100%;padding:40px 36px;position:relative">
     <button onclick="closeBlogPopup()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;color:var(--navy-60);cursor:pointer;line-height:1">×</button>
-    <span style="font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px">Recurso gratuito</span>
-    <h2 style="font-family:var(--font-serif);font-size:clamp(22px,2.5vw,28px);font-weight:400;color:var(--navy);margin-bottom:12px;line-height:1.2">¿Tu empresa necesita certificarse?</h2>
-    <p style="font-family:var(--font-sans);font-size:0.88rem;color:var(--navy-60);line-height:1.65;margin-bottom:28px">Habla gratis con un experto. En 15 minutos te decimos exactamente qué certificación necesitas, en qué plazo y a qué coste.</p>
+    <span style="font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px" data-i18n="popup.label"></span>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(22px,2.5vw,28px);font-weight:400;color:var(--navy);margin-bottom:12px;line-height:1.2" data-i18n="popup.title"></h2>
+    <p style="font-family:var(--font-sans);font-size:0.88rem;color:var(--navy-60);line-height:1.65;margin-bottom:28px" data-i18n="popup.text"></p>
     <form onsubmit="submitBlogPopup(event)" style="display:flex;flex-direction:column;gap:12px">
-      <input type="email" id="popupEmail" placeholder="tu@empresa.com" required
+      <input type="email" id="popupEmail" placeholder="" data-i18n-placeholder="popup.emailPlaceholder" required
         style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.9rem;color:var(--navy);outline:none;box-sizing:border-box"
         onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'">
-      <input type="text" id="popupEmpresa" placeholder="Nombre de tu empresa" required
+      <input type="text" id="popupEmpresa" placeholder="" data-i18n-placeholder="popup.empresaPlaceholder" required
         style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.9rem;color:var(--navy);outline:none;box-sizing:border-box"
         onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'">
-      <button type="submit" style="background:var(--navy);color:var(--white);border:none;padding:16px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;letter-spacing:0.04em;cursor:pointer;width:100%">
-        Pide presupuesto gratis →
-      </button>
+      <button type="submit" style="background:var(--navy);color:var(--white);border:none;padding:16px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;letter-spacing:0.04em;cursor:pointer;width:100%" data-i18n="popup.submit"></button>
     </form>
-    <p style="font-family:var(--font-sans);font-size:0.72rem;color:var(--navy-60);text-align:center;margin-top:12px;margin-bottom:0">Sin compromiso · Te llamamos en <30 min (L–V 9–18h)</p>
-    <button onclick="closeBlogPopup()" style="display:block;width:100%;background:none;border:none;font-family:var(--font-sans);font-size:0.78rem;color:var(--navy-60);cursor:pointer;padding:8px;margin-top:4px">
-      No gracias, seguir leyendo
-    </button>
+    <p style="font-family:var(--font-sans);font-size:0.72rem;color:var(--navy-60);text-align:center;margin-top:12px;margin-bottom:0" data-i18n="popup.disclaimer"></p>
+    <button onclick="closeBlogPopup()" style="display:block;width:100%;background:none;border:none;font-family:var(--font-sans);font-size:0.78rem;color:var(--navy-60);cursor:pointer;padding:8px;margin-top:4px" data-i18n="popup.dismiss"></button>
   </div>
 </div>
 
 <!-- CTA MÓVIL PERMANENTE -->
 <div class="v3-mobile-cta"><div class="v3-mobile-cta__row">
-  <a href="tel:+34648414863" class="v3-mobile-cta__call" aria-label="Llamar">Llamar</a>
-  <a href="../contacto.html" class="v3-mobile-cta__main">Habla con un experto →</a>
+  <a href="tel:+34648414863" class="v3-mobile-cta__call" aria-label="Llamar" data-i18n="mobileCta.call"></a>
+  <a href="../contacto.html" class="v3-mobile-cta__main" data-i18n="mobileCta.main"></a>
 </div></div>
 </body>
 </html>
