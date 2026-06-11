@@ -87,6 +87,10 @@ async function getToken() {
 }
 
 async function sendMail(token, to, subject, htmlContent) {
+  // to puede ser "a@b.com" o "a@b.com,c@d.com"
+  const recipients = String(to).split(',').map(e => e.trim()).filter(Boolean)
+    .map(address => ({ emailAddress: { address } }))
+
   const res = await fetch(
     `https://graph.microsoft.com/v1.0/users/${SENDER}/sendMail`,
     {
@@ -99,7 +103,7 @@ async function sendMail(token, to, subject, htmlContent) {
         message: {
           subject,
           body: { contentType: 'HTML', content: htmlContent },
-          toRecipients: [{ emailAddress: { address: to } }],
+          toRecipients: recipients,
         },
         saveToSentItems: true,
       }),
