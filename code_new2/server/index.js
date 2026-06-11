@@ -1,9 +1,26 @@
 import express from 'express'
 import cors from 'cors'
+import rateLimit from 'express-rate-limit'
 
 const app = express()
-app.use(cors())
+
+// ── CORS: solo permitir avson.eu ──
+app.use(cors({
+  origin: ['https://avson.eu', 'https://www.avson.eu'],
+  methods: ['POST', 'GET'],
+  allowedHeaders: ['Content-Type']
+}))
+
 app.use(express.json())
+
+// ── Rate limiting: max 5 leads por minuto por IP ──
+const leadLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 5,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Demasiadas solicitudes, inténtalo de nuevo en un minuto' }
+})
 
 // ── Azure Graph API config ──
 const TENANT = process.env.AZURE_TENANT_ID
@@ -115,6 +132,26 @@ async function sendMail(token, to, subject, htmlContent) {
   }
 }
 
+// ── Validation helpers ──
+const EMAIL_RE = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/
+
+function isValidEmail(email) {
+  if (typeof email !== 'string') return false
+  if (email.length > 254) return false
+  if (/[\r\n\x00]/.test(email)) return false   // bloquear inyección CRLF
+  return EMAIL_RE.test(email)
+}
+
+function escapeHtml(text) {
+  const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }
+  return String(text).replace(/[&<>"']/g, m => map[m])
+}
+
+function sanitizeField(val) {
+  const s = String(val).trim()
+  return s.length > 500 ? s.substring(0, 500) : s
+}
+
 // ── Lead endpoint ──
 const FIELD_LABELS = {
   nombre: 'Nombre',
@@ -126,11 +163,11 @@ const FIELD_LABELS = {
   ts: 'Fecha'
 }
 
-app.post('/api/lead', async (req, res) => {
+app.post('/api/lead', leadLimiter, async (req, res) => {
   const data = req.body || {}
 
-  if (!data.email) {
-    return res.status(400).json({ error: 'Email is required' })
+  if (!isValidEmail(data.email)) {
+    return res.status(400).json({ error: 'Valid email is required' })
   }
 
   try {
@@ -139,19 +176,19 @@ app.post('/api/lead', async (req, res) => {
     const rows = Object.entries(data)
       .map(([key, val]) => {
         const label = FIELD_LABELS[key] || key
-        const escaped = String(val).replace(/</g, '&lt;').replace(/>/g, '&gt;')
-        return `<tr><td style="padding:6px 12px;font-weight:bold;vertical-align:top">${label}</td><td style="padding:6px 12px">${escaped}</td></tr>`
+        const escaped = escapeHtml(sanitizeField(val))
+        return `<tr><td style="padding:6px 12px;font-weight:bold;vertical-align:top">${escapeHtml(label)}</td><td style="padding:6px 12px">${escaped}</td></tr>`
       })
       .join('')
 
-    const nombre = data.nombre || data.email.split('@')[0]
-    const source = data.source || 'web'
+    const nombre = sanitizeField(data.nombre || data.email.split('@')[0])
+    const source = sanitizeField(data.source || 'web')
 
     // 1. Internal notification
     await sendMail(
       token,
       RECIPIENT,
-      `[avson.eu] Lead de ${nombre} — ${source}`,
+      `[avson.eu] Lead de ${escapeHtml(nombre)} — ${escapeHtml(source)}`,
       `<h2>Nuevo lead desde avson.eu</h2>
        <table style="border-collapse:collapse;font-family:sans-serif;">
          ${rows}
@@ -163,12 +200,12 @@ app.post('/api/lead', async (req, res) => {
       token,
       data.email,
       'Hemos recibido tu solicitud — avson',
-      buildConfirmationEmail(nombre)
+      buildConfirmationEmail(escapeHtml(nombre))
     )
 
     res.json({ ok: true })
   } catch (err) {
-    console.error('[/api/lead] Error:', err.message || err)
+    console.error('[/api/lead] Error:', err.message ? err.message.substring(0, 200) : 'Unknown error')
     res.status(500).json({ error: 'Internal server error' })
   }
 })
