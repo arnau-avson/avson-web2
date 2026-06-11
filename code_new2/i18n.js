@@ -1,20 +1,22 @@
 // AVSON i18n — carga textos desde palabras.json
 (function () {
-  // Detectar idioma desde la URL: /en/webinars.html → "en", /webinars.html → "es"
-  var pathParts = window.location.pathname.split('/').filter(Boolean);
-  var LANG = (pathParts.length > 1 && pathParts[0].length === 2) ? pathParts[0] : 'es';
+  // 1. Detectar idioma: localStorage > navigator.language > default 'es'
+  var saved = localStorage.getItem('avson-lang');
+  var browserLang = (navigator.language || '').split('-')[0];
+  var LANG = saved || (browserLang === 'en' ? 'en' : 'es');
 
-  // Detectar página incluyendo subdirectorio: blog/index, blog/que-es-el-ens, etc.
-  var pageParts = LANG === 'es' ? pathParts : pathParts.slice(1);
+  // 2. Detectar página desde la URL: /blog/que-es-el-ens.html → "blog/que-es-el-ens"
+  var pathParts = window.location.pathname.split('/').filter(Boolean);
+  var pageParts = pathParts.slice();
   if (pageParts.length === 0) pageParts = ['index'];
   pageParts[pageParts.length - 1] = pageParts[pageParts.length - 1].replace(/\.html$/, '') || 'index';
   var PAGE = pageParts.join('/');
 
-  // Ruta al JSON (relativa, ajustada por profundidad de subdirectorio)
+  // 3. Ruta al JSON (relativa, ajustada por profundidad de subdirectorio)
   var depth = pageParts.length - 1;
   var prefix = '';
   for (var i = 0; i < depth; i++) prefix += '../';
-  var jsonPath = LANG === 'es' ? prefix + 'assets/palabras.json' : '/' + LANG + '/assets/palabras.json';
+  var jsonPath = prefix + 'assets/palabras.json';
 
   fetch(jsonPath)
     .then(function (res) {
@@ -22,13 +24,20 @@
       return res.json();
     })
     .then(function (data) {
+      // Fallback: si no hay traducciones en el idioma elegido, usar 'es'
       var langData = data[LANG];
+      if (!langData || !langData[PAGE]) {
+        LANG = 'es';
+        langData = data[LANG];
+      }
       if (!langData || !langData[PAGE]) {
         console.warn('[i18n] No se encontró data["' + LANG + '"]["' + PAGE + '"]');
         return;
       }
       var t = langData[PAGE];
       applyTranslations(t);
+      document.documentElement.lang = LANG;
+      setupLangSwitch();
       document.dispatchEvent(new Event('i18n:ready'));
     })
     .catch(function (err) {
@@ -36,7 +45,6 @@
     });
 
   function resolve(obj, key) {
-    // Resuelve claves con punto: "hero.title" → obj["hero.title"] o obj.hero.title
     if (obj[key] !== undefined) return obj[key];
     var parts = key.split('.');
     var val = obj;
@@ -87,7 +95,7 @@
       if (val !== undefined) el.setAttribute('placeholder', val);
     });
 
-    // 5. Listas dinámicas (upcoming.items, recordings.items, faq.items)
+    // 5. Listas dinámicas
     document.querySelectorAll('[data-i18n-list]').forEach(function (container) {
       var listKey = container.getAttribute('data-i18n-list');
       var templateId = container.getAttribute('data-i18n-template');
@@ -98,14 +106,52 @@
       container.innerHTML = '';
       items.forEach(function (item, idx) {
         var html = template.innerHTML;
-        // Reemplaza {{campo}} por el valor del item
         html = html.replace(/\{\{(\w+)\}\}/g, function (_, field) {
           return item[field] !== undefined ? item[field] : '';
         });
-        // Reemplaza {{$index}} por el índice
         html = html.replace(/\{\{\$index\}\}/g, String(idx));
         container.insertAdjacentHTML('beforeend', html);
       });
+    });
+  }
+
+  // Lang switch: reescribir menú con solo ES/EN y guardar preferencia
+  function setupLangSwitch() {
+    var otherLang = LANG === 'es' ? 'en' : 'es';
+    var otherLabel = LANG === 'es' ? 'EN' : 'ES';
+
+    function switchLang(e) {
+      e.preventDefault();
+      localStorage.setItem('avson-lang', otherLang);
+      location.reload();
+    }
+
+    // Desktop: reemplazar contenido del menú dropdown
+    document.querySelectorAll('.lang-switch__menu').forEach(function (menu) {
+      menu.innerHTML = '';
+      var a = document.createElement('a');
+      a.href = '#';
+      a.textContent = otherLabel;
+      a.addEventListener('click', switchLang);
+      menu.appendChild(a);
+    });
+
+    // Mobile overlay: reemplazar los links de idioma
+    document.querySelectorAll('.nav-overlay').forEach(function (overlay) {
+      var langLinks = overlay.querySelectorAll('a[hreflang], a[href*="/en/"], a[href*="/de/"], a[href*="/fr/"], a[href*="/it/"]');
+      if (langLinks.length > 0) {
+        // Mantener solo el primero, cambiar su contenido
+        var first = langLinks[0];
+        first.href = '#';
+        first.textContent = otherLabel;
+        first.style.fontSize = '15px';
+        first.removeAttribute('hreflang');
+        first.addEventListener('click', switchLang);
+        // Eliminar el resto
+        for (var i = 1; i < langLinks.length; i++) {
+          langLinks[i].remove();
+        }
+      }
     });
   }
 }());
