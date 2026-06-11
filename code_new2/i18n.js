@@ -1,7 +1,7 @@
 // AVSON i18n — carga textos desde palabras.json
 (function () {
   // 1. Detectar idioma: localStorage > navigator.language > default 'es'
-  var SUPPORTED = ['es', 'en', 'fr'];
+  var SUPPORTED = ['es', 'en', 'fr', 'it'];
   var saved = localStorage.getItem('avson-lang');
   var browserLang = (navigator.language || '').split('-')[0];
   var LANG = saved || (SUPPORTED.indexOf(browserLang) !== -1 ? browserLang : 'es');
