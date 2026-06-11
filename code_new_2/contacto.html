@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habla con un experto ENS | Avson GRC</title>
-  <meta name="description" content="Habla con un experto en certificación ENS. Gratuito, sin compromiso. Te llamamos en <30 min (horario de oficina).">
+  <title></title>
+  <meta name="description" content="">
   <link rel="canonical" href="https://avson.eu/contacto.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <script src="i18n.js"></script>
   <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -97,13 +98,13 @@
     <div class="cnav__inner">
       <a href="index.html" class="cnav__logo">avs<span class="logo-o">o</span>n</a>
       <div class="cnav__links">
-        <a href="ens.html">ENS</a>
-        <a href="iso27001.html">ISO 27001</a>
-        <a href="iso22301.html">ISO 22301</a>
-        <a href="dora.html">DORA</a>
-        <a href="nis2.html">NIS2</a>
-        <a href="packs.html">Packs</a>
-        <a href="equipo.html">Equipo</a>
+        <a href="ens.html" data-i18n="nav.links.ens"></a>
+        <a href="iso27001.html" data-i18n="nav.links.iso27001"></a>
+        <a href="iso22301.html" data-i18n="nav.links.iso22301"></a>
+        <a href="dora.html" data-i18n="nav.links.dora"></a>
+        <a href="nis2.html" data-i18n="nav.links.nis2"></a>
+        <a href="packs.html" data-i18n="nav.links.packs"></a>
+        <a href="equipo.html" data-i18n="nav.links.equipo"></a>
       </div>
       <a href="tel:+34648414863" class="cnav__phone">648 414 863</a>
       <div class="lang-switch">
@@ -115,54 +116,54 @@
           <a href="it/index.html">IT</a>
         </div>
       </div>
-      <a href="#contactForm" class="cnav__cta">Habla con un experto →</a>
+      <a href="#contactForm" class="cnav__cta" data-i18n="nav.cta"></a>
     </div>
   </nav>
 
   <main class="cmain">
-    <div class="fomo-bar">El 85% de empresas sin ENS pierde sus licitaciones</div>
+    <div class="fomo-bar" data-i18n="fomo"></div>
 
     <div class="card">
-      <span class="badge">Te llamamos en <30 min (horario de oficina)</span>
-      <h1 class="card-title">Habla con un experto.</h1>
-      <p class="card-sub">Gratuito · Sin compromiso · En 30 min sabrás exactamente qué necesitas</p>
+      <span class="badge" data-i18n="badge"></span>
+      <h1 class="card-title" data-i18n="card.title"></h1>
+      <p class="card-sub" data-i18n="card.sub"></p>
 
-      <p class="qual-label">¿Qué necesitas?</p>
+      <p class="qual-label" data-i18n="qualLabel"></p>
       <div class="qual-grid">
-        <button type="button" class="qual-btn qual-btn--urgent" onclick="pickQ(this,'ENS Express urgente')">ENS urgente</button>
-        <button type="button" class="qual-btn" onclick="pickQ(this,'ENS estándar')">ENS estándar</button>
-        <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 27001')">ISO 27001</button>
-        <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 22301')">ISO 22301</button>
-        <button type="button" class="qual-btn" onclick="pickQ(this,'DORA')">DORA</button>
-        <button type="button" class="qual-btn" onclick="pickQ(this,'No lo sé aún')">No lo sé aún</button>
-        <button type="button" class="qual-btn" onclick="pickQ(this,'Otras')">Otras</button>
+        <button type="button" class="qual-btn qual-btn--urgent" onclick="pickQ(this,'ENS Express urgente')" data-i18n="qualBtn1"></button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'ENS estándar')" data-i18n="qualBtn2"></button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 27001')" data-i18n="qualBtn3"></button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'ISO 22301')" data-i18n="qualBtn4"></button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'DORA')" data-i18n="qualBtn5"></button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'No lo sé aún')" data-i18n="qualBtn6"></button>
+        <button type="button" class="qual-btn" onclick="pickQ(this,'Otras')" data-i18n="qualBtn7"></button>
       </div>
       <form id="contactForm" onsubmit="avsonSubmitLead(event,{source:'contacto',event:'contact_form_submit'})" novalidate>
         <input type="hidden" id="cNecesidad" name="necesidad" value="">
         <div class="form-group">
-          <input type="text"  id="cNombre" name="nombre" placeholder="Tu nombre *" autocomplete="given-name" required>
+          <input type="text"  id="cNombre" name="nombre" placeholder="" data-i18n-placeholder="form.placeholderName" autocomplete="given-name" required>
         </div>
         <div class="form-group">
-          <input type="email" id="cEmail"  name="email"  placeholder="Tu email *" autocomplete="email" required>
+          <input type="email" id="cEmail"  name="email"  placeholder="" data-i18n-placeholder="form.placeholderEmail" autocomplete="email" required>
         </div>
         <div class="rgpd">
           <input type="checkbox" id="cRgpd" required>
-          <label for="cRgpd">Al enviar, acepto que Avson me contacte para responder mi consulta. <a href="privacidad.html" target="_blank">Política de privacidad</a></label>
+          <label for="cRgpd" data-i18n="form.rgpd"></label>
         </div>
-        <button type="submit" class="btn-cta">Habla con un experto →</button>
-        <p class="lock-text">Gratuito · Sin compromiso · Confidencial</p>
+        <button type="submit" class="btn-cta" data-i18n="form.submit"></button>
+        <p class="lock-text" data-i18n="form.lockText"></p>
       </form>
 
       <div class="alt-phone">
-        <span>¿Prefieres llamar?</span>
+        <span data-i18n="altPhone.label"></span>
         <a href="tel:+34648414863">+34 648 414 863</a>
       </div>
     </div>
 
     <div class="trust-strip">
-      <span>355+ empresas certificadas</span>
-      <span>100% de éxito</span>
-      <span>Garantía por escrito</span>
+      <span data-i18n="trust1"></span>
+      <span data-i18n="trust2"></span>
+      <span data-i18n="trust3"></span>
     </div>
   </main>
 
@@ -171,33 +172,33 @@
     <div class="cfooter__grid">
       <div>
         <div class="cfooter__logo" style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em">avs<span class="logo-o" style="color:#fff">o</span>n</div>
-        <p>Consultora GRC especializada en ENS, ISO 27001, ISO 22301, DORA y NIS2. Tu socio estratégico en compliance.</p>
-        <p style="margin-top:10px">hola@avson.eu · +34 648 41 48 63<br>Calle Pedro Muñoz Seca 2 (Madrid) · Plaza Francesc Macià 7 (Barcelona)</p>
-        <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:12px;color:var(--gold);text-decoration:none">LinkedIn · Avson GRC</a>
+        <p data-i18n="footer.desc"></p>
+        <p style="margin-top:10px" data-i18n="footer.contact"></p>
+        <a href="https://www.linkedin.com/avson" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:12px;color:var(--gold);text-decoration:none" data-i18n="footer.linkedin"></a>
       </div>
       <div>
-        <p role="presentation" style="font-weight:600">Certificaciones</p>
+        <p role="presentation" style="font-weight:600" data-i18n="footer.colCerts"></p>
         <ul>
-          <li><a href="ens.html">ENS</a></li>
-          <li><a href="ens-express.html">ENS Express</a></li>
-          <li><a href="iso27001.html">ISO 27001</a></li>
-          <li><a href="iso22301.html">ISO 22301</a></li>
-          <li><a href="otras.html">Otras certificaciones</a></li>
+          <li><a href="ens.html" data-i18n="footer.linkEns"></a></li>
+          <li><a href="ens-express.html" data-i18n="footer.linkEnsExpress"></a></li>
+          <li><a href="iso27001.html" data-i18n="footer.linkIso27001"></a></li>
+          <li><a href="iso22301.html" data-i18n="footer.linkIso22301"></a></li>
+          <li><a href="otras.html" data-i18n="footer.linkOtras"></a></li>
         </ul>
       </div>
       <div>
-        <p role="presentation" style="font-weight:600">Empresa</p>
+        <p role="presentation" style="font-weight:600" data-i18n="footer.colCompany"></p>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="packs.html">Packs</a></li>
-          <li><a href="equipo.html">Equipo</a></li>
-          <li><a href="unete.html">Únete al equipo</a></li>
+          <li><a href="index.html" data-i18n="footer.linkInicio"></a></li>
+          <li><a href="packs.html" data-i18n="footer.linkPacks"></a></li>
+          <li><a href="equipo.html" data-i18n="footer.linkEquipo"></a></li>
+          <li><a href="unete.html" data-i18n="footer.linkUnete"></a></li>
         </ul>
       </div>
     </div>
     <div class="cfooter__bottom">
-      <span>© 2026 Avson Consultoría Estratégica SLU · CIF B10560795</span>
-      <span><a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></span>
+      <span data-i18n="footer.copy"></span>
+      <span><a href="privacidad.html" data-i18n="footer.privacy"></a> · <a href="cookies.html" data-i18n="footer.cookies"></a></span>
     </div>
   </footer>
 

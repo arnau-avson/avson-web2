@@ -4,12 +4,17 @@
   var pathParts = window.location.pathname.split('/').filter(Boolean);
   var LANG = (pathParts.length > 1 && pathParts[0].length === 2) ? pathParts[0] : 'es';
 
-  // Detectar página desde el filename: webinars.html → "webinars"
-  var lastPart = pathParts[pathParts.length - 1] || 'index';
-  var PAGE = lastPart.replace(/\.html$/, '');
+  // Detectar página incluyendo subdirectorio: blog/index, blog/que-es-el-ens, etc.
+  var pageParts = LANG === 'es' ? pathParts : pathParts.slice(1);
+  if (pageParts.length === 0) pageParts = ['index'];
+  pageParts[pageParts.length - 1] = pageParts[pageParts.length - 1].replace(/\.html$/, '') || 'index';
+  var PAGE = pageParts.join('/');
 
-  // Ruta al JSON (relativa a la raíz)
-  var jsonPath = LANG === 'es' ? './assets/palabras.json' : '/' + LANG + '/assets/palabras.json';
+  // Ruta al JSON (relativa, ajustada por profundidad de subdirectorio)
+  var depth = pageParts.length - 1;
+  var prefix = '';
+  for (var i = 0; i < depth; i++) prefix += '../';
+  var jsonPath = LANG === 'es' ? prefix + 'assets/palabras.json' : '/' + LANG + '/assets/palabras.json';
 
   fetch(jsonPath)
     .then(function (res) {
