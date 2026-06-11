@@ -138,16 +138,22 @@
 
     // Mobile overlay: reemplazar los links de idioma
     document.querySelectorAll('.nav-overlay').forEach(function (overlay) {
-      var langLinks = overlay.querySelectorAll('a[hreflang], a[href*="/en/"], a[href*="/de/"], a[href*="/fr/"], a[href*="/it/"]');
+      var allLinks = overlay.querySelectorAll('a');
+      var langLinks = [];
+      allLinks.forEach(function (a) {
+        var href = a.getAttribute('href') || '';
+        var text = a.textContent.trim().toUpperCase();
+        if (a.hasAttribute('hreflang') || /\b(en|de|fr|it)\b/i.test(href) || /^(EN|DE|FR|IT|ES)$/.test(text)) {
+          langLinks.push(a);
+        }
+      });
       if (langLinks.length > 0) {
-        // Mantener solo el primero, cambiar su contenido
         var first = langLinks[0];
         first.href = '#';
         first.textContent = otherLabel;
         first.style.fontSize = '15px';
         first.removeAttribute('hreflang');
         first.addEventListener('click', switchLang);
-        // Eliminar el resto
         for (var i = 1; i < langLinks.length; i++) {
           langLinks[i].remove();
         }
