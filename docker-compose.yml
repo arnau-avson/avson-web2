@@ -12,3 +12,9 @@ services:
     restart: unless-stopped
     expose:
       - "3001"
+    environment:
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID}
+      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID}
+      - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET}
+      - MAIL_SENDER=${MAIL_SENDER}
+      - MAIL_RECIPIENT=${MAIL_RECIPIENT}
