@@ -75,9 +75,9 @@ app.post('/__auth', (req, res) => {
   res.status(401).send(page)
 })
 
-// Auth middleware — skip for favicon and robots.txt
+// Auth middleware — skip for API routes, favicon and robots.txt
 app.use((req, res, next) => {
-  if (req.path === '/__auth' || req.path === '/favicon.svg' || req.path === '/robots.txt') return next()
+  if (req.path === '/__auth' || req.path === '/favicon.svg' || req.path === '/robots.txt' || req.path.startsWith('/api/')) return next()
   const cookies = parseCookies(req.headers.cookie)
   if (cookies[AUTH_COOKIE]) return next()
   const page = loginPage.replace('ERRORMSG', '')
@@ -228,6 +228,65 @@ app.post('/api/contact', async (req, res) => {
 
     res.json({ ok: true })
   } catch {
+    res.status(500).json({ error: 'Internal server error' })
+  }
+})
+
+// ── Generic Lead endpoint (code_new2 forms) ──
+const FIELD_LABELS = {
+  nombre: 'Nombre',
+  email: 'Email',
+  empresa: 'Empresa',
+  necesidad: 'Necesidad',
+  source: 'Origen',
+  page: 'Página',
+  ts: 'Fecha'
+}
+
+app.post('/api/lead', async (req, res) => {
+  const data = req.body || {}
+
+  if (!data.email) {
+    return res.status(400).json({ error: 'Email is required' })
+  }
+
+  try {
+    const token = await getToken()
+
+    // Build HTML table with all fields
+    const rows = Object.entries(data)
+      .map(([key, val]) => {
+        const label = FIELD_LABELS[key] || key
+        const escaped = String(val).replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        return `<tr><td style="padding:6px 12px;font-weight:bold;vertical-align:top">${label}</td><td style="padding:6px 12px">${escaped}</td></tr>`
+      })
+      .join('')
+
+    const nombre = data.nombre || data.email.split('@')[0]
+    const source = data.source || 'web'
+
+    // 1. Internal notification
+    await sendMail(
+      token,
+      RECIPIENT,
+      `[avson.eu] Lead de ${nombre} — ${source}`,
+      `<h2>Nuevo lead desde avson.eu</h2>
+       <table style="border-collapse:collapse;font-family:sans-serif;">
+         ${rows}
+       </table>`
+    )
+
+    // 2. Confirmation to sender
+    await sendMail(
+      token,
+      data.email,
+      'Hemos recibido tu solicitud — avson',
+      buildConfirmationEmail(nombre)
+    )
+
+    res.json({ ok: true })
+  } catch (err) {
+    console.error('[/api/lead] Error:', err.message || err)
     res.status(500).json({ error: 'Internal server error' })
   }
 })

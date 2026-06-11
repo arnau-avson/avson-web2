@@ -1,8 +1,14 @@
-version: '3.8'
-
 services:
   avson-web:
     build: .
     ports:
       - "3000:3000"
     restart: unless-stopped
+    depends_on:
+      - avson-api
+
+  avson-api:
+    build: ./code_new2/server
+    restart: unless-stopped
+    expose:
+      - "3001"

@@ -13,7 +13,7 @@
 
 window.AVSON_CONFIG = {
   // ⬇⬇⬇  PEGA AQUÍ LA URL DE TU ENDPOINT CUANDO LO TENGAS  ⬇⬇⬇
-  LEAD_ENDPOINT: "",        // ej. "https://formspree.io/f/xxxxxxx"  ó  "https://hooks.zapier.com/..."
+  LEAD_ENDPOINT: "/api/lead",
   // ⬆⬆⬆  ───────────────────────────────────────────────  ⬆⬆⬆
 
   // Si tu endpoint espera un método/headers concretos, ajústalos aquí:
@@ -277,4 +277,96 @@ function avsonTrack(event, props) {
   function init(){ document.querySelectorAll(".tcar").forEach(initCar); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
+})();
+
+/* ──────────────────────────────────────────────────────────────────────────
+   OVERRIDES: submitBlogPopup y submitLeadGate
+   ──────────────────────────────────────────────────────────────────────────
+   Estas funciones se definen inline en cada HTML. Las sobrescribimos aquí
+   después de DOMContentLoaded para que envíen el lead al backend.
+   ────────────────────────────────────────────────────────────────────────── */
+(function () {
+  function override() {
+    // ── Blog popup (19 blog pages) ──
+    if (document.getElementById('blogPopup')) {
+      window.submitBlogPopup = function (e) {
+        if (e && e.preventDefault) e.preventDefault();
+        var email = (document.getElementById('popupEmail') || {}).value;
+        var empresa = (document.getElementById('popupEmpresa') || {}).value;
+        if (!email || !empresa) return;
+        email = email.trim();
+        empresa = empresa.trim();
+        if (!avsonIsValidEmail(email)) return;
+
+        var data = {
+          email: email,
+          empresa: empresa,
+          source: 'blog_popup',
+          page: window.location.pathname,
+          ts: new Date().toISOString()
+        };
+
+        avsonTrack('lead_generated', { source: 'blog_popup' });
+
+        var endpoint = window.AVSON_CONFIG.LEAD_ENDPOINT;
+        if (endpoint) {
+          fetch(endpoint, {
+            method: window.AVSON_CONFIG.ENDPOINT_METHOD,
+            headers: window.AVSON_CONFIG.ENDPOINT_HEADERS,
+            body: JSON.stringify(data)
+          }).catch(function () {});
+        }
+
+        document.getElementById('blogPopup').style.display = 'none';
+        // Redirect relativo (funciona desde /blog/)
+        window.location.href = (window.location.pathname.indexOf('/blog/') !== -1 ? '../' : '') + 'contacto.html';
+      };
+    }
+
+    // ── Diagnostic lead gate (diagnostico.html) ──
+    if (document.getElementById('leadGateModal')) {
+      var originalSubmitLeadGate = window.submitLeadGate;
+      window.submitLeadGate = function (e) {
+        if (e && e.preventDefault) e.preventDefault();
+        var nombre = (document.getElementById('gateNombre') || {}).value;
+        var email = (document.getElementById('gateEmail') || {}).value;
+        var empresa = (document.getElementById('gateEmpresa') || {}).value;
+        if (!email) return;
+
+        var data = {
+          nombre: (nombre || '').trim(),
+          email: email.trim(),
+          empresa: (empresa || '').trim(),
+          source: 'diagnostico',
+          page: window.location.pathname,
+          ts: new Date().toISOString()
+        };
+
+        avsonTrack('lead_generated', { source: 'diagnostico' });
+
+        var endpoint = window.AVSON_CONFIG.LEAD_ENDPOINT;
+        if (endpoint) {
+          fetch(endpoint, {
+            method: window.AVSON_CONFIG.ENDPOINT_METHOD,
+            headers: window.AVSON_CONFIG.ENDPOINT_HEADERS,
+            body: JSON.stringify(data)
+          }).catch(function () {});
+        }
+
+        // Continuar con el flujo original del diagnóstico (mostrar resultado)
+        if (typeof originalSubmitLeadGate === 'function') {
+          originalSubmitLeadGate(e);
+        } else {
+          // Fallback: cerrar modal y mostrar resultado
+          document.getElementById('leadGateModal').style.display = 'none';
+        }
+      };
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', override);
+  } else {
+    override();
+  }
 })();
