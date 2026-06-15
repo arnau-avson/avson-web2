@@ -1347,13 +1347,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__logo {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--white);
   margin-bottom: 16px;
   display: block;
 }
+.footer__logo img { height: 22px; width: auto; display: block; }
 
 .footer__logo span { color: var(--gold); }
 
@@ -4218,9 +4215,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .v3-nav__logo {
-  font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--navy);
-  text-decoration: none; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.02em;
+  text-decoration: none; white-space: nowrap; flex-shrink: 0; display: flex; align-items: center;
 }
+.v3-nav__logo img { height: 24px; width: auto; display: block; }
 .v3-nav__logo span:not(.logo-o) { color: var(--gold); margin: 0 2px; }
 .v3-nav__phone { font-family: var(--font-sans); font-size: 14px; font-weight: 600; color: var(--navy); text-decoration: none; white-space: nowrap; flex-shrink: 0; }
 .v3-nav__phone:hover { color: var(--gold); }
@@ -4509,7 +4506,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Footer v3 ─────────────────────────────────────── */
 .v3-footer { background: var(--navy); padding: 72px 0 0; }
 .v3-footer__grid { display: grid; grid-template-columns: 3fr 2fr 2fr 3fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-.v3-footer__logo { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); display: block; margin-bottom: 12px; }
+.v3-footer__logo { display: block; margin-bottom: 12px; }
+.v3-footer__logo img { height: 22px; width: auto; display: block; }
 .v3-footer__logo span { color: var(--gold); }
 .v3-footer__brand p { font-family: var(--font-sans); font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.65; margin-bottom: 20px; }
 .v3-footer__contact { display: flex; flex-direction: column; gap: 6px; font-family: var(--font-sans); font-size: 13px; }
@@ -4907,11 +4905,7 @@ h1, h2, h3 { font-weight: 700; }
 .v3-btn:hover, .btn:hover { transform: translateY(-1px); }
 blockquote, .tcar__quote, .testimonial-quote { font-style: normal; font-weight: 500; }
 
-/* Logo v2: avsôn */
-.v3-nav__logo { font-family: var(--font-serif); font-weight: 700; letter-spacing: -0.02em; }
-.logo-o { position: relative; display: inline-block; }
-.v3-nav__logo .logo-o, .footer__logo .logo-o { color: inherit; margin: 0; }
-.logo-o::after { content: "\02C6"; position: absolute; top: -0.46em; left: 50%; transform: translateX(-50%); font-size: 0.62em; line-height: 1; color: var(--gold); }
+/* Logo v2: SVG image */
 
 /* Selector de idioma navbar */
 .lang-switch { position: relative; font-size: 13px; }
