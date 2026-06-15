@@ -42,8 +42,11 @@
   </script>
   <script src="i18n.js?v=4"></script>
   <script src="avson-leads.js" defer></script>
+  <script src="avson-consent.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6KDZDV6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Google Tag Manager (noscript) -->
   <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 
@@ -362,15 +365,6 @@
   </div>
 </footer>
 
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-banner__text" data-i18n="cookieBanner.text"></p>
-  <div class="cookie-banner__actions">
-    <button class="cookie-accept" onclick="closeCookie()" data-i18n="cookieBanner.accept"></button>
-    <button class="cookie-decline" onclick="closeCookie()" data-i18n="cookieBanner.reject"></button>
-  </div>
-</div>
-
 <script>
 window.addEventListener('scroll', () => {
   var n=document.getElementById('mainNav'); if(n) n.classList.toggle('scrolled', window.scrollY > 40);
@@ -378,15 +372,6 @@ window.addEventListener('scroll', () => {
 function toggleNav() {
   document.getElementById('navOverlay').classList.toggle('open');
   document.body.classList.toggle('no-overflow');
-}
-window.addEventListener('load', () => {
-  if (!localStorage.getItem('cookieAccepted')) {
-    setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1200);
-  }
-});
-function closeCookie() {
-  localStorage.setItem('cookieAccepted', 'true');
-  document.getElementById('cookieBanner').classList.remove('visible');
 }
 const animEls = document.querySelectorAll('.anim-fade-up, .anim-fade');
 const observer = new IntersectionObserver((entries) => {

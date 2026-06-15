@@ -218,8 +218,11 @@
   </script>
   <script src="i18n.js?v=4"></script>
   <script src="avson-leads.js" defer></script>
+  <script src="avson-consent.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6KDZDV6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ANNOUNCE BAR -->
 <div class="announce-bar" data-i18n="announceBar"></div>
@@ -562,15 +565,6 @@
 <!-- FLOATING CTA -->
 <a href="contacto.html" class="floating-cta" data-i18n="floatingCta"></a>
 
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-banner__text" data-i18n="cookie.text"></p>
-  <div class="cookie-banner__actions">
-    <button class="cookie-accept" onclick="closeCookie()" data-i18n="cookie.accept"></button>
-    <button class="cookie-decline" onclick="closeCookie()" data-i18n="cookie.decline"></button>
-  </div>
-</div>
-
 <script>
 // ── Nav ──────────────────────────────────────────────────────
 (function(){
@@ -583,17 +577,6 @@
   if(burger) burger.addEventListener('click', function(){ toggleNav(!overlay.classList.contains('open')); });
   if(close) close.addEventListener('click', function(){ toggleNav(false); });
 })();
-
-// ── Cookie ───────────────────────────────────────────────────
-window.addEventListener('load', () => {
-  if (!localStorage.getItem('cookieAccepted')) {
-    setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1200);
-  }
-});
-function closeCookie() {
-  localStorage.setItem('cookieAccepted', 'true');
-  document.getElementById('cookieBanner').classList.remove('visible');
-}
 
 // ── Quiz ─────────────────────────────────────────────────────
 const scores = { ens: 0, iso27001: 0, iso22301: 0, dora: 0 };
@@ -819,6 +802,14 @@ function reiniciarQuiz() {
         style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.95rem;color:var(--navy);background:var(--white);outline:none;box-sizing:border-box"
         onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'"
         data-i18n-placeholder="leadGate.placeholderCompany">
+      <div style="display:flex;align-items:flex-start;gap:10px;font-size:11px;color:var(--text-muted);line-height:1.5">
+        <input type="checkbox" id="gateRgpd" required style="width:15px;height:15px;flex-shrink:0;margin-top:1px;accent-color:var(--navy);cursor:pointer">
+        <label for="gateRgpd" data-i18n="form.rgpd"></label>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;font-size:11px;color:var(--text-muted);line-height:1.5">
+        <input type="checkbox" id="gateComercial" name="comercial" style="width:15px;height:15px;flex-shrink:0;margin-top:1px;accent-color:var(--navy);cursor:pointer">
+        <label for="gateComercial" data-i18n="form.comercial"></label>
+      </div>
       <button type="submit" style="background:var(--navy);color:var(--white);border:none;padding:18px 32px;font-family:var(--font-sans);font-size:0.95rem;font-weight:600;letter-spacing:0.04em;cursor:pointer;transition:opacity 0.2s;width:100%"
         onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'" data-i18n="leadGate.submit"></button>
       <p style="font-family:var(--font-sans);font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;margin-bottom:0" data-i18n="leadGate.note"></p>

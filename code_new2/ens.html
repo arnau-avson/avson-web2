@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="i18n.js?v=4"></script>
   <script src="avson-leads.js" defer></script>
+  <script src="avson-consent.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,7 +51,7 @@
     "telephone": "+34648414863",
     "email": "hola@avson.eu",
     "address": {"@type": "PostalAddress", "streetAddress": "Calle Pedro Muñoz Seca 2", "addressLocality": "Madrid", "postalCode": "28014", "addressCountry": "ES"},
-    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "87", "bestRating": "5"},
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "355", "bestRating": "5"},
     "priceRange": "€€",
     "openingHours": "Mo-Fr 09:00-18:00",
     "areaServed": "ES",
@@ -85,6 +86,8 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es el Esquema Nacional de Seguridad (ENS)?", "acceptedAnswer": {"@type": "Answer", "text": "Es el marco legal (Real Decreto 311/2022) que fija los requisitos de seguridad para los sistemas de información del sector público español. Obligatorio para las administraciones y para las empresas privadas que les prestan servicios."}}, {"@type": "Question", "name": "¿Cuánto cuesta la certificación ENS?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de la categoría (Básica, Media o Alta) y del alcance. Avson da una cifra cerrada antes de empezar, con garantía por escrito incluida."}}, {"@type": "Question", "name": "¿Cuánto tarda el certificado ENS?", "acceptedAnswer": {"@type": "Answer", "text": "Entre 9 y 14 semanas en un proyecto estándar. Con ENS Express, 30 días con equipo dedicado."}}, {"@type": "Question", "name": "¿Quién emite el certificado ENS?", "acceptedAnswer": {"@type": "Answer", "text": "Una entidad acreditada por ENAC (AENOR, Bureau Veritas, SGS, Applus+, BSI) tras auditoría independiente. Avson prepara la empresa y coordina la auditoría."}}, {"@type": "Question", "name": "¿Sirve también para ayuntamientos y universidades?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Avson implanta el ENS en empresas proveedoras y en administraciones: ayuntamientos, diputaciones, universidades y entidades públicas."}}, {"@type": "Question", "name": "Si ya tengo ISO 27001, ¿cuánto queda para el ENS?", "acceptedAnswer": {"@type": "Answer", "text": "Alrededor del 65% del trabajo ya está hecho: se aprovecha la documentación existente y solo se cubren las diferencias."}}]}</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6KDZDV6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Google Tag Manager (noscript) -->
   <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 
@@ -539,14 +542,6 @@
 </footer>
 
 <a href="contacto.html" class="floating-cta" data-i18n="floatingCta"></a>
-<div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-banner__text" data-i18n="cookie.text"></p>
-  <div class="cookie-banner__actions">
-    <button class="cookie-accept" onclick="closeCookie()" data-i18n="cookie.accept"></button>
-    <button class="cookie-decline" onclick="closeCookie()" data-i18n="cookie.decline"></button>
-  </div>
-</div>
-
 <!-- EXIT INTENT MODAL -->
 <div class="exit-modal" id="exitModal">
   <div class="exit-modal__box">
@@ -572,14 +567,10 @@
 <script>
 document.addEventListener('i18n:ready', function () {
   window.addEventListener('scroll', function () { var n = document.getElementById('mainNav'); if (n) n.classList.toggle('scrolled', window.scrollY > 40); });
-  window.addEventListener('load', function () { if (!localStorage.getItem('cookieAccepted')) { setTimeout(function () { document.getElementById('cookieBanner').classList.add('visible'); }, 1200); } });
-
   var obs = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.12 });
   document.querySelectorAll('.anim-fade-up, .anim-fade').forEach(function (el) { obs.observe(el); });
   document.querySelectorAll('.faq-item__question').forEach(function (q) { q.addEventListener('click', function () { var item = q.closest('.faq-item'); var isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); }); if (!isOpen) item.classList.add('open'); }); });
 });
-
-function closeCookie() { localStorage.setItem('cookieAccepted', 'true'); document.getElementById('cookieBanner').classList.remove('visible'); }
 
 // Exit intent
 var exitShown = false;

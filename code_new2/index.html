@@ -7,11 +7,13 @@
   <meta name="theme-color" content="#1f2023">
   <title></title>
   <meta name="description" content="">
-  <link rel="canonical" href="https://avson.eu">
+  <link rel="canonical" href="https://avson.eu/">
+  <link rel="alternate" hreflang="es" href="https://avson.eu/">
+  <link rel="alternate" hreflang="x-default" href="https://avson.eu/">
   <meta property="og:title" content="">
   <meta property="og:description" content="">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://avson.eu">
+  <meta property="og:url" content="https://avson.eu/">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Avson GRC">
   <meta name="twitter:card" content="summary_large_image">
@@ -57,8 +59,8 @@
   </style>
   <script src="i18n.js?v=4"></script>
   <script src="avson-leads.js" defer></script>
-  <!-- ═══ CLARITY — reemplazar CLARITY_ID con el ID real cuando esté disponible ═══ -->
-  <!-- <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_ID");</script> -->
+  <script src="avson-consent.js"></script>
+  <!-- Clarity + GTM se cargan desde avson-consent.js tras aceptar cookies -->
 
   <!-- ═══ LINKEDIN INSIGHT TAG — añadir partner_id cuando esté disponible ═══ -->
   <!-- <script type="text/javascript">
@@ -82,6 +84,8 @@
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"Avson GRC","url":"https://avson.eu","telephone":"+34648414863","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"355","bestRating":"5"},"review":[{"@type":"Review","author":{"@type":"Person","name":"Javier M."},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Llevábamos años perdiendo licitaciones sin ENS. Avson nos lo resolvió en 9 semanas. Al siguiente concurso, ganamos el contrato."},{"@type":"Review","author":{"@type":"Person","name":"Silvia R."},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Otros consultores decían un año. Avson lo hizo en 14 semanas y superamos la auditoría ENAC a la primera."},{"@type":"Review","author":{"@type":"Person","name":"Andrés D."},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Ningún otro proveedor ponía la garantía por escrito. Avson sí. El proceso duró 7 semanas sin una sola incidencia."}]}</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6KDZDV6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- STICKY BAR -->
 <div class="v3-sticky-bar" id="stickyBar">
@@ -420,6 +424,10 @@
             <input type="checkbox" id="fRgpd" required>
             <label for="fRgpd" data-i18n="contact.rgpdLabel"></label>
           </div>
+          <div class="v3-form__rgpd">
+            <input type="checkbox" id="fComercial" name="comercial">
+            <label for="fComercial" data-i18n="form.comercial"></label>
+          </div>
           <button type="submit" class="v3-btn v3-btn--gold v3-btn--full v3-btn--xl v3-btn--pulse" data-i18n="contact.formSubmit"></button>
           <p class="v3-form__lock" data-i18n="contact.formLock"></p>
         </form>
@@ -504,15 +512,6 @@
 </div>
 
 
-<!-- COOKIE BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <p class="cookie-banner__text" data-i18n="cookieBanner.text"></p>
-  <div class="cookie-banner__actions">
-    <button class="cookie-decline" onclick="setCookies('decline')" data-i18n="cookieBanner.decline"></button>
-    <button class="cookie-accept" onclick="setCookies('accept')" data-i18n="cookieBanner.accept"></button>
-  </div>
-</div>
-
 <script>
 const nav    = document.getElementById('mainNav');
 const sticky = document.getElementById('stickyBar');
@@ -547,16 +546,6 @@ document.addEventListener('i18n:ready', function() {
     new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('v3-fade--in'); }, { threshold: 0.1 }).observe(el);
   });
 });
-
-window.addEventListener('load', () => {
-  if (!localStorage.getItem('avson_cookies')) {
-    setTimeout(() => document.getElementById('cookieBanner').classList.add('visible'), 1800);
-  }
-});
-function setCookies(choice) {
-  localStorage.setItem('avson_cookies', choice);
-  document.getElementById('cookieBanner').classList.remove('visible');
-}
 
 // ─── ANIMATED COUNTERS ──────────────────────────────
 (function() {

@@ -29,24 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
 
-  // Cookie Banner
-  if (!localStorage.getItem('avson-cookies')) {
-    var banner = document.getElementById('cookieBanner');
-    if (banner) banner.style.display = 'flex';
-  }
 });
-
-function acceptCookies() {
-  localStorage.setItem('avson-cookies', 'accepted');
-  var banner = document.getElementById('cookieBanner');
-  if (banner) banner.style.display = 'none';
-}
-
-function rejectCookies() {
-  localStorage.setItem('avson-cookies', 'rejected');
-  var banner = document.getElementById('cookieBanner');
-  if (banner) banner.style.display = 'none';
-}
 
 // Form submission (placeholder)
 function handleFormSubmit(e) {

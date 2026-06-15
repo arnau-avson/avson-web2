@@ -381,3 +381,70 @@ function avsonTrack(event, props) {
     override();
   }
 })();
+
+/* ──────────────────────────────────────────────────────────────────────────
+   NEWSLETTER FOOTER — captura el clic del botón → y envía el email
+   ────────────────────────────────────────────────────────────────────────── */
+(function () {
+  function initNewsletter() {
+    document.querySelectorAll('.footer__newsletter-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var form = btn.closest('.footer__newsletter-form');
+        if (!form) return;
+        var input = form.querySelector('.footer__newsletter-input');
+        if (!input) return;
+        var email = (input.value || '').trim();
+
+        if (!email || !avsonIsValidEmail(email)) {
+          input.style.borderColor = '#d04428';
+          input.setAttribute('placeholder', 'Introduce un email válido');
+          return;
+        }
+        input.style.borderColor = '';
+
+        btn.disabled = true;
+        btn.textContent = '…';
+
+        var data = {
+          email: email,
+          source: 'newsletter_footer',
+          page: window.location.pathname,
+          ts: new Date().toISOString()
+        };
+
+        avsonTrack('newsletter_subscribe', { source: 'footer' });
+
+        var endpoint = window.AVSON_CONFIG.LEAD_ENDPOINT;
+        if (endpoint) {
+          fetch(endpoint, {
+            method: window.AVSON_CONFIG.ENDPOINT_METHOD,
+            headers: window.AVSON_CONFIG.ENDPOINT_HEADERS,
+            body: JSON.stringify(data)
+          }).then(function () {
+            input.value = '';
+            input.style.display = 'none';
+            btn.style.display = 'none';
+            var msg = document.createElement('p');
+            msg.style.cssText = 'color:#16a34a;font-family:var(--font-sans),sans-serif;font-size:13px;margin:0';
+            msg.textContent = '✓ Suscrito correctamente';
+            form.appendChild(msg);
+          }).catch(function () {
+            btn.disabled = false;
+            btn.textContent = '→';
+            input.style.borderColor = '#d04428';
+          });
+        } else {
+          console.info('[Avson] LEAD_ENDPOINT vacío — newsletter no enviado.');
+          btn.disabled = false;
+          btn.textContent = '→';
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNewsletter);
+  } else {
+    initNewsletter();
+  }
+})();

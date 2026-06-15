@@ -1,0 +1,8 @@
+# avson.eu — robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /old/
+Disallow: /gracias.html
+
+Sitemap: https://avson.eu/sitemap.xml

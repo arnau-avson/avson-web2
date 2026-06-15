@@ -92,6 +92,8 @@
   </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6KDZDV6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- NAV -->
   <nav class="cnav">
@@ -150,6 +152,10 @@
           <input type="checkbox" id="cRgpd" required>
           <label for="cRgpd" data-i18n="form.rgpd"></label>
         </div>
+        <div class="rgpd">
+          <input type="checkbox" id="cComercial" name="comercial">
+          <label for="cComercial" data-i18n="form.comercial"></label>
+        </div>
         <button type="submit" class="btn-cta" data-i18n="form.submit"></button>
         <p class="lock-text" data-i18n="form.lockText"></p>
       </form>
@@ -203,6 +209,7 @@
   </footer>
 
   <script src="avson-leads.js"></script>
+  <script src="avson-consent.js"></script>
   <script>
     function pickQ(btn, val) {
       document.getElementById('cNecesidad').value = val;

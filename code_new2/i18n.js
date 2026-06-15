@@ -75,11 +75,18 @@
       }
     }
 
-    // 2. Elementos con data-i18n (innerHTML)
+    // 2. Elementos con data-i18n (usa textContent salvo que el valor contenga HTML)
+    var htmlTagRe = /<[a-z][\s\S]*>/i;
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
       var val = resolve(t, k);
-      if (val !== undefined) el.innerHTML = val;
+      if (val !== undefined) {
+        if (htmlTagRe.test(val)) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      }
     });
 
     // 3. Elementos con data-i18n-text (textContent, sin HTML)
