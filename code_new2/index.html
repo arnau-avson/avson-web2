@@ -392,7 +392,7 @@
       <form onsubmit="return avsonSubmitLead(event, { source: 'checklist_pliego', event: 'lead_magnet' })" style="display:flex;flex-direction:column;gap:12px">
         <input type="text" name="nombre" placeholder="" required style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px" data-i18n-placeholder="checklist.placeholderName">
         <input type="email" name="email" placeholder="" required style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px" data-i18n-placeholder="checklist.placeholderEmail">
-        <input type="tel" name="telefono" placeholder="Teléfono (opcional)" autocomplete="tel" style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px">
+        <input type="tel" name="telefono" placeholder="" data-i18n-placeholder="checklist.placeholderPhone" autocomplete="tel" style="padding:13px 16px;border:1px solid var(--border);border-radius:10px;font-family:var(--font-sans);font-size:14px">
         <label style="display:flex;gap:8px;align-items:flex-start;font-family:var(--font-sans);font-size:11.5px;color:var(--text-muted);line-height:1.4"><input type="checkbox" required style="margin-top:2px"><span data-i18n="checklist.checkbox"></span></label>
         <button type="submit" class="v3-btn v3-btn--gold" style="width:100%" data-i18n="checklist.submit"></button>
         <p style="font-family:var(--font-sans);font-size:12px;color:var(--text-muted);text-align:center;margin:0" data-i18n="checklist.note"></p>
@@ -421,7 +421,7 @@
         <form class="v3-form" id="heroForm" onsubmit="avsonSubmitLead(event,{source:'hero',event:'hero_lead'})">
           <input type="text"  id="fNombre" name="nombre" placeholder="" autocomplete="given-name" required class="v3-form__input" data-i18n-placeholder="contact.placeholderName">
           <input type="email" id="fEmail"  name="email"  placeholder="" autocomplete="email"      required class="v3-form__input" data-i18n-placeholder="contact.placeholderEmail">
-          <input type="tel"   id="fTelefono" name="telefono" placeholder="Teléfono (opcional)" autocomplete="tel" class="v3-form__input">
+          <input type="tel"   id="fTelefono" name="telefono" placeholder="" data-i18n-placeholder="contact.placeholderPhone" autocomplete="tel" class="v3-form__input">
           <div class="v3-form__rgpd">
             <input type="checkbox" id="fRgpd" required>
             <label for="fRgpd" data-i18n="contact.rgpdLabel"></label>
