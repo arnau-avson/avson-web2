@@ -309,9 +309,11 @@ function avsonTrack(event, props) {
         empresa = empresa.trim();
         if (!avsonIsValidEmail(email)) return;
 
+        var telefono = ((document.getElementById('popupTelefono') || {}).value || '').trim();
         var data = {
           email: email,
           empresa: empresa,
+          telefono: telefono,
           source: 'blog_popup',
           page: window.location.pathname,
           ts: new Date().toISOString()
@@ -344,10 +346,12 @@ function avsonTrack(event, props) {
         var empresa = (document.getElementById('gateEmpresa') || {}).value;
         if (!email) return;
 
+        var telefono = ((document.getElementById('gateTelefono') || {}).value || '').trim();
         var data = {
           nombre: (nombre || '').trim(),
           email: email.trim(),
           empresa: (empresa || '').trim(),
+          telefono: telefono,
           source: 'diagnostico',
           page: window.location.pathname,
           ts: new Date().toISOString()

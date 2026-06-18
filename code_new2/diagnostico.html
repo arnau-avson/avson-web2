@@ -802,6 +802,10 @@ function reiniciarQuiz() {
         style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.95rem;color:var(--navy);background:var(--white);outline:none;box-sizing:border-box"
         onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'"
         data-i18n-placeholder="leadGate.placeholderCompany">
+      <input type="tel" id="gateTelefono" placeholder="Teléfono (opcional)"
+        style="width:100%;padding:14px 18px;border:1.5px solid #D8D8D8;font-family:var(--font-sans);font-size:0.95rem;color:var(--navy);background:var(--white);outline:none;box-sizing:border-box"
+        onfocus="this.style.borderColor='#e85838'" onblur="this.style.borderColor='#D8D8D8'"
+        autocomplete="tel">
       <div style="display:flex;align-items:flex-start;gap:10px;font-size:11px;color:var(--text-muted);line-height:1.5">
         <input type="checkbox" id="gateRgpd" required style="width:15px;height:15px;flex-shrink:0;margin-top:1px;accent-color:var(--navy);cursor:pointer">
         <label for="gateRgpd" data-i18n="form.rgpd"></label>

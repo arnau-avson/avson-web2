@@ -302,6 +302,7 @@ function sanitizeField(val) {
 const FIELD_LABELS = {
   nombre: 'Nombre',
   email: 'Email',
+  telefono: 'Teléfono',
   empresa: 'Empresa',
   necesidad: 'Necesidad',
   source: 'Origen',
@@ -320,6 +321,7 @@ app.post('/api/lead', leadLimiter, async (req, res) => {
     const token = await getToken()
 
     const rows = Object.entries(data)
+      .filter(([, val]) => val !== undefined && val !== null && String(val).trim() !== '')
       .map(([key, val]) => {
         const label = FIELD_LABELS[key] || key
         const escaped = escapeHtml(sanitizeField(val))
@@ -474,7 +476,8 @@ app.post('/api/quote', leadLimiter, async (req, res) => {
     const nombre = sanitizeField(data.nombre || data.email.split('@')[0])
 
     const leadData = {
-      nombre, email: data.email, normas: input.norms.join(','),
+      nombre, email: data.email, telefono: data.telefono || '',
+      normas: input.norms.join(','),
       ubicaciones: input.locations, infra: input.infra,
       express: input.express, ens_categoria: input.ensCategoria,
       size: quote.size, presupuesto_base: quote.base,
@@ -482,6 +485,7 @@ app.post('/api/quote', leadLimiter, async (req, res) => {
       source: 'presupuesto_packs', page: sanitizeField(data.page || ''), ts: new Date().toISOString()
     }
     const rows = Object.entries(leadData)
+      .filter(([, val]) => val !== undefined && val !== null && String(val).trim() !== '')
       .map(([key, val]) => {
         const label = FIELD_LABELS[key] || key
         return `<tr><td style="padding:6px 12px;font-weight:bold">${escapeHtml(label)}</td><td style="padding:6px 12px">${escapeHtml(sanitizeField(String(val)))}</td></tr>`

@@ -58,6 +58,7 @@ function avsonQuoteSubmit(event) {
   const payload = {
     nombre: fd.get("nombre"),
     email: email,
+    telefono: fd.get("telefono") || "",
     norms: norms,
     ensCategoria: fd.get("ensCategoria") || "media",
     locations: fd.get("ubicaciones") || "1",
